@@ -1,6 +1,6 @@
 const steps=[{"title": "약물 소개 · 두 함량과 치료 목적", "file": 0, "duration": 35.45, "mediaStart": 0.0, "source": "intro.mp4"}, {"title": "두 성분의 작용 위치", "file": 1, "duration": 28.05, "mediaStart": 35.45, "source": "intro.mp4"}, {"title": "기전 영상 · 위산 분비 억제", "id": "oAEwnbi9Cio", "start": 0, "end": 118}, {"title": "기전 영상 · calcium carbonate", "id": "EmcCMQ-xkLA", "start": 0, "end": null, "toEnd": true, "portrait": true}, {"title": "용량과 사용법", "file": 2, "duration": 41.0, "mediaStart": 0.0, "source": "lesson.mp4"}, {"title": "주의점과 부작용", "file": 4, "duration": 51.2, "mediaStart": 41.0, "source": "lesson.mp4"}, {"title": "함께 복용하는 약 · 상호작용", "file": 7, "duration": 52.75, "mediaStart": 92.2, "source": "lesson.mp4"}, {"title": "사용 및 보관법", "file": 5, "duration": 31.0, "mediaStart": 144.95, "source": "lesson.mp4"}, {"title": "Take-home message", "file": 6, "duration": 27.45, "mediaStart": 175.95, "source": "lesson.mp4"}];
 const $=id=>document.getElementById(id),local=$('local');
-let index=0,yt,ytReady=false,ytLoading=false,wantsPlay=false,slideRate=1.1,pendingOffset=0,ended=false,dragging=false;
+let index=0,yt,ytReady=false,ytLoading=false,wantsPlay=false,slideRate=1,pendingOffset=0,ended=false,dragging=false;
 const isYT=()=>!!steps[index].id;
 const mediaBase=()=>steps[index].mediaStart||0;
 const mediaSource=s=>s.source;

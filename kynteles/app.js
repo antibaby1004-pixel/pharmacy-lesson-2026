@@ -1,6 +1,6 @@
 const steps=[{"title": "약물 소개 · 두 제형과 치료 목적", "file": 0, "duration": 57.1}, {"title": "작용기전 · 장 선택적 작용", "id": "CksGufrYhPI", "start": 0, "end": null, "toEnd": true}, {"title": "vedolizumab과 ustekinumab · 특징 비교", "file": 6, "duration": 51.4, "mediaStart": 0.0}, {"title": "용량과 사용법 · 정맥주사", "file": 1, "duration": 24.0, "mediaStart": 51.4}, {"title": "정맥주사 · 재구성과 희석", "file": 7, "duration": 50.55, "mediaStart": 75.4}, {"title": "용량과 사용법 · 프리필드 펜", "file": 2, "duration": 29.9, "mediaStart": 125.95}, {"title": "주의점과 부작용", "file": 3, "duration": 36.9, "mediaStart": 155.85}, {"title": "사용 및 보관법", "file": 4, "duration": 34.0, "mediaStart": 192.75}, {"title": "Take-home message", "file": 5, "duration": 37.8, "mediaStart": 226.75}];
 const $=id=>document.getElementById(id),local=$('local');
-let index=0,yt,ytReady=false,ytLoading=false,wantsPlay=false,slideRate=1.15,pendingOffset=0,ended=false,dragging=false;
+let index=0,yt,ytReady=false,ytLoading=false,wantsPlay=false,slideRate=1,pendingOffset=0,ended=false,dragging=false;
 const isYT=()=>!!steps[index].id;
 const mediaBase=()=>steps[index].mediaStart||0;
 const mediaSource=s=>s.mediaStart!==undefined?'lesson.mp4':'part'+s.file+'.mp4';

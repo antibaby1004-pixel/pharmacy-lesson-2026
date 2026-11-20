@@ -1,6 +1,6 @@
 const steps=[{"title": "약물 소개 · 치료 목적과 허가 적응증", "file": 0, "duration": 31.5}, {"title": "정맥주사와 프리필드시린지 구별", "file": 1, "duration": 31.8}, {"title": "ustekinumab · 작용기전", "file": 2, "duration": 16.7}, {"title": "기전 영상 · 0:00–3:37", "id": "KWHUwVdVICM", "start": 0, "end": 217}, {"title": "주의점과 부작용", "file": 3, "duration": 68.1}, {"title": "용량과 사용법 · 성인 염증성 장질환", "file": 4, "duration": 34.7}, {"title": "정맥주사 · 희석과 주입", "file": 5, "duration": 29.3}, {"title": "프리필드시린지 · 보관과 준비", "file": 6, "duration": 37.5}, {"title": "주사방법 영상 · 0:00–2:23", "id": "Rve4H-Dhu2c", "start": 0, "end": 143}, {"title": "프리필드시린지 주사방법 · 0:48부터 끝까지", "id": "SeK7Ch0ZbIg", "start": 48, "end": null, "toEnd": true}, {"title": "Take-home message", "file": 7, "duration": 36.8}];
 const $=id=>document.getElementById(id),local=$('local');
-let index=0,yt,ytReady=false,ytLoading=false,wantsPlay=false,slideRate=1.15,pendingOffset=0,ended=false,dragging=false;
+let index=0,yt,ytReady=false,ytLoading=false,wantsPlay=false,slideRate=1,pendingOffset=0,ended=false,dragging=false;
 const isYT=()=>!!steps[index].id;
 const message=s=>$('status').textContent=s;
 const length=s=>s.id?(Number.isFinite(s.end)?Math.max(0,s.end-s.start):1):s.duration/slideRate;

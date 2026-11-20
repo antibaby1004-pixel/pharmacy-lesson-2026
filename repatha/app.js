@@ -7,7 +7,7 @@ const steps=[
 {title:'자가주사 시연 · 1:30–4:40',id:'I_Vir4DcvYk',start:90,end:280},
 {title:'Take-home message',file:'summary',duration:50.7}];
 const $=id=>document.getElementById(id),local=$('local');
-let index=0,yt,ytReady=false,ytLoading=false,wantsPlay=false,slideRate=1.15,pendingOffset=0,ended=false,dragging=false;
+let index=0,yt,ytReady=false,ytLoading=false,wantsPlay=false,slideRate=1,pendingOffset=0,ended=false,dragging=false;
 const isYT=()=>!!steps[index].id;
 const message=s=>$('status').textContent=s;
 const length=s=>s.id?s.end-s.start:s.duration/slideRate;

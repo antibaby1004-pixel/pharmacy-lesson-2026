@@ -1,6 +1,6 @@
 const steps=[{"title": "약물 소개", "file": 0, "duration": 31.1}, {"title": "암세포 증식의 핵심: 유전물질 복제", "file": 1, "duration": 10.6}, {"title": "원본 기전 영상 · 0:15–2:45", "id": "QA5ufAU1NSk", "start": 15, "end": 165}, {"title": "주의점과 부작용", "file": 3, "duration": 25.5}, {"title": "용량과 사용법", "file": 4, "duration": 28.3}, {"title": "분말제제: 재구성 후 농도를 확인하세요", "file": 5, "duration": 41.8}, {"title": "Take-home message", "file": 6, "duration": 33.0}];
 const $=id=>document.getElementById(id),local=$('local');
-let index=0,yt,ytReady=false,ytLoading=false,wantsPlay=false,slideRate=1.15,pendingOffset=0,ended=false,dragging=false;
+let index=0,yt,ytReady=false,ytLoading=false,wantsPlay=false,slideRate=1,pendingOffset=0,ended=false,dragging=false;
 const isYT=()=>!!steps[index].id;
 const message=s=>$('status').textContent=s;
 const length=s=>s.id?s.end-s.start:s.duration/slideRate;
