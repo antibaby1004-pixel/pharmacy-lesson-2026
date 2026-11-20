@@ -1,0 +1,49 @@
+:root{color-scheme:dark;font-family:Arial,'Malgun Gothic',sans-serif;color:#e8f3f5;background:#10252f}*{box-sizing:border-box}body{margin:0}main{max-width:1150px;margin:auto;padding:38px 24px 60px}.eyebrow{color:#7bd8cd;letter-spacing:3px;font-size:12px;font-weight:700}.headline{display:flex;align-items:center;justify-content:space-between;gap:20px}h1{font-size:32px;margin:10px 0}h1 span{font-size:23px;font-weight:400;color:#c1d5dc;margin-left:12px}small{white-space:nowrap;border:1px solid #49616b;border-radius:20px;padding:7px 12px;color:#b6cbd3}.intro{color:#a9c5ce;font-size:16px;margin:12px 0 25px}.cinema{border:1px solid #35535e;border-radius:14px;overflow:hidden;background:#071419;box-shadow:0 15px 50px #0004}.topline,.bottomline{display:flex;align-items:center;gap:14px;padding:13px 18px;background:#17323e}.topline #position{color:#78d5cb;font-size:12px}.topline strong{flex:1;font-size:15px}button,a{font:inherit}button{background:#254651;color:#e0eef2;border:1px solid #45636c;border-radius:7px;padding:9px 13px;cursor:pointer}button:hover{background:#345965}button:focus-visible,a:focus-visible{outline:3px solid #ffda7c;outline-offset:2px}button:disabled{opacity:.4;cursor:default}button.primary{color:#102f36;background:#86ded1;border-color:#86ded1;font-weight:700}#stage{position:relative;aspect-ratio:16/9;background:black}video,#youtubeWrap,#youtubeWrap iframe{width:100%;height:100%;border:0}video{display:block}#stage [hidden]{display:none}#status{font-size:13px;color:#b3cad0;margin-left:auto}#chapters{display:flex;flex-wrap:wrap;gap:7px;margin-top:20px}#chapters button{background:transparent;border-color:#38535e;font-size:13px;padding:9px 12px}#chapters button[aria-current=true]{background:#244e57;color:#9be8dc;border-color:#78d5cb}#ytNote,#fallback{font-size:14px;line-height:1.8;padding:14px 18px;background:#213b47;border-radius:8px}#fallback{background:#4a3824}#fallback button{margin-left:12px}a{color:#8de0d2}details{margin-top:30px;border-top:1px solid #35505c;padding-top:20px;color:#a7c0c9;font-size:14px;line-height:1.8}summary{cursor:pointer}li{margin:6px 0}.cinema:fullscreen{display:flex;flex-direction:column;justify-content:center} .cinema:fullscreen #stage{flex:1;min-height:0;aspect-ratio:auto}.cinema:fullscreen video{object-fit:contain}@media(max-width:650px){main{padding:22px 12px}.headline{display:block}h1{font-size:28px}h1 span{display:block;margin:7px 0;font-size:20px}small{display:inline-block;margin-top:5px}.topline{padding:10px;gap:8px}.topline strong{font-size:12px}.bottomline{flex-wrap:wrap;padding:10px;gap:8px}#status{width:100%;margin:0}button{font-size:13px}#fullscreen{padding:6px}#chapters button{font-size:12px}}
+
+.seekline{display:flex;align-items:center;gap:16px;padding:14px 18px;background:#17323e}.seekline input{flex:1;min-width:0;accent-color:#86ded1;cursor:pointer}.seekline span{font-size:13px;white-space:nowrap;font-variant-numeric:tabular-nums}
+
+.caption-line{font-size:12px;line-height:1.55;min-height:31px;text-align:center;padding:6px 12px;color:#fff;background:#071419}.caption-line[hidden]{display:none}
+
+#transitionVeil{position:absolute;inset:0;z-index:5;background:#071419;opacity:0;pointer-events:none;transition:opacity .45s ease-in-out}#transitionVeil.covered{opacity:1;pointer-events:auto}.caption-line[hidden]{display:block;visibility:hidden}
+@media(prefers-reduced-motion:reduce){#transitionVeil{transition:none}}
+
+#transitionVeil{display:flex;align-items:center;justify-content:center;color:#d4e9ed;font-size:16px}#fallback{margin:0;border-radius:0}#fallback[hidden]{display:none}
+
+/* Readable chapter headings, 1440p edition */
+.topline strong{flex:1;min-width:0;font-size:24px;line-height:1.4;overflow-wrap:anywhere}
+@media(max-width:650px){.topline strong{font-size:18px}}
+.cinema:fullscreen .topline strong{font-size:28px}
+
+/* ===== 2026 리디자인 · 흰 배경 · 차콜 글씨 · 얇은 구분선 (이 블록만 지우면 이전 모양으로 돌아갑니다) ===== */
+@font-face{font-family:Pretendard;font-weight:400;src:url(fonts/Pretendard-Regular.woff2) format('woff2')}
+@font-face{font-family:Pretendard;font-weight:600;src:url(fonts/Pretendard-SemiBold.woff2) format('woff2')}
+@font-face{font-family:Pretendard;font-weight:700;src:url(fonts/Pretendard-Bold.woff2) format('woff2')}
+:root{--acc:#1F5A94;color-scheme:light;background:#fff;color:#1C2026;font-family:Pretendard,'Malgun Gothic',sans-serif}
+body{background:#fff;word-break:keep-all}
+main{max-width:1320px;padding:52px 32px 80px}
+.eyebrow{color:var(--acc);letter-spacing:.22em;font-size:12px;font-weight:600}
+h1{font-size:34px;font-weight:700;letter-spacing:-.02em;color:#1C2026}
+h1 span{color:#868D96;font-weight:400}
+.intro{color:#4A515B;font-size:16px}
+.cinema{background:#fff;border:1px solid #E2E5E9;border-radius:10px;box-shadow:0 12px 40px rgba(20,30,40,.06)}
+.topline,.bottomline,.seekline{background:#fff;color:#1C2026}
+.topline{border-bottom:1px solid #E2E5E9;padding:16px 22px}
+.topline #position{color:var(--acc);font-weight:700;font-size:13px;letter-spacing:.1em}
+.topline strong{font-size:20px;font-weight:600;letter-spacing:-.01em}
+.cinema:fullscreen .topline strong{font-size:24px}
+.seekline,.bottomline{border-top:1px solid #EEF0F2;padding:12px 22px}
+.seekline input{accent-color:var(--acc)}
+button{background:#fff;color:#1C2026;border:1px solid #D5DADF;border-radius:6px}
+button:hover{background:#F6F7F8}
+button.primary{background:var(--acc);border-color:var(--acc);color:#fff;font-weight:600}
+select{padding:5px 8px;border:1px solid #D5DADF;border-radius:6px;background:#fff;color:#1C2026}
+#status{color:#868D96}
+#stage{background:#fff}
+#youtubeWrap{background:#111}
+.caption-line{background:#fff;color:#1C2026;border-top:1px solid #EEF0F2;font-size:17px;line-height:1.55;min-height:46px;padding:11px 18px}
+#transitionVeil{background:#fff;color:#868D96}
+#ytNote{background:#F6F7F8;color:#4A515B;border-radius:8px}
+#fallback{background:#FBF1EF;color:#7A2A21}
+a,.downloads{color:var(--acc)}
+details{color:#4A515B;border-top:1px solid #E2E5E9}
+@media(max-width:650px){.caption-line{font-size:14px}.topline strong{font-size:16px}}
