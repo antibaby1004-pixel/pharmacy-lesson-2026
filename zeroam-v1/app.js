@@ -1,10 +1,10 @@
 const steps=[
-{title:'제로암 소개 · 함량과 허가 적응증',file:'intro',duration:42.582},
-{title:'DNA 복제 · 재료가 필요하다',file:0,duration:10.044},{title:'닮은꼴 재료 · 인산화',file:1,duration:11.807},{title:'DNA 합성 억제 · 증식 억제',file:2,duration:14.755},
+{title:'제로암 소개 · 함량과 허가 적응증',file:'intro',duration:41.269},
+{title:'DNA 복제 · 재료가 필요하다',file:0,duration:10.044},{title:'닮은꼴 재료 · 인산화',file:1,duration:11.124},{title:'DNA 합성 억제 · 증식 억제',file:2,duration:14.158},
 {title:'기전 영상 · 0:15–2:45',id:'QA5ufAU1NSk',start:15,end:165},
-{title:'용량과 사용법',file:5,duration:32.333},{title:'조제 · 녹이는 순서',file:'recon',duration:44.566},
-{title:'보관',file:'storage',duration:19.694},{title:'주의점과 부작용',file:4,duration:25.107},
-{title:'Take-home message',file:'summary',duration:34.507}];
+{title:'용량과 사용법',file:5,duration:31.29},{title:'조제 · 녹이는 순서',file:'recon',duration:43.647},
+{title:'보관',file:'storage',duration:19.176},{title:'주의점과 부작용',file:4,duration:24.56},
+{title:'Take-home message',file:'summary',duration:33.496}];
 const $=id=>document.getElementById(id),local=$('local');
 let index=0,yt,ytReady=false,ytLoading=false,wantsPlay=false,slideRate=1,pendingOffset=0,ended=false,dragging=false;
 const isYT=()=>!!steps[index].id;
