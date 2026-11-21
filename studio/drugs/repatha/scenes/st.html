@@ -1,0 +1,53 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../../lib/common.css"><style>
+.box{position:absolute;padding:28px 34px}
+.form{left:96px;top:272px;width:470px;height:360px}
+.form .v{font-size:44px;line-height:56px;font-weight:600}.e{font-size:24px;letter-spacing:.08em;color:var(--muted);font-weight:600;margin-top:4px;text-transform:uppercase}
+.no{display:flex;align-items:center;gap:14px;margin-top:16px;font-size:40px;font-weight:700;color:var(--acc)}
+.temp{left:596px;top:272px;width:844px;height:360px}
+.zone{display:grid;grid-template-columns:170px 1fr;gap:24px;align-items:center;padding:16px 0}
+.zone .t{font-size:52px;font-weight:700;line-height:56px;white-space:nowrap}
+.zone .v{font-size:40px;line-height:52px;font-weight:600}
+.cold .t{color:#3f5a6b}.room .t{color:#9a6f1c}
+.arrow{font-size:28px;font-weight:700;color:var(--muted);letter-spacing:.06em;margin:4px 0 4px 0;padding-left:174px}
+.callout{left:96px;top:664px;width:1344px;padding:24px 34px;display:flex;align-items:center;gap:28px;border-color:#d9b9bf;background:#fdf6f6}
+.callout .v{font-size:40px;font-weight:700;color:var(--acc-ink)}
+.prep{left:96px;top:800px;width:1344px;padding:22px 34px;display:grid;grid-template-columns:200px 1fr;gap:24px;align-items:center}
+.prep .v{font-size:42px;font-weight:600}
+</style></head><body><div class="stage">
+<div class="fade"><header class="top"><div class="sec"><b>주사 전 · 펜과 보관</b> · STORAGE</div><div class="chip">레파타 Repatha <i>· evolocumab</i></div></header>
+<h1>주사 전 · 펜과 보관</h1></div>
+<div class="fade">
+<div class="wm">05</div>
+<div class="card box form" data-in="0.1"><span class="lab">제형</span>
+ <svg width="400" height="90" viewBox="0 0 400 90" style="margin:18px 0 10px"><rect x="4" y="25" width="330" height="40" rx="20" fill="#fffdf9" stroke="#3f5a6b" stroke-width="3"/><rect x="236" y="25" width="98" height="40" rx="20" fill="#8c3b4a"/><rect x="66" y="35" width="96" height="20" rx="6" fill="#f4e7e9" stroke="#a3606b" stroke-width="2"/><rect x="332" y="35" width="44" height="20" rx="6" fill="#a9bcb9"/></svg>
+ <div class="v">1회용 프리필드펜</div><div class="e">Single-use prefilled pen</div>
+ <div class="no" data-in="3.8"><svg width="44" height="44" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10.5" fill="none" stroke="#8c3b4a" stroke-width="2"/><path d="M5 19 L19 5" stroke="#8c3b4a" stroke-width="2"/></svg>사용 후 재사용 금지</div></div>
+<div class="card box temp"><span class="lab" data-in="7.2">보관 온도</span>
+ <div class="zone cold" data-in="7.3"><div class="t num">2–8°C</div><div><div class="v">냉장 보관 · 동결 금지</div><div class="e">Refrigerated storage · Do not freeze</div></div></div>
+ <div class="arrow" data-in="13.8">▼ 냉장고에서 꺼낸 후</div>
+ <div class="zone room" data-in="14.2"><div class="t num">≤25°C</div><div><div class="v">원래 포장으로 차광 · 30일 이내 사용</div><div class="e">Protect from light · Use within 30 days</div></div></div></div>
+<div class="card box callout" data-in="22.4"><svg width="64" height="64" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#8c3b4a"/><path d="M11 6h2v8h-2zM11 16h2v2h-2z" fill="#fff"/></svg><div class="v">30일 = 사용 전 보관 가능 기간 · 한 펜을 30일 동안 나눠 쓰는 것이 아님</div></div>
+<div class="card box prep" data-in="26.5"><span class="lab">투여 준비</span><div><div class="v">주사 전 최소 30분 미리 꺼내기 · 흔들기 금지</div><div class="e">Allow to reach room temperature · Do not shake</div></div></div>
+</div></div>
+<script src="../timing.js"></script><script src="../../../lib/core.js"></script><script>
+useTiming('storage');
+SCENE.char=makeChar([
+ {k:'walk',t0:1.0,t1:2.4,x0:2150,x1:1590},
+ {k:'bubble',t0:3.9,t1:6.4,text:'재활용은<br>수용체만 합니다.'},{k:'shrug',t0:4.2,t1:5.8},
+ {k:'sip',t0:8.4,t1:9.4},
+ {k:'walk',t0:9.6,t1:11.6,x0:1590,x1:2250}
+]);
+SCENE.char2=makeChar([
+ {k:'walk',t0:6.4,t1:7.4,x0:2200,x1:1790,run:true},
+ {k:'bubble',t0:7.4,t1:9.6,text:'선배, 보관은<br>제가 할게요!'},{k:'thumbs',t0:7.6,t1:9.2},
+ {k:'walk',t0:11.4,t1:12.4,x0:1790,x1:1680},
+ {k:'hop',t0:12.6,t1:13.6},{k:'sweat',t0:12.8,t1:14.0},
+ {k:'float',t0:15.4,t1:18.6},
+ {k:'think',t0:21.4,t1:22.8},
+ {k:'bubble',t0:22.8,t1:27.4,text:'30일 동안 나눠 쓰기?<br>노노, 보관 기한이에요!'},{k:'talk',t0:23.0,t1:24.6},{k:'wink',t0:25.2,t1:26.2},
+ {k:'memo',t0:27.6,t1:29.4},
+ {k:'wave',t0:30.0,t1:32.4},{k:'splash',t0:30.2,t1:31.0},
+ {k:'walk',t0:32.6,t1:33.9,x0:1680,x1:2250,slide:true}
+],'haru');
+render(0);
+</script></body></html>

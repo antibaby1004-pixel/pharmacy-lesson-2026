@@ -1,0 +1,49 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../../lib/common.css"><style>
+.grid{display:grid;grid-template-columns:680px 1fr;gap:52px}
+.fig{height:640px;position:relative;overflow:hidden}
+.s p{font-size:30px;line-height:42px}
+</style></head><body><div class="stage">
+<div class="fade"><header class="top"><div class="sec"><b>작용 기전</b> · 01 / 03</div><div class="chip">레파타 Repatha <i>· evolocumab</i></div></header>
+<h1>간세포 수용체는 다시 사용됩니다</h1></div>
+<div class="fade grid">
+ <div class="steps">
+  <div class="s" data-on="0,2.6"><div class="n">1</div><div><div class="en">Binding</div><h3>혈액에서 결합</h3><p>LDL 수용체가 혈중 저밀도 지단백(LDL)을 붙잡는다</p></div></div>
+  <div class="s" data-on="2.6,5.6"><div class="n">2</div><div><div class="en">Receptor-mediated uptake</div><h3>간세포 안으로 이동</h3><p>수용체와 LDL이 함께 세포 안으로 들어간다</p></div></div>
+  <div class="s" data-on="5.6"><div class="n">3</div><div><div class="en">Receptor recycling</div><h3>수용체 재활용</h3><p>콜레스테롤을 내려놓은 수용체는 표면으로 돌아온다</p></div></div>
+ </div>
+ <div class="card fig"><svg id="fig" width="100%" height="100%" viewBox="0 0 1056 640"></svg></div>
+</div>
+<div class="fade"><div class="key" data-in="6.4"><span class="k">KEY</span><span>콜레스테롤 흡수 → 수용체는 세포 표면으로 복귀</span></div>
+<div class="fn">교육용 개념도</div></div>
+</div>
+<script src="../timing.js"></script><script src="../../../lib/core.js"></script><script src="../../../lib/mech.js"></script><script>
+useTiming('0');
+const svg=$('#fig');baseFig(svg);
+const SC=1.4;
+const endo=el('ellipse',{cx:500,cy:450,rx:130,ry:100,fill:'#fffdf9',stroke:'#a9bcb9','stroke-width':3},svg);
+const endoL=lbl(svg,500,580,'엔도솜 · endosome','#5b6573',22,'middle');
+const rec=el('path',{d:'M628 420 C 720 360, 780 320, 800 290',stroke:'#3d7a6e','stroke-width':5,fill:'none','stroke-linecap':'round'},svg);
+const recH=el('path',{d:'M786 298 l14 -10 l4 18',stroke:'#3d7a6e','stroke-width':5,fill:'none','stroke-linecap':'round','stroke-linejoin':'round'},svg);
+const recL=lbl(svg,826,360,'수용체 재활용','#3d7a6e',26,'start',700);
+const R=grp(svg,RECEPTOR),L=grp(svg,LDL);
+const ldlL=lbl(svg,340,104,'저밀도 지단백 (LDL)','#1f2a37',24);
+const ldlLn=el('line',{x1:334,y1:96,x2:300,y2:104,stroke:'#1f2a37','stroke-width':2},svg);
+const crumbs=el('g',{fill:'#d9a441'},svg,'<circle cx="470" cy="420" r="7"/><circle cx="530" cy="440" r="6"/><circle cx="490" cy="480" r="5"/><circle cx="545" cy="490" r="7"/><circle cx="455" cy="465" r="5"/>');
+const crL=lbl(svg,500,402,'콜레스테롤 흡수','#9a6f1c',22,'middle');
+const recpL=lbl(svg,300,330,'LDL 수용체','#3f5a6b',24);
+const recpLn=el('line',{x1:296,y1:318,x2:262,y2:288,stroke:'#3f5a6b','stroke-width':2},svg);
+SCENE.anim=t=>{
+ const b=ease(seg(t,.3,2.2)), p2=ease(seg(t,2.6,4.8)), p3=ease(seg(t,5.6,7.8));
+ const ux=lerp(250,500,p2), uy=lerp(200,470,p2), us=lerp(SC,SC*.85,p2);
+ if(t<5.6)setT(R,ux,uy,us);else setT(R,lerp(500,800,p3),lerp(470,200,p3),lerp(SC*.85,SC,p3));
+ if(t<2.6)setT(L,250,lerp(20,108,b),SC,seg(t,0,.4));
+ else setT(L,ux,uy-66*us,us,1-seg(t,4.8,5.5));
+ endo.style.opacity=seg(t,2.4,3.0);crumbs.style.opacity=seg(t,5.0,5.6)*.8;crL.style.opacity=seg(t,5.2,5.8);endoL.style.opacity=seg(t,2.6,3.2);
+ [ldlL,ldlLn].forEach(e=>e.style.opacity=seg(t,.6,1.2)*(1-seg(t,2.5,2.9)));[recpL,recpLn].forEach(e=>e.style.opacity=seg(t,.8,1.4)*(1-seg(t,2.5,2.9)));
+ pathDraw(rec,seg(t,5.6,7.4));recH.style.opacity=seg(t,7.2,7.5);recL.style.opacity=seg(t,6.4,7.0);
+};
+SCENE.char=makeChar([
+ {k:'walk',t0:6.6,t1:7.4,x0:2150,x1:1975},{k:'lean',t0:7.2,t1:8.45,ang:-16},{k:'wave',t0:7.4,t1:8.45}
+]);
+render(0);
+</script></body></html>

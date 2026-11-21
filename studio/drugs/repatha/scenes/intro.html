@@ -1,0 +1,65 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../../lib/common.css"><style>
+.l{position:absolute;left:96px;top:200px;width:910px}
+.t1{font-size:120px;line-height:120px;font-weight:700;letter-spacing:-.03em;margin:0}
+.t1 span{font-size:64px;font-weight:600;color:var(--muted);margin-left:20px;letter-spacing:-.01em}
+.t2{font-size:46px;font-weight:500;color:var(--muted);margin:14px 0 0;letter-spacing:.01em}
+.goal{margin-top:44px;display:flex;gap:28px;align-items:center}
+.goal .v{font-size:50px;font-weight:600}
+.ind{margin-top:34px}
+.ind .lab{display:block;margin-bottom:18px}
+.row{display:grid;grid-template-columns:72px 1fr;align-items:center;padding:18px 0;border-top:1.5px solid var(--hair);font-size:44px;line-height:56px}
+.row:last-child{border-bottom:1.5px solid var(--hair)}
+.row b{font-size:32px;color:var(--acc);font-weight:700}
+.row small{display:block;font-size:32px;margin-left:0;color:var(--muted);font-weight:500;margin-left:14px}
+.dose{position:absolute;left:1020px;top:200px;width:450px;padding:34px 36px}
+.dose .big{white-space:nowrap;font-size:96px;line-height:100px;font-weight:700;color:var(--acc);letter-spacing:-.02em}
+.dose .sub{font-size:38px;line-height:50px;color:var(--ink);margin-top:14px;font-weight:500}
+.why{position:absolute;left:1020px;top:610px;width:450px;padding:26px 36px}
+.why .v{font-size:46px;font-weight:600;margin-top:8px}
+</style></head><body><div class="stage">
+<div class="fade">
+<header class="top"><div class="sec"><b>약물 소개</b> · DRUG OVERVIEW</div><div class="chip">레파타 Repatha <i>· evolocumab</i></div></header>
+</div>
+<div class="fade">
+<div class="l">
+ <p class="t1" data-in="0.1">레파타<span>Repatha</span></p>
+ <p class="t2" data-in="0.4">evolocumab</p>
+ <div class="goal" data-in="9.1"><span class="lab">치료 목적</span><span class="v">저밀도 지단백 콜레스테롤 감소</span></div>
+ <div class="ind"><span class="lab" data-in="10.5">국내 허가 적응증</span>
+  <div class="row" data-in="11.2"><b>01</b><span>고콜레스테롤혈증 · 혼합형 이상지질혈증</span></div>
+  <div class="row" data-in="18.6"><b>02</b><span>동형접합 가족성 고콜레스테롤혈증</span></div>
+  <div class="row" data-in="23.2"><b>03</b><span>확립된 죽상경화성 심혈관계 질환<small data-in="25.1">심혈관계 위험 감소</small></span></div>
+ </div>
+</div>
+<div class="card dose" data-in="1.2">
+ <svg width="378" height="70" viewBox="0 0 348 70"><rect x="2" y="17" width="300" height="36" rx="18" fill="#fffdf9" stroke="#3f5a6b" stroke-width="3"/><rect x="214" y="17" width="88" height="36" rx="18" fill="#8c3b4a"/><rect x="60" y="26" width="90" height="18" rx="6" fill="#f4e7e9" stroke="#a3606b" stroke-width="2"/><rect x="300" y="27" width="40" height="16" rx="5" fill="#a9bcb9"/></svg>
+ <div class="big num">140<span class="unit">mg / 1 mL</span></div>
+ <div class="sub">1회용 프리필드펜<br>피하주사</div>
+</div>
+<div class="card why" data-in="4.4"><span class="lab">원내 도입 목적</span><div class="v">입원환자 사용</div></div>
+</div>
+</div>
+<script src="../timing.js"></script><script src="../../../lib/core.js"></script><script>
+useTiming('intro');
+SCENE.char=makeChar([
+ {k:'walk',t0:0.6,t1:2.2,x0:2150,x1:1700,run:true},
+ {k:'wave',t0:2.3,t1:4.0},{k:'bubble',t0:2.4,t1:5.6,text:'야간약사 박 선배입니다.<br>오늘은 레파타!'},
+ {k:'sip',t0:6.0,t1:7.4},
+ {k:'walk',t0:9.1,t1:10.3,x0:1700,x1:1600},
+ {k:'point',t0:10.5,t1:13.0,ang:86},
+ {k:'lean',t0:13.6,t1:15.2,ang:-10},
+ {k:'nod',t0:16.5,t1:17.6},
+ {k:'think',t0:18.6,t1:21.0},
+ {k:'walk',t0:21.4,t1:22.4,x0:1600,x1:1590},
+ {k:'point',t0:23.4,t1:26.0,ang:84},{k:'talk',t0:23.6,t1:25.4},
+ {k:'surprise',t0:26.4},{k:'nod',t0:28.0,t1:29.0},
+ {k:'walk',t0:29.3,t1:30.6,x0:1590,x1:2250,run:true}
+]);
+SCENE.char2=makeChar([
+ {k:'walk',t0:25.6,t1:26.8,x0:2200,x1:1790,slide:true},
+ {k:'bow',t0:26.9,t1:27.9},{k:'bubble',t0:26.9,t1:29.2,text:'신입 하루예요!<br>잘 부탁드려요!'},
+ {k:'spin',t0:28.2,t1:29.0},
+ {k:'walk',t0:29.4,t1:30.6,x0:1790,x1:2250,run:true}
+],'haru');
+render(0);
+</script></body></html>

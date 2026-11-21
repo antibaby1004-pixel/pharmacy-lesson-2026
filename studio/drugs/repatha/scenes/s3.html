@@ -1,0 +1,59 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../../lib/common.css"><style>
+.W{position:absolute;left:96px;width:1344px}
+.pair{top:276px;display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.pc{padding:30px 34px;display:grid;grid-template-columns:120px 1fr;gap:26px;align-items:center;height:250px}
+.pc h3{margin:6px 0 4px;font-size:44px;line-height:54px;font-weight:700}
+.pc p{margin:0;font-size:42px;line-height:54px;font-weight:600}
+.pc.b{border-color:#d9b9bf;background:#fdf6f6}.pc.b h3{color:var(--acc)}
+.vs{position:absolute;left:96px;top:548px;width:1344px;text-align:center}
+.vs span{display:inline-block;background:var(--paper);border:1.5px solid var(--hair);border-radius:999px;padding:6px 24px;font-size:30px;font-weight:600;color:var(--muted)}
+.rows{top:604px}
+.r{display:grid;grid-template-columns:230px 1fr;gap:22px;padding:18px 0;border-top:1.5px solid var(--hair);align-items:center}
+.r:last-child{border-bottom:1.5px solid var(--hair)}
+.r .lab{font-size:30px}
+.r .v{font-size:44px;line-height:56px;font-weight:600}
+.r .e{font-size:24px;letter-spacing:.08em;color:var(--muted);font-weight:600;margin-top:6px;text-transform:uppercase}
+.badge{display:inline-block;margin-left:18px;font-size:30px;font-weight:700;color:var(--acc);border:2px solid var(--acc);border-radius:999px;padding:2px 16px;vertical-align:middle}
+.chips{display:flex;gap:14px;flex-wrap:wrap}
+.chips span{font-size:40px;font-weight:600;background:var(--card);border:1.5px solid var(--hair);border-radius:14px;padding:8px 20px}
+</style></head><body><div class="stage">
+<div class="fade"><header class="top"><div class="sec"><b>특징과 사용 이유</b> · ROLE IN THERAPY</div><div class="chip">레파타 Repatha <i>· evolocumab</i></div></header>
+<h1>스타틴과 작용 지점이 다릅니다</h1></div>
+<div class="fade">
+<div class="wm">02</div>
+<div class="W pair">
+ <div class="card pc" data-in="0.3"><svg width="120" height="120" viewBox="0 0 120 120"><circle cx="60" cy="60" r="52" fill="#f2eee6" stroke="#a9bcb9" stroke-width="3"/><g transform="translate(60 56)" fill="none" stroke="#3f5a6b" stroke-width="6"><circle r="16"/><path d="M0 -28 v8 M0 20 v8 M-28 0 h8 M20 0 h8 M-20 -20 l6 6 M14 14 l6 6 M20 -20 l-6 6 M-14 14 l-6 6"/></g><path d="M92 74 v26 M82 90 l10 10 l10 -10" stroke="#3f5a6b" stroke-width="5" fill="none" stroke-linecap="round"/></svg>
+  <div><div class="en">Cholesterol synthesis</div><h3>스타틴</h3><p>간의 콜레스테롤 합성 감소</p></div></div>
+ <div class="card pc b" data-in="3.6"><svg width="120" height="120" viewBox="0 0 120 120"><circle cx="60" cy="60" r="52" fill="#f4e7e9" stroke="#d9b9bf" stroke-width="3"/><path d="M60 96 V60 M60 60 L42 38 M60 60 L78 38" stroke="#3f5a6b" stroke-width="9" stroke-linecap="round" fill="none"/><path d="M30 74 q30 -16 60 0" stroke="#8c3b4a" stroke-width="5" fill="none" stroke-linecap="round"/><path d="M80 24 l12 12 M92 24 l-12 12" stroke="#8c3b4a" stroke-width="5" stroke-linecap="round"/></svg>
+  <div><div class="en" style="color:#8c3b4a">Receptor degradation</div><h3>evolocumab</h3><p>수용체 분해 억제</p></div></div>
+</div>
+<div class="vs" data-in="9.0"><span>작용 지점이 다르다 → 함께 쓸 수 있다</span></div>
+<div class="W rows">
+ <div class="r" data-in="9.3"><span class="lab">치료 역할</span><div><div class="v">기존 치료로 충분히 조절되지 않을 때 추가 치료<span class="badge" data-in="16.9">추가 · 교체 아님</span></div><div class="e">Add-on lipid-lowering therapy</div></div></div>
+ <div class="r" data-in="22.0"><span class="lab">환자별 판단</span><div><div class="chips"><span data-in="22.4">적응증</span><span data-in="24.6">기존 치료 반응</span><span data-in="26.4">스타틴 내약성</span></div><div class="e">Indication · Treatment response · Statin tolerability</div></div></div>
+ <div class="r" data-in="28.9"><span class="lab">처방 확인</span><div><div class="v">허가 적응증과 국내 급여조건을 구분해 확인</div><div class="e">Approved indication / Reimbursement criteria</div></div></div>
+</div>
+</div></div>
+<script src="../timing.js"></script><script src="../../../lib/core.js"></script><script>
+useTiming('3');
+SCENE.char=makeChar([
+ {k:'walk',t0:1.0,t1:2.4,x0:2150,x1:1590},
+ {k:'think',t0:2.6,t1:4.2},
+ {k:'point',t0:4.4,t1:6.8,ang:92},
+ {k:'nod',t0:9.2,t1:10.4},
+ {k:'sip',t0:11.0,t1:12.4},
+ {k:'bubble',t0:17.3,t1:21.2,text:'그건 아니죠!<br>교체가 아니라 추가.'},
+ 
+ {k:'point',t0:24.4,t1:27.4,ang:88},
+ {k:'thumbs',t0:29.4,t1:32.4}
+]);
+SCENE.char2=makeChar([
+ {k:'walk',t0:13.4,t1:14.6,x0:2200,x1:1790,run:true},
+ {k:'memo',t0:14.6,t1:15.4},{k:'bubble',t0:14.8,t1:17.1,text:'선배, 그럼 스타틴은<br>이제 끊어요?'},{k:'talk',t0:15.0,t1:16.4},
+ {k:'facepalm',t0:18.0,t1:19.4},
+ {k:'memo',t0:20.0,t1:22.4},
+ {k:'clap',t0:25.0,t1:26.4},{k:'nod',t0:27.0,t1:28.0},
+ {k:'cheer',t0:29.6,t1:31.4},{k:'splash',t0:29.8,t1:30.6}
+],'haru');
+render(0);
+</script></body></html>

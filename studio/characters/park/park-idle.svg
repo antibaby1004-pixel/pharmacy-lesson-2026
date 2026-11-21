@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="660" viewBox="-100 -20 560 660" style=""><style>.o{stroke:#1f2a37;stroke-width:6;stroke-linejoin:round;stroke-linecap:round}text{font-family:Pretendard,"Apple SD Gothic Neo","Malgun Gothic",sans-serif}</style>
+<g id="cBody">
+ <g id="legL" transform="translate(150 430) rotate(0)"><rect class="o" x="-22" y="0" width="44" height="170" rx="14" fill="#3b4a66"></rect><ellipse class="o" cx="-12" cy="178" rx="34" ry="16" fill="#1f2a37"></ellipse></g>
+ <g id="legR" transform="translate(210 430) rotate(0)"><rect class="o" x="-22" y="0" width="44" height="170" rx="14" fill="#3b4a66"></rect><ellipse class="o" cx="-12" cy="178" rx="34" ry="16" fill="#1f2a37"></ellipse></g>
+ <path class="o" d="M70 480 L92 350 Q110 300 180 294 Q250 300 268 350 L290 480Z" fill="#fff"></path>
+ <path class="o" d="M150 298 L180 352 L210 298" fill="#8c3b4a"></path>
+ <path class="o" d="M180 352 V478" fill="none" stroke-width="4"></path>
+ <rect x="210" y="370" width="50" height="26" rx="5" fill="#1f2a37"></rect><text x="235" y="390" text-anchor="middle" font-weight="700" font-size="16" fill="#fff">야간</text>
+ <g id="head" transform="rotate(0 180 260)">
+  <rect class="o" x="164" y="252" width="32" height="44" rx="8" fill="#e9c09c"></rect>
+  <ellipse class="o" cx="180" cy="190" rx="84" ry="90" fill="#f3cfae"></ellipse>
+  <path class="o" d="M96 178 L90 128 L114 144 L118 98 L140 128 L156 84 L174 120 L196 82 L208 122 L236 92 L236 132 L264 116 L266 178 Q244 136 180 138 Q118 136 96 178Z" fill="#3a2f28"></path>
+  <g id="eyeN"><path class="o" d="M122 196 h38 M200 196 h38" fill="none"></path><path d="M124 198 q17 13 34 0 M202 198 q17 13 34 0" fill="none" stroke="#1f2a37" stroke-width="5"></path></g>
+  <g id="eyeC" style="display:none"><path class="o" d="M122 200 q19 8 38 0 M200 200 q19 8 38 0" fill="none"></path></g>
+  <g id="eyeW" style="display:none"><circle class="o" cx="141" cy="196" r="17" fill="#fff"></circle><circle class="o" cx="219" cy="196" r="17" fill="#fff"></circle><circle cx="141" cy="198" r="7" fill="#1f2a37"></circle><circle cx="219" cy="198" r="7" fill="#1f2a37"></circle></g>
+  <path d="M122 220 q19 11 38 0 M200 220 q19 11 38 0" fill="none" stroke="#9a8fc4" stroke-width="6" stroke-linecap="round"></path>
+  <g fill="#6b5a4e"><circle cx="156" cy="262" r="2.5"></circle><circle cx="168" cy="268" r="2.5"></circle><circle cx="192" cy="268" r="2.5"></circle><circle cx="204" cy="262" r="2.5"></circle><circle cx="180" cy="272" r="2.5"></circle></g>
+  <path id="mF" class="o" d="M164 248 h32" fill="none"></path>
+  <ellipse id="mO" class="o" cx="180" cy="248" rx="13" ry="9" fill="#7a2e2e" style="display:none"></ellipse>
+  <ellipse id="mY" class="o" cx="180" cy="250" rx="20" ry="26" fill="#7a2e2e" style="display:none"></ellipse>
+  <path id="mS" class="o" d="M160 242 q20 18 40 0" fill="none" style="display:none"></path>
+  <path id="sweat" d="M268 150 q10 18 0 28 q-10 -10 0 -28z" fill="#7ea6e0" style="opacity:0" transform="translate(0 0)"></path>
+  <g id="bang" style="opacity:0"><path class="o" d="M60 70 l18 30 M40 120 l30 8 M300 70 l-18 30 M320 120 l-30 8" fill="none" stroke="#a86400" stroke-width="7"></path></g>
+ </g>
+ <g id="armM" transform="translate(262 318)"><g id="armMr" transform="rotate(0)"><rect class="o" x="-20" y="0" width="40" height="150" rx="18" fill="#fff"></rect><circle class="o" cx="0" cy="152" r="18" fill="#f3cfae"></circle>
+   <g id="mug" transform="translate(0 150) rotate(0)"><rect class="o" x="6" y="-30" width="54" height="58" rx="8" fill="#3d7a6e"></rect><path class="o" d="M60 -16 q20 0 20 16 q0 16 -20 16" fill="none"></path></g></g></g>
+ <g id="armP" transform="translate(98 318)"><g id="armPr" transform="rotate(0)"><rect class="o" x="-20" y="0" width="40" height="160" rx="18" fill="#fff"></rect>
+   <g id="hP"><circle class="o" cx="0" cy="162" r="18" fill="#f3cfae"></circle><path class="o" d="M0 176 v26" fill="none" stroke-width="10"></path></g>
+   <g id="hW" style="display:none"><ellipse class="o" cx="0" cy="170" rx="22" ry="26" fill="#f3cfae"></ellipse><path class="o" d="M-12 190 v14 M0 194 v14 M12 190 v14" fill="none" stroke-width="5"></path></g>
+   <g id="hT" style="display:none"><circle class="o" cx="0" cy="164" r="20" fill="#f3cfae"></circle><g transform="translate(0 164) rotate(-130)"><rect class="o" x="-8" y="-50" width="16" height="36" rx="8" fill="#f3cfae"></rect></g></g>
+ </g></g>
+</g></svg>
