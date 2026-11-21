@@ -1,5 +1,5 @@
 const steps=[
-{title:'제로암 소개 · 함량과 허가 적응증',file:'intro',duration:40.869},
+{title:'제로암 소개 · 함량과 허가 적응증',file:'intro',duration:38.795},
 {title:'DNA 복제 · 재료가 필요하다',file:0,duration:10.044},{title:'닮은꼴 재료 · 인산화',file:1,duration:11.124},{title:'DNA 합성 억제 · 증식 억제',file:2,duration:14.158},
 {title:'기전 영상 · 0:15–2:45',id:'QA5ufAU1NSk',start:15,end:165},
 {title:'용량과 사용법',file:5,duration:31.29},{title:'조제 · 녹이는 순서',file:'recon',duration:43.647},
