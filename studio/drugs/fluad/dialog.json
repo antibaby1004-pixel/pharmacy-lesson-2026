@@ -1,0 +1,174 @@
+{
+ "voices": {
+  "wang": {
+   "voice": "en-US-BrianMultilingualNeural",
+   "rate": "-8%",
+   "pitch": "-14Hz",
+   "gain": 1.35
+  },
+  "park": {
+   "voice": "en-US-AndrewMultilingualNeural",
+   "rate": "-6%",
+   "pitch": "-8Hz",
+   "gain": 1.45
+  }
+ },
+ "lines": {
+  "intro": [
+   {
+    "who": "wang",
+    "bubble": "허허, 면역학 40년<br>왕교수일세!",
+    "say": "허허, 면역학 사십 년, 왕교수일세!",
+    "at": 2.1,
+    "with": [
+     {
+      "k": "wave",
+      "dt": 0,
+      "len": 1.6
+     }
+    ]
+   }
+  ],
+  "0": [
+   {
+    "who": "wang",
+    "bubble": "MF59는 면역세포를<br>부르는 초대장이지.",
+    "say": "엠에프 오십구는, 면역세포를 부르는 초대장이지.",
+    "at": 8.6,
+    "with": [
+     {
+      "k": "point",
+      "dt": 0,
+      "len": 2.0,
+      "ang": 100
+     }
+    ]
+   }
+  ],
+  "2": [
+   {
+    "who": "wang",
+    "bubble": "나 같은 노인에게<br>딱 맞는 백신이야!",
+    "say": "나 같은 노인에게, 딱 맞는 백신이야!",
+    "at": 8.4,
+    "with": [
+     {
+      "k": "thumbs",
+      "dt": 0,
+      "len": 1.6
+     }
+    ]
+   }
+  ],
+  "storage": [
+   {
+    "who": "wang",
+    "bubble": "얼었으면 미련 없이<br>버리게!",
+    "say": "얼었으면, 미련 없이 버리게!",
+    "at": 9.0,
+    "with": [
+     {
+      "k": "shrug",
+      "dt": 0,
+      "len": 1.4
+     }
+    ]
+   }
+  ],
+  "check": [
+   {
+    "who": "park",
+    "bubble": "계란 알레르기,<br>꼭 물어보세요?",
+    "say": "계란 알레르기도, 꼭 물어봐야 하죠?",
+    "at": 8.2,
+    "with": [
+     {
+      "k": "prop",
+      "name": "phone",
+      "dt": 0,
+      "len": 2.0
+     }
+    ]
+   },
+   {
+    "who": "wang",
+    "bubble": "그렇지,<br>성분 과민반응도!",
+    "say": "그렇지, 성분 과민반응도!",
+    "at": 8.3,
+    "with": [
+     {
+      "k": "nod",
+      "dt": 0,
+      "len": 1.2
+     }
+    ]
+   }
+  ],
+  "4": [
+   {
+    "who": "wang",
+    "bubble": "관찰 시간,<br>절대 건너뛰지 말게.",
+    "say": "관찰 시간, 절대 건너뛰지 말게.",
+    "at": 16.9,
+    "with": [
+     {
+      "k": "prop",
+      "name": "clock",
+      "dt": 0,
+      "len": 2.0
+     }
+    ]
+   }
+  ],
+  "summary": [
+   {
+    "who": "park",
+    "bubble": "교수님,<br>정리 완벽해요!",
+    "say": "교수님, 정리 완벽해요!",
+    "at": 19.6,
+    "with": [
+     {
+      "k": "thumbs",
+      "dt": 0,
+      "len": 1.4
+     }
+    ]
+   },
+   {
+    "who": "both",
+    "bubble": "수고하셨습니다!<br>안녕~!",
+    "say": "수고하셨습니다! 안녕!",
+    "at": 19.7,
+    "with": [
+     {
+      "k": "walk",
+      "for": "wang",
+      "dt": 0,
+      "len": 1.1,
+      "x0": "cur",
+      "x1": 840
+     },
+     {
+      "k": "walk",
+      "for": "park",
+      "dt": 0,
+      "len": 1.1,
+      "x0": "cur",
+      "x1": 1090
+     },
+     {
+      "k": "wave",
+      "dt": 0.9,
+      "len": 2.2
+     },
+     {
+      "k": "hop",
+      "dt": 0.9,
+      "len": 2.2
+     }
+    ]
+   }
+  ]
+ },
+ "bridges": {}
+}

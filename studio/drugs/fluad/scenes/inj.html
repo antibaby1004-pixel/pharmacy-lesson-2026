@@ -1,0 +1,30 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../../lib/common.css"><style>
+svg text{font-family:P}
+.list{position:absolute;left:96px;top:262px;width:600px}
+.st{display:grid;grid-template-columns:52px 1fr;gap:18px;align-items:center;padding:16px 0;border-top:1.5px solid var(--hair);opacity:.42}
+.st:first-child{border-top:0}.st.on{opacity:1}
+.st .n{width:52px;height:52px;border-radius:999px;border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:700}
+.st.on .n{background:var(--acc);border-color:var(--acc);color:#fff}
+.st .h{font-size:34px;line-height:44px;font-weight:600}.st .d{font-size:24px;line-height:32px;color:var(--muted);margin-top:2px}
+.figc{position:absolute;left:730px;top:262px;width:710px;height:740px;overflow:hidden}.figc svg{position:absolute;left:0;top:0}
+</style></head><body><div class="stage">
+<div class="fade"><header class="top"><div class="sec"><b>프리필드시린지 접종</b> · HOW TO INJECT</div><div class="chip">플루아드 Fluad <i>· MF59 adjuvanted influenza vaccine</i></div></header><h1>흔들어 확인하고, 삼각근에 90도</h1></div>
+<div class="fade"><div class="list"><div class="st" data-on="1.7,5.0"><div class="n">1</div><div><div class="h">실온 도달 · 부드럽게 흔들기</div><div class="d">거품 나게 세게 흔들지 않기</div></div></div><div class="st" data-on="5.0,9.5"><div class="n">2</div><div><div class="h">우윳빛 백색 확인</div><div class="d">미립자·변색 → 사용 안 함</div></div></div><div class="st" data-on="9.5,12.0"><div class="n">3</div><div><div class="h">삼각근 90°</div><div class="d">근육까지 바늘 삽입</div></div></div><div class="st" data-on="12.0,15.3"><div class="n">4</div><div><div class="h">0.5 mL 전량 주입</div><div class="d">주입 후 바늘 빼기</div></div></div><div class="st" data-on="15.3"><div class="n">5</div><div><div class="h">바로 폐기</div><div class="d">폐기 용기에</div></div></div></div><div class="card figc"><svg width="710" height="740" viewBox="0 0 710 740"><defs><g id="syr"><rect x="-130" y="-22" width="230" height="44" rx="10" fill="#fff" stroke="#243341" stroke-width="5"/><rect class="liq" x="-112" y="-12" width="150" height="24" fill="#F4F1EA"/><path d="M100 -40 v80" stroke="#243341" stroke-width="9"/>
+<g class="plg"><rect x="100" y="-7" width="90" height="14" fill="#B6C6D2" stroke="#243341" stroke-width="3"/><rect x="188" y="-24" width="14" height="48" rx="4" fill="#B6C6D2" stroke="#243341" stroke-width="3"/></g><path d="M-130 0 h-60" stroke="#243341" stroke-width="4"/></g></defs>
+<g id="p1"><g id="shk" transform="translate(355 330)"><g transform="rotate(-90) scale(1.3)"><use href="#syr"/></g></g><text x="355" y="640" text-anchor="middle" font-size="30" font-weight="700" fill="#243341">부드럽게 흔들기</text><g id="th" transform="translate(560 180)"><circle r="54" fill="#fff" stroke="#243341" stroke-width="4"/><text y="10" text-anchor="middle" font-size="28" font-weight="700" fill="#D96C00">실온</text></g></g>
+<g id="p2"><g transform="translate(330 330) scale(1.55)"><use href="#syr"/></g><circle cx="300" cy="330" r="90" fill="none" stroke="#007F86" stroke-width="6"/><path d="M364 394 l70 70" stroke="#007F86" stroke-width="14" stroke-linecap="round"/><text x="355" y="560" text-anchor="middle" font-size="30" font-weight="700" fill="#243341">우윳빛 백색 현탁액</text><text x="355" y="606" text-anchor="middle" font-size="26" font-weight="700" fill="#D2342A">미립자·변색 → 사용 안 함</text></g>
+<g id="p3"><path d="M120 120 q-40 300 30 600 h360 q40 -300 -10 -600z" fill="#F3E2D3" stroke="#243341" stroke-width="4"/><ellipse cx="300" cy="300" rx="120" ry="90" fill="#EBCDB0" opacity=".7"/><text x="300" y="440" text-anchor="middle" font-size="26" font-weight="700" fill="#7D4A00">삼각근</text>
+<g id="s3"><g transform="rotate(0) scale(1.1)"><use href="#syr"/></g></g><text id="d90" x="520" y="220" font-size="44" font-weight="700" fill="#007F86">90°</text><g id="cnt" style="opacity:0"><text x="560" y="420" text-anchor="middle" font-size="56" font-weight="700" fill="#D96C00">0.5</text><text x="560" y="460" text-anchor="middle" font-size="24" fill="#243341">mL</text></g></g>
+<g id="p5"><path d="M220 330 h240 l-24 300 h-192 z" fill="#FCE9E7" stroke="#D2342A" stroke-width="5"/><rect x="206" y="300" width="268" height="40" rx="10" fill="#D2342A"/><text x="340" y="500" text-anchor="middle" font-size="30" font-weight="700" fill="#D2342A">폐기 용기</text><g id="s5"><g transform="rotate(90) scale(.6)"><use href="#syr"/></g></g></g></svg></div></div>
+</div>
+<script src="../timing.js"></script><script src="../../../lib/core.js"></script><script>
+useTiming('inj');const $i=i=>document.getElementById(i);
+function vis(o,W){for(const [id,a,b] of W){const v=(a<=0.1?seg(o,0,.3):easeOut(seg(o,a+.05,a+.4)))*(1-seg(o,b+.05,b+.4));$i(id).style.opacity=v;$i(id).style.display=v<.01?'none':''}}
+const W=[['p1',0.1,5.0],['p2',5.0,9.5],['p3',9.5,15.3],['p5',15.3,99]];
+SCENE.anim=o=>{vis(o,W);const sh=seg(o,2.4,4.8)>0&&seg(o,2.4,4.8)<1?Math.sin(o*9)*10:0;$i('shk').setAttribute('transform',`translate(355 330) rotate(${sh})`);
+ const ins=ease(seg(o,10.0,10.8)),push=seg(o,12.3,14.2),out=ease(seg(o,14.4,15.0));
+ $i('s3').setAttribute('transform',`translate(${lerp(560,420,ins)+out*140} 300)`);$i('s3').querySelectorAll('.plg').forEach(e=>e.setAttribute('transform',`translate(${-push*140} 0)`));$i('s3').querySelectorAll('.liq').forEach(e=>e.setAttribute('width',150*(1-push)));
+ $i('d90').style.opacity=seg(o,9.8,10.2)*(1-seg(o,11.8,12.2));$i('cnt').style.opacity=seg(o,12.3,12.6);
+ $i('s5').setAttribute('transform',`translate(340 ${lerp(60,470,ease(seg(o,15.8,17.0)))})`);$i('s5').querySelectorAll('.plg').forEach(e=>e.setAttribute('transform','translate(-140 0)'));$i('s5').querySelectorAll('.liq').forEach(e=>e.setAttribute('width',0))};
+SCENE.char=makeChar([{k:'walk',t0:0.15,t1:1.2,x0:2250,x1:1600},{k:'prop',name:'thermo',t0:1.8,t1:4.4},{k:'prop',name:'magnifier',t0:5.2,t1:8.8},{k:'point',t0:9.8,t1:11.6,ang:110},{k:'nod',t0:12.6,t1:13.6},{k:'clap',t0:15.6,t1:17.0}],'lead');
+</script><script src="../../../lib/highlight.js"></script></body></html>

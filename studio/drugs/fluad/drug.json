@@ -1,0 +1,129 @@
+{
+ "name": "플루아드",
+ "no": 6,
+ "name_en": "Fluad · MF59 adjuvanted influenza vaccine",
+ "parts": [
+  {
+   "part": "intro",
+   "scene": "intro.html",
+   "video_dur": 25.68
+  },
+  {
+   "part": "0",
+   "scene": "m0.html",
+   "video_dur": 8.63
+  },
+  {
+   "part": "1",
+   "scene": "m1.html",
+   "video_dur": 6.66
+  },
+  {
+   "part": "2",
+   "scene": "m2.html",
+   "video_dur": 12.66
+  },
+  {
+   "part": "5",
+   "scene": "s5.html",
+   "video_dur": 9.88
+  },
+  {
+   "part": "inj",
+   "scene": "inj.html",
+   "video_dur": 18.26
+  },
+  {
+   "part": "storage",
+   "scene": "st.html",
+   "video_dur": 9.03
+  },
+  {
+   "part": "check",
+   "scene": "check.html",
+   "video_dur": 21.49
+  },
+  {
+   "part": "4",
+   "scene": "s4.html",
+   "video_dur": 20.58
+  },
+  {
+   "part": "summary",
+   "scene": "sum.html",
+   "video_dur": 21.29
+  }
+ ],
+ "order": [
+  "intro",
+  "0",
+  "1",
+  "2",
+  "5",
+  "inj",
+  "storage",
+  "check",
+  "4",
+  "summary"
+ ],
+ "player_parts": [
+  "intro",
+  "0",
+  "1",
+  "2",
+  "5",
+  "inj",
+  "storage",
+  "check",
+  "4",
+  "summary"
+ ],
+ "cast": {
+  "lead": "wang",
+  "cameo": "park"
+ },
+ "props": [
+  "syringe",
+  "thermo",
+  "book",
+  "magnifier",
+  "clock",
+  "phone",
+  "mega"
+ ],
+ "highlight": {
+  "generic": [
+   "MF59",
+   "스쿠알렌",
+   "불활화 백신",
+   "항원"
+  ],
+  "target": [
+   "면역세포",
+   "항원제시세포",
+   "림프절",
+   "T세포",
+   "B세포",
+   "항체"
+  ],
+  "warn": [
+   "동결 금지",
+   "얼리면",
+   "얼었던",
+   "정맥",
+   "피하",
+   "피내",
+   "과민반응",
+   "계란",
+   "길랑-바레",
+   "중증 알레르기",
+   "호흡곤란",
+   "얼굴 부종",
+   "아나필락시스",
+   "미립자",
+   "변색",
+   "출혈",
+   "실신"
+  ]
+ }
+}

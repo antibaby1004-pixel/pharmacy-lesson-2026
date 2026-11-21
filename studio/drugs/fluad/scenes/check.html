@@ -1,0 +1,15 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../../lib/common.css"><style>
+svg text{font-family:P}
+.box{position:absolute;left:96px;width:1344px;padding:20px 32px;display:grid;grid-template-columns:240px 1fr;align-items:center;gap:24px}
+.box .lab{font-size:30px}.box .v{font-size:38px;font-weight:600;line-height:50px}.box .e{font-size:24px;color:var(--muted);letter-spacing:.06em;margin-top:4px}
+.box.red{border-color:#F2B8B2;background:#FCE9E7}.box.red .lab,.box.red .v{color:#8E2219}
+.box.amb{border-color:#F3C58A;background:#FFF7EC}.box.amb .lab,.box.amb .v{color:#7D4A00}
+</style></head><body><div class="stage">
+<div class="fade"><header class="top"><div class="sec"><b>접종 전 확인</b> · BEFORE VACCINATION</div><div class="chip">플루아드 Fluad <i>· MF59 adjuvanted influenza vaccine</i></div></header><h1>과민반응과 이전 반응부터 묻습니다</h1></div>
+<div class="fade"><div class="card box " style="top:262px" data-in="0.1"><span class="lab">이전 반응</span><div><div class="v">이전 백신 접종 후 중증 반응</div></div></div><div class="card box red" style="top:402px" data-in="4.4"><span class="lab">과민반응</span><div><div class="v">백신 성분 · 계란 단백 등</div><div class=e>HYPERSENSITIVITY</div></div></div><div class="card box " style="top:542px" data-in="8.3"><span class="lab">발열·급성 감염</span><div><div class="v">접종 연기 여부 평가</div></div></div><div class="card box amb" style="top:682px" data-in="12.1"><span class="lab">길랑-바레</span><div><div class="v">이전 독감 백신 6주 이내 발생 → 신중 판단</div><div class=e>GBS</div></div></div><div class="card box " style="top:822px" data-in="16.9"><span class="lab">출혈 위험</span><div><div class="v">항응고제 · 혈소판 감소 → 근육주사 출혈 주의</div></div></div></div>
+</div>
+<script src="../timing.js"></script><script src="../../../lib/core.js"></script><script>
+useTiming('check');window.CENTER_FIRST=1.2;const $i=i=>document.getElementById(i);
+SCENE.char=makeChar([{k:'walk',t0:0.15,t1:1.2,x0:2250,x1:1620},{k:'prop',name:'book',t0:0.8,t1:3.8},{k:'prop',name:'magnifier',t0:4.6,t1:7.6},{k:'prop',name:'thermo',t0:8.6,t1:11.4},{k:'think',t0:12.4,t1:15.0}],'lead');
+SCENE.char2=makeChar([{k:'walk',t0:16.4,t1:17.6,x0:2300,x1:1850},{k:'prop',name:'phone',t0:17.8,t1:20.4},{k:'walk',t0:21.2,t1:22.4,x0:1850,x1:2320}],'cameo');
+</script><script src="../../../lib/highlight.js"></script></body></html>

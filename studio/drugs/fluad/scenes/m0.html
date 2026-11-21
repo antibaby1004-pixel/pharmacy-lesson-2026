@@ -1,0 +1,19 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../../lib/common.css"><style>
+svg text{font-family:P}
+.grid{display:grid;grid-template-columns:680px 1fr;gap:52px;width:1344px}.fig{height:640px;position:relative;overflow:hidden}.s p{font-size:30px;line-height:42px}
+</style></head><body><div class="stage">
+<div class="fade"><header class="top"><div class="sec"><b>작용 기전</b> · 01 / 03</div><div class="chip">플루아드 Fluad <i>· MF59 adjuvanted influenza vaccine</i></div></header><h1>MF59는 주사 부위로 면역세포를 모읍니다</h1></div>
+<div class="fade"><div class="grid"><div class="steps"><div class="s" data-on="0,4.3"><div class="n">1</div><div><h3>항원 + MF59 주사</h3><p>스쿠알렌 수중유형 유화액이 항원과 함께 근육에</p></div></div><div class="s" data-on="4.3,6.8"><div class="n">2</div><div><h3>면역세포 모집</h3><p>주사 부위로 면역세포가 모인다</p></div></div><div class="s" data-on="6.8"><div class="n">3</div><div><h3>다음: 항원 섭취</h3><p>모인 세포가 항원을 받아들인다</p></div></div></div><div class="card fig"><svg width="100%" height="100%" viewBox="0 0 612 640"><defs><g id="apc"><path d="M-30 -10 q-10 -26 14 -30 q10 -18 30 -4 q26 -6 24 20 q18 14 -2 30 q4 24 -22 22 q-16 16 -30 -2 q-24 2 -20 -20 q-16 -12 6 -16z" fill="#E2F2F3" stroke="#007F86" stroke-width="3"/><circle r="9" fill="#7FC6CA"/></g>
+<g id="ag"><path d="M0 -10 l9 5 v10 l-9 5 l-9 -5 v-10z" fill="#D96C00"/></g><g id="drop"><circle r="7" fill="#FFF7EC" stroke="#E0B060" stroke-width="2.5"/></g></defs><rect x="30" y="80" width="552" height="480" rx="30" fill="#F6E3E0" stroke="#243341" stroke-width="4"/><text x="50" y="118" font-size="22" fill="#8E2219">근육 (주사 부위)</text>
+<g id="ndl"><rect x="250" y="-60" width="110" height="34" rx="8" fill="#fff" stroke="#243341" stroke-width="4" transform="rotate(90 305 -43)"/><path d="M305 10 v170" stroke="#243341" stroke-width="4"/></g>
+<g id="mix"></g><g id="cells"></g><text id="lb" x="306" y="610" text-anchor="middle" font-size="26" font-weight="700" fill="#007F86" style="opacity:0">MF59 → 면역세포 모집</text></svg></div></div><div class="key" data-in="5.4"><span class="k">KEY</span><span>면역세포 모집</span></div><div class="fn">교육용 개념도</div></div>
+</div>
+<script src="../timing.js"></script><script src="../../../lib/core.js"></script><script>
+useTiming('0');const $i=i=>document.getElementById(i);
+let m='';for(let i=0;i<14;i++)m+=`<use id="m${i}" href="${i%2?'#ag':'#drop'}"/>`;$i('mix').innerHTML=m;let c='';for(let i=0;i<6;i++)c+=`<use id="c${i}" href="#apc"/>`;$i('cells').innerHTML=c;
+SCENE.anim=o=>{const inj=seg(o,0.4,1.6);$i('ndl').setAttribute('transform',`translate(0 ${lerp(-40,120,ease(inj))-ease(seg(o,2.6,3.4))*260})`);
+ for(let i=0;i<14;i++){const a=i*2.4,r=lerp(0,30+(i%5)*18,seg(o,1.4,3.0));const e=$i('m'+i);e.setAttribute('x',306+Math.cos(a)*r);e.setAttribute('y',330+Math.sin(a)*r);e.style.opacity=seg(o,1.2,1.6)}
+ for(let i=0;i<6;i++){const a=i/6*Math.PI*2,R=lerp(330,120,easeOut(seg(o,4.4+i*.25,6.6+i*.25)));const e=$i('c'+i);e.setAttribute('x',306+Math.cos(a)*R);e.setAttribute('y',330+Math.sin(a)*R*.8);e.style.opacity=seg(o,4.3+i*.25,4.8+i*.25)}
+ $i('lb').style.opacity=seg(o,5.4,5.9)};
+SCENE.char=makeChar([{k:'walk',t0:0.15,t1:1.2,x0:2250,x1:1620},{k:'prop',name:'syringe',t0:0.8,t1:3.6},{k:'point',t0:4.6,t1:6.8,ang:100}],'lead');
+</script><script src="../../../lib/highlight.js"></script></body></html>

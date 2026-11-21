@@ -1,0 +1,22 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../../lib/common.css"><style>
+svg text{font-family:P}
+.g{position:absolute;left:96px;top:262px;width:1344px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.c{padding:26px 30px;height:300px;box-sizing:border-box}.c .v{font-size:38px;font-weight:600;line-height:52px;margin-top:16px}
+.c.red{border-color:#F2B8B2;background:#FCE9E7}.c.red .lab,.c.red .v{color:#8E2219}
+</style></head><body><div class="stage">
+<div class="fade"><header class="top"><div class="sec"><b>핵심 정리</b> · TAKE-HOME MESSAGE</div><div class="chip">플루아드 Fluad <i>· MF59 adjuvanted influenza vaccine</i></div></header><h1>플루아드, 이 6가지만 기억하세요</h1></div>
+<div class="fade"><div class="wm">06</div><div class="g">
+<div class="card c" data-in="1.3"><span class="lab">대상</span><div class="v">만 65세 이상<br>인플루엔자 예방</div></div>
+<div class="card c" data-in="6.2"><span class="lab">MF59</span><div class="v">면역세포 모집<br>항체 반응 ↑</div></div>
+<div class="card c" data-in="10.4"><span class="lab">용법</span><div class="v">0.5 mL 매년 1회<br>삼각근 IM</div></div>
+<div class="card c red" data-in="14.1"><span class="lab">보관</span><div class="v">2–8°C 냉장<br>동결 금지</div></div>
+<div class="card c" data-in="15.6"><span class="lab">접종 직전</span><div class="v">흔들기<br>우윳빛 확인</div></div>
+<div class="card c red" data-in="18.2"><span class="lab">안전</span><div class="v">과민반응 확인<br>접종 후 관찰</div></div></div></div>
+</div>
+<script src="../timing.js"></script><script src="../../../lib/core.js"></script><script>
+useTiming('summary');window.CENTER_FIRST=1.6;const $i=i=>document.getElementById(i);
+const BT=((TIMING.summary.dialog||[]).find(d=>d.who==='both')||{}).t0||1e9;
+SCENE.anim=(o,T)=>{const dm=1-.72*easeOut(seg(T,BT-1.1,BT-.2));document.querySelectorAll('.card,.wm').forEach(e=>e.style.filter=dm<1?`opacity(${dm})`:'')};
+SCENE.char=makeChar([{k:'walk',t0:0.15,t1:1.2,x0:2250,x1:1560},{k:'prop',name:'book',t0:2.0,t1:4.6},{k:'prop',name:'syringe',t0:10.6,t1:13.0},{k:'prop',name:'thermo',t0:14.2,t1:16.0}],'lead');
+SCENE.char2=makeChar([{k:'walk',t0:18.0,t1:19.2,x0:2300,x1:1830},{k:'nod',t0:19.4,t1:20.2}],'cameo');
+</script><script src="../../../lib/highlight.js"></script></body></html>

@@ -1,0 +1,16 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../../lib/common.css"><style>
+svg text{font-family:P}
+.grid{display:grid;grid-template-columns:680px 1fr;gap:52px;width:1344px}.fig{height:640px;position:relative;overflow:hidden}.s p{font-size:30px;line-height:42px}
+</style></head><body><div class="stage">
+<div class="fade"><header class="top"><div class="sec"><b>작용 기전</b> · 02 / 02</div><div class="chip">라베피드 Rabepid <i>· rabeprazole + CaCO₃</i></div></header><h1>탄산칼슘은 이미 나온 산을 중화합니다</h1></div>
+<div class="fade"><div class="grid"><div class="steps"><div class="s" data-on="0,2.4"><div class="n">1</div><div><h3>이미 나온 산</h3><p>위 안에 분비된 위산(H⁺)</p></div></div><div class="s" data-on="2.4,4.9"><div class="n">2</div><div><h3>CaCO₃가 중화</h3><p>탄산칼슘이 산과 반응해 중화</p></div></div><div class="s" data-on="4.9"><div class="n">3</div><div><h3>분비 억제 ≠ 중화</h3><p>두 성분은 작용 위치가 다르다</p></div></div></div><div class="card fig"><svg width="100%" height="100%" viewBox="0 0 612 640"><rect x="40" y="60" width="532" height="500" rx="30" fill="#EEF6FB" stroke="#243341" stroke-width="4"/><text x="60" y="100" font-size="22" fill="#3E5872">위 안</text>
+<g id="hs"></g><g id="ca" transform="translate(306 330)"><circle r="56" fill="#fff" stroke="#243341" stroke-width="4"/><text y="8" text-anchor="middle" font-size="24" font-weight="700" fill="#243341">CaCO₃</text></g>
+<g id="bub"></g><text id="eq" x="306" y="610" text-anchor="middle" font-size="26" font-weight="700" fill="#007F86" style="opacity:0">CaCO₃ + 2HCl → CaCl₂ + H₂O + CO₂</text></svg></div></div><div class="key" data-in="4.9"><span class="k">KEY</span><span>억제(라베프라졸) + 중화(탄산칼슘)</span></div><div class="fn">교육용 개념도</div></div>
+</div>
+<script src="../timing.js"></script><script src="../../../lib/core.js"></script><script>
+useTiming('1');const $i=i=>document.getElementById(i);
+let h='';for(let i=0;i<8;i++)h+=`<g id="h${i}"><circle r="18" fill="#D96C00"/><text y="7" text-anchor="middle" font-size="18" font-weight="700" fill="#fff">H⁺</text></g>`;$i('hs').innerHTML=h;let b='';for(let i=0;i<6;i++)b+=`<circle id="b${i}" r="${8+i%3*4}" fill="none" stroke="#7FC6CA" stroke-width="3"/>`;$i('bub').innerHTML=b;
+SCENE.anim=o=>{for(let i=0;i<8;i++){const a=i/8*Math.PI*2+o*.4,r=lerp(220,40,seg(o,1.0+i*.3,2.6+i*.3));$i('h'+i).setAttribute('transform',`translate(${306+Math.cos(a)*r} ${330+Math.sin(a)*r*.8})`);$i('h'+i).style.opacity=1-seg(o,2.4+i*.3,2.8+i*.3)}
+ for(let i=0;i<6;i++){const ph=((o-2)*.5+i/6)%1;const e=$i('b'+i);e.setAttribute('cx',270+i*14);e.setAttribute('cy',300-ph*220);e.style.opacity=o>2.4?1-ph:0}$i('eq').style.opacity=seg(o,4.4,4.9)};
+SCENE.char=makeChar([{k:'walk',t0:0.15,t1:1.2,x0:2250,x1:1620},{k:'prop',name:'pill',t0:1.4,t1:4.0},{k:'clap',t0:5.4,t1:6.6}],'lead');
+</script><script src="../../../lib/highlight.js"></script></body></html>

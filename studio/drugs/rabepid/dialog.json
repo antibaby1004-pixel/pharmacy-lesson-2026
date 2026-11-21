@@ -1,0 +1,165 @@
+{
+ "voices": {
+  "skull": {
+   "voice": "it-IT-GiuseppeMultilingualNeural",
+   "rate": "+4%",
+   "pitch": "-2Hz",
+   "gain": 1.3
+  },
+  "wang": {
+   "voice": "en-US-BrianMultilingualNeural",
+   "rate": "-8%",
+   "pitch": "-14Hz",
+   "gain": 1.35
+  }
+ },
+ "lines": {
+  "intro": [
+   {
+    "who": "skull",
+    "bubble": "뼈 빼고 다 아는<br>해골약사! 오늘은 라베피드!",
+    "say": "뼈 빼고 다 아는 해골약사! 오늘은 라베피드!",
+    "at": 2.3,
+    "with": [
+     {
+      "k": "wave",
+      "dt": 0,
+      "len": 1.6
+     },
+     {
+      "k": "hop",
+      "dt": 0.4,
+      "len": 1.0
+     }
+    ]
+   }
+  ],
+  "1": [
+   {
+    "who": "skull",
+    "bubble": "칼슘이라면<br>제 전문이죠!",
+    "say": "칼슘이라면, 제 전문이죠!",
+    "at": 4.6,
+    "with": [
+     {
+      "k": "thumbs",
+      "dt": 0,
+      "len": 1.6
+     }
+    ]
+   }
+  ],
+  "5": [
+   {
+    "who": "skull",
+    "bubble": "두 알 먹으면<br>칼슘도 두 배!",
+    "say": "두 알 먹으면, 칼슘도 두 배!",
+    "at": 25.4,
+    "with": [
+     {
+      "k": "prop",
+      "name": "pill",
+      "dt": 0,
+      "len": 2.0
+     }
+    ]
+   }
+  ],
+  "4": [
+   {
+    "who": "wang",
+    "bubble": "허허, 간격을<br>꼭 떼세요.",
+    "say": "허허, 간격을 꼭 떼세요.",
+    "at": 17.8,
+    "with": [
+     {
+      "k": "prop",
+      "name": "clock",
+      "dt": 0,
+      "len": 2.0
+     }
+    ]
+   }
+  ],
+  "storage": [
+   {
+    "who": "skull",
+    "bubble": "습기는 뼈에도<br>안 좋아요!",
+    "say": "습기는, 뼈에도 안 좋아요!",
+    "at": 11.7,
+    "with": [
+     {
+      "k": "shrug",
+      "dt": 0,
+      "len": 1.4
+     }
+    ]
+   }
+  ],
+  "summary": [
+   {
+    "who": "wang",
+    "bubble": "해골 군,<br>오늘 잘했네.",
+    "say": "해골 군, 오늘 잘했네.",
+    "at": 19.6,
+    "with": [
+     {
+      "k": "thumbs",
+      "dt": 0,
+      "len": 1.4
+     }
+    ]
+   },
+   {
+    "who": "both",
+    "bubble": "수고하셨습니다!<br>안녕~!",
+    "say": "수고하셨습니다! 안녕!",
+    "at": 19.7,
+    "with": [
+     {
+      "k": "walk",
+      "for": "skull",
+      "dt": 0,
+      "len": 1.1,
+      "x0": "cur",
+      "x1": 840
+     },
+     {
+      "k": "walk",
+      "for": "wang",
+      "dt": 0,
+      "len": 1.1,
+      "x0": "cur",
+      "x1": 1090
+     },
+     {
+      "k": "wave",
+      "dt": 0.9,
+      "len": 2.2
+     },
+     {
+      "k": "hop",
+      "dt": 0.9,
+      "len": 2.2
+     }
+    ]
+   }
+  ]
+ },
+ "bridges": {
+  "yt1": {
+   "who": "skull",
+   "bubble": "첫 번째 영상,<br>시작!",
+   "say": "첫 번째 영상, 시작!",
+   "at": 1.4,
+   "min_dur": 4.5
+  },
+  "yt2": {
+   "who": "skull",
+   "bubble": "이번엔<br>탄산칼슘!",
+   "say": "이번엔, 탄산칼슘!",
+   "at": 1.4,
+   "min_dur": 4.5
+  }
+ }
+}

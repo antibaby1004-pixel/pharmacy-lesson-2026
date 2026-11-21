@@ -1,0 +1,21 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../../lib/common.css"><style>
+svg text{font-family:P}
+.grid{display:grid;grid-template-columns:680px 1fr;gap:52px;width:1344px}.fig{height:640px;position:relative;overflow:hidden}.s p{font-size:30px;line-height:42px}
+</style></head><body><div class="stage">
+<div class="fade"><header class="top"><div class="sec"><b>작용 기전</b> · 02 / 03</div><div class="chip">플루아드 Fluad <i>· MF59 adjuvanted influenza vaccine</i></div></header><h1>면역세포가 항원을 들고 림프절로 갑니다</h1></div>
+<div class="fade"><div class="grid"><div class="steps"><div class="s" data-on="0,3.2"><div class="n">1</div><div><h3>항원 섭취</h3><p>면역세포가 백신 항원을 받아들인다</p></div></div><div class="s" data-on="3.2"><div class="n">2</div><div><h3>림프절로 이동</h3><p>항원제시세포가 림프관을 따라 림프절로</p></div></div></div><div class="card fig"><svg width="100%" height="100%" viewBox="0 0 612 640"><defs><g id="apc"><path d="M-30 -10 q-10 -26 14 -30 q10 -18 30 -4 q26 -6 24 20 q18 14 -2 30 q4 24 -22 22 q-16 16 -30 -2 q-24 2 -20 -20 q-16 -12 6 -16z" fill="#E2F2F3" stroke="#007F86" stroke-width="3"/><circle r="9" fill="#7FC6CA"/></g>
+<g id="ag"><path d="M0 -10 l9 5 v10 l-9 5 l-9 -5 v-10z" fill="#D96C00"/></g><g id="drop"><circle r="7" fill="#FFF7EC" stroke="#E0B060" stroke-width="2.5"/></g></defs><rect x="30" y="80" width="300" height="480" rx="30" fill="#F6E3E0" stroke="#243341" stroke-width="4"/><text x="50" y="118" font-size="22" fill="#8E2219">주사 부위</text>
+<path d="M330 330 C400 330 420 200 480 200" fill="none" stroke="#B6C6D2" stroke-width="22" stroke-linecap="round"/><text x="360" y="380" font-size="22" fill="#3E5872">림프관</text>
+<ellipse cx="500" cy="200" rx="80" ry="58" fill="#EEF0FA" stroke="#5B5FA8" stroke-width="4"/><text x="500" y="290" text-anchor="middle" font-size="24" font-weight="700" fill="#5B5FA8">림프절</text>
+<g id="ags"></g><use id="cell" href="#apc"/><g id="held"></g>
+<text id="lb" x="306" y="610" text-anchor="middle" font-size="26" font-weight="700" fill="#007F86" style="opacity:0">항원제시세포 → 림프절 이동</text></svg></div></div><div class="key" data-in="3.6"><span class="k">KEY</span><span>항원 인식과 전달</span></div><div class="fn">교육용 개념도</div></div>
+</div>
+<script src="../timing.js"></script><script src="../../../lib/core.js"></script><script>
+useTiming('1');const $i=i=>document.getElementById(i);
+let a='';for(let i=0;i<5;i++)a+=`<use id="a${i}" href="#ag"/>`;$i('ags').innerHTML=a;
+SCENE.anim=o=>{const eat=seg(o,0.8,2.6),mv=easeOut(seg(o,3.4,5.8));let cx,cy;if(mv<=0){cx=180;cy=360}else{const t=mv;cx=t<.4?lerp(180,330,t/.4):lerp(330,490,(t-.4)/.6);cy=t<.4?lerp(360,330,t/.4):lerp(330,205,(t-.4)/.6)}
+ const c=$i('cell');c.setAttribute('x',cx);c.setAttribute('y',cy);
+ for(let i=0;i<5;i++){const ang=i*1.3,r0=110,f=seg(o,0.8+i*.3,1.6+i*.3);const e=$i('a'+i);e.setAttribute('x',lerp(180+Math.cos(ang)*r0,cx+Math.cos(ang)*14,f));e.setAttribute('y',lerp(360+Math.sin(ang)*r0,cy+Math.sin(ang)*14,f))}
+ $i('lb').style.opacity=seg(o,3.6,4.1)};
+SCENE.char=makeChar([{k:'walk',t0:0.15,t1:1.2,x0:2250,x1:1620},{k:'point',t0:1.0,t1:3.0,ang:100},{k:'prop',name:'magnifier',t0:3.6,t1:6.0}],'lead');
+</script><script src="../../../lib/highlight.js"></script></body></html>
