@@ -125,22 +125,12 @@
   "inn": "vedolizumab",
   "photos": [
    {
-    "draw": "vial",
-    "args": [
-     "300 mg",
-     "정맥주사용",
-     "#C0504D"
-    ],
+    "img": "img/iv300.jpg",
     "label": "정맥 300 mg 바이알"
    },
    {
-    "draw": "pen",
-    "args": [
-     "108 mg",
-     "프리필드 펜",
-     "#3A8F8A"
-    ],
-    "label": "피하 108 mg 프리필드 펜"
+    "img": "img/pen108.jpg",
+    "label": "피하 108 mg 프리필드펜"
    }
   ],
   "facts": [
@@ -196,6 +186,7 @@
     "t0": 14.0,
     "t1": 15.8
    }
-  ]
+  ],
+  "photo_note": "실제 제품 사진 · KIMS"
  }
 }

@@ -121,21 +121,15 @@
   "inn": "gemcitabine",
   "photos": [
    {
-    "draw": "vial",
-    "args": [
-     "200 mg",
-     "동결건조 분말",
-     "#4C9A6A"
-    ],
+    "img": "img/box200.jpg",
+    "label": "200 mg 포장"
+   },
+   {
+    "img": "img/v200.jpg",
     "label": "200 mg 바이알"
    },
    {
-    "draw": "vial",
-    "args": [
-     "1 g",
-     "동결건조 분말",
-     "#2F6FB0"
-    ],
+    "img": "img/v1g.jpg",
     "label": "1 g 바이알"
    }
   ],
@@ -208,6 +202,7 @@
     "t0": 25.0,
     "t1": 26.0
    }
-  ]
+  ],
+  "photo_note": "실제 제품 사진 · KIMS"
  }
 }
