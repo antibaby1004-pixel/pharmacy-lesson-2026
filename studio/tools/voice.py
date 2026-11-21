@@ -28,7 +28,10 @@ for P in cfg['parts']:
         write_wav(os.path.join(d,'build',f'f_{p}.wav'),fa)
         OUT[p]={'dur':dur,'knots':None,'ins':[],'dialog':[{'who':b['who'],'text':b['bubble'],'t0':t0,'t1':round(t0+len(la)/SR+.45,3),'with':[]}]};continue
     nw=os.path.join(d,'build',f'n_{p}.wav');a=read_audio(nw);T=len(a)/SR
-    st,en=silences(nw,0.28);pts=[0.0]+[(s+e)/2 for s,e in zip(st,en)]+[T]
+    if M[p].get('cues'):
+        C=M[p]['cues'];pts=[0.0]+[((C[i]['end']-0.2)+C[i+1]['start'])/2 for i in range(len(C)-1)]+[T]   # 문장 사이에만 끼움
+    else:
+        st,en=silences(nw,0.28);pts=[0.0]+[(s+e)/2 for s,e in zip(st,en)]+[T]
     groups={}
     for L in DL['lines'].get(p,[]):
         tau=fwd_tight(p,L['at']);cand=[x for x in pts if x>=tau-0.6] or [T]
@@ -42,6 +45,6 @@ for P in cfg['parts']:
             gap+= [la,np.zeros(int(.3*SR),np.float32)];off+=du+.3
         gap.append(np.zeros(int(.1*SR),np.float32));G=np.concatenate(gap);pieces.append(G);ins.append([round(g,4),round(len(G)/SR,4)]);acc+=len(G)/SR
     pieces.append(a[last:]);write_wav(os.path.join(d,'build',f'f_{p}.wav'),np.concatenate(pieces))
-    OUT[p]={'dur':round(M[p]['dur']+acc,3),'knots':M[p]['knots'],'ins':ins,'dialog':dialog};print(p,OUT[p]['dur'],len(dialog),'lines')
+    OUT[p]={'dur':round(M[p]['dur']+acc,3),'knots':M[p]['knots'],'ins':ins,'dialog':dialog,'cues':M[p].get('cues')};print(p,OUT[p]['dur'],len(dialog),'lines')
 json.dump(OUT,open(os.path.join(d,'build','final.json'),'w'),ensure_ascii=False,indent=1)
 open(os.path.join(d,'timing.js'),'w').write('const TIMING='+json.dumps(OUT,ensure_ascii=False)+';\n')

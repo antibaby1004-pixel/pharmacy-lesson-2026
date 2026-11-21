@@ -20,18 +20,18 @@
 useTiming('0');
 const svg=$('#fig');baseFig(svg);
 const SC=1.4;
-const endo=el('ellipse',{cx:500,cy:450,rx:130,ry:100,fill:'#fffdf9',stroke:'#a9bcb9','stroke-width':3},svg);
-const endoL=lbl(svg,500,580,'엔도솜 · endosome','#5b6573',22,'middle');
-const rec=el('path',{d:'M628 420 C 720 360, 780 320, 800 290',stroke:'#3d7a6e','stroke-width':5,fill:'none','stroke-linecap':'round'},svg);
-const recH=el('path',{d:'M786 298 l14 -10 l4 18',stroke:'#3d7a6e','stroke-width':5,fill:'none','stroke-linecap':'round','stroke-linejoin':'round'},svg);
-const recL=lbl(svg,826,360,'수용체 재활용','#3d7a6e',26,'start',700);
+const endo=el('ellipse',{cx:500,cy:450,rx:130,ry:100,fill:'#FFFFFF',stroke:'#a9bcb9','stroke-width':3},svg);
+const endoL=lbl(svg,500,580,'엔도솜 · endosome','#5A6B7B',22,'middle');
+const rec=el('path',{d:'M628 420 C 720 360, 780 320, 800 290',stroke:'#007F86','stroke-width':5,fill:'none','stroke-linecap':'round'},svg);
+const recH=el('path',{d:'M786 298 l14 -10 l4 18',stroke:'#007F86','stroke-width':5,fill:'none','stroke-linecap':'round','stroke-linejoin':'round'},svg);
+const recL=lbl(svg,826,360,'수용체 재활용','#007F86',26,'start',700);
 const R=grp(svg,RECEPTOR),L=grp(svg,LDL);
-const ldlL=lbl(svg,340,104,'저밀도 지단백 (LDL)','#1f2a37',24);
-const ldlLn=el('line',{x1:334,y1:96,x2:300,y2:104,stroke:'#1f2a37','stroke-width':2},svg);
+const ldlL=lbl(svg,340,104,'저밀도 지단백 (LDL)','#243341',24);
+const ldlLn=el('line',{x1:334,y1:96,x2:300,y2:104,stroke:'#243341','stroke-width':2},svg);
 const crumbs=el('g',{fill:'#d9a441'},svg,'<circle cx="470" cy="420" r="7"/><circle cx="530" cy="440" r="6"/><circle cx="490" cy="480" r="5"/><circle cx="545" cy="490" r="7"/><circle cx="455" cy="465" r="5"/>');
 const crL=lbl(svg,500,402,'콜레스테롤 흡수','#9a6f1c',22,'middle');
-const recpL=lbl(svg,300,330,'LDL 수용체','#3f5a6b',24);
-const recpLn=el('line',{x1:296,y1:318,x2:262,y2:288,stroke:'#3f5a6b','stroke-width':2},svg);
+const recpL=lbl(svg,300,330,'LDL 수용체','#3E5872',24);
+const recpLn=el('line',{x1:296,y1:318,x2:262,y2:288,stroke:'#3E5872','stroke-width':2},svg);
 SCENE.anim=t=>{
  const b=ease(seg(t,.3,2.2)), p2=ease(seg(t,2.6,4.8)), p3=ease(seg(t,5.6,7.8));
  const ux=lerp(250,500,p2), uy=lerp(200,470,p2), us=lerp(SC,SC*.85,p2);

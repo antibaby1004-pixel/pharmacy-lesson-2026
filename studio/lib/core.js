@@ -24,19 +24,19 @@ function entries(t){
 /* ---------------- character ---------------- */
 const CHAR_SVG=`
 <g id="cBody">
- <g id="legL" ><rect class="o" x="-22" y="0" width="44" height="170" rx="14" fill="#3b4a66"/><ellipse class="o" cx="-12" cy="178" rx="34" ry="16" fill="#1f2a37"/></g>
- <g id="legR" ><rect class="o" x="-22" y="0" width="44" height="170" rx="14" fill="#3b4a66"/><ellipse class="o" cx="-12" cy="178" rx="34" ry="16" fill="#1f2a37"/></g>
+ <g id="legL" ><rect class="o" x="-22" y="0" width="44" height="170" rx="14" fill="#3b4a66"/><ellipse class="o" cx="-12" cy="178" rx="34" ry="16" fill="#243341"/></g>
+ <g id="legR" ><rect class="o" x="-22" y="0" width="44" height="170" rx="14" fill="#3b4a66"/><ellipse class="o" cx="-12" cy="178" rx="34" ry="16" fill="#243341"/></g>
  <path class="o" d="M70 480 L92 350 Q110 300 180 294 Q250 300 268 350 L290 480Z" fill="#fff"/>
- <path class="o" d="M150 298 L180 352 L210 298" fill="#8c3b4a"/>
+ <path class="o" d="M150 298 L180 352 L210 298" fill="#007F86"/>
  <path class="o" d="M180 352 V478" fill="none" stroke-width="4"/>
- <rect x="210" y="370" width="50" height="26" rx="5" fill="#1f2a37"/><text x="235" y="390" text-anchor="middle" font-weight="700" font-size="16" fill="#fff">야간</text>
+ <rect x="210" y="370" width="50" height="26" rx="5" fill="#243341"/><text x="235" y="390" text-anchor="middle" font-weight="700" font-size="16" fill="#fff">야간</text>
  <g id="head">
   <rect class="o" x="164" y="252" width="32" height="44" rx="8" fill="#e9c09c"/>
   <ellipse class="o" cx="180" cy="190" rx="84" ry="90" fill="#f3cfae"/>
   <path class="o" d="M96 178 L90 128 L114 144 L118 98 L140 128 L156 84 L174 120 L196 82 L208 122 L236 92 L236 132 L264 116 L266 178 Q244 136 180 138 Q118 136 96 178Z" fill="#3a2f28"/>
-  <g id="eyeN"><path class="o" d="M122 196 h38 M200 196 h38" fill="none"/><path d="M124 198 q17 13 34 0 M202 198 q17 13 34 0" fill="none" stroke="#1f2a37" stroke-width="5"/></g>
+  <g id="eyeN"><path class="o" d="M122 196 h38 M200 196 h38" fill="none"/><path d="M124 198 q17 13 34 0 M202 198 q17 13 34 0" fill="none" stroke="#243341" stroke-width="5"/></g>
   <g id="eyeC" style="display:none"><path class="o" d="M122 200 q19 8 38 0 M200 200 q19 8 38 0" fill="none"/></g>
-  <g id="eyeW" style="display:none"><circle class="o" cx="141" cy="196" r="17" fill="#fff"/><circle class="o" cx="219" cy="196" r="17" fill="#fff"/><circle cx="141" cy="198" r="7" fill="#1f2a37"/><circle cx="219" cy="198" r="7" fill="#1f2a37"/></g>
+  <g id="eyeW" style="display:none"><circle class="o" cx="141" cy="196" r="17" fill="#fff"/><circle class="o" cx="219" cy="196" r="17" fill="#fff"/><circle cx="141" cy="198" r="7" fill="#243341"/><circle cx="219" cy="198" r="7" fill="#243341"/></g>
   <path d="M122 220 q19 11 38 0 M200 220 q19 11 38 0" fill="none" stroke="#9a8fc4" stroke-width="6" stroke-linecap="round"/>
   <g fill="#6b5a4e"><circle cx="156" cy="262" r="2.5"/><circle cx="168" cy="268" r="2.5"/><circle cx="192" cy="268" r="2.5"/><circle cx="204" cy="262" r="2.5"/><circle cx="180" cy="272" r="2.5"/></g>
   <path id="mF" class="o" d="M164 248 h32" fill="none"/>
@@ -44,7 +44,7 @@ const CHAR_SVG=`
   <ellipse id="mY" class="o" cx="180" cy="250" rx="20" ry="26" fill="#7a2e2e" style="display:none"/>
   <path id="mS" class="o" d="M160 242 q20 18 40 0" fill="none" style="display:none"/>
   <path id="sweat" d="M268 150 q10 18 0 28 q-10 -10 0 -28z" fill="#7ea6e0" style="opacity:0"/>
-  <text id="qm" x="292" y="96" font-size="72" font-weight="700" fill="#8c3b4a" style="opacity:0">?</text>
+  <text id="qm" x="292" y="96" font-size="72" font-weight="700" fill="#007F86" style="opacity:0">?</text>
   <g id="bang" style="opacity:0"><path class="o" d="M60 70 l18 30 M40 120 l30 8 M300 70 l-18 30 M320 120 l-30 8" fill="none" stroke="#a86400" stroke-width="7"/></g>
  </g>
  <g id="armM"><g id="armMr"><rect class="o" x="-20" y="0" width="40" height="150" rx="18" fill="#fff"/><circle class="o" cx="0" cy="152" r="18" fill="#f3cfae"/>
@@ -52,7 +52,7 @@ const CHAR_SVG=`
  <g id="armP"><g id="armPr"><rect class="o" x="-20" y="0" width="40" height="160" rx="18" fill="#fff"/>
    <g id="hP"><circle class="o" cx="0" cy="162" r="18" fill="#f3cfae"/><path class="o" d="M0 176 v26" fill="none" stroke-width="10"/></g>
    <g id="hW" style="display:none"><ellipse class="o" cx="0" cy="170" rx="22" ry="26" fill="#f3cfae"/><path class="o" d="M-12 190 v14 M0 194 v14 M12 190 v14" fill="none" stroke-width="5"/></g>
-   <g id="hT" style="display:none"><g id="hTi"><rect class="o" x="-22" y="148" width="44" height="38" rx="12" fill="#f3cfae"/><path d="M-4 160 h22 M-4 170 h22 M-4 180 h18" stroke="#1f2a37" stroke-width="3.5" stroke-linecap="round"/><rect class="o" x="-22" y="112" width="18" height="44" rx="9" fill="#f3cfae"/></g></g>
+   <g id="hT" style="display:none"><g id="hTi"><rect class="o" x="-22" y="148" width="44" height="38" rx="12" fill="#f3cfae"/><path d="M-4 160 h22 M-4 170 h22 M-4 180 h18" stroke="#243341" stroke-width="3.5" stroke-linecap="round"/><rect class="o" x="-22" y="112" width="18" height="44" rx="9" fill="#f3cfae"/></g></g>
 </g>
  </g></g>
 </g>`;
@@ -71,10 +71,10 @@ const HARU_SVG=`
   <circle class="o" cx="112" cy="120" r="20" fill="#8a5a3c"/><circle class="o" cx="248" cy="120" r="20" fill="#8a5a3c"/><circle cx="112" cy="120" r="8" fill="#5a3826"/><circle cx="248" cy="120" r="8" fill="#5a3826"/>
   <ellipse class="o" cx="180" cy="196" rx="90" ry="86" fill="#8a5a3c"/>
   <path class="o" d="M108 214 Q116 170 180 170 Q244 170 252 214 Q248 276 180 280 Q112 276 108 214Z" fill="#efdcc4"/>
-  <g id="eyeN"><circle cx="142" cy="198" r="11" fill="#1f2a37"/><circle cx="218" cy="198" r="11" fill="#1f2a37"/><circle cx="146" cy="193" r="4.5" fill="#fff"/><circle cx="222" cy="193" r="4.5" fill="#fff"/></g>
-  <g id="eyeC" style="display:none"><path d="M126 202 q16 -16 32 0 M202 202 q16 -16 32 0" fill="none" stroke="#1f2a37" stroke-width="7" stroke-linecap="round"/></g>
-  <g id="eyeW" style="display:none"><circle class="o" cx="142" cy="196" r="18" fill="#fff"/><circle class="o" cx="218" cy="196" r="18" fill="#fff"/><circle cx="142" cy="198" r="8" fill="#1f2a37"/><circle cx="218" cy="198" r="8" fill="#1f2a37"/></g>
-  <g id="eyeK" style="display:none"><path d="M126 202 q16 -16 32 0" fill="none" stroke="#1f2a37" stroke-width="7" stroke-linecap="round"/><circle cx="218" cy="198" r="11" fill="#1f2a37"/><circle cx="222" cy="193" r="4.5" fill="#fff"/></g>
+  <g id="eyeN"><circle cx="142" cy="198" r="11" fill="#243341"/><circle cx="218" cy="198" r="11" fill="#243341"/><circle cx="146" cy="193" r="4.5" fill="#fff"/><circle cx="222" cy="193" r="4.5" fill="#fff"/></g>
+  <g id="eyeC" style="display:none"><path d="M126 202 q16 -16 32 0 M202 202 q16 -16 32 0" fill="none" stroke="#243341" stroke-width="7" stroke-linecap="round"/></g>
+  <g id="eyeW" style="display:none"><circle class="o" cx="142" cy="196" r="18" fill="#fff"/><circle class="o" cx="218" cy="196" r="18" fill="#fff"/><circle cx="142" cy="198" r="8" fill="#243341"/><circle cx="218" cy="198" r="8" fill="#243341"/></g>
+  <g id="eyeK" style="display:none"><path d="M126 202 q16 -16 32 0" fill="none" stroke="#243341" stroke-width="7" stroke-linecap="round"/><circle cx="218" cy="198" r="11" fill="#243341"/><circle cx="222" cy="193" r="4.5" fill="#fff"/></g>
   <ellipse class="o" cx="180" cy="224" rx="16" ry="11" fill="#3a2418"/>
   <path d="M116 226 h-36 M118 238 l-34 8 M244 226 h36 M242 238 l34 8" stroke="#3a2418" stroke-width="3" stroke-linecap="round"/>
   <circle cx="122" cy="246" r="10" fill="#f4a9a0" opacity=".8"/><circle cx="238" cy="246" r="10" fill="#f4a9a0" opacity=".8"/>

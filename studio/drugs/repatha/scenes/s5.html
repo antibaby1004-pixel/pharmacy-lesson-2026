@@ -10,18 +10,18 @@
 .hofh .v{font-size:42px;font-weight:600}.e{font-size:24px;letter-spacing:.08em;color:var(--muted);font-weight:600;margin-top:4px;text-transform:uppercase}
 .p420{left:96px;top:738px;width:1344px;height:236px;display:grid;grid-template-columns:200px 520px 1fr;gap:24px;align-items:center}
 .p420 .v{font-size:46px;line-height:58px;font-weight:700}
-.warnb{display:inline-block;margin-top:10px;font-size:34px;font-weight:700;color:var(--acc);border:2.5px solid var(--acc);border-radius:14px;padding:6px 18px;background:#fdf6f6}
+.warnb{display:inline-block;margin-top:10px;font-size:34px;font-weight:700;color:var(--acc);border:2.5px solid var(--acc);border-radius:14px;padding:6px 18px;background:#F3FAFA}
 </style></head><body><div class="stage">
 <div class="fade"><header class="top"><div class="sec"><b>용량과 사용법</b> · DOSAGE</div><div class="chip">레파타 Repatha <i>· evolocumab</i></div></header>
 <h1>용량과 사용법</h1></div>
 <div class="fade">
-<div class="wm">04</div>
+<div class="wm">03</div>
 <div class="card box pen" data-in="3.9"><span class="lab">투여 경로</span>
  <div class="big num">140<span class="unit">mg / 1 mL</span></div>
  <div class="v">피하주사 · 원내 펜</div><div class="e">Subcutaneous injection · Prefilled pen</div></div>
 <div class="card box tl" data-in="10.0"><span class="lab">주요 성인 용법*</span>
  <svg id="axis" width="776" height="230" viewBox="0 0 776 230" style="margin-top:6px">
-  <g font-size="22" font-weight="600" fill="#5b6573"></g>
+  <g font-size="22" font-weight="600" fill="#5A6B7B"></g>
  </svg></div>
 <div class="card box hofh" data-in="18.3"><span class="lab">처방 확인</span><div><div class="v">동형접합 가족성 고콜레스테롤혈증 등은 별도 용법 확인</div><div class="e">Homozygous familial hypercholesterolemia</div></div></div>
 <div class="card box p420" data-in="25.3"><span class="lab">420 mg 처방</span>
@@ -32,18 +32,18 @@
 <script src="../timing.js"></script><script src="../../../lib/core.js"></script><script src="../../../lib/mech.js"></script><script>
 useTiming('5');
 const ax=$('#axis');const X0=210,X1=730,wk=w=>X0+(X1-X0)*w/8;
-el('line',{x1:X0,y1:200,x2:X1,y2:200,stroke:'#e4ded3','stroke-width':3},ax);
-for(let w=0;w<=8;w+=2){el('line',{x1:wk(w),y1:30,x2:wk(w),y2:200,stroke:'#efe9df','stroke-width':2},ax);lbl(ax,wk(w),226,w+'주','#5b6573',20,'middle')}
-lbl(ax,0,76,'140 mg','#1f2a37',24,'start',700);lbl(ax,0,104,'2주마다','#5b6573',18,'start',600);
-lbl(ax,0,156,'420 mg','#1f2a37',24,'start',700);lbl(ax,0,184,'매월','#5b6573',18,'start',600);
-const PEN=c=>`<rect x="-34" y="-11" width="68" height="22" rx="11" fill="#fffdf9" stroke="#3f5a6b" stroke-width="2.5"/><rect x="12" y="-11" width="22" height="22" rx="11" fill="${c}"/>`;
-const d1=[0,2,4,6,8].map(w=>{const g=grp(ax,PEN('#8c3b4a'));setT(g,wk(w),82);return g});
-const m1=[0,4.35].map(w=>{const g=el('g',{},ax);[0,1,2].forEach(i=>{const p=grp(g,PEN('#8c3b4a'));setT(p,0,(i-1)*18,.8)});setT(g,wk(w),160);return g});
-const mL=lbl(ax,wk(4.35)+48,150,'1개월','#8c3b4a',20,'start',700);
-const ps=$('#pens');const big=c=>`<rect x="-110" y="-20" width="220" height="40" rx="20" fill="#fffdf9" stroke="#3f5a6b" stroke-width="3"/><rect x="40" y="-20" width="70" height="40" rx="20" fill="${c}"/><rect x="-60" y="-9" width="70" height="18" rx="6" fill="#f4e7e9" stroke="#a3606b" stroke-width="2"/>`;
-const P3=[0,1,2].map(i=>{const g=grp(ps,big('#8c3b4a'));setT(g,140,36+i*52);return g});
-const plus=[0,1,2].map(i=>lbl(ps,24,46+i*52,(i+1)+'','#8c3b4a',26,'middle',700));
-const clock=el('g',{transform:'translate(400 76)'},ps,'<circle r="56" fill="#fdf6f6" stroke="#8c3b4a" stroke-width="4"/><path id="arc" d="" fill="#f4e7e9"/><path d="M0 0 V-40 M0 0 L26 14" stroke="#1f2a37" stroke-width="5" stroke-linecap="round"/><text y="96" text-anchor="middle" font-size="24" font-weight="700" fill="#8c3b4a">30분 이내</text>');
+el('line',{x1:X0,y1:200,x2:X1,y2:200,stroke:'#DCE3EA','stroke-width':3},ax);
+for(let w=0;w<=8;w+=2){el('line',{x1:wk(w),y1:30,x2:wk(w),y2:200,stroke:'#efe9df','stroke-width':2},ax);lbl(ax,wk(w),226,w+'주','#5A6B7B',20,'middle')}
+lbl(ax,0,76,'140 mg','#243341',24,'start',700);lbl(ax,0,104,'2주마다','#5A6B7B',18,'start',600);
+lbl(ax,0,156,'420 mg','#243341',24,'start',700);lbl(ax,0,184,'매월','#5A6B7B',18,'start',600);
+const PEN=c=>`<rect x="-34" y="-11" width="68" height="22" rx="11" fill="#FFFFFF" stroke="#3E5872" stroke-width="2.5"/><rect x="12" y="-11" width="22" height="22" rx="11" fill="${c}"/>`;
+const d1=[0,2,4,6,8].map(w=>{const g=grp(ax,PEN('#007F86'));setT(g,wk(w),82);return g});
+const m1=[0,4.35].map(w=>{const g=el('g',{},ax);[0,1,2].forEach(i=>{const p=grp(g,PEN('#007F86'));setT(p,0,(i-1)*18,.8)});setT(g,wk(w),160);return g});
+const mL=lbl(ax,wk(4.35)+48,150,'1개월','#007F86',20,'start',700);
+const ps=$('#pens');const big=c=>`<rect x="-110" y="-20" width="220" height="40" rx="20" fill="#FFFFFF" stroke="#3E5872" stroke-width="3"/><rect x="40" y="-20" width="70" height="40" rx="20" fill="${c}"/><rect x="-60" y="-9" width="70" height="18" rx="6" fill="#E2F2F3" stroke="#a3606b" stroke-width="2"/>`;
+const P3=[0,1,2].map(i=>{const g=grp(ps,big('#007F86'));setT(g,140,36+i*52);return g});
+const plus=[0,1,2].map(i=>lbl(ps,24,46+i*52,(i+1)+'','#007F86',26,'middle',700));
+const clock=el('g',{transform:'translate(400 76)'},ps,'<circle r="56" fill="#F3FAFA" stroke="#007F86" stroke-width="4"/><path id="arc" d="" fill="#E2F2F3"/><path d="M0 0 V-40 M0 0 L26 14" stroke="#243341" stroke-width="5" stroke-linecap="round"/><text y="96" text-anchor="middle" font-size="24" font-weight="700" fill="#007F86">30분 이내</text>');
 SCENE.anim=t=>{
  d1.forEach((g,i)=>g.style.opacity=seg(t,10.6+i*.55,11.0+i*.55));
  m1.forEach((g,i)=>g.style.opacity=seg(t,13.6+i*.9,14.0+i*.9));mL.style.opacity=seg(t,14.6,15.0);
