@@ -1,0 +1,26 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../../lib/common.css"><style>
+svg text{font-family:P}
+.grid{display:grid;grid-template-columns:680px 1fr;gap:52px;width:1344px}.fig{height:640px;position:relative;overflow:hidden}
+</style></head><body><div class="stage">
+<div class="fade"><header class="top"><div class="sec"><b>작용 기전</b> · MECHANISM</div><div class="chip">캡박시브 Capvaxive <i>· pneumococcal 21-valent conjugate vaccine</i></div></header><h1>단백에 붙이면 기억이 남습니다</h1></div>
+<div class="fade"><div class="grid"><div class="steps"><div class="s" data-on="0.1,10.14"><div class="n">1</div><div><h3>다당 단독</h3><p>T세포 비의존 B세포 반응 · 기억 약함</p></div></div><div class="s" data-on="10.14,14.63"><div class="n">2</div><div><h3>단백(CRM197) 접합</h3><p>항원제시 → T세포가 B세포를 도움</p></div></div><div class="s" data-on="14.63"><div class="n">3</div><div><h3>기억 B세포</h3><p>다음 접종에서 항체 크게 상승</p></div></div></div><div class="card fig"><svg width="100%" height="100%" viewBox="0 0 612 640"><line x1="306" y1="40" x2="306" y2="440" stroke="#C9D6E0" stroke-width="3" stroke-dasharray="8 8"/>
+<text x="153" y="60" text-anchor="middle" font-size="24" font-weight="700" fill="#3F4D5A">다당만</text><text x="459" y="60" text-anchor="middle" font-size="24" font-weight="700" fill="#007F86">단백 접합</text>
+<g transform="translate(153 230)"><circle r="46" fill="#fff" stroke="#D96C00" stroke-width="4"/><text y="9" text-anchor="middle" font-size="26" font-weight="700" fill="#D96C00">B</text></g>
+<g id="ps1"><path d="M90 130 q15 -15 30 0 t30 0" fill="none" stroke="#2F8F6A" stroke-width="6"/><path d="M160 120 q15 -15 30 0 t30 0" fill="none" stroke="#2F8F6A" stroke-width="6"/></g>
+<text x="153" y="320" text-anchor="middle" font-size="20" fill="#3F4D5A">T세포 도움 없음</text>
+<g transform="translate(459 300)"><circle r="46" fill="#fff" stroke="#D96C00" stroke-width="4"/><text y="9" text-anchor="middle" font-size="26" font-weight="700" fill="#D96C00">B</text></g>
+<g id="tc" transform="translate(540 190)" style="opacity:.2"><circle r="38" fill="#fff" stroke="#1F6FD1" stroke-width="4"/><text y="8" text-anchor="middle" font-size="24" font-weight="700" fill="#1F6FD1">T</text></g>
+<g id="cj"><rect x="380" y="140" width="60" height="30" rx="8" fill="#B6C6D2" stroke="#243341" stroke-width="2"/><text x="410" y="161" text-anchor="middle" font-size="14" font-weight="700">CRM197</text><path d="M440 155 q15 -15 30 0 t30 0" fill="none" stroke="#2F8F6A" stroke-width="6"/></g>
+<path id="help" d="M520 220 L480 268" stroke="#1F6FD1" stroke-width="5" stroke-dasharray="8 6" style="opacity:0"/>
+<g id="mem" style="opacity:0"><circle cx="520" cy="380" r="22" fill="#FFF7EC" stroke="#D96C00" stroke-width="3"/><circle cx="565" cy="360" r="22" fill="#FFF7EC" stroke="#D96C00" stroke-width="3"/><text x="540" y="420" text-anchor="middle" font-size="18" font-weight="700" fill="#D96C00">기억 B세포</text></g>
+<line x1="40" y1="600" x2="572" y2="600" stroke="#243341" stroke-width="3"/><text x="306" y="630" text-anchor="middle" font-size="20" fill="#3F4D5A">2차 접종 후 항체</text>
+<rect id="b1" x="110" y="600" width="86" height="0" fill="#9FB4C6"/><rect id="b2" x="416" y="600" width="86" height="0" fill="#007F86"/></svg></div></div><div class="key" data-in="14.63"><span class="k">KEY</span><span>단백에 붙이면 T세포 의존 반응 + 기억</span></div><div class="fn">교육용 개념도</div></div>
+</div>
+<script src="../timing.js"></script><script src="../../../lib/core.js"></script><script>
+useTiming('m0');const $i=i=>document.getElementById(i);
+const S=[0.1, 5.2, 10.14, 14.63];
+SCENE.anim=o=>{const b1=seg(o,S[1],S[1]+1),k2=seg(o,S[2],S[2]+1),k3=seg(o,S[3],S[3]+1);
+ $i('b1').setAttribute('height',40*b1);$i('b1').setAttribute('y',600-40*b1);$i('tc').style.opacity=.2+.8*k2;$i('help').style.opacity=k2;$i('help').style.strokeDashoffset=-o*20;
+ $i('mem').style.opacity=k3;$i('b2').setAttribute('height',130*k3);$i('b2').setAttribute('y',600-130*k3)};
+SCENE.char=makeChar([{k: "walk", t0: 0.15, t1: 1.2, x0: 2250, x1: 1640}, {k: "prop", name: "book", t0: 5.4, t1: 8.0}, {k: "thumbs", t0: 10.34, t1: 11.94}, {k: "prop", name: "thermo", t0: 14.83, t1: 17.43}, {k: "walk", t0: 16.72, t1: 17.62, x0: "cur", x1: 1560}],'lead');SCENE.char2=makeChar([{k: "walk", t0: 16.92, t1: 18.12, x0: 2300, x1: 1840}, {k: "walk", t0: 19.52, t1: 20.72, x0: 1840, x1: 2320}],'cameo');
+</script><script src="../../../lib/highlight.js"></script></body></html>

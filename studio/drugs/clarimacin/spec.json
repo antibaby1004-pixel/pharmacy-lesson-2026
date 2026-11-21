@@ -1,0 +1,326 @@
+{
+ "name": "클래리마신",
+ "no": "10",
+ "name_en": "Clarimacin tab 250 mg",
+ "voice": "sunhi",
+ "chip": "클래리마신 Clarimacin <i>· clarithromycin 250 mg</i>",
+ "cast": {
+  "lead": "park",
+  "cameo": "wang"
+ },
+ "props": [
+  "pill",
+  "book",
+  "magnifier",
+  "clock"
+ ],
+ "highlight": {
+  "generic": [
+   "clarithromycin",
+   "클래리스로마이신",
+   "마크로라이드"
+  ],
+  "target": [
+   "50S",
+   "23S rRNA",
+   "출구 터널",
+   "CYP3A4"
+  ],
+  "warn": [
+   "QT 연장",
+   "병용 금기",
+   "상호작용",
+   "스타틴",
+   "콜히친",
+   "면역억제제",
+   "DOAC"
+  ]
+ },
+ "greet": {
+  "say": "음… 커피약사 박 선배입니다. 오늘은, 클래리마신.",
+  "bubble": "음… 커피약사 박 선배.<br>오늘은 클래리마신."
+ },
+ "intro_title": "클래리마신 소개 · 원내 전환",
+ "intro": {
+  "title": "클래리마신",
+  "en": "Clarimacin tab.",
+  "inn": "clarithromycin",
+  "photos": [
+   {
+    "draw": "tablet",
+    "args": [
+     "250 mg",
+     "clarithromycin",
+     "#FFF7D6"
+    ],
+    "label": "클래리마신정 250 mg"
+   }
+  ],
+  "sents": [
+   [
+    "성분은 clarithromycin, 마크로라이드계 항생제예요.",
+    "성분은 클래리스로마이신, 마크로라이드계 항생제예요."
+   ],
+   [
+    "한 정에 250 mg이 들어 있어요.",
+    "한 정에 이백오십 밀리그램이 들어 있어요."
+   ],
+   "원내 클래리시드가 품절되면서, 원외 코드였던 클래리마신을 원내로 들이게 됐어요.",
+   "헬리코박터 제균 요법과 비정형 폐렴 등에 쓰여요."
+  ],
+  "facts": [
+   {
+    "s": 1,
+    "lab": "함량",
+    "v": "250 mg 정제"
+   },
+   {
+    "s": 2,
+    "lab": "도입",
+    "v": "클래리시드 품절 → 원외에서 원내로",
+    "cls": "amb"
+   },
+   {
+    "s": 3,
+    "lab": "쓰임",
+    "v": "H. pylori 제균 · 비정형 폐렴 등"
+   }
+  ]
+ },
+ "parts": [
+  {
+   "id": "m0",
+   "type": "mech",
+   "title": "50S 출구 터널 차단",
+   "sec": "<b>작용 기전</b> · 01 / 02",
+   "h1": "단백질이 나오는 터널을 막습니다",
+   "sents": [
+    "세균의 리보솜은 단백질을 만드는 공장이에요.",
+    "아미노산이 이어진 사슬은, 50S 소단위의 출구 터널로 빠져나와요.",
+    [
+     "clarithromycin은 23S rRNA에 붙어 이 터널을 막아요.",
+     "클래리스로마이신은 이십삼 에스 알 알엔에이에 붙어, 이 터널을 막아요."
+    ],
+    "사슬이 더 자라지 못해 단백질 합성이 멈추고, 기본적으로 정균 작용을 해요."
+   ],
+   "steps": [
+    {
+     "s": 1,
+     "h": "50S 출구 터널",
+     "p": "자라는 펩타이드 사슬이 빠져나오는 길"
+    },
+    {
+     "s": 2,
+     "h": "23S rRNA 결합",
+     "p": "clarithromycin이 터널 입구를 막음"
+    },
+    {
+     "s": 3,
+     "h": "합성 정지 · 정균",
+     "p": "사슬이 더 자라지 못함"
+    }
+   ],
+   "key": {
+    "s": 3,
+    "text": "터널 차단 = 단백질 합성 정지"
+   },
+   "fig": "<path d=\"M40 330 h532\" stroke=\"#C0704A\" stroke-width=\"6\"/><text x=\"44\" y=\"320\" font-size=\"20\" fill=\"#C0704A\" font-weight=\"700\">mRNA</text>\n<ellipse cx=\"300\" cy=\"380\" rx=\"170\" ry=\"70\" fill=\"#E2F2F3\" stroke=\"#007F86\" stroke-width=\"4\"/><text x=\"300\" y=\"400\" text-anchor=\"middle\" font-size=\"24\" font-weight=\"700\" fill=\"#00666C\">30S</text>\n<path d=\"M120 320 C110 170 210 110 300 110 C400 110 500 170 480 320 Z\" fill=\"#EEF0FA\" stroke=\"#5B5FA8\" stroke-width=\"4\"/><text x=\"210\" y=\"290\" font-size=\"26\" font-weight=\"700\" fill=\"#5B5FA8\">50S</text>\n<path d=\"M300 300 C300 230 330 180 360 120\" fill=\"none\" stroke=\"#C9CDE8\" stroke-width=\"34\" stroke-linecap=\"round\"/><text x=\"410\" y=\"200\" font-size=\"20\" font-weight=\"700\" fill=\"#5B5FA8\">출구 터널</text>\n<g id=\"ch\"></g>\n<g id=\"dr\" style=\"opacity:0\"><rect x=\"-22\" y=\"-14\" width=\"44\" height=\"28\" rx=\"14\" fill=\"#D2342A\"/><text y=\"7\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"700\" fill=\"#fff\">CLR</text></g>\n<text id=\"lb\" x=\"306\" y=\"560\" text-anchor=\"middle\" font-size=\"26\" font-weight=\"700\" fill=\"#D2342A\" style=\"opacity:0\">터널이 막혀 사슬이 자라지 못함</text>",
+   "js": "let h='';for(let i=0;i<9;i++)h+=`<circle id=\"b${i}\" r=\"11\" fill=\"${['#D96C00','#1F6FD1','#2F8F6A'][i%3]}\"/>`;$i('ch').innerHTML=h;\nconst P=t=>{const x=300+60*t*t*0+ (360-300)*t, y=300-(300-120)*t;return [300+(360-300)*Math.pow(t,1.3),300-180*t]};\nSCENE.anim=o=>{const stop=S[2]+0.8;const tt=Math.min(o,stop);const grow=Math.max(0,(tt-S[1]+1.2)*0.9);\n for(let i=0;i<9;i++){let t=(grow-i*0.22)/1.6;const e=$i('b'+i);if(t<0){e.style.opacity=0;continue}e.style.opacity=1;\n  if(o>stop)t=Math.min(t,0.42-i*0.05);t=Math.min(t,1.15);const [x,y]=t<=1?P(t):[360+40*(t-1)*5,120-60*(t-1)*5];e.setAttribute('cx',x);e.setAttribute('cy',y)}\n const k=seg(o,S[2],S[2]+0.8);$i('dr').style.opacity=k;$i('dr').setAttribute('transform',`translate(${lerp(560,330,ease(k))} ${lerp(80,210,ease(k))})`);$i('lb').style.opacity=seg(o,S[3],S[3]+0.5)};"
+  },
+  {
+   "id": "yt1",
+   "type": "ytslot",
+   "title": "기전 영상 · 링크 확정 전",
+   "sec": "<b>기전 영상</b> · VIDEO",
+   "h1": ""
+  },
+  {
+   "id": "m1",
+   "type": "mech",
+   "title": "CYP3A4 억제 · 상호작용",
+   "sec": "<b>상호작용</b> · 02 / 02",
+   "h1": "CYP3A4가 막히면 다른 약이 쌓입니다",
+   "sents": [
+    [
+     "clarithromycin은 간의 CYP3A4를 강하게 억제해요.",
+     "클래리스로마이신은 간의 씨와이피 쓰리에이포를 강하게 억제해요."
+    ],
+    "그러면 이 효소로 처리되던 다른 약들이 대기줄에 밀려, 혈중 농도가 올라가요.",
+    "일부 스타틴, 콜히친, 면역억제제, 일부 경구 항응고제가 대표적이에요.",
+    "처방 전에 함께 먹는 약을 꼭 확인해요."
+   ],
+   "steps": [
+    {
+     "s": 0,
+     "h": "CYP3A4 강력 억제",
+     "p": "간의 약물 대사 효소가 막힘"
+    },
+    {
+     "s": 1,
+     "h": "병용약 농도 ↑",
+     "p": "처리되지 못한 약이 혈중에 쌓임"
+    },
+    {
+     "s": 2,
+     "h": "대표 약물",
+     "p": "일부 스타틴 · 콜히친 · 면역억제제 · DOAC"
+    }
+   ],
+   "key": {
+    "s": 3,
+    "text": "처방 전 병용약 확인"
+   },
+   "fig": "<rect x=\"40\" y=\"70\" width=\"532\" height=\"460\" rx=\"40\" fill=\"#F6E3E0\" stroke=\"#243341\" stroke-width=\"4\"/><text x=\"70\" y=\"110\" font-size=\"24\" font-weight=\"700\" fill=\"#8E2219\">간</text>\n<g transform=\"translate(430 300)\"><rect x=\"-70\" y=\"-60\" width=\"140\" height=\"120\" rx=\"20\" fill=\"#fff\" stroke=\"#243341\" stroke-width=\"4\"/><text y=\"-8\" text-anchor=\"middle\" font-size=\"24\" font-weight=\"700\" fill=\"#243341\">CYP3A4</text><text id=\"st\" y=\"26\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"700\" fill=\"#2F8F6A\">처리 중</text></g>\n<g id=\"blk\" style=\"opacity:0\"><rect x=\"350\" y=\"230\" width=\"44\" height=\"28\" rx=\"14\" fill=\"#D2342A\"/><text x=\"372\" y=\"250\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"700\" fill=\"#fff\">CLR</text></g>\n<g id=\"q\"></g>\n<g id=\"up\" style=\"opacity:0\"><path d=\"M120 470 v-60\" stroke=\"#D2342A\" stroke-width=\"10\" marker-end=\"url(#a)\"/><text x=\"150\" y=\"460\" font-size=\"26\" font-weight=\"700\" fill=\"#D2342A\">병용약 혈중 농도 ↑</text></g>\n<defs><marker id=\"a\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"5\" markerHeight=\"5\" orient=\"auto\"><path d=\"M0 0 L10 5 L0 10z\" fill=\"#D2342A\"/></marker></defs>",
+   "js": "const N=['스타틴','콜히친','면역억제제','DOAC','스타틴','콜히친'];let h='';N.forEach((n,i)=>h+=`<g id=\"p${i}\"><rect x=\"-56\" y=\"-20\" width=\"112\" height=\"40\" rx=\"20\" fill=\"#fff\" stroke=\"#9FB4C6\" stroke-width=\"3\"/><text y=\"7\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#243341\">${n}</text></g>`);$i('q').innerHTML=h;\nSCENE.anim=o=>{const blk=seg(o,S[0]+0.6,S[0]+1.4);$i('blk').style.opacity=blk;$i('st').textContent=blk>.5?'정체':'처리 중';$i('st').setAttribute('fill',blk>.5?'#D2342A':'#2F8F6A');\n N.forEach((n,i)=>{const e=$i('p'+i);let x;if(blk<.5){x=120+((o*60+i*70)%280)}else{x=120+i*0+Math.min(280,(i)*0)}const y=blk<.5?300:150+i*55;const xx=blk<.5?x:lerp(120+((S[0]*60+i*70)%280),170,seg(o,S[0]+1.4,S[1]+0.4));e.setAttribute('transform',`translate(${xx} ${lerp(300,y,seg(o,S[0]+1.4,S[1]+0.4))})`);e.querySelector('rect').setAttribute('stroke',seg(o,S[2],S[2]+0.6)>.5?'#D2342A':'#9FB4C6')});\n $i('up').style.opacity=seg(o,S[1]+0.4,S[1]+1)};"
+  },
+  {
+   "id": "5",
+   "type": "rows",
+   "title": "용법",
+   "sec": "<b>용량과 사용법</b> · DOSAGE",
+   "h1": "보통 250 mg 하루 두 번",
+   "sents": [
+    "성인은 보통 1회 250 mg을 하루 두 번 먹고, 중증이면 500 mg까지 늘려요.",
+    "헬리코박터 제균에서는 양성자펌프억제제, amoxicillin과 함께 1회 500 mg을 하루 두 번 써요.",
+    "중증 신장애가 있으면 용량을 줄여요.",
+    "식사와 관계없이 먹을 수 있어요."
+   ],
+   "rows": [
+    {
+     "s": 0,
+     "lab": "성인",
+     "v": "1회 250 mg 1일 2회 · 중증 시 500 mg까지"
+    },
+    {
+     "s": 1,
+     "lab": "H. pylori",
+     "v": "PPI + amoxicillin 병용 · 1회 500 mg 1일 2회"
+    },
+    {
+     "s": 2,
+     "lab": "신기능",
+     "v": "중증 신장애 시 감량",
+     "cls": "amb"
+    },
+    {
+     "s": 3,
+     "lab": "복용",
+     "v": "식사와 관계없이"
+    }
+   ]
+  },
+  {
+   "id": "4",
+   "type": "rows",
+   "title": "주의 · 상호작용",
+   "sec": "<b>주의점과 부작용</b> · PRECAUTIONS",
+   "h1": "상호작용과 QT 연장을 먼저 봅니다",
+   "sents": [
+    "CYP3A4로 대사되는 약과 함께 쓰면, 그 약의 농도가 크게 올라요.",
+    "QT 연장 위험이 있어서, 다른 QT 연장 약과 함께 쓸 때 주의해요.",
+    [
+     "일부 약물과는 병용 금기이므로, 처방할 때 DUR을 꼭 확인해요.",
+     "일부 약물과는 병용 금기이므로, 처방할 때 디유알을 꼭 확인해요."
+    ],
+    "흔한 이상반응은 쓴맛 같은 미각 이상과 소화기 증상이에요."
+   ],
+   "rows": [
+    {
+     "s": 0,
+     "lab": "상호작용",
+     "v": "CYP3A4 기질 — 일부 스타틴 · 콜히친 · 면역억제제 · DOAC",
+     "cls": "red"
+    },
+    {
+     "s": 1,
+     "lab": "심장",
+     "v": "QT 연장 — QT 연장 약 병용 주의",
+     "cls": "red"
+    },
+    {
+     "s": 2,
+     "lab": "병용 금기",
+     "v": "일부 약물 병용 금기 → 처방 시 DUR 확인",
+     "cls": "amb"
+    },
+    {
+     "s": 3,
+     "lab": "흔한 반응",
+     "v": "미각 이상 · 소화기 증상"
+    }
+   ]
+  },
+  {
+   "id": "summary",
+   "type": "summary",
+   "title": "Take-home message",
+   "sec": "<b>핵심 정리</b> · TAKE-HOME MESSAGE",
+   "h1": "클래리마신, 이 6가지만 기억하세요",
+   "sents": [
+    "정리할게요.",
+    "클래리마신은 clarithromycin 250 mg 정제예요.",
+    "50S 출구 터널을 막아 단백질 합성을 멈춰요.",
+    "헬리코박터 제균과 비정형 폐렴에 쓰여요.",
+    "CYP3A4를 강하게 억제해서 상호작용이 많아요.",
+    "QT 연장과 병용 금기를 확인해요."
+   ],
+   "cards": [
+    {
+     "s": 2,
+     "lab": "기전",
+     "v": "50S 출구 터널 차단<br>단백질 합성 정지"
+    },
+    {
+     "s": 1,
+     "lab": "함량",
+     "v": "250 mg 정제<br>보통 1일 2회"
+    },
+    {
+     "s": 3,
+     "lab": "쓰임",
+     "v": "H. pylori 제균<br>비정형 폐렴"
+    },
+    {
+     "s": 4,
+     "lab": "상호작용",
+     "v": "CYP3A4 강력 억제",
+     "cls": "red"
+    },
+    {
+     "s": 5,
+     "lab": "심장",
+     "v": "QT 연장 주의",
+     "cls": "red"
+    },
+    {
+     "s": 5,
+     "lab": "확인",
+     "v": "병용약 · DUR",
+     "cls": "amb"
+    }
+   ],
+   "cameo_say": "박 선배, 커피 한 잔 하게나.",
+   "cameo_bubble": "박 선배,<br>커피 한 잔 하게나."
+  }
+ ],
+ "lines": {
+  "m1": [
+   {
+    "who": "cameo",
+    "after": 1,
+    "say": "허허, 대기줄이 길어지면 사고가 나지.",
+    "bubble": "허허, 대기줄이<br>길어지면 사고가 나지.",
+    "act": "point"
+   }
+  ],
+  "5": [
+   {
+    "who": "lead",
+    "after": 1,
+    "say": "음… 제균 요법은, 조합이 중요해.",
+    "bubble": "음… 제균 요법은<br>조합이 중요해.",
+    "act": "sip"
+   }
+  ]
+ }
+}

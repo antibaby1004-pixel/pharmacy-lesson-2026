@@ -1,0 +1,125 @@
+{
+ "voices": {
+  "skull": {
+   "voice": "it-IT-GiuseppeMultilingualNeural",
+   "rate": "+16%",
+   "pitch": "-2Hz",
+   "gain": 1.3
+  },
+  "haru": {
+   "voice": "en-US-EmmaMultilingualNeural",
+   "rate": "+22%",
+   "pitch": "+20Hz",
+   "gain": 1.15
+  }
+ },
+ "lines": {
+  "intro": [
+   {
+    "who": "skull",
+    "bubble": "해골약사 등장!<br>오늘은 맥시알록!",
+    "say": "해골약사 등장! 오늘은 맥시알록!",
+    "at": 0.0,
+    "with": [
+     {
+      "k": "walk",
+      "dt": 0,
+      "len": 0.9,
+      "x0": 2250,
+      "x1": 960
+     },
+     {
+      "k": "wave",
+      "dt": 1.0,
+      "len": 1.6
+     },
+     {
+      "k": "hop",
+      "dt": 1.4,
+      "len": 1.0
+     }
+    ]
+   }
+  ],
+  "m0": [
+   {
+    "who": "haru",
+    "bubble": "신호가 끊기면<br>울렁거림도 멈추죠?",
+    "say": "신호가 끊기면, 울렁거림도 멈추는 거죠?",
+    "at": 15.19,
+    "with": [
+     {
+      "k": "think",
+      "dt": 0,
+      "len": 1.4
+     }
+    ]
+   }
+  ],
+  "check": [
+   {
+    "who": "skull",
+    "bubble": "숫자 하나 차이로<br>용도가 완전히 달라요!",
+    "say": "숫자 하나 차이로, 용도가 완전히 달라요!",
+    "at": 12.46,
+    "with": [
+     {
+      "k": "point",
+      "dt": 0,
+      "len": 1.4
+     }
+    ]
+   }
+  ],
+  "summary": [
+   {
+    "who": "haru",
+    "bubble": "해골 선배,<br>덕분에 안 헷갈려요!",
+    "say": "해골 선배, 덕분에 안 헷갈려요!",
+    "at": 20.03,
+    "with": [
+     {
+      "k": "thumbs",
+      "dt": 0,
+      "len": 1.4
+     }
+    ]
+   },
+   {
+    "who": "both",
+    "bubble": "수고하셨습니다!<br>안녕~!",
+    "say": "수고하셨습니다! 안녕!",
+    "at": 20.130000000000003,
+    "with": [
+     {
+      "k": "walk",
+      "for": "skull",
+      "dt": 0,
+      "len": 1.1,
+      "x0": "cur",
+      "x1": 840
+     },
+     {
+      "k": "walk",
+      "for": "haru",
+      "dt": 0,
+      "len": 1.1,
+      "x0": "cur",
+      "x1": 1090
+     },
+     {
+      "k": "wave",
+      "dt": 0.9,
+      "len": 2.2
+     },
+     {
+      "k": "hop",
+      "dt": 0.9,
+      "len": 2.2
+     }
+    ]
+   }
+  ]
+ },
+ "bridges": {}
+}

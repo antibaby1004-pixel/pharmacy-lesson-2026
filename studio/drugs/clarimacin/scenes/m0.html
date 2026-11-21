@@ -1,0 +1,24 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../../lib/common.css"><style>
+svg text{font-family:P}
+.grid{display:grid;grid-template-columns:680px 1fr;gap:52px;width:1344px}.fig{height:640px;position:relative;overflow:hidden}
+</style></head><body><div class="stage">
+<div class="fade"><header class="top"><div class="sec"><b>작용 기전</b> · 01 / 02</div><div class="chip">클래리마신 Clarimacin <i>· clarithromycin 250 mg</i></div></header><h1>단백질이 나오는 터널을 막습니다</h1></div>
+<div class="fade"><div class="grid"><div class="steps"><div class="s" data-on="3.38,8.02"><div class="n">1</div><div><h3>50S 출구 터널</h3><p>자라는 펩타이드 사슬이 빠져나오는 길</p></div></div><div class="s" data-on="8.02,12.82"><div class="n">2</div><div><h3>23S rRNA 결합</h3><p>clarithromycin이 터널 입구를 막음</p></div></div><div class="s" data-on="12.82"><div class="n">3</div><div><h3>합성 정지 · 정균</h3><p>사슬이 더 자라지 못함</p></div></div></div><div class="card fig"><svg width="100%" height="100%" viewBox="0 0 612 640"><path d="M40 330 h532" stroke="#C0704A" stroke-width="6"/><text x="44" y="320" font-size="20" fill="#C0704A" font-weight="700">mRNA</text>
+<ellipse cx="300" cy="380" rx="170" ry="70" fill="#E2F2F3" stroke="#007F86" stroke-width="4"/><text x="300" y="400" text-anchor="middle" font-size="24" font-weight="700" fill="#00666C">30S</text>
+<path d="M120 320 C110 170 210 110 300 110 C400 110 500 170 480 320 Z" fill="#EEF0FA" stroke="#5B5FA8" stroke-width="4"/><text x="210" y="290" font-size="26" font-weight="700" fill="#5B5FA8">50S</text>
+<path d="M300 300 C300 230 330 180 360 120" fill="none" stroke="#C9CDE8" stroke-width="34" stroke-linecap="round"/><text x="410" y="200" font-size="20" font-weight="700" fill="#5B5FA8">출구 터널</text>
+<g id="ch"></g>
+<g id="dr" style="opacity:0"><rect x="-22" y="-14" width="44" height="28" rx="14" fill="#D2342A"/><text y="7" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">CLR</text></g>
+<text id="lb" x="306" y="560" text-anchor="middle" font-size="26" font-weight="700" fill="#D2342A" style="opacity:0">터널이 막혀 사슬이 자라지 못함</text></svg></div></div><div class="key" data-in="12.82"><span class="k">KEY</span><span>터널 차단 = 단백질 합성 정지</span></div><div class="fn">교육용 개념도</div></div>
+</div>
+<script src="../timing.js"></script><script src="../../../lib/core.js"></script><script>
+useTiming('m0');const $i=i=>document.getElementById(i);
+const S=[0.1, 3.38, 8.02, 12.82];
+let h='';for(let i=0;i<9;i++)h+=`<circle id="b${i}" r="11" fill="${['#D96C00','#1F6FD1','#2F8F6A'][i%3]}"/>`;$i('ch').innerHTML=h;
+const P=t=>{const x=300+60*t*t*0+ (360-300)*t, y=300-(300-120)*t;return [300+(360-300)*Math.pow(t,1.3),300-180*t]};
+SCENE.anim=o=>{const stop=S[2]+0.8;const tt=Math.min(o,stop);const grow=Math.max(0,(tt-S[1]+1.2)*0.9);
+ for(let i=0;i<9;i++){let t=(grow-i*0.22)/1.6;const e=$i('b'+i);if(t<0){e.style.opacity=0;continue}e.style.opacity=1;
+  if(o>stop)t=Math.min(t,0.42-i*0.05);t=Math.min(t,1.15);const [x,y]=t<=1?P(t):[360+40*(t-1)*5,120-60*(t-1)*5];e.setAttribute('cx',x);e.setAttribute('cy',y)}
+ const k=seg(o,S[2],S[2]+0.8);$i('dr').style.opacity=k;$i('dr').setAttribute('transform',`translate(${lerp(560,330,ease(k))} ${lerp(80,210,ease(k))})`);$i('lb').style.opacity=seg(o,S[3],S[3]+0.5)};
+SCENE.char=makeChar([{k: "walk", t0: 0.15, t1: 1.2, x0: 2250, x1: 1640}, {k: "prop", name: "book", t0: 3.58, t1: 6.18}, {k: "thumbs", t0: 8.22, t1: 9.82}, {k: "prop", name: "magnifier", t0: 13.02, t1: 15.62}],'lead');
+</script><script src="../../../lib/highlight.js"></script></body></html>

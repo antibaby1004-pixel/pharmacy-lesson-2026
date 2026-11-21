@@ -1,0 +1,311 @@
+{
+ "name": "캡박시브",
+ "no": "11",
+ "name_en": "Capvaxive PFS",
+ "voice": "hyunsu",
+ "chip": "캡박시브 Capvaxive <i>· pneumococcal 21-valent conjugate vaccine</i>",
+ "cast": {
+  "lead": "haru",
+  "cameo": "skull"
+ },
+ "props": [
+  "syringe",
+  "book",
+  "thermo",
+  "phone"
+ ],
+ "highlight": {
+  "generic": [
+   "CRM197",
+   "협막 다당",
+   "다당"
+  ],
+  "target": [
+   "T세포",
+   "B세포",
+   "기억 B세포",
+   "항원제시",
+   "혈청형"
+  ],
+  "warn": [
+   "과민반응",
+   "디프테리아 톡소이드",
+   "동결 금지",
+   "얼리지",
+   "면역저하"
+  ]
+ },
+ "greet": {
+  "say": "안녕하세요, 신입 하루예요! 오늘은 캡박시브!",
+  "bubble": "신입 하루예요!<br>오늘은 캡박시브!"
+ },
+ "intro_title": "캡박시브 소개 · 성인용 21가 접합 백신",
+ "intro": {
+  "title": "캡박시브",
+  "en": "Capvaxive",
+  "inn": "pneumococcal 21-valent conjugate vaccine (CRM197)",
+  "photos": [
+   {
+    "draw": "pfs",
+    "args": [
+     "0.5 mL",
+     "프리필드시린지",
+     "#7FC6CA"
+    ],
+    "label": "캡박시브 프리필드시린지"
+   }
+  ],
+  "sents": [
+   "폐렴구균 단백접합 백신이에요.",
+   [
+    "21가지 혈청형의 협막 다당을 CRM197 단백에 붙였어요.",
+    "이십일 가지 혈청형의 협막 다당을, 씨알엠 백구십칠 단백에 붙였어요."
+   ],
+   "18세 이상 성인에서 폐렴구균에 의한 침습성 질환과 폐렴을 예방해요.",
+   [
+    "0.5 mL 프리필드시린지 한 개이고, 원내 신약으로 들어왔어요.",
+    "영점오 밀리리터 프리필드시린지 한 개이고, 원내 신약으로 들어왔어요."
+   ]
+  ],
+  "facts": [
+   {
+    "s": 1,
+    "lab": "구성",
+    "v": "21가 혈청형 다당 + CRM197 접합"
+   },
+   {
+    "s": 2,
+    "lab": "대상",
+    "v": "18세 이상 성인 · 침습성 질환·폐렴 예방"
+   },
+   {
+    "s": 3,
+    "lab": "제형",
+    "v": "0.5 mL 프리필드시린지 · 원내 신약",
+    "cls": "amb"
+   }
+  ]
+ },
+ "parts": [
+  {
+   "id": "m0",
+   "type": "mech",
+   "title": "다당 vs 단백 접합",
+   "sec": "<b>작용 기전</b> · MECHANISM",
+   "h1": "단백에 붙이면 기억이 남습니다",
+   "sents": [
+    "다당만 있는 백신은 B세포를 직접 자극하지만, T세포의 도움을 받지 못해요.",
+    "그래서 기억 B세포가 잘 남지 않고, 다시 맞아도 항체가 크게 오르지 않아요.",
+    "다당을 단백에 붙이면, 항원제시를 거쳐 T세포가 B세포를 도와요.",
+    "그러면 기억 B세포가 생기고, 다음 접종에서 항체가 크게 올라가요."
+   ],
+   "steps": [
+    {
+     "s": 0,
+     "h": "다당 단독",
+     "p": "T세포 비의존 B세포 반응 · 기억 약함"
+    },
+    {
+     "s": 2,
+     "h": "단백(CRM197) 접합",
+     "p": "항원제시 → T세포가 B세포를 도움"
+    },
+    {
+     "s": 3,
+     "h": "기억 B세포",
+     "p": "다음 접종에서 항체 크게 상승"
+    }
+   ],
+   "key": {
+    "s": 3,
+    "text": "단백에 붙이면 T세포 의존 반응 + 기억"
+   },
+   "fig": "<line x1=\"306\" y1=\"40\" x2=\"306\" y2=\"440\" stroke=\"#C9D6E0\" stroke-width=\"3\" stroke-dasharray=\"8 8\"/>\n<text x=\"153\" y=\"60\" text-anchor=\"middle\" font-size=\"24\" font-weight=\"700\" fill=\"#3F4D5A\">다당만</text><text x=\"459\" y=\"60\" text-anchor=\"middle\" font-size=\"24\" font-weight=\"700\" fill=\"#007F86\">단백 접합</text>\n<g transform=\"translate(153 230)\"><circle r=\"46\" fill=\"#fff\" stroke=\"#D96C00\" stroke-width=\"4\"/><text y=\"9\" text-anchor=\"middle\" font-size=\"26\" font-weight=\"700\" fill=\"#D96C00\">B</text></g>\n<g id=\"ps1\"><path d=\"M90 130 q15 -15 30 0 t30 0\" fill=\"none\" stroke=\"#2F8F6A\" stroke-width=\"6\"/><path d=\"M160 120 q15 -15 30 0 t30 0\" fill=\"none\" stroke=\"#2F8F6A\" stroke-width=\"6\"/></g>\n<text x=\"153\" y=\"320\" text-anchor=\"middle\" font-size=\"20\" fill=\"#3F4D5A\">T세포 도움 없음</text>\n<g transform=\"translate(459 300)\"><circle r=\"46\" fill=\"#fff\" stroke=\"#D96C00\" stroke-width=\"4\"/><text y=\"9\" text-anchor=\"middle\" font-size=\"26\" font-weight=\"700\" fill=\"#D96C00\">B</text></g>\n<g id=\"tc\" transform=\"translate(540 190)\" style=\"opacity:.2\"><circle r=\"38\" fill=\"#fff\" stroke=\"#1F6FD1\" stroke-width=\"4\"/><text y=\"8\" text-anchor=\"middle\" font-size=\"24\" font-weight=\"700\" fill=\"#1F6FD1\">T</text></g>\n<g id=\"cj\"><rect x=\"380\" y=\"140\" width=\"60\" height=\"30\" rx=\"8\" fill=\"#B6C6D2\" stroke=\"#243341\" stroke-width=\"2\"/><text x=\"410\" y=\"161\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"700\">CRM197</text><path d=\"M440 155 q15 -15 30 0 t30 0\" fill=\"none\" stroke=\"#2F8F6A\" stroke-width=\"6\"/></g>\n<path id=\"help\" d=\"M520 220 L480 268\" stroke=\"#1F6FD1\" stroke-width=\"5\" stroke-dasharray=\"8 6\" style=\"opacity:0\"/>\n<g id=\"mem\" style=\"opacity:0\"><circle cx=\"520\" cy=\"380\" r=\"22\" fill=\"#FFF7EC\" stroke=\"#D96C00\" stroke-width=\"3\"/><circle cx=\"565\" cy=\"360\" r=\"22\" fill=\"#FFF7EC\" stroke=\"#D96C00\" stroke-width=\"3\"/><text x=\"540\" y=\"420\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#D96C00\">기억 B세포</text></g>\n<line x1=\"40\" y1=\"600\" x2=\"572\" y2=\"600\" stroke=\"#243341\" stroke-width=\"3\"/><text x=\"306\" y=\"630\" text-anchor=\"middle\" font-size=\"20\" fill=\"#3F4D5A\">2차 접종 후 항체</text>\n<rect id=\"b1\" x=\"110\" y=\"600\" width=\"86\" height=\"0\" fill=\"#9FB4C6\"/><rect id=\"b2\" x=\"416\" y=\"600\" width=\"86\" height=\"0\" fill=\"#007F86\"/>",
+   "js": "SCENE.anim=o=>{const b1=seg(o,S[1],S[1]+1),k2=seg(o,S[2],S[2]+1),k3=seg(o,S[3],S[3]+1);\n $i('b1').setAttribute('height',40*b1);$i('b1').setAttribute('y',600-40*b1);$i('tc').style.opacity=.2+.8*k2;$i('help').style.opacity=k2;$i('help').style.strokeDashoffset=-o*20;\n $i('mem').style.opacity=k3;$i('b2').setAttribute('height',130*k3);$i('b2').setAttribute('y',600-130*k3)};"
+  },
+  {
+   "id": "yt1",
+   "type": "ytslot",
+   "title": "기전 영상 · 링크 확정 전",
+   "sec": "<b>기전 영상</b> · VIDEO",
+   "h1": ""
+  },
+  {
+   "id": "sero",
+   "type": "rows",
+   "title": "혈청형 구성",
+   "sec": "<b>구성</b> · SEROTYPES",
+   "h1": "성인에서 문제 되는 혈청형 위주로",
+   "sents": [
+    "캡박시브는 성인에서 침습성 질환을 실제로 일으키는 혈청형 위주로 만든 성인 전용 백신이에요.",
+    "기존 어느 백신에도 없던 혈청형 8개가 새로 들어갔어요.",
+    "원내 기존 폐렴구균 백신과 겹치는 혈청형은 대조표로 따로 확인해요."
+   ],
+   "rows": [
+    {
+     "s": 0,
+     "lab": "설계",
+     "v": "성인 침습성 질환 원인 혈청형 위주 — 성인 전용"
+    },
+    {
+     "s": 1,
+     "lab": "새 혈청형 8개",
+     "v": "15A · 15C · 16F · 23A · 23B · 24F · 31 · 35B"
+    },
+    {
+     "s": 2,
+     "lab": "원내 비교",
+     "v": "기존 폐렴구균 백신과 중복·차이 — 대조표 확인 중",
+     "cls": "amb"
+    }
+   ]
+  },
+  {
+   "id": "5",
+   "type": "rows",
+   "title": "용법과 보관",
+   "sec": "<b>용법</b> · DOSAGE",
+   "h1": "0.5 mL 한 번, 근육주사",
+   "sents": [
+    [
+     "0.5 mL를 한 번 근육주사해요.",
+     "영점오 밀리리터를 한 번 근육주사해요."
+    ],
+    "주로 위팔 삼각근에 놓아요.",
+    "냉장 보관하고, 얼리지 않아요.",
+    "접종 후에는 이상반응이 없는지 관찰해요."
+   ],
+   "rows": [
+    {
+     "s": 0,
+     "lab": "용량",
+     "v": "0.5 mL 1회 근육주사"
+    },
+    {
+     "s": 1,
+     "lab": "부위",
+     "v": "위팔 삼각근"
+    },
+    {
+     "s": 2,
+     "lab": "보관",
+     "v": "2–8°C 냉장 · 동결 금지",
+     "cls": "amb"
+    },
+    {
+     "s": 3,
+     "lab": "관찰",
+     "v": "접종 후 이상반응 관찰"
+    }
+   ]
+  },
+  {
+   "id": "4",
+   "type": "rows",
+   "title": "주의사항",
+   "sec": "<b>주의점과 부작용</b> · PRECAUTIONS",
+   "h1": "디프테리아 톡소이드 과민반응을 확인합니다",
+   "sents": [
+    "백신 성분이나 디프테리아 톡소이드에 심한 알레르기가 있었다면 접종하지 않아요.",
+    "발열이나 급성 질환이 있으면 접종을 미룰지 평가해요.",
+    "면역저하 환자는 면역 반응이 약할 수 있어요.",
+    "흔한 반응은 주사 부위 통증, 피로, 두통, 근육통이에요."
+   ],
+   "rows": [
+    {
+     "s": 0,
+     "lab": "금기",
+     "v": "백신 성분 · 디프테리아 톡소이드 중증 과민반응",
+     "cls": "red"
+    },
+    {
+     "s": 1,
+     "lab": "연기",
+     "v": "발열 · 급성 질환 시 평가"
+    },
+    {
+     "s": 2,
+     "lab": "면역저하",
+     "v": "면역 반응 감소 가능",
+     "cls": "amb"
+    },
+    {
+     "s": 3,
+     "lab": "흔한 반응",
+     "v": "주사 부위 통증 · 피로 · 두통 · 근육통"
+    }
+   ]
+  },
+  {
+   "id": "summary",
+   "type": "summary",
+   "title": "Take-home message",
+   "sec": "<b>핵심 정리</b> · TAKE-HOME MESSAGE",
+   "h1": "캡박시브, 이 6가지만 기억하세요",
+   "sents": [
+    "정리할게요.",
+    "캡박시브는 21가 폐렴구균 단백접합 백신이에요.",
+    "단백에 붙여서 T세포 의존 반응과 기억을 만들어요.",
+    "18세 이상 성인이 대상이에요.",
+    "0.5 mL를 한 번 근육주사하고, 냉장 보관해요.",
+    "디프테리아 톡소이드 과민반응을 확인해요."
+   ],
+   "cards": [
+    {
+     "s": 1,
+     "lab": "구성",
+     "v": "21가 다당<br>+ CRM197 접합"
+    },
+    {
+     "s": 2,
+     "lab": "기전",
+     "v": "T세포 의존 반응<br>기억 B세포"
+    },
+    {
+     "s": 3,
+     "lab": "대상",
+     "v": "18세 이상 성인<br>침습성 질환 · 폐렴"
+    },
+    {
+     "s": 4,
+     "lab": "용법",
+     "v": "0.5 mL 1회<br>근육주사"
+    },
+    {
+     "s": 4,
+     "lab": "보관",
+     "v": "2–8°C 냉장<br>동결 금지",
+     "cls": "amb"
+    },
+    {
+     "s": 5,
+     "lab": "금기",
+     "v": "디프테리아 톡소이드<br>과민반응",
+     "cls": "red"
+    }
+   ],
+   "cameo_say": "하루 씨, 뼈 있는 정리였어요!",
+   "cameo_bubble": "하루 씨,<br>뼈 있는 정리였어요!"
+  }
+ ],
+ "lines": {
+  "m0": [
+   {
+    "who": "cameo",
+    "after": 3,
+    "say": "기억이 남는다니, 저보다 낫네요!",
+    "bubble": "기억이 남는다니<br>저보다 낫네요!",
+    "act": "shrug"
+   }
+  ],
+  "5": [
+   {
+    "who": "lead",
+    "after": 1,
+    "say": "근육주사니까, 삼각근 맞죠?",
+    "bubble": "근육주사니까<br>삼각근 맞죠?",
+    "act": "think"
+   }
+  ]
+ }
+}

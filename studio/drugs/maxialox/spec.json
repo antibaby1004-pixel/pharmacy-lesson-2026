@@ -1,0 +1,369 @@
+{
+ "name": "맥시알록",
+ "no": "12",
+ "name_en": "Maxialox prefilled inj 1.5 mL",
+ "voice": "injoon",
+ "chip": "맥시알록 Maxialox <i>· palonosetron 0.075 mg/1.5 mL</i>",
+ "cast": {
+  "lead": "skull",
+  "cameo": "haru"
+ },
+ "props": [
+  "syringe",
+  "clock",
+  "magnifier",
+  "book"
+ ],
+ "highlight": {
+  "generic": [
+   "palonosetron",
+   "팔로노세트론"
+  ],
+  "target": [
+   "5-HT3",
+   "세로토닌",
+   "미주신경",
+   "구토중추",
+   "장크롬친화세포"
+  ],
+  "warn": [
+   "QT 연장",
+   "세로토닌 증후군",
+   "과민반응",
+   "혼합 금지",
+   "0.25 mg"
+  ]
+ },
+ "greet": {
+  "say": "해골약사 등장! 오늘은 맥시알록!",
+  "bubble": "해골약사 등장!<br>오늘은 맥시알록!"
+ },
+ "intro_title": "맥시알록 소개 · PONV 예방",
+ "intro": {
+  "title": "맥시알록",
+  "en": "Maxialox prefilled inj.",
+  "inn": "palonosetron",
+  "photos": [
+   {
+    "draw": "pfs",
+    "args": [
+     "0.075 mg",
+     "1.5 mL 프리필드",
+     "#C0504D"
+    ],
+    "label": "맥시알록 프리필드주 1.5 mL"
+   }
+  ],
+  "sents": [
+   [
+    "성분은 palonosetron, 2세대 5-HT3 수용체 길항제예요.",
+    "성분은 팔로노세트론, 2세대 오에이치티 쓰리 수용체 길항제예요."
+   ],
+   [
+    "1.5 mL 프리필드 주사에 palonosetron 0.075 mg이 들어 있어요.",
+    "일점오 밀리리터 프리필드 주사에, 팔로노세트론 영점영칠오 밀리그램이 들어 있어요."
+   ],
+   [
+    "수술 후 오심과 구토, PONV를 예방하는 용량이에요.",
+    "수술 후 오심과 구토, 피오엔브이를 예방하는 용량이에요."
+   ],
+   "원내 팔로논주 1.5 mL를 대체하는 품목이에요."
+  ],
+  "facts": [
+   {
+    "s": 1,
+    "lab": "함량",
+    "v": "0.075 mg / 1.5 mL (0.05 mg/mL)"
+   },
+   {
+    "s": 2,
+    "lab": "용도",
+    "v": "수술 후 오심·구토(PONV) 예방"
+   },
+   {
+    "s": 3,
+    "lab": "도입",
+    "v": "팔로논주 1.5 mL 대체",
+    "cls": "amb"
+   }
+  ]
+ },
+ "parts": [
+  {
+   "id": "m0",
+   "type": "mech",
+   "title": "세로토닌 · 5-HT3 · 구토중추",
+   "sec": "<b>작용 기전</b> · 01 / 02",
+   "h1": "구토 신호가 올라가는 길을 끊습니다",
+   "sents": [
+    "항암제나 수술 자극이 오면, 소장의 장크롬친화세포에서 세로토닌이 쏟아져요.",
+    [
+     "세로토닌이 미주신경 끝의 5-HT3 수용체를 자극하면, 뇌간 구토중추로 신호가 올라가요.",
+     "세로토닌이 미주신경 끝의 오에이치티 쓰리 수용체를 자극하면, 뇌간 구토중추로 신호가 올라가요."
+    ],
+    [
+     "palonosetron이 이 수용체를 막으면 신호가 끊겨요.",
+     "팔로노세트론이 이 수용체를 막으면 신호가 끊겨요."
+    ]
+   ],
+   "steps": [
+    {
+     "s": 0,
+     "h": "세로토닌 방출",
+     "p": "장크롬친화세포(EC세포)에서 쏟아짐"
+    },
+    {
+     "s": 1,
+     "h": "5-HT3 → 구토중추",
+     "p": "미주신경 구심성 신호가 뇌간으로"
+    },
+    {
+     "s": 2,
+     "h": "palonosetron 차단",
+     "p": "수용체를 막아 신호 끊김"
+    }
+   ],
+   "key": {
+    "s": 2,
+    "text": "5-HT3 차단 = 구토 신호 차단"
+   },
+   "fig": "<rect x=\"30\" y=\"380\" width=\"250\" height=\"200\" rx=\"20\" fill=\"#F6E3E0\" stroke=\"#243341\" stroke-width=\"4\"/><text x=\"50\" y=\"410\" font-size=\"20\" font-weight=\"700\" fill=\"#8E2219\">소장 점막</text>\n<g transform=\"translate(110 500)\"><rect x=\"-40\" y=\"-40\" width=\"80\" height=\"80\" rx=\"16\" fill=\"#FFE4D6\" stroke=\"#C0704A\" stroke-width=\"3\"/><text y=\"6\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"700\" fill=\"#C0704A\">EC세포</text></g>\n<g id=\"ser\"></g>\n<path id=\"nv\" d=\"M230 470 C330 470 330 200 470 150\" fill=\"none\" stroke=\"#5B7FA6\" stroke-width=\"10\"/><text x=\"300\" y=\"300\" font-size=\"20\" font-weight=\"700\" fill=\"#5B7FA6\">미주신경</text>\n<g transform=\"translate(230 470)\"><rect x=\"-16\" y=\"-24\" width=\"32\" height=\"48\" rx=\"8\" fill=\"#B9A7E0\" stroke=\"#243341\" stroke-width=\"3\"/></g><text x=\"200\" y=\"440\" font-size=\"16\" font-weight=\"700\" fill=\"#5B5FA8\">5-HT3</text>\n<ellipse cx=\"500\" cy=\"120\" rx=\"80\" ry=\"60\" fill=\"#EEF0FA\" stroke=\"#5B5FA8\" stroke-width=\"4\"/><text x=\"500\" y=\"115\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"700\" fill=\"#5B5FA8\">뇌간</text><text x=\"500\" y=\"140\" text-anchor=\"middle\" font-size=\"16\" fill=\"#5B5FA8\">구토중추</text>\n<g id=\"pl\"></g>\n<g id=\"dr\" style=\"opacity:0\"><rect x=\"-26\" y=\"-14\" width=\"52\" height=\"28\" rx=\"14\" fill=\"#007F86\"/><text y=\"7\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"700\" fill=\"#fff\">PALO</text></g>\n<text id=\"lb\" x=\"306\" y=\"620\" text-anchor=\"middle\" font-size=\"24\" font-weight=\"700\" fill=\"#007F86\" style=\"opacity:0\">수용체 차단 → 구토 신호 끊김</text>",
+   "js": "let h='';for(let i=0;i<8;i++)h+=`<circle id=\"s${i}\" r=\"8\" fill=\"#D96C00\"/>`;$i('ser').innerHTML=h;let p='';for(let i=0;i<4;i++)p+=`<circle id=\"q${i}\" r=\"10\" fill=\"#FFD166\" stroke=\"#D96C00\" stroke-width=\"2\"/>`;$i('pl').innerHTML=p;\nconst nv=$i('nv'),L=nv.getTotalLength();\nSCENE.anim=o=>{const rel=seg(o,S[0]+0.3,S[0]+1.2),blk=seg(o,S[2],S[2]+0.8);\n for(let i=0;i<8;i++){const ph=((o*.7+i/8)%1);const e=$i('s'+i);e.style.opacity=rel;e.setAttribute('cx',130+ph*90);e.setAttribute('cy',490-Math.sin(ph*3+i)*30)}\n for(let i=0;i<4;i++){const ph=((o*.5+i/4)%1);const pt=nv.getPointAtLength(L*ph);const e=$i('q'+i);e.setAttribute('cx',pt.x);e.setAttribute('cy',pt.y);e.style.opacity=seg(o,S[1],S[1]+0.6)*(1-blk)}\n $i('dr').style.opacity=blk;$i('dr').setAttribute('transform',`translate(${lerp(320,232,ease(blk))} ${lerp(560,470,ease(blk))})`);$i('lb').style.opacity=seg(o,S[2]+0.6,S[2]+1.1)};"
+  },
+  {
+   "id": "yt1",
+   "type": "ytslot",
+   "title": "기전 영상 · 링크 확정 전",
+   "sec": "<b>기전 영상</b> · VIDEO",
+   "h1": ""
+  },
+  {
+   "id": "m1",
+   "type": "mech",
+   "title": "2세대의 차이 · 긴 반감기",
+   "sec": "<b>작용 기전</b> · 02 / 02",
+   "h1": "오래 붙어 있어 지연성까지 덮습니다",
+   "sents": [
+    "1세대와 다른 점은, 수용체에 붙는 방식이에요.",
+    "알로스테릭하게 결합하고 수용체 내재화를 일으켜, 효과가 오래가요.",
+    "반감기가 약 40시간으로 길어서, 급성뿐 아니라 지연성 구역까지 덮어요."
+   ],
+   "steps": [
+    {
+     "s": 0,
+     "h": "결합 방식",
+     "p": "1세대와 다르게 붙음"
+    },
+    {
+     "s": 1,
+     "h": "알로스테릭 결합 · 내재화",
+     "p": "수용체를 세포 안으로 끌어들여 오래 작용"
+    },
+    {
+     "s": 2,
+     "h": "반감기 약 40시간",
+     "p": "급성 + 지연성 구역"
+    }
+   ],
+   "key": {
+    "s": 2,
+    "text": "긴 반감기 → 지연성까지"
+   },
+   "fig": "<text x=\"40\" y=\"70\" font-size=\"22\" font-weight=\"700\" fill=\"#3F4D5A\">작용 지속 시간 (개념)</text>\n<line x1=\"40\" y1=\"440\" x2=\"580\" y2=\"440\" stroke=\"#243341\" stroke-width=\"3\"/>\n<rect x=\"40\" y=\"450\" width=\"130\" height=\"30\" fill=\"#FFF7EC\"/><text x=\"105\" y=\"472\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#7D4A00\">급성 (~24 h)</text>\n<rect x=\"170\" y=\"450\" width=\"410\" height=\"30\" fill=\"#FCE9E7\"/><text x=\"375\" y=\"472\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#8E2219\">지연성 (24–120 h)</text>\n<text x=\"40\" y=\"170\" font-size=\"22\" font-weight=\"700\" fill=\"#5B7FA6\">1세대</text><rect id=\"g1\" x=\"40\" y=\"185\" width=\"0\" height=\"50\" rx=\"10\" fill=\"#9FB4C6\"/>\n<text x=\"40\" y=\"300\" font-size=\"22\" font-weight=\"700\" fill=\"#007F86\">palonosetron · 반감기 약 40시간</text><rect id=\"g2\" x=\"40\" y=\"315\" width=\"0\" height=\"50\" rx=\"10\" fill=\"#007F86\"/>\n<g id=\"ai\" style=\"opacity:0\" transform=\"translate(470 150)\"><rect x=\"-26\" y=\"-40\" width=\"52\" height=\"80\" rx=\"12\" fill=\"#B9A7E0\" stroke=\"#243341\" stroke-width=\"3\"/><circle cx=\"-34\" cy=\"0\" r=\"12\" fill=\"#007F86\"/><path d=\"M0 50 v40\" stroke=\"#5B5FA8\" stroke-width=\"5\" marker-end=\"url(#m)\"/><text y=\"120\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#5B5FA8\">내재화</text></g>\n<defs><marker id=\"m\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"5\" markerHeight=\"5\" orient=\"auto\"><path d=\"M0 0 L10 5 L0 10z\" fill=\"#5B5FA8\"/></marker></defs>\n<text x=\"306\" y=\"560\" text-anchor=\"middle\" font-size=\"20\" fill=\"#3F4D5A\">막대 길이는 상대 비교용 개념도</text>",
+   "js": "SCENE.anim=o=>{$i('g1').setAttribute('width',110*seg(o,S[0]+0.3,S[0]+1.2));$i('ai').style.opacity=seg(o,S[1],S[1]+0.6);$i('g2').setAttribute('width',520*easeOut(seg(o,S[2],S[2]+1.6)))};"
+  },
+  {
+   "id": "check",
+   "type": "rows",
+   "title": "규격 혼동 주의",
+   "sec": "<b>규격</b> · STRENGTH",
+   "h1": "같은 성분, 다른 규격, 다른 용도",
+   "sents": [
+    "같은 성분이라도 규격과 용도가 달라요.",
+    [
+     "1.5 mL, 0.075 mg은 수술 후 오심·구토 예방용이에요.",
+     "일점오 밀리리터, 영점영칠오 밀리그램은, 수술 후 오심 구토 예방용이에요."
+    ],
+    [
+     "항암제 유발 오심·구토에는 0.25 mg, 5 mL 규격을 써요.",
+     "항암제 유발 오심 구토에는, 영점이오 밀리그램, 오 밀리리터 규격을 써요."
+    ],
+    "라벨의 함량과 용도를 꼭 확인해요."
+   ],
+   "rows": [
+    {
+     "s": 0,
+     "lab": "원칙",
+     "v": "같은 성분 · 다른 규격 · 다른 용도"
+    },
+    {
+     "s": 1,
+     "lab": "PONV",
+     "v": "0.075 mg / 1.5 mL — 이 제품"
+    },
+    {
+     "s": 2,
+     "lab": "CINV",
+     "v": "0.25 mg / 5 mL — 다른 규격",
+     "cls": "red"
+    },
+    {
+     "s": 3,
+     "lab": "확인",
+     "v": "라벨 함량 · 용도 확인",
+     "cls": "amb"
+    }
+   ]
+  },
+  {
+   "id": "5",
+   "type": "rows",
+   "title": "용법",
+   "sec": "<b>용량과 사용법</b> · DOSAGE",
+   "h1": "마취 유도 직전, 10초에 걸쳐 한 번",
+   "sents": [
+    [
+     "마취 유도 직전에 0.075 mg을 한 번 정맥주사해요.",
+     "마취 유도 직전에 영점영칠오 밀리그램을 한 번 정맥주사해요."
+    ],
+    "10초에 걸쳐 주사해요.",
+    "다른 약과 섞지 말고, 주사 전후로 수액 라인을 생리식염수로 씻어 줘요.",
+    "수술 후 24시간 이후의 효과는 확립되지 않았어요."
+   ],
+   "rows": [
+    {
+     "s": 0,
+     "lab": "용량",
+     "v": "0.075 mg 1회 정맥주사 · 마취 유도 직전"
+    },
+    {
+     "s": 1,
+     "lab": "속도",
+     "v": "10초에 걸쳐"
+    },
+    {
+     "s": 2,
+     "lab": "라인",
+     "v": "다른 약과 혼합 금지 · 전후 생리식염수 플러시",
+     "cls": "amb"
+    },
+    {
+     "s": 3,
+     "lab": "범위",
+     "v": "24시간 이후 효과는 미확립"
+    }
+   ]
+  },
+  {
+   "id": "4",
+   "type": "rows",
+   "title": "주의사항",
+   "sec": "<b>주의점과 부작용</b> · PRECAUTIONS",
+   "h1": "세로토닌 증후군과 QT를 살핍니다",
+   "sents": [
+    "흔한 이상반응은 두통과 변비예요.",
+    "QT 연장 위험이 있는 환자는 주의해요.",
+    "세로토닌성 약물과 함께 쓰면, 세로토닌 증후군을 살펴요.",
+    "다른 5-HT3 길항제에 과민반응이 있었다면 주의해요."
+   ],
+   "rows": [
+    {
+     "s": 0,
+     "lab": "흔한 반응",
+     "v": "두통 · 변비"
+    },
+    {
+     "s": 1,
+     "lab": "심장",
+     "v": "QT 연장 위험 환자 주의",
+     "cls": "amb"
+    },
+    {
+     "s": 2,
+     "lab": "세로토닌",
+     "v": "세로토닌성 약물 병용 시 세로토닌 증후군 관찰",
+     "cls": "red"
+    },
+    {
+     "s": 3,
+     "lab": "과민",
+     "v": "다른 5-HT3 길항제 과민반응 이력 확인"
+    }
+   ]
+  },
+  {
+   "id": "summary",
+   "type": "summary",
+   "title": "Take-home message",
+   "sec": "<b>핵심 정리</b> · TAKE-HOME MESSAGE",
+   "h1": "맥시알록, 이 6가지만 기억하세요",
+   "sents": [
+    "정리할게요.",
+    "맥시알록은 5-HT3 수용체를 막아 구토 신호를 끊어요.",
+    "2세대라서 반감기가 길고 지연성까지 덮어요.",
+    [
+     "0.075 mg, 1.5 mL는 수술 후 오심·구토 예방 용량이에요.",
+     "영점영칠오 밀리그램, 일점오 밀리리터는, 수술 후 오심 구토 예방 용량이에요."
+    ],
+    "마취 유도 직전에 10초에 걸쳐 정맥주사해요.",
+    "항암제용 0.25 mg 규격과 헷갈리지 않아요."
+   ],
+   "cards": [
+    {
+     "s": 1,
+     "lab": "기전",
+     "v": "5-HT3 차단<br>구토 신호 차단"
+    },
+    {
+     "s": 2,
+     "lab": "2세대",
+     "v": "반감기 약 40시간<br>지연성까지"
+    },
+    {
+     "s": 3,
+     "lab": "함량",
+     "v": "0.075 mg / 1.5 mL<br>PONV 예방"
+    },
+    {
+     "s": 4,
+     "lab": "용법",
+     "v": "마취 유도 직전<br>10초 정맥주사"
+    },
+    {
+     "s": 5,
+     "lab": "규격 주의",
+     "v": "CINV는<br>0.25 mg / 5 mL",
+     "cls": "red"
+    },
+    {
+     "s": 5,
+     "lab": "주의",
+     "v": "QT · 세로토닌 증후군",
+     "cls": "amb"
+    }
+   ],
+   "cameo_say": "해골 선배, 덕분에 안 헷갈려요!",
+   "cameo_bubble": "해골 선배,<br>덕분에 안 헷갈려요!"
+  }
+ ],
+ "lines": {
+  "m0": [
+   {
+    "who": "cameo",
+    "after": 2,
+    "say": "신호가 끊기면, 울렁거림도 멈추는 거죠?",
+    "bubble": "신호가 끊기면<br>울렁거림도 멈추죠?",
+    "act": "think"
+   }
+  ],
+  "check": [
+   {
+    "who": "lead",
+    "after": 2,
+    "say": "숫자 하나 차이로, 용도가 완전히 달라요!",
+    "bubble": "숫자 하나 차이로<br>용도가 완전히 달라요!",
+    "act": "point"
+   }
+  ]
+ }
+}

@@ -1,0 +1,286 @@
+{
+ "name": "뉴도탑",
+ "no": "15",
+ "name_en": "Newdotop cataplasma",
+ "voice": "injoon",
+ "chip": "뉴도탑 Newdotop <i>· lidocaine 700 mg cataplasma</i>",
+ "cast": {
+  "lead": "park",
+  "cameo": "skull"
+ },
+ "props": [
+  "clock",
+  "book",
+  "magnifier",
+  "phone"
+ ],
+ "highlight": {
+  "generic": [
+   "lidocaine",
+   "리도카인"
+  ],
+  "target": [
+   "나트륨 채널",
+   "Na 채널",
+   "전압의존성",
+   "이소성 발화"
+  ],
+  "warn": [
+   "과민증",
+   "중증 간질환",
+   "혈중 농도",
+   "독성",
+   "12시간 초과"
+  ]
+ },
+ "greet": {
+  "say": "음… 커피약사 박 선배입니다. 오늘은, 뉴도탑.",
+  "bubble": "음… 커피약사 박 선배.<br>오늘은 뉴도탑."
+ },
+ "intro_title": "뉴도탑 소개 · 리도카인 첩부제",
+ "intro": {
+  "title": "뉴도탑",
+  "en": "Newdotop cataplasma",
+  "inn": "lidocaine",
+  "photos": [
+   {
+    "draw": "patch",
+    "args": [
+     "700 mg",
+     "10 × 14 cm",
+     "#F2E6D8"
+    ],
+    "label": "뉴도탑 카타플라스마 (5매)"
+   }
+  ],
+  "sents": [
+   [
+    "성분은 lidocaine, 국소마취제를 담은 카타플라스마 첩부제예요.",
+    "성분은 리도카인, 국소마취제를 담은 카타플라스마 첩부제예요."
+   ],
+   [
+    "한 매에 lidocaine 700 mg, 크기는 10 × 14 cm예요.",
+    "한 매에 리도카인 칠백 밀리그램, 크기는 십 곱하기 십사 센티미터예요."
+   ],
+   "대상포진 후 신경통증 완화에 써요.",
+   "이번 심의에서 원내 신약으로 들어왔어요."
+  ],
+  "facts": [
+   {
+    "s": 1,
+    "lab": "함량",
+    "v": "lidocaine 700 mg/매 · 10 × 14 cm"
+   },
+   {
+    "s": 2,
+    "lab": "적응증",
+    "v": "대상포진 후 신경통증 완화"
+   },
+   {
+    "s": 3,
+    "lab": "도입",
+    "v": "원내 신약 · 5매 포장",
+    "cls": "amb"
+   }
+  ]
+ },
+ "parts": [
+  {
+   "id": "m0",
+   "type": "mech",
+   "title": "나트륨 채널 차단",
+   "sec": "<b>작용 기전</b> · MECHANISM",
+   "h1": "제멋대로 쏘는 신경을 조용히 시킵니다",
+   "sents": [
+    "손상된 말초 신경은 자극이 없어도 제멋대로 신호를 쏘아 올려요.",
+    "이 이소성 발화의 문이 전압의존성 나트륨 채널이에요.",
+    [
+     "lidocaine이 나트륨 채널을 막으면, 발화가 줄어 통증 신호가 올라가지 못해요.",
+     "리도카인이 나트륨 채널을 막으면, 발화가 줄어 통증 신호가 올라가지 못해요."
+    ],
+    "첩부제는 전신으로 적게 퍼지고, 붙인 자리에서 주로 작용해요."
+   ],
+   "steps": [
+    {
+     "s": 0,
+     "h": "이소성 발화",
+     "p": "손상 신경이 자극 없이도 신호를 냄"
+    },
+    {
+     "s": 1,
+     "h": "전압의존성 Na 채널",
+     "p": "발화가 지나가는 문"
+    },
+    {
+     "s": 2,
+     "h": "lidocaine 차단",
+     "p": "채널을 막아 통증 신호 감소"
+    }
+   ],
+   "key": {
+    "s": 3,
+    "text": "붙인 자리에서 — 전신 흡수 적음"
+   },
+   "fig": "<text x=\"40\" y=\"70\" font-size=\"22\" font-weight=\"700\" fill=\"#3F4D5A\">신경 신호 (스파이크)</text>\n<line x1=\"40\" y1=\"230\" x2=\"572\" y2=\"230\" stroke=\"#C9D6E0\" stroke-width=\"3\"/><path id=\"trace\" d=\"\" fill=\"none\" stroke=\"#D96C00\" stroke-width=\"4\"/>\n<rect x=\"30\" y=\"345\" width=\"552\" height=\"70\" rx=\"35\" fill=\"#FFF7EC\" stroke=\"#E0B060\" stroke-width=\"4\"/><text x=\"50\" y=\"455\" font-size=\"22\" font-weight=\"700\" fill=\"#7D4A00\">손상된 말초 신경 축삭</text><g id=\"c0\" transform=\"translate(110 380)\"><rect x=\"-14\" y=\"-34\" width=\"28\" height=\"68\" rx=\"6\" fill=\"#7FC6CA\" stroke=\"#243341\" stroke-width=\"3\"/><rect class=\"gate\" x=\"-14\" y=\"-8\" width=\"28\" height=\"16\" fill=\"#FFFFFF\"/></g><g id=\"c1\" transform=\"translate(220 380)\"><rect x=\"-14\" y=\"-34\" width=\"28\" height=\"68\" rx=\"6\" fill=\"#7FC6CA\" stroke=\"#243341\" stroke-width=\"3\"/><rect class=\"gate\" x=\"-14\" y=\"-8\" width=\"28\" height=\"16\" fill=\"#FFFFFF\"/></g><g id=\"c2\" transform=\"translate(330 380)\"><rect x=\"-14\" y=\"-34\" width=\"28\" height=\"68\" rx=\"6\" fill=\"#7FC6CA\" stroke=\"#243341\" stroke-width=\"3\"/><rect class=\"gate\" x=\"-14\" y=\"-8\" width=\"28\" height=\"16\" fill=\"#FFFFFF\"/></g><g id=\"c3\" transform=\"translate(440 380)\"><rect x=\"-14\" y=\"-34\" width=\"28\" height=\"68\" rx=\"6\" fill=\"#7FC6CA\" stroke=\"#243341\" stroke-width=\"3\"/><rect class=\"gate\" x=\"-14\" y=\"-8\" width=\"28\" height=\"16\" fill=\"#FFFFFF\"/></g><g id=\"c4\" transform=\"translate(550 380)\"><rect x=\"-14\" y=\"-34\" width=\"28\" height=\"68\" rx=\"6\" fill=\"#7FC6CA\" stroke=\"#243341\" stroke-width=\"3\"/><rect class=\"gate\" x=\"-14\" y=\"-8\" width=\"28\" height=\"16\" fill=\"#FFFFFF\"/></g>\n<rect id=\"patch\" x=\"150\" y=\"300\" width=\"312\" height=\"160\" rx=\"20\" fill=\"#F2E6D8\" stroke=\"#C9B79F\" stroke-width=\"4\" stroke-dasharray=\"12 8\" style=\"opacity:0\"/>\n<g id=\"zone\" style=\"opacity:0\"><rect x=\"130\" y=\"480\" width=\"352\" height=\"40\" rx=\"12\" fill=\"#E2F2F3\"/><text x=\"306\" y=\"508\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"700\" fill=\"#00666C\">붙인 자리 위주 · 전신 흡수 적음</text></g>\n<text id=\"lb\" x=\"306\" y=\"580\" text-anchor=\"middle\" font-size=\"24\" font-weight=\"700\" fill=\"#007F86\" style=\"opacity:0\">Na 채널 차단 → 이소성 발화 ↓</text>",
+   "js": "SCENE.anim=o=>{const blk=seg(o,S[2],S[2]+1.2);let d='M40 230';for(let x=40;x<=572;x+=4){const ph=(x*0.05-o*6);const sp=(Math.sin(ph)>0.93?1:0)*(1-blk*0.95);d+=` L${x} ${230-sp*120*seg(o,0.4,1.0)}`}$i('trace').setAttribute('d',d);\n for(let i=0;i<5;i++){const g=$i('c'+i).querySelector('.gate');const open=(Math.sin(o*5+i*1.7)>0.3?1:0)*(1-blk);g.setAttribute('height',16-14*open*seg(o,S[1],S[1]+0.6)+8*blk);g.setAttribute('y',-8-4*blk);g.setAttribute('fill',blk>.5?'#D2342A':'#FFFFFF')}\n $i('patch').style.opacity=.85*blk;$i('lb').style.opacity=seg(o,S[2]+1,S[2]+1.5);$i('zone').style.opacity=seg(o,S[3],S[3]+0.6)};"
+  },
+  {
+   "id": "yt1",
+   "type": "ytslot",
+   "title": "기전 영상 · 링크 확정 전",
+   "sec": "<b>기전 영상</b> · VIDEO",
+   "h1": ""
+  },
+  {
+   "id": "5",
+   "type": "rows",
+   "title": "용법",
+   "sec": "<b>용법</b> · DOSAGE",
+   "h1": "1일 1회 1–3매, 최대 12시간",
+   "sents": [
+    "1일 1회, 1에서 3매를 최대 12시간 동안 붙여요.",
+    "상처나 손상이 없는 피부에서 가장 아픈 부위에 붙여요.",
+    "파우치에서 꺼내면 바로 붙이고, 가위로 잘라 써도 돼요.",
+    "더 넓게, 더 오래 붙이면 혈중 농도가 올라가 위험할 수 있어요."
+   ],
+   "rows": [
+    {
+     "s": 0,
+     "lab": "용량",
+     "v": "1일 1회 1–3매 · 최대 12시간"
+    },
+    {
+     "s": 1,
+     "lab": "부위",
+     "v": "상처 없는 피부 · 가장 아픈 부위"
+    },
+    {
+     "s": 2,
+     "lab": "사용",
+     "v": "꺼내면 즉시 부착 · 잘라서 사용 가능"
+    },
+    {
+     "s": 3,
+     "lab": "과량",
+     "v": "넓은 부위 · 12시간 초과 → 혈중 농도 ↑",
+     "cls": "red"
+    }
+   ]
+  },
+  {
+   "id": "4",
+   "type": "rows",
+   "title": "주의사항",
+   "sec": "<b>주의점과 부작용</b> · PRECAUTIONS",
+   "h1": "아미드계 과민증과 간질환을 확인합니다",
+   "sents": [
+    "아미드계 국소마취제에 과민증이 있으면 쓰지 않아요.",
+    "중증 간질환 환자는 리도카인 대사가 느려 혈중 농도가 오를 수 있어요.",
+    [
+     "class 1 항부정맥제나 다른 국소마취제와 함께 쓰면, 독성이 더해질 수 있어요.",
+     "클래스 원 항부정맥제나 다른 국소마취제와 함께 쓰면, 독성이 더해질 수 있어요."
+    ],
+    "흔한 반응은 붙인 자리의 발적이나 가려움 같은 피부 반응이에요."
+   ],
+   "rows": [
+    {
+     "s": 0,
+     "lab": "금기",
+     "v": "아미드계 국소마취제 과민증",
+     "cls": "red"
+    },
+    {
+     "s": 1,
+     "lab": "간질환",
+     "v": "중증 간질환 → 혈중 농도 ↑",
+     "cls": "amb"
+    },
+    {
+     "s": 2,
+     "lab": "병용",
+     "v": "class 1 항부정맥제 · 다른 국소마취제 → 독성 가산",
+     "cls": "amb"
+    },
+    {
+     "s": 3,
+     "lab": "흔한 반응",
+     "v": "부착 부위 발적 · 가려움"
+    }
+   ]
+  },
+  {
+   "id": "summary",
+   "type": "summary",
+   "title": "Take-home message",
+   "sec": "<b>핵심 정리</b> · TAKE-HOME MESSAGE",
+   "h1": "뉴도탑, 이 6가지만 기억하세요",
+   "sents": [
+    "정리할게요.",
+    [
+     "뉴도탑은 lidocaine 700 mg 카타플라스마예요.",
+     "뉴도탑은 리도카인 칠백 밀리그램 카타플라스마예요."
+    ],
+    "나트륨 채널을 막아 손상 신경의 발화를 줄여요.",
+    "대상포진 후 신경통증 완화에 써요.",
+    "1일 1회 1에서 3매, 최대 12시간 붙여요.",
+    "더 넓게, 더 오래 붙이지 않아요."
+   ],
+   "cards": [
+    {
+     "s": 2,
+     "lab": "기전",
+     "v": "Na 채널 차단<br>이소성 발화 ↓"
+    },
+    {
+     "s": 1,
+     "lab": "함량",
+     "v": "lidocaine 700 mg/매<br>10 × 14 cm"
+    },
+    {
+     "s": 3,
+     "lab": "적응증",
+     "v": "대상포진 후<br>신경통증 완화"
+    },
+    {
+     "s": 4,
+     "lab": "용법",
+     "v": "1일 1회 1–3매<br>최대 12시간"
+    },
+    {
+     "s": 5,
+     "lab": "주의",
+     "v": "넓게 · 오래 붙이면<br>혈중 농도 ↑",
+     "cls": "red"
+    },
+    {
+     "s": 5,
+     "lab": "확인",
+     "v": "아미드계 과민증<br>중증 간질환",
+     "cls": "amb"
+    }
+   ],
+   "cameo_say": "선배님, 커피는 제가 살게요!",
+   "cameo_bubble": "선배님,<br>커피는 제가 살게요!"
+  }
+ ],
+ "lines": {
+  "m0": [
+   {
+    "who": "cameo",
+    "after": 2,
+    "say": "신경이 조용해지면, 제 뼈도 덜 시려요!",
+    "bubble": "신경이 조용해지면<br>제 뼈도 덜 시려요!",
+    "act": "shrug"
+   }
+  ],
+  "5": [
+   {
+    "who": "lead",
+    "after": 0,
+    "say": "음… 최대 열두 시간, 그다음엔 떼는 거야.",
+    "bubble": "음… 최대 12시간,<br>그다음엔 떼는 거야.",
+    "act": "sip"
+   }
+  ]
+ }
+}

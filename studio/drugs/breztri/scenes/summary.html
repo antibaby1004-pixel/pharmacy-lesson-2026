@@ -1,0 +1,17 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../../lib/common.css"><style>
+svg text{font-family:P}
+.g{position:absolute;left:96px;top:262px;width:1344px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.c{padding:26px 30px;height:300px;box-sizing:border-box}.c .v{font-size:38px;font-weight:600;line-height:52px;margin-top:16px}
+.c.red{border-color:#F2B8B2;background:#FCE9E7}.c.red .lab,.c.red .v{color:#8E2219}
+.c.amb{border-color:#F3C58A;background:#FFF7EC}.c.amb .lab,.c.amb .v{color:#7D4A00}
+</style></head><body><div class="stage">
+<div class="fade"><header class="top"><div class="sec"><b>핵심 정리</b> · TAKE-HOME MESSAGE</div><div class="chip">브레즈트리 Breztri <i>· budesonide / glycopyrronium / formoterol</i></div></header><h1>브레즈트리, 이 6가지만 기억하세요</h1></div>
+<div class="fade"><div class="wm">07</div><div class="g"><div class="card c " data-in="1.26"><span class="lab">구성</span><div class="v">ICS + LAMA + LABA<br>3제 흡입기</div></div><div class="card c " data-in="6.2"><span class="lab">기전</span><div class="v">염증 억제 · 콜린 차단<br>β2 이완</div></div><div class="card c " data-in="10.09"><span class="lab">용법</span><div class="v">1회 2번 · 1일 2회<br>흡입 후 입 헹구기</div></div><div class="card c red" data-in="13.06"><span class="lab">급성 증상</span><div class="v">발작 완화용 아님<br>속효성 약 따로</div></div><div class="card c red" data-in="15.74"><span class="lab">주의</span><div class="v">녹내장 · 요저류</div></div><div class="card c amb" data-in="15.74"><span class="lab">중복</span><div class="v">다른 LAMA·LABA<br>흡입제 확인</div></div></div></div>
+</div>
+<script src="../timing.js"></script><script src="../../../lib/core.js"></script><script>
+useTiming('summary');window.CENTER_FIRST=1.6;const $i=i=>document.getElementById(i);
+const BT=((TIMING.summary.dialog||[]).find(d=>d.who==='both')||{}).t0||1e9;
+SCENE.anim=(o,T)=>{const dm=1-.72*easeOut(seg(T,BT-1.1,BT-.2));document.querySelectorAll('.card,.wm').forEach(e=>e.style.filter=dm<1?`opacity(${dm})`:'')};
+SCENE.char=makeChar([{k: "walk", t0: 0.15, t1: 1.2, x0: 2250, x1: 1560}, {k: "think", t0: 1.46, t1: 3.06}, {k: "prop", name: "book", t0: 6.4, t1: 9.0}, {k: "clap", t0: 10.29, t1: 11.89}, {k: "prop", name: "clock", t0: 13.26, t1: 15.86}, {k: "nod", t0: 15.94, t1: 17.54}],'lead');
+SCENE.char2=makeChar([{k: "walk", t0: 17.06, t1: 18.26, x0: 2300, x1: 1830}, {k: "nod", t0: 18.46, t1: 19.26}],'cameo');
+</script><script src="../../../lib/highlight.js"></script></body></html>

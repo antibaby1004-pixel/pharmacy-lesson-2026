@@ -1,0 +1,26 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../../lib/common.css"><style>
+svg text{font-family:P}
+.grid{display:grid;grid-template-columns:680px 1fr;gap:52px;width:1344px}.fig{height:640px;position:relative;overflow:hidden}
+</style></head><body><div class="stage">
+<div class="fade"><header class="top"><div class="sec"><b>작용 기전</b> · 01 / 02</div><div class="chip">맥시알록 Maxialox <i>· palonosetron 0.075 mg/1.5 mL</i></div></header><h1>구토 신호가 올라가는 길을 끊습니다</h1></div>
+<div class="fade"><div class="grid"><div class="steps"><div class="s" data-on="0.1,5.35"><div class="n">1</div><div><h3>세로토닌 방출</h3><p>장크롬친화세포(EC세포)에서 쏟아짐</p></div></div><div class="s" data-on="5.35,11.81"><div class="n">2</div><div><h3>5-HT3 → 구토중추</h3><p>미주신경 구심성 신호가 뇌간으로</p></div></div><div class="s" data-on="11.81"><div class="n">3</div><div><h3>palonosetron 차단</h3><p>수용체를 막아 신호 끊김</p></div></div></div><div class="card fig"><svg width="100%" height="100%" viewBox="0 0 612 640"><rect x="30" y="380" width="250" height="200" rx="20" fill="#F6E3E0" stroke="#243341" stroke-width="4"/><text x="50" y="410" font-size="20" font-weight="700" fill="#8E2219">소장 점막</text>
+<g transform="translate(110 500)"><rect x="-40" y="-40" width="80" height="80" rx="16" fill="#FFE4D6" stroke="#C0704A" stroke-width="3"/><text y="6" text-anchor="middle" font-size="16" font-weight="700" fill="#C0704A">EC세포</text></g>
+<g id="ser"></g>
+<path id="nv" d="M230 470 C330 470 330 200 470 150" fill="none" stroke="#5B7FA6" stroke-width="10"/><text x="300" y="300" font-size="20" font-weight="700" fill="#5B7FA6">미주신경</text>
+<g transform="translate(230 470)"><rect x="-16" y="-24" width="32" height="48" rx="8" fill="#B9A7E0" stroke="#243341" stroke-width="3"/></g><text x="200" y="440" font-size="16" font-weight="700" fill="#5B5FA8">5-HT3</text>
+<ellipse cx="500" cy="120" rx="80" ry="60" fill="#EEF0FA" stroke="#5B5FA8" stroke-width="4"/><text x="500" y="115" text-anchor="middle" font-size="20" font-weight="700" fill="#5B5FA8">뇌간</text><text x="500" y="140" text-anchor="middle" font-size="16" fill="#5B5FA8">구토중추</text>
+<g id="pl"></g>
+<g id="dr" style="opacity:0"><rect x="-26" y="-14" width="52" height="28" rx="14" fill="#007F86"/><text y="7" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">PALO</text></g>
+<text id="lb" x="306" y="620" text-anchor="middle" font-size="24" font-weight="700" fill="#007F86" style="opacity:0">수용체 차단 → 구토 신호 끊김</text></svg></div></div><div class="key" data-in="11.81"><span class="k">KEY</span><span>5-HT3 차단 = 구토 신호 차단</span></div><div class="fn">교육용 개념도</div></div>
+</div>
+<script src="../timing.js"></script><script src="../../../lib/core.js"></script><script>
+useTiming('m0');const $i=i=>document.getElementById(i);
+const S=[0.1, 5.35, 11.81];
+let h='';for(let i=0;i<8;i++)h+=`<circle id="s${i}" r="8" fill="#D96C00"/>`;$i('ser').innerHTML=h;let p='';for(let i=0;i<4;i++)p+=`<circle id="q${i}" r="10" fill="#FFD166" stroke="#D96C00" stroke-width="2"/>`;$i('pl').innerHTML=p;
+const nv=$i('nv'),L=nv.getTotalLength();
+SCENE.anim=o=>{const rel=seg(o,S[0]+0.3,S[0]+1.2),blk=seg(o,S[2],S[2]+0.8);
+ for(let i=0;i<8;i++){const ph=((o*.7+i/8)%1);const e=$i('s'+i);e.style.opacity=rel;e.setAttribute('cx',130+ph*90);e.setAttribute('cy',490-Math.sin(ph*3+i)*30)}
+ for(let i=0;i<4;i++){const ph=((o*.5+i/4)%1);const pt=nv.getPointAtLength(L*ph);const e=$i('q'+i);e.setAttribute('cx',pt.x);e.setAttribute('cy',pt.y);e.style.opacity=seg(o,S[1],S[1]+0.6)*(1-blk)}
+ $i('dr').style.opacity=blk;$i('dr').setAttribute('transform',`translate(${lerp(320,232,ease(blk))} ${lerp(560,470,ease(blk))})`);$i('lb').style.opacity=seg(o,S[2]+0.6,S[2]+1.1)};
+SCENE.char=makeChar([{k: "walk", t0: 0.15, t1: 1.2, x0: 2250, x1: 1640}, {k: "prop", name: "clock", t0: 5.55, t1: 8.15}, {k: "thumbs", t0: 12.01, t1: 13.61}, {k: "walk", t0: 12.99, t1: 13.89, x0: "cur", x1: 1560}],'lead');SCENE.char2=makeChar([{k: "walk", t0: 13.19, t1: 14.39, x0: 2300, x1: 1840}, {k: "walk", t0: 15.79, t1: 16.99, x0: 1840, x1: 2320}],'cameo');
+</script><script src="../../../lib/highlight.js"></script></body></html>

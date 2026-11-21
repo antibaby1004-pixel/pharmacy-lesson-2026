@@ -1,0 +1,151 @@
+{
+ "name": "캡박시브",
+ "no": "11",
+ "name_en": "Capvaxive PFS",
+ "parts": [
+  {
+   "part": "intro",
+   "scene": "intro.html"
+  },
+  {
+   "part": "m0",
+   "scene": "m0.html",
+   "video_dur": 19.12
+  },
+  {
+   "part": "yt1",
+   "scene": "yt1.html",
+   "video_dur": 7.11
+  },
+  {
+   "part": "sero",
+   "scene": "sero.html",
+   "video_dur": 14.94
+  },
+  {
+   "part": "5",
+   "scene": "5.html",
+   "video_dur": 10.18
+  },
+  {
+   "part": "4",
+   "scene": "4.html",
+   "video_dur": 16.09
+  },
+  {
+   "part": "summary",
+   "scene": "summary.html",
+   "video_dur": 17.2
+  }
+ ],
+ "order": [
+  "intro",
+  "m0",
+  "yt1",
+  "sero",
+  "5",
+  "4",
+  "summary"
+ ],
+ "player_parts": [
+  "intro",
+  "m0",
+  "yt1",
+  "sero",
+  "5",
+  "4",
+  "summary"
+ ],
+ "cast": {
+  "lead": "haru",
+  "cameo": "skull"
+ },
+ "props": [
+  "syringe",
+  "book",
+  "thermo",
+  "phone"
+ ],
+ "highlight": {
+  "generic": [
+   "CRM197",
+   "협막 다당",
+   "다당"
+  ],
+  "target": [
+   "T세포",
+   "B세포",
+   "기억 B세포",
+   "항원제시",
+   "혈청형"
+  ],
+  "warn": [
+   "과민반응",
+   "디프테리아 톡소이드",
+   "동결 금지",
+   "얼리지",
+   "면역저하"
+  ]
+ },
+ "intro": {
+  "title": "캡박시브",
+  "en": "Capvaxive",
+  "inn": "pneumococcal 21-valent conjugate vaccine (CRM197)",
+  "photos": [
+   {
+    "draw": "pfs",
+    "args": [
+     "0.5 mL",
+     "프리필드시린지",
+     "#7FC6CA"
+    ],
+    "label": "캡박시브 프리필드시린지"
+   }
+  ],
+  "facts": [
+   {
+    "t": 2.47,
+    "lab": "구성",
+    "v": "21가 혈청형 다당 + CRM197 접합"
+   },
+   {
+    "t": 7.11,
+    "lab": "대상",
+    "v": "18세 이상 성인 · 침습성 질환·폐렴 예방"
+   },
+   {
+    "t": 11.91,
+    "lab": "제형",
+    "v": "0.5 mL 프리필드시린지 · 원내 신약",
+    "cls": "amb"
+   }
+  ],
+  "actions": [
+   {
+    "k": "walk",
+    "t0": 0.25,
+    "t1": 1.15,
+    "x0": 960,
+    "x1": 1640
+   },
+   {
+    "k": "prop",
+    "name": "book",
+    "t0": 2.67,
+    "t1": 5.27
+   },
+   {
+    "k": "thumbs",
+    "t0": 7.31,
+    "t1": 8.91
+   },
+   {
+    "k": "prop",
+    "name": "thermo",
+    "t0": 12.11,
+    "t1": 14.71
+   }
+  ],
+  "chip": "캡박시브 Capvaxive <i>· pneumococcal 21-valent conjugate vaccine</i>"
+ }
+}

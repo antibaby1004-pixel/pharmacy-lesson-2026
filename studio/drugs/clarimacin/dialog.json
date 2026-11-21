@@ -1,0 +1,125 @@
+{
+ "voices": {
+  "park": {
+   "voice": "en-US-AndrewMultilingualNeural",
+   "rate": "+8%",
+   "pitch": "-8Hz",
+   "gain": 1.45
+  },
+  "wang": {
+   "voice": "en-US-BrianMultilingualNeural",
+   "rate": "+6%",
+   "pitch": "-14Hz",
+   "gain": 1.35
+  }
+ },
+ "lines": {
+  "intro": [
+   {
+    "who": "park",
+    "bubble": "음… 커피약사 박 선배.<br>오늘은 클래리마신.",
+    "say": "음… 커피약사 박 선배입니다. 오늘은, 클래리마신.",
+    "at": 0.0,
+    "with": [
+     {
+      "k": "walk",
+      "dt": 0,
+      "len": 0.9,
+      "x0": 2250,
+      "x1": 960
+     },
+     {
+      "k": "wave",
+      "dt": 1.0,
+      "len": 1.6
+     },
+     {
+      "k": "hop",
+      "dt": 1.4,
+      "len": 1.0
+     }
+    ]
+   }
+  ],
+  "m1": [
+   {
+    "who": "wang",
+    "bubble": "허허, 대기줄이<br>길어지면 사고가 나지.",
+    "say": "허허, 대기줄이 길어지면 사고가 나지.",
+    "at": 9.64,
+    "with": [
+     {
+      "k": "point",
+      "dt": 0,
+      "len": 1.4
+     }
+    ]
+   }
+  ],
+  "5": [
+   {
+    "who": "park",
+    "bubble": "음… 제균 요법은<br>조합이 중요해.",
+    "say": "음… 제균 요법은, 조합이 중요해.",
+    "at": 12.67,
+    "with": [
+     {
+      "k": "sip",
+      "dt": 0,
+      "len": 1.4
+     }
+    ]
+   }
+  ],
+  "summary": [
+   {
+    "who": "wang",
+    "bubble": "박 선배,<br>커피 한 잔 하게나.",
+    "say": "박 선배, 커피 한 잔 하게나.",
+    "at": 18.36,
+    "with": [
+     {
+      "k": "thumbs",
+      "dt": 0,
+      "len": 1.4
+     }
+    ]
+   },
+   {
+    "who": "both",
+    "bubble": "수고하셨습니다!<br>안녕~!",
+    "say": "수고하셨습니다! 안녕!",
+    "at": 18.46,
+    "with": [
+     {
+      "k": "walk",
+      "for": "park",
+      "dt": 0,
+      "len": 1.1,
+      "x0": "cur",
+      "x1": 840
+     },
+     {
+      "k": "walk",
+      "for": "wang",
+      "dt": 0,
+      "len": 1.1,
+      "x0": "cur",
+      "x1": 1090
+     },
+     {
+      "k": "wave",
+      "dt": 0.9,
+      "len": 2.2
+     },
+     {
+      "k": "hop",
+      "dt": 0.9,
+      "len": 2.2
+     }
+    ]
+   }
+  ]
+ },
+ "bridges": {}
+}

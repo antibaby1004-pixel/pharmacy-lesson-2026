@@ -1,0 +1,168 @@
+{
+ "name": "브레즈트리",
+ "no": "07",
+ "name_en": "Breztri Aerosphere",
+ "parts": [
+  {
+   "part": "intro",
+   "scene": "intro.html"
+  },
+  {
+   "part": "m0",
+   "scene": "m0.html",
+   "video_dur": 20.43
+  },
+  {
+   "part": "yt1",
+   "scene": "yt1.html",
+   "video_dur": 7.11
+  },
+  {
+   "part": "form",
+   "scene": "form.html",
+   "video_dur": 22.31
+  },
+  {
+   "part": "5",
+   "scene": "5.html",
+   "video_dur": 16.25
+  },
+  {
+   "part": "4",
+   "scene": "4.html",
+   "video_dur": 17.76
+  },
+  {
+   "part": "summary",
+   "scene": "summary.html",
+   "video_dur": 18.86
+  }
+ ],
+ "order": [
+  "intro",
+  "m0",
+  "yt1",
+  "form",
+  "5",
+  "4",
+  "summary"
+ ],
+ "player_parts": [
+  "intro",
+  "m0",
+  "yt1",
+  "form",
+  "5",
+  "4",
+  "summary"
+ ],
+ "cast": {
+  "lead": "haru",
+  "cameo": "wang"
+ },
+ "props": [
+  "book",
+  "clock",
+  "magnifier",
+  "phone"
+ ],
+ "highlight": {
+  "generic": [
+   "budesonide",
+   "glycopyrronium",
+   "formoterol",
+   "부데소니드",
+   "글리코피로니움",
+   "포르모테롤"
+  ],
+  "target": [
+   "M3 무스카린 수용체",
+   "M3",
+   "β2",
+   "베타2 수용체",
+   "글루코코르티코이드 수용체",
+   "cAMP"
+  ],
+  "warn": [
+   "녹내장",
+   "요저류",
+   "급성",
+   "중복",
+   "칸디다",
+   "폐렴",
+   "저칼륨혈증"
+  ]
+ },
+ "intro": {
+  "title": "브레즈트리",
+  "en": "Breztri Aerosphere",
+  "inn": "budesonide · glycopyrronium · formoterol",
+  "photos": [
+   {
+    "draw": "inhaler",
+    "args": [
+     "160/7.2/5",
+     "120회 분사",
+     "#E0703A"
+    ],
+    "label": "에어로스피어 흡입제 120회"
+   }
+  ],
+  "facts": [
+   {
+    "t": 4.29,
+    "lab": "구성",
+    "v": "ICS + LAMA + LABA 3제"
+   },
+   {
+    "t": 9.99,
+    "lab": "표기 함량",
+    "v": "160 / 7.2 / 5 µg · 120회"
+   },
+   {
+    "t": 15.24,
+    "lab": "적응증",
+    "v": "성인 COPD 유지 치료"
+   },
+   {
+    "t": 18.97,
+    "lab": "도입",
+    "v": "원내 신약",
+    "cls": "amb"
+   }
+  ],
+  "actions": [
+   {
+    "k": "walk",
+    "t0": 0.25,
+    "t1": 1.15,
+    "x0": 960,
+    "x1": 1640
+   },
+   {
+    "k": "prop",
+    "name": "clock",
+    "t0": 4.49,
+    "t1": 7.09
+   },
+   {
+    "k": "thumbs",
+    "t0": 10.19,
+    "t1": 11.79
+   },
+   {
+    "k": "prop",
+    "name": "magnifier",
+    "t0": 15.44,
+    "t1": 18.04
+   },
+   {
+    "k": "point",
+    "t0": 19.17,
+    "t1": 20.77,
+    "ang": 100
+   }
+  ],
+  "chip": "브레즈트리 Breztri <i>· budesonide / glycopyrronium / formoterol</i>"
+ }
+}

@@ -1,0 +1,125 @@
+{
+ "voices": {
+  "haru": {
+   "voice": "en-US-EmmaMultilingualNeural",
+   "rate": "+22%",
+   "pitch": "+20Hz",
+   "gain": 1.15
+  },
+  "wang": {
+   "voice": "en-US-BrianMultilingualNeural",
+   "rate": "+6%",
+   "pitch": "-14Hz",
+   "gain": 1.35
+  }
+ },
+ "lines": {
+  "intro": [
+   {
+    "who": "haru",
+    "bubble": "신입 하루예요!<br>오늘은 브레즈트리!",
+    "say": "안녕하세요, 신입 하루예요! 오늘은 브레즈트리!",
+    "at": 0.0,
+    "with": [
+     {
+      "k": "walk",
+      "dt": 0,
+      "len": 0.9,
+      "x0": 2250,
+      "x1": 960
+     },
+     {
+      "k": "wave",
+      "dt": 1.0,
+      "len": 1.6
+     },
+     {
+      "k": "hop",
+      "dt": 1.4,
+      "len": 1.0
+     }
+    ]
+   }
+  ],
+  "m0": [
+   {
+    "who": "wang",
+    "bubble": "허허, 세 갈래를<br>한 번에 막는 셈이지.",
+    "say": "허허, 세 갈래를 한 번에 막는 셈이지.",
+    "at": 20.23,
+    "with": [
+     {
+      "k": "nod",
+      "dt": 0,
+      "len": 1.4
+     }
+    ]
+   }
+  ],
+  "5": [
+   {
+    "who": "haru",
+    "bubble": "흡입하고 나면<br>꼭 가글하는 거죠?",
+    "say": "흡입하고 나면, 꼭 가글하는 거죠?",
+    "at": 10.19,
+    "with": [
+     {
+      "k": "think",
+      "dt": 0,
+      "len": 1.4
+     }
+    ]
+   }
+  ],
+  "summary": [
+   {
+    "who": "wang",
+    "bubble": "하루 양,<br>정리 아주 좋았네.",
+    "say": "하루 양, 정리 아주 좋았네.",
+    "at": 18.66,
+    "with": [
+     {
+      "k": "thumbs",
+      "dt": 0,
+      "len": 1.4
+     }
+    ]
+   },
+   {
+    "who": "both",
+    "bubble": "수고하셨습니다!<br>안녕~!",
+    "say": "수고하셨습니다! 안녕!",
+    "at": 18.76,
+    "with": [
+     {
+      "k": "walk",
+      "for": "haru",
+      "dt": 0,
+      "len": 1.1,
+      "x0": "cur",
+      "x1": 840
+     },
+     {
+      "k": "walk",
+      "for": "wang",
+      "dt": 0,
+      "len": 1.1,
+      "x0": "cur",
+      "x1": 1090
+     },
+     {
+      "k": "wave",
+      "dt": 0.9,
+      "len": 2.2
+     },
+     {
+      "k": "hop",
+      "dt": 0.9,
+      "len": 2.2
+     }
+    ]
+   }
+  ]
+ },
+ "bridges": {}
+}

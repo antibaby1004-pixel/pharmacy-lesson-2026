@@ -1,0 +1,158 @@
+{
+ "name": "네오블루5",
+ "no": "08",
+ "name_en": "Neoblue 5",
+ "parts": [
+  {
+   "part": "intro",
+   "scene": "intro.html"
+  },
+  {
+   "part": "m0",
+   "scene": "m0.html",
+   "video_dur": 26.04
+  },
+  {
+   "part": "yt1",
+   "scene": "yt1.html",
+   "video_dur": 7.11
+  },
+  {
+   "part": "read",
+   "scene": "read.html",
+   "video_dur": 12.97
+  },
+  {
+   "part": "5",
+   "scene": "5.html",
+   "video_dur": 11.0
+  },
+  {
+   "part": "4",
+   "scene": "4.html",
+   "video_dur": 18.67
+  },
+  {
+   "part": "summary",
+   "scene": "summary.html",
+   "video_dur": 16.29
+  }
+ ],
+ "order": [
+  "intro",
+  "m0",
+  "yt1",
+  "read",
+  "5",
+  "4",
+  "summary"
+ ],
+ "player_parts": [
+  "intro",
+  "m0",
+  "yt1",
+  "read",
+  "5",
+  "4",
+  "summary"
+ ],
+ "cast": {
+  "lead": "skull",
+  "cameo": "park"
+ },
+ "props": [
+  "vial",
+  "magnifier",
+  "book",
+  "thermo"
+ ],
+ "highlight": {
+  "generic": [
+   "아연",
+   "구리",
+   "망간",
+   "크롬",
+   "셀레늄",
+   "Zn",
+   "Cu",
+   "Mn",
+   "Cr",
+   "Se"
+  ],
+  "target": [
+   "세룰로플라스민",
+   "사이토크롬 c 산화효소",
+   "SOD2",
+   "글루타치온 과산화효소",
+   "보조인자",
+   "기저핵"
+  ],
+  "warn": [
+   "신경독성",
+   "축적",
+   "담도 폐쇄",
+   "신부전"
+  ]
+ },
+ "intro": {
+  "title": "네오블루5",
+  "en": "Neoblue 5 inj.",
+  "inn": "zinc · copper · manganese · chromium · selenium",
+  "photos": [
+   {
+    "draw": "vial",
+    "args": [
+     "5종",
+     "미량원소",
+     "#2F6FB0"
+    ],
+    "label": "네오블루5주 바이알"
+   }
+  ],
+  "facts": [
+   {
+    "t": 3.68,
+    "lab": "성분",
+    "v": "Zn · Cu · Mn · Cr · Se"
+   },
+   {
+    "t": 6.66,
+    "lab": "1 mL 중",
+    "v": "Zn 1 mg · Cu 0.4 mg · Mn 0.1 mg · Cr 4 µg · Se 20 µg"
+   },
+   {
+    "t": 15.39,
+    "lab": "도입",
+    "v": "멀티블루5주 대체 (조성 동일)",
+    "cls": "amb"
+   }
+  ],
+  "actions": [
+   {
+    "k": "walk",
+    "t0": 0.25,
+    "t1": 1.15,
+    "x0": 960,
+    "x1": 1640
+   },
+   {
+    "k": "prop",
+    "name": "magnifier",
+    "t0": 3.88,
+    "t1": 6.48
+   },
+   {
+    "k": "thumbs",
+    "t0": 6.86,
+    "t1": 8.46
+   },
+   {
+    "k": "prop",
+    "name": "book",
+    "t0": 15.59,
+    "t1": 18.19
+   }
+  ],
+  "chip": "네오블루5 Neoblue 5 <i>· trace elements</i>"
+ }
+}

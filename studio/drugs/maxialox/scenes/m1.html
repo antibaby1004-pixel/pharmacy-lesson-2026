@@ -1,0 +1,21 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../../lib/common.css"><style>
+svg text{font-family:P}
+.grid{display:grid;grid-template-columns:680px 1fr;gap:52px;width:1344px}.fig{height:640px;position:relative;overflow:hidden}
+</style></head><body><div class="stage">
+<div class="fade"><header class="top"><div class="sec"><b>작용 기전</b> · 02 / 02</div><div class="chip">맥시알록 Maxialox <i>· palonosetron 0.075 mg/1.5 mL</i></div></header><h1>오래 붙어 있어 지연성까지 덮습니다</h1></div>
+<div class="fade"><div class="grid"><div class="steps"><div class="s" data-on="0.1,3.38"><div class="n">1</div><div><h3>결합 방식</h3><p>1세대와 다르게 붙음</p></div></div><div class="s" data-on="3.38,8.02"><div class="n">2</div><div><h3>알로스테릭 결합 · 내재화</h3><p>수용체를 세포 안으로 끌어들여 오래 작용</p></div></div><div class="s" data-on="8.02"><div class="n">3</div><div><h3>반감기 약 40시간</h3><p>급성 + 지연성 구역</p></div></div></div><div class="card fig"><svg width="100%" height="100%" viewBox="0 0 612 640"><text x="40" y="70" font-size="22" font-weight="700" fill="#3F4D5A">작용 지속 시간 (개념)</text>
+<line x1="40" y1="440" x2="580" y2="440" stroke="#243341" stroke-width="3"/>
+<rect x="40" y="450" width="130" height="30" fill="#FFF7EC"/><text x="105" y="472" text-anchor="middle" font-size="18" font-weight="700" fill="#7D4A00">급성 (~24 h)</text>
+<rect x="170" y="450" width="410" height="30" fill="#FCE9E7"/><text x="375" y="472" text-anchor="middle" font-size="18" font-weight="700" fill="#8E2219">지연성 (24–120 h)</text>
+<text x="40" y="170" font-size="22" font-weight="700" fill="#5B7FA6">1세대</text><rect id="g1" x="40" y="185" width="0" height="50" rx="10" fill="#9FB4C6"/>
+<text x="40" y="300" font-size="22" font-weight="700" fill="#007F86">palonosetron · 반감기 약 40시간</text><rect id="g2" x="40" y="315" width="0" height="50" rx="10" fill="#007F86"/>
+<g id="ai" style="opacity:0" transform="translate(470 150)"><rect x="-26" y="-40" width="52" height="80" rx="12" fill="#B9A7E0" stroke="#243341" stroke-width="3"/><circle cx="-34" cy="0" r="12" fill="#007F86"/><path d="M0 50 v40" stroke="#5B5FA8" stroke-width="5" marker-end="url(#m)"/><text y="120" text-anchor="middle" font-size="18" font-weight="700" fill="#5B5FA8">내재화</text></g>
+<defs><marker id="m" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0 L10 5 L0 10z" fill="#5B5FA8"/></marker></defs>
+<text x="306" y="560" text-anchor="middle" font-size="20" fill="#3F4D5A">막대 길이는 상대 비교용 개념도</text></svg></div></div><div class="key" data-in="8.02"><span class="k">KEY</span><span>긴 반감기 → 지연성까지</span></div><div class="fn">교육용 개념도</div></div>
+</div>
+<script src="../timing.js"></script><script src="../../../lib/core.js"></script><script>
+useTiming('m1');const $i=i=>document.getElementById(i);
+const S=[0.1, 3.38, 8.02];
+SCENE.anim=o=>{$i('g1').setAttribute('width',110*seg(o,S[0]+0.3,S[0]+1.2));$i('ai').style.opacity=seg(o,S[1],S[1]+0.6);$i('g2').setAttribute('width',520*easeOut(seg(o,S[2],S[2]+1.6)))};
+SCENE.char=makeChar([{k: "walk", t0: 0.15, t1: 1.2, x0: 2250, x1: 1640}, {k: "prop", name: "magnifier", t0: 3.58, t1: 6.18}, {k: "point", t0: 8.22, t1: 9.82, ang: 100}],'lead');
+</script><script src="../../../lib/highlight.js"></script></body></html>

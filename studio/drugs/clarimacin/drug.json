@@ -1,0 +1,152 @@
+{
+ "name": "클래리마신",
+ "no": "10",
+ "name_en": "Clarimacin tab 250 mg",
+ "parts": [
+  {
+   "part": "intro",
+   "scene": "intro.html"
+  },
+  {
+   "part": "m0",
+   "scene": "m0.html",
+   "video_dur": 17.76
+  },
+  {
+   "part": "yt1",
+   "scene": "yt1.html",
+   "video_dur": 7.11
+  },
+  {
+   "part": "m1",
+   "scene": "m1.html",
+   "video_dur": 17.15
+  },
+  {
+   "part": "5",
+   "scene": "5.html",
+   "video_dur": 17.91
+  },
+  {
+   "part": "4",
+   "scene": "4.html",
+   "video_dur": 17.46
+  },
+  {
+   "part": "summary",
+   "scene": "summary.html",
+   "video_dur": 18.56
+  }
+ ],
+ "order": [
+  "intro",
+  "m0",
+  "yt1",
+  "m1",
+  "5",
+  "4",
+  "summary"
+ ],
+ "player_parts": [
+  "intro",
+  "m0",
+  "yt1",
+  "m1",
+  "5",
+  "4",
+  "summary"
+ ],
+ "cast": {
+  "lead": "park",
+  "cameo": "wang"
+ },
+ "props": [
+  "pill",
+  "book",
+  "magnifier",
+  "clock"
+ ],
+ "highlight": {
+  "generic": [
+   "clarithromycin",
+   "클래리스로마이신",
+   "마크로라이드"
+  ],
+  "target": [
+   "50S",
+   "23S rRNA",
+   "출구 터널",
+   "CYP3A4"
+  ],
+  "warn": [
+   "QT 연장",
+   "병용 금기",
+   "상호작용",
+   "스타틴",
+   "콜히친",
+   "면역억제제",
+   "DOAC"
+  ]
+ },
+ "intro": {
+  "title": "클래리마신",
+  "en": "Clarimacin tab.",
+  "inn": "clarithromycin",
+  "photos": [
+   {
+    "draw": "tablet",
+    "args": [
+     "250 mg",
+     "clarithromycin",
+     "#FFF7D6"
+    ],
+    "label": "클래리마신정 250 mg"
+   }
+  ],
+  "facts": [
+   {
+    "t": 3.98,
+    "lab": "함량",
+    "v": "250 mg 정제"
+   },
+   {
+    "t": 6.96,
+    "lab": "도입",
+    "v": "클래리시드 품절 → 원외에서 원내로",
+    "cls": "amb"
+   },
+   {
+    "t": 12.51,
+    "lab": "쓰임",
+    "v": "H. pylori 제균 · 비정형 폐렴 등"
+   }
+  ],
+  "actions": [
+   {
+    "k": "walk",
+    "t0": 0.25,
+    "t1": 1.15,
+    "x0": 960,
+    "x1": 1640
+   },
+   {
+    "k": "prop",
+    "name": "book",
+    "t0": 4.18,
+    "t1": 6.78
+   },
+   {
+    "k": "thumbs",
+    "t0": 7.16,
+    "t1": 8.76
+   },
+   {
+    "k": "prop",
+    "name": "magnifier",
+    "t0": 12.71,
+    "t1": 15.31
+   }
+  ],
+  "chip": "클래리마신 Clarimacin <i>· clarithromycin 250 mg</i>"
+ }
+}

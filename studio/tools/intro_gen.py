@@ -20,7 +20,32 @@ def vial(label, sub='', cap='#7B6FD0'):
 <text x="150" y="252" text-anchor="middle" font-size="36" font-weight="700" fill="#243341">{label}</text>
 <text x="150" y="290" text-anchor="middle" font-size="22" font-weight="600" fill="#3F4D5A">{sub}</text></svg>'''
 
-DRAW = {'pen': pen, 'vial': vial}
+
+def inhaler(label, sub='', color='#E0703A'):
+    return f'''<svg viewBox="0 0 420 420"><rect x="120" y="30" width="150" height="250" rx="40" fill="{color}" stroke="#243341" stroke-width="7"/>
+<path d="M110 250 h170 v60 a20 20 0 0 1 -20 20 h-40 v70 h-50 v-70 h-40 a20 20 0 0 1 -20 -20z" fill="#fff" stroke="#243341" stroke-width="7"/>
+<rect x="145" y="80" width="100" height="70" rx="12" fill="#fff" opacity=".85"/><text x="195" y="125" text-anchor="middle" font-size="30" font-weight="700" fill="#243341">{label}</text>
+<text x="300" y="380" font-size="26" font-weight="600" fill="#3F4D5A">{sub}</text></svg>'''
+
+def bag(label, sub='', color='#3A8FB7'):
+    return f'''<svg viewBox="0 0 320 420"><path d="M60 40 h200 a20 20 0 0 1 20 20 v260 a40 40 0 0 1 -40 40 h-160 a40 40 0 0 1 -40 -40 v-260 a20 20 0 0 1 20 -20z" fill="#EEF6FB" stroke="#243341" stroke-width="7"/>
+<rect x="135" y="360" width="50" height="40" rx="8" fill="{color}" stroke="#243341" stroke-width="5"/><rect x="80" y="120" width="160" height="120" rx="12" fill="#fff" stroke="#9FB4C6" stroke-width="3"/>
+<text x="160" y="175" text-anchor="middle" font-size="34" font-weight="700" fill="#243341">{label}</text><text x="160" y="215" text-anchor="middle" font-size="22" font-weight="600" fill="#3F4D5A">{sub}</text></svg>'''
+
+def tablet(label, sub='', color='#FFFFFF'):
+    return f'''<svg viewBox="0 0 420 300"><ellipse cx="210" cy="130" rx="150" ry="95" fill="{color}" stroke="#243341" stroke-width="7"/><path d="M60 130 h300" stroke="#C9D6E0" stroke-width="4"/>
+<text x="210" y="270" text-anchor="middle" font-size="40" font-weight="700" fill="#243341">{label}</text><text x="210" y="122" text-anchor="middle" font-size="26" font-weight="600" fill="#3F4D5A">{sub}</text></svg>'''
+
+def patch(label, sub='', color='#F2E6D8'):
+    return f'''<svg viewBox="0 0 460 340"><rect x="40" y="40" width="380" height="230" rx="26" fill="{color}" stroke="#243341" stroke-width="7"/><rect x="70" y="70" width="320" height="170" rx="16" fill="#fff" opacity=".6" stroke="#C9B79F" stroke-width="3" stroke-dasharray="10 8"/>
+<text x="230" y="160" text-anchor="middle" font-size="40" font-weight="700" fill="#243341">{label}</text><text x="230" y="205" text-anchor="middle" font-size="24" font-weight="600" fill="#3F4D5A">{sub}</text></svg>'''
+
+def pfs(label, sub='', color='#7FC6CA'):
+    return f'''<svg viewBox="0 0 640 260"><rect x="120" y="100" width="340" height="60" rx="14" fill="#fff" stroke="#243341" stroke-width="7"/><rect x="140" y="112" width="220" height="36" fill="{color}" opacity=".5"/>
+<path d="M460 80 v100" stroke="#243341" stroke-width="10"/><rect x="460" y="118" width="120" height="24" fill="#B6C6D2" stroke="#243341" stroke-width="5"/><rect x="574" y="96" width="22" height="68" rx="6" fill="#B6C6D2" stroke="#243341" stroke-width="5"/>
+<path d="M120 130 h-90" stroke="#243341" stroke-width="5"/><text x="300" y="232" text-anchor="middle" font-size="40" font-weight="700" fill="#243341">{label}</text><text x="300" y="60" text-anchor="middle" font-size="26" font-weight="600" fill="#3F4D5A">{sub}</text></svg>'''
+
+DRAW = {'pen': pen, 'vial': vial, 'inhaler': inhaler, 'bag': bag, 'tablet': tablet, 'patch': patch, 'pfs': pfs}
 
 def build(dr):
     cfg = json.load(open(os.path.join(dr, 'drug.json')))

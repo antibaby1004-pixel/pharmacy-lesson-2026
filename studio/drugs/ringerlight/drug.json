@@ -1,0 +1,152 @@
+{
+ "name": "링거라이트",
+ "no": "14",
+ "name_en": "Ringer light soln 200 mL",
+ "parts": [
+  {
+   "part": "intro",
+   "scene": "intro.html"
+  },
+  {
+   "part": "m0",
+   "scene": "m0.html",
+   "video_dur": 13.22
+  },
+  {
+   "part": "yt1",
+   "scene": "yt1.html",
+   "video_dur": 7.11
+  },
+  {
+   "part": "m1",
+   "scene": "m1.html",
+   "video_dur": 16.4
+  },
+  {
+   "part": "5",
+   "scene": "5.html",
+   "video_dur": 12.61
+  },
+  {
+   "part": "4",
+   "scene": "4.html",
+   "video_dur": 14.73
+  },
+  {
+   "part": "summary",
+   "scene": "summary.html",
+   "video_dur": 19.17
+  }
+ ],
+ "order": [
+  "intro",
+  "m0",
+  "yt1",
+  "m1",
+  "5",
+  "4",
+  "summary"
+ ],
+ "player_parts": [
+  "intro",
+  "m0",
+  "yt1",
+  "m1",
+  "5",
+  "4",
+  "summary"
+ ],
+ "cast": {
+  "lead": "haru",
+  "cameo": "park"
+ },
+ "props": [
+  "bag",
+  "clock",
+  "book",
+  "thermo"
+ ],
+ "highlight": {
+  "generic": [
+   "포도당",
+   "염화나트륨",
+   "구연산칼륨",
+   "구연산나트륨",
+   "구연산염"
+  ],
+  "target": [
+   "SGLT1",
+   "나트륨",
+   "중탄산염"
+  ],
+  "warn": [
+   "신부전",
+   "고칼륨혈증",
+   "칼륨",
+   "당뇨",
+   "중증 탈수",
+   "삼킴"
+  ]
+ },
+ "intro": {
+  "title": "링거라이트",
+  "en": "Ringer light soln.",
+  "inn": "oral rehydration solution",
+  "photos": [
+   {
+    "draw": "bag",
+    "args": [
+     "200 mL",
+     "경구 수분 보충",
+     "#3A8FB7"
+    ],
+    "label": "링거라이트액 200 mL 백"
+   }
+  ],
+  "facts": [
+   {
+    "t": 2.92,
+    "lab": "100 mL 중",
+    "v": "포도당 2.5 g · 나트륨 · 칼륨 · 구연산염"
+   },
+   {
+    "t": 9.08,
+    "lab": "제형",
+    "v": "200 mL 백 · 경구"
+   },
+   {
+    "t": 12.21,
+    "lab": "도입",
+    "v": "원외 → 원내 · 비급여(2026.5~)",
+    "cls": "amb"
+   }
+  ],
+  "actions": [
+   {
+    "k": "walk",
+    "t0": 0.25,
+    "t1": 1.15,
+    "x0": 960,
+    "x1": 1640
+   },
+   {
+    "k": "prop",
+    "name": "clock",
+    "t0": 3.12,
+    "t1": 5.72
+   },
+   {
+    "k": "thumbs",
+    "t0": 9.28,
+    "t1": 10.88
+   },
+   {
+    "k": "prop",
+    "name": "book",
+    "t0": 12.41,
+    "t1": 15.01
+   }
+  ],
+  "chip": "링거라이트 Ringer light <i>· oral rehydration solution 200 mL</i>"
+ }
+}

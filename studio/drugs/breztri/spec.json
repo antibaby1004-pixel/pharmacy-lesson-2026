@@ -1,0 +1,345 @@
+{
+ "name": "브레즈트리",
+ "no": "07",
+ "name_en": "Breztri Aerosphere",
+ "voice": "sunhi",
+ "chip": "브레즈트리 Breztri <i>· budesonide / glycopyrronium / formoterol</i>",
+ "cast": {
+  "lead": "haru",
+  "cameo": "wang"
+ },
+ "props": [
+  "book",
+  "clock",
+  "magnifier",
+  "phone"
+ ],
+ "highlight": {
+  "generic": [
+   "budesonide",
+   "glycopyrronium",
+   "formoterol",
+   "부데소니드",
+   "글리코피로니움",
+   "포르모테롤"
+  ],
+  "target": [
+   "M3 무스카린 수용체",
+   "M3",
+   "β2",
+   "베타2 수용체",
+   "글루코코르티코이드 수용체",
+   "cAMP"
+  ],
+  "warn": [
+   "녹내장",
+   "요저류",
+   "급성",
+   "중복",
+   "칸디다",
+   "폐렴",
+   "저칼륨혈증"
+  ]
+ },
+ "greet": {
+  "say": "안녕하세요, 신입 하루예요! 오늘은 브레즈트리!",
+  "bubble": "신입 하루예요!<br>오늘은 브레즈트리!"
+ },
+ "intro_title": "브레즈트리 소개 · 3제 흡입제",
+ "intro": {
+  "title": "브레즈트리",
+  "en": "Breztri Aerosphere",
+  "inn": "budesonide · glycopyrronium · formoterol",
+  "photos": [
+   {
+    "draw": "inhaler",
+    "args": [
+     "160/7.2/5",
+     "120회 분사",
+     "#E0703A"
+    ],
+    "label": "에어로스피어 흡입제 120회"
+   }
+  ],
+  "sents": [
+   [
+    "성분은 budesonide, glycopyrronium, formoterol, 세 가지예요.",
+    "성분은 부데소니드, 글리코피로니움, 포르모테롤, 세 가지예요."
+   ],
+   "흡입용 스테로이드와 지속성 항콜린제, 지속성 베타2 작용제를 한 흡입기에 담았어요.",
+   [
+    "1회 분사 표기는 160/7.2/5 µg이고, 120회 분사용이에요.",
+    "1회 분사 표기는 백육십, 칠점이, 오 마이크로그램이고, 백이십 회 분사용이에요."
+   ],
+   [
+    "성인 만성폐쇄성폐질환, COPD의 유지 치료에 써요.",
+    "성인 만성폐쇄성폐질환, 씨오피디의 유지 치료에 써요."
+   ],
+   "이번 심의에서 원내 신약으로 들어왔어요."
+  ],
+  "facts": [
+   {
+    "s": 1,
+    "lab": "구성",
+    "v": "ICS + LAMA + LABA 3제"
+   },
+   {
+    "s": 2,
+    "lab": "표기 함량",
+    "v": "160 / 7.2 / 5 µg · 120회"
+   },
+   {
+    "s": 3,
+    "lab": "적응증",
+    "v": "성인 COPD 유지 치료"
+   },
+   {
+    "s": 4,
+    "lab": "도입",
+    "v": "원내 신약",
+    "cls": "amb"
+   }
+  ]
+ },
+ "parts": [
+  {
+   "id": "m0",
+   "type": "mech",
+   "title": "세 경로 · 기도 넓히기",
+   "sec": "<b>작용 기전</b> · MECHANISM",
+   "h1": "세 갈래로 기도를 넓힙니다",
+   "sents": [
+    "기도가 좁아지는 이유는 크게 세 가지예요.",
+    [
+     "budesonide는 기도 벽의 염증 유전자 전사를 억제해요.",
+     "부데소니드는 기도 벽의 염증 유전자 전사를 억제해요."
+    ],
+    [
+     "glycopyrronium은 M3 무스카린 수용체를 막아 콜린성 수축을 차단해요.",
+     "글리코피로니움은 엠 쓰리 무스카린 수용체를 막아, 콜린성 수축을 차단해요."
+    ],
+    [
+     "formoterol은 베타2 수용체를 자극해 cAMP를 올리고 평활근을 이완시켜요.",
+     "포르모테롤은 베타 투 수용체를 자극해, 씨 에이 엠 피를 올리고 평활근을 이완시켜요."
+    ],
+    "세 경로가 겹치지 않아서 효과가 더해져요."
+   ],
+   "steps": [
+    {
+     "s": 1,
+     "h": "ICS · budesonide",
+     "p": "글루코코르티코이드 수용체 → 염증 유전자 전사 억제"
+    },
+    {
+     "s": 2,
+     "h": "LAMA · glycopyrronium",
+     "p": "M3 무스카린 수용체 차단 → 콜린성 수축 차단"
+    },
+    {
+     "s": 3,
+     "h": "LABA · formoterol",
+     "p": "β2 자극 → cAMP ↑ → 평활근 이완, 빠른 발현"
+    }
+   ],
+   "key": {
+    "s": 4,
+    "text": "염증 · 콜린 · β2 — 세 경로가 더해짐"
+   },
+   "fig": "<defs><marker id=\"ah\" viewBox=\"0 0 10 10\" refX=\"8\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0 0 L10 5 L0 10z\" fill=\"context-stroke\"/></marker></defs>\n<circle cx=\"306\" cy=\"300\" r=\"250\" fill=\"#F6E3E0\" stroke=\"#243341\" stroke-width=\"4\"/>\n<circle id=\"mus\" cx=\"306\" cy=\"300\" r=\"205\" fill=\"none\" stroke=\"#E7A66B\" stroke-width=\"34\"/>\n<circle id=\"wall\" cx=\"306\" cy=\"300\" r=\"170\" fill=\"#F9D9D3\"/>\n<circle id=\"lum\" cx=\"306\" cy=\"300\" r=\"70\" fill=\"#FFFFFF\" stroke=\"#C98A82\" stroke-width=\"5\"/>\n<text x=\"306\" y=\"308\" text-anchor=\"middle\" font-size=\"26\" font-weight=\"700\" fill=\"#3E5872\">기도 내강</text>\n<g id=\"a1\" style=\"opacity:.15\"><path d=\"M60 80 L190 190\" stroke=\"#1F6FD1\" stroke-width=\"9\" marker-end=\"url(#ah)\"/><text x=\"40\" y=\"66\" font-size=\"24\" font-weight=\"700\" fill=\"#1F6FD1\">ICS · 염증 억제</text></g>\n<g id=\"a2\" style=\"opacity:.15\"><path d=\"M560 90 L440 190\" stroke=\"#7B4FB8\" stroke-width=\"9\" marker-end=\"url(#ah)\"/><text x=\"420\" y=\"66\" font-size=\"24\" font-weight=\"700\" fill=\"#7B4FB8\">LAMA · M3 차단</text></g>\n<g id=\"a3\" style=\"opacity:.15\"><path d=\"M306 600 L306 525\" stroke=\"#D96C00\" stroke-width=\"9\" marker-end=\"url(#ah)\"/><text x=\"306\" y=\"630\" text-anchor=\"middle\" font-size=\"24\" font-weight=\"700\" fill=\"#D96C00\">LABA · β2 → cAMP ↑ 이완</text></g>",
+   "js": "SCENE.anim=o=>{const k1=seg(o,S[1],S[1]+1),k2=seg(o,S[2],S[2]+1),k3=seg(o,S[3],S[3]+1);\n ['a1','a2','a3'].forEach((id,i)=>{$i(id).style.opacity=.15+.85*[k1,k2,k3][i]});\n const r=70+25*ease(k1)+25*ease(k2)+30*ease(k3);$i('lum').setAttribute('r',r);\n $i('wall').setAttribute('r',170-14*ease(k1));$i('mus').setAttribute('stroke-width',34-12*ease(k3));};"
+  },
+  {
+   "id": "yt1",
+   "type": "ytslot",
+   "title": "기전 영상 · 링크 확정 전",
+   "sec": "<b>기전 영상</b> · VIDEO",
+   "h1": ""
+  },
+  {
+   "id": "form",
+   "type": "rows",
+   "title": "제형 · 함량 표기",
+   "sec": "<b>제형</b> · AEROSPHERE",
+   "h1": "표기 함량과 원료 함량이 다른 이유",
+   "sents": [
+    "에어로스피어는 다공성 인지질 입자에 세 성분을 함께 실어 보내는 정량 흡입기예요.",
+    [
+     "제품 표기는 1회 분사 160/7.2/5 µg이에요.",
+     "제품 표기는 1회 분사 백육십, 칠점이, 오 마이크로그램이에요."
+    ],
+    [
+     "원료 기준으로는 budesonide 170, glycopyrronium bromide 9.6, formoterol fumarate 5.3 µg이에요.",
+     "원료 기준으로는 부데소니드 백칠십, 글리코피로니움 브로마이드 구점육, 포르모테롤 푸마르산염 오점삼 마이크로그램이에요."
+    ],
+    "염 형태와 표시 기준이 달라서 생긴 차이일 뿐, 같은 제품이에요."
+   ],
+   "rows": [
+    {
+     "s": 0,
+     "lab": "제형",
+     "v": "에어로스피어 — 인지질 입자에 3성분을 함께 실은 정량 흡입기"
+    },
+    {
+     "s": 1,
+     "lab": "제품 표기",
+     "v": "1회 분사 160 / 7.2 / 5 µg"
+    },
+    {
+     "s": 2,
+     "lab": "원료 기준",
+     "v": "budesonide 170 · glycopyrronium bromide 9.6 · formoterol fumarate 5.3 µg"
+    },
+    {
+     "s": 3,
+     "lab": "차이 이유",
+     "v": "염 형태·표시 기준 차이 — 같은 제품",
+     "cls": "amb"
+    }
+   ]
+  },
+  {
+   "id": "5",
+   "type": "rows",
+   "title": "용법과 흡입 방법",
+   "sec": "<b>용법</b> · DOSAGE",
+   "h1": "1회 2번, 1일 2회 — 흡입 후엔 입 헹구기",
+   "sents": [
+    "1회 2번 흡입, 하루 두 번, 아침과 저녁에 써요.",
+    "처음 쓰기 전에는 잘 흔들고 공기 중에 시험 분사를 해요.",
+    "흡입 후에는 입을 헹궈서 구강 칸디다를 예방해요.",
+    "급성 호흡곤란을 멈추는 약이 아니라서, 속효성 기관지확장제를 따로 가지고 있어야 해요."
+   ],
+   "rows": [
+    {
+     "s": 0,
+     "lab": "용량",
+     "v": "1회 2번 흡입 · 1일 2회 (아침·저녁)"
+    },
+    {
+     "s": 1,
+     "lab": "처음 사용",
+     "v": "잘 흔들기 · 공기 중 시험 분사"
+    },
+    {
+     "s": 2,
+     "lab": "흡입 후",
+     "v": "입 헹구기 → 구강 칸디다 예방"
+    },
+    {
+     "s": 3,
+     "lab": "급성 증상",
+     "v": "발작 완화용 아님 → 속효성 기관지확장제 따로",
+     "cls": "red"
+    }
+   ]
+  },
+  {
+   "id": "4",
+   "type": "rows",
+   "title": "주의사항",
+   "sec": "<b>주의점과 부작용</b> · PRECAUTIONS",
+   "h1": "녹내장·요저류, 그리고 중복 처방 확인",
+   "sents": [
+    "항콜린 성분이 있어서 협우각 녹내장이나 요저류가 악화될 수 있어요.",
+    "베타2 작용제는 심혈관 질환이나 저칼륨혈증이 있으면 주의해요.",
+    "흡입 스테로이드는 폐렴과 구강 칸디다를 살펴요.",
+    "다른 지속성 항콜린제나 베타2 작용제 흡입기와 겹치지 않는지 꼭 확인해요."
+   ],
+   "rows": [
+    {
+     "s": 0,
+     "lab": "항콜린",
+     "v": "협우각 녹내장 · 요저류(전립선비대) 악화 주의"
+    },
+    {
+     "s": 1,
+     "lab": "LABA",
+     "v": "심혈관 질환 · 저칼륨혈증 주의"
+    },
+    {
+     "s": 2,
+     "lab": "ICS",
+     "v": "폐렴 · 구강 칸디다 관찰"
+    },
+    {
+     "s": 3,
+     "lab": "중복",
+     "v": "다른 LAMA·LABA 흡입제와 중복 금지",
+     "cls": "red"
+    }
+   ]
+  },
+  {
+   "id": "summary",
+   "type": "summary",
+   "title": "Take-home message",
+   "sec": "<b>핵심 정리</b> · TAKE-HOME MESSAGE",
+   "h1": "브레즈트리, 이 6가지만 기억하세요",
+   "sents": [
+    "정리할게요.",
+    "브레즈트리는 흡입 스테로이드, 항콜린제, 베타2 작용제 3제 흡입기예요.",
+    "염증 억제, 콜린 차단, 평활근 이완, 세 경로로 기도를 넓혀요.",
+    "1회 2번, 하루 두 번 흡입하고 입을 헹궈요.",
+    "급성 증상에는 속효성 약을 따로 써요.",
+    "녹내장, 요저류, 그리고 중복 처방을 확인해요."
+   ],
+   "cards": [
+    {
+     "s": 1,
+     "lab": "구성",
+     "v": "ICS + LAMA + LABA<br>3제 흡입기"
+    },
+    {
+     "s": 2,
+     "lab": "기전",
+     "v": "염증 억제 · 콜린 차단<br>β2 이완"
+    },
+    {
+     "s": 3,
+     "lab": "용법",
+     "v": "1회 2번 · 1일 2회<br>흡입 후 입 헹구기"
+    },
+    {
+     "s": 4,
+     "lab": "급성 증상",
+     "v": "발작 완화용 아님<br>속효성 약 따로",
+     "cls": "red"
+    },
+    {
+     "s": 5,
+     "lab": "주의",
+     "v": "녹내장 · 요저류",
+     "cls": "red"
+    },
+    {
+     "s": 5,
+     "lab": "중복",
+     "v": "다른 LAMA·LABA<br>흡입제 확인",
+     "cls": "amb"
+    }
+   ],
+   "cameo_say": "하루 양, 정리 아주 좋았네.",
+   "cameo_bubble": "하루 양,<br>정리 아주 좋았네."
+  }
+ ],
+ "lines": {
+  "m0": [
+   {
+    "who": "cameo",
+    "after": 4,
+    "say": "허허, 세 갈래를 한 번에 막는 셈이지.",
+    "bubble": "허허, 세 갈래를<br>한 번에 막는 셈이지.",
+    "act": "nod"
+   }
+  ],
+  "5": [
+   {
+    "who": "lead",
+    "after": 2,
+    "say": "흡입하고 나면, 꼭 가글하는 거죠?",
+    "bubble": "흡입하고 나면<br>꼭 가글하는 거죠?",
+    "act": "think"
+   }
+  ]
+ }
+}

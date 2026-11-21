@@ -1,0 +1,153 @@
+{
+ "name": "크라비트 750",
+ "no": "09",
+ "name_en": "Cravit inj 750 mg/150 mL",
+ "parts": [
+  {
+   "part": "intro",
+   "scene": "intro.html"
+  },
+  {
+   "part": "m0",
+   "scene": "m0.html",
+   "video_dur": 22.86
+  },
+  {
+   "part": "yt1",
+   "scene": "yt1.html",
+   "video_dur": 7.11
+  },
+  {
+   "part": "m1",
+   "scene": "m1.html",
+   "video_dur": 18.22
+  },
+  {
+   "part": "5",
+   "scene": "5.html",
+   "video_dur": 13.82
+  },
+  {
+   "part": "4",
+   "scene": "4.html",
+   "video_dur": 18.67
+  },
+  {
+   "part": "summary",
+   "scene": "summary.html",
+   "video_dur": 20.08
+  }
+ ],
+ "order": [
+  "intro",
+  "m0",
+  "yt1",
+  "m1",
+  "5",
+  "4",
+  "summary"
+ ],
+ "player_parts": [
+  "intro",
+  "m0",
+  "yt1",
+  "m1",
+  "5",
+  "4",
+  "summary"
+ ],
+ "cast": {
+  "lead": "wang",
+  "cameo": "skull"
+ },
+ "props": [
+  "book",
+  "clock",
+  "magnifier",
+  "vial"
+ ],
+ "highlight": {
+  "generic": [
+   "levofloxacin",
+   "레보플록사신",
+   "플루오로퀴놀론"
+  ],
+  "target": [
+   "DNA gyrase",
+   "gyrase",
+   "topoisomerase IV",
+   "topo IV",
+   "MIC",
+   "Cmax"
+  ],
+  "warn": [
+   "QT 연장",
+   "힘줄",
+   "대동맥",
+   "혈당",
+   "말초신경병증",
+   "저혈압"
+  ]
+ },
+ "intro": {
+  "title": "크라비트 750",
+  "en": "Cravit inj.",
+  "inn": "levofloxacin",
+  "photos": [
+   {
+    "draw": "vial",
+    "args": [
+     "750 mg",
+     "150 mL",
+     "#E0A030"
+    ],
+    "label": "크라비트주 750 mg/150 mL"
+   }
+  ],
+  "facts": [
+   {
+    "t": 3.83,
+    "lab": "함량",
+    "v": "750 mg / 150 mL 정맥주사"
+   },
+   {
+    "t": 8.17,
+    "lab": "도입",
+    "v": "원내 용량 추가",
+    "cls": "amb"
+   },
+   {
+    "t": 11.6,
+    "lab": "쓰임",
+    "v": "고용량 1일 1회 요법 (중증 CAP · 복잡성 UTI 등)"
+   }
+  ],
+  "actions": [
+   {
+    "k": "walk",
+    "t0": 0.25,
+    "t1": 1.15,
+    "x0": 960,
+    "x1": 1640
+   },
+   {
+    "k": "prop",
+    "name": "clock",
+    "t0": 4.03,
+    "t1": 6.63
+   },
+   {
+    "k": "thumbs",
+    "t0": 8.37,
+    "t1": 9.97
+   },
+   {
+    "k": "prop",
+    "name": "magnifier",
+    "t0": 11.8,
+    "t1": 14.4
+   }
+  ],
+  "chip": "크라비트 Cravit <i>· levofloxacin 750 mg/150 mL</i>"
+ }
+}

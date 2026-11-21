@@ -1,0 +1,125 @@
+{
+ "voices": {
+  "wang": {
+   "voice": "en-US-BrianMultilingualNeural",
+   "rate": "+6%",
+   "pitch": "-14Hz",
+   "gain": 1.35
+  },
+  "park": {
+   "voice": "en-US-AndrewMultilingualNeural",
+   "rate": "+8%",
+   "pitch": "-8Hz",
+   "gain": 1.45
+  }
+ },
+ "lines": {
+  "intro": [
+   {
+    "who": "wang",
+    "bubble": "허허, 왕교수입니다.<br>오늘은 메탈라제!",
+    "say": "허허, 왕교수입니다. 오늘은 메탈라제!",
+    "at": 0.0,
+    "with": [
+     {
+      "k": "walk",
+      "dt": 0,
+      "len": 0.9,
+      "x0": 2250,
+      "x1": 960
+     },
+     {
+      "k": "wave",
+      "dt": 1.0,
+      "len": 1.6
+     },
+     {
+      "k": "hop",
+      "dt": 1.4,
+      "len": 1.0
+     }
+    ]
+   }
+  ],
+  "m1": [
+   {
+    "who": "park",
+    "bubble": "음… 한 시간이<br>십 초가 됐네.",
+    "say": "음… 한 시간이, 십 초가 됐네.",
+    "at": 21.45,
+    "with": [
+     {
+      "k": "sip",
+      "dt": 0,
+      "len": 1.4
+     }
+    ]
+   }
+  ],
+  "dose": [
+   {
+    "who": "wang",
+    "bubble": "허허, 경계 체중에서는<br>꼭 다시 보게.",
+    "say": "허허, 경계 체중에서는 꼭 다시 보게.",
+    "at": 21.65,
+    "with": [
+     {
+      "k": "point",
+      "dt": 0,
+      "len": 1.4
+     }
+    ]
+   }
+  ],
+  "summary": [
+   {
+    "who": "park",
+    "bubble": "음… 교수님,<br>응급실에 붙여 둘게요.",
+    "say": "음… 교수님, 응급실에 붙여 둘게요.",
+    "at": 20.94,
+    "with": [
+     {
+      "k": "thumbs",
+      "dt": 0,
+      "len": 1.4
+     }
+    ]
+   },
+   {
+    "who": "both",
+    "bubble": "수고하셨습니다!<br>안녕~!",
+    "say": "수고하셨습니다! 안녕!",
+    "at": 21.040000000000003,
+    "with": [
+     {
+      "k": "walk",
+      "for": "wang",
+      "dt": 0,
+      "len": 1.1,
+      "x0": "cur",
+      "x1": 840
+     },
+     {
+      "k": "walk",
+      "for": "park",
+      "dt": 0,
+      "len": 1.1,
+      "x0": "cur",
+      "x1": 1090
+     },
+     {
+      "k": "wave",
+      "dt": 0.9,
+      "len": 2.2
+     },
+     {
+      "k": "hop",
+      "dt": 0.9,
+      "len": 2.2
+     }
+    ]
+   }
+  ]
+ },
+ "bridges": {}
+}

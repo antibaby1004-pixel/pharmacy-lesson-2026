@@ -1,0 +1,17 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../../lib/common.css"><style>
+svg text{font-family:P}
+.g{position:absolute;left:96px;top:262px;width:1344px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.c{padding:26px 30px;height:300px;box-sizing:border-box}.c .v{font-size:38px;font-weight:600;line-height:52px;margin-top:16px}
+.c.red{border-color:#F2B8B2;background:#FCE9E7}.c.red .lab,.c.red .v{color:#8E2219}
+.c.amb{border-color:#F3C58A;background:#FFF7EC}.c.amb .lab,.c.amb .v{color:#7D4A00}
+</style></head><body><div class="stage">
+<div class="fade"><header class="top"><div class="sec"><b>핵심 정리</b> · TAKE-HOME MESSAGE</div><div class="chip">캡박시브 Capvaxive <i>· pneumococcal 21-valent conjugate vaccine</i></div></header><h1>캡박시브, 이 6가지만 기억하세요</h1></div>
+<div class="fade"><div class="wm">11</div><div class="g"><div class="card c " data-in="1.26"><span class="lab">구성</span><div class="v">21가 다당<br>+ CRM197 접합</div></div><div class="card c " data-in="4.84"><span class="lab">기전</span><div class="v">T세포 의존 반응<br>기억 B세포</div></div><div class="card c " data-in="8.42"><span class="lab">대상</span><div class="v">18세 이상 성인<br>침습성 질환 · 폐렴</div></div><div class="card c " data-in="10.79"><span class="lab">용법</span><div class="v">0.5 mL 1회<br>근육주사</div></div><div class="card c amb" data-in="10.79"><span class="lab">보관</span><div class="v">2–8°C 냉장<br>동결 금지</div></div><div class="card c red" data-in="14.07"><span class="lab">금기</span><div class="v">디프테리아 톡소이드<br>과민반응</div></div></div></div>
+</div>
+<script src="../timing.js"></script><script src="../../../lib/core.js"></script><script>
+useTiming('summary');window.CENTER_FIRST=1.6;const $i=i=>document.getElementById(i);
+const BT=((TIMING.summary.dialog||[]).find(d=>d.who==='both')||{}).t0||1e9;
+SCENE.anim=(o,T)=>{const dm=1-.72*easeOut(seg(T,BT-1.1,BT-.2));document.querySelectorAll('.card,.wm').forEach(e=>e.style.filter=dm<1?`opacity(${dm})`:'')};
+SCENE.char=makeChar([{k: "walk", t0: 0.15, t1: 1.2, x0: 2250, x1: 1560}, {k: "think", t0: 1.46, t1: 3.06}, {k: "prop", name: "syringe", t0: 5.04, t1: 7.64}, {k: "clap", t0: 8.62, t1: 10.22}, {k: "prop", name: "book", t0: 10.99, t1: 13.59}, {k: "nod", t0: 14.27, t1: 15.87}],'lead');
+SCENE.char2=makeChar([{k: "walk", t0: 15.4, t1: 16.6, x0: 2300, x1: 1830}, {k: "nod", t0: 16.8, t1: 17.6}],'cameo');
+</script><script src="../../../lib/highlight.js"></script></body></html>

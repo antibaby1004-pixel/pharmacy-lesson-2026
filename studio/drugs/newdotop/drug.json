@@ -1,0 +1,142 @@
+{
+ "name": "뉴도탑",
+ "no": "15",
+ "name_en": "Newdotop cataplasma",
+ "parts": [
+  {
+   "part": "intro",
+   "scene": "intro.html"
+  },
+  {
+   "part": "m0",
+   "scene": "m0.html",
+   "video_dur": 17.46
+  },
+  {
+   "part": "yt1",
+   "scene": "yt1.html",
+   "video_dur": 7.11
+  },
+  {
+   "part": "5",
+   "scene": "5.html",
+   "video_dur": 15.18
+  },
+  {
+   "part": "4",
+   "scene": "4.html",
+   "video_dur": 18.06
+  },
+  {
+   "part": "summary",
+   "scene": "summary.html",
+   "video_dur": 16.14
+  }
+ ],
+ "order": [
+  "intro",
+  "m0",
+  "yt1",
+  "5",
+  "4",
+  "summary"
+ ],
+ "player_parts": [
+  "intro",
+  "m0",
+  "yt1",
+  "5",
+  "4",
+  "summary"
+ ],
+ "cast": {
+  "lead": "park",
+  "cameo": "skull"
+ },
+ "props": [
+  "clock",
+  "book",
+  "magnifier",
+  "phone"
+ ],
+ "highlight": {
+  "generic": [
+   "lidocaine",
+   "리도카인"
+  ],
+  "target": [
+   "나트륨 채널",
+   "Na 채널",
+   "전압의존성",
+   "이소성 발화"
+  ],
+  "warn": [
+   "과민증",
+   "중증 간질환",
+   "혈중 농도",
+   "독성",
+   "12시간 초과"
+  ]
+ },
+ "intro": {
+  "title": "뉴도탑",
+  "en": "Newdotop cataplasma",
+  "inn": "lidocaine",
+  "photos": [
+   {
+    "draw": "patch",
+    "args": [
+     "700 mg",
+     "10 × 14 cm",
+     "#F2E6D8"
+    ],
+    "label": "뉴도탑 카타플라스마 (5매)"
+   }
+  ],
+  "facts": [
+   {
+    "t": 4.44,
+    "lab": "함량",
+    "v": "lidocaine 700 mg/매 · 10 × 14 cm"
+   },
+   {
+    "t": 9.08,
+    "lab": "적응증",
+    "v": "대상포진 후 신경통증 완화"
+   },
+   {
+    "t": 11.6,
+    "lab": "도입",
+    "v": "원내 신약 · 5매 포장",
+    "cls": "amb"
+   }
+  ],
+  "actions": [
+   {
+    "k": "walk",
+    "t0": 0.25,
+    "t1": 1.15,
+    "x0": 960,
+    "x1": 1640
+   },
+   {
+    "k": "prop",
+    "name": "book",
+    "t0": 4.64,
+    "t1": 7.24
+   },
+   {
+    "k": "thumbs",
+    "t0": 9.28,
+    "t1": 10.88
+   },
+   {
+    "k": "prop",
+    "name": "magnifier",
+    "t0": 11.8,
+    "t1": 14.4
+   }
+  ],
+  "chip": "뉴도탑 Newdotop <i>· lidocaine 700 mg cataplasma</i>"
+ }
+}

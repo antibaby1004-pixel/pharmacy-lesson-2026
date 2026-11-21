@@ -1,0 +1,17 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../../lib/common.css"><style>
+svg text{font-family:P}
+.g{position:absolute;left:96px;top:262px;width:1344px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.c{padding:26px 30px;height:300px;box-sizing:border-box}.c .v{font-size:38px;font-weight:600;line-height:52px;margin-top:16px}
+.c.red{border-color:#F2B8B2;background:#FCE9E7}.c.red .lab,.c.red .v{color:#8E2219}
+.c.amb{border-color:#F3C58A;background:#FFF7EC}.c.amb .lab,.c.amb .v{color:#7D4A00}
+</style></head><body><div class="stage">
+<div class="fade"><header class="top"><div class="sec"><b>핵심 정리</b> · TAKE-HOME MESSAGE</div><div class="chip">크라비트 Cravit <i>· levofloxacin 750 mg/150 mL</i></div></header><h1>크라비트 750, 이 6가지만 기억하세요</h1></div>
+<div class="fade"><div class="wm">09</div><div class="g"><div class="card c " data-in="5.14"><span class="lab">기전</span><div class="v">gyrase · topo IV 억제<br>→ DNA 절단</div></div><div class="card c " data-in="9.63"><span class="lab">특성</span><div class="v">농도의존 살균<br>Cmax/MIC</div></div><div class="card c " data-in="13.06"><span class="lab">용법</span><div class="v">750 mg 1일 1회<br>90분 이상 점적</div></div><div class="card c amb" data-in="13.06"><span class="lab">신기능</span><div class="v">CrCl 따라 조절</div></div><div class="card c red" data-in="17.25"><span class="lab">경고</span><div class="v">QT 연장 · 힘줄</div></div><div class="card c red" data-in="17.25"><span class="lab">주의</span><div class="v">대동맥류 · 혈당</div></div></div></div>
+</div>
+<script src="../timing.js"></script><script src="../../../lib/core.js"></script><script>
+useTiming('summary');window.CENTER_FIRST=1.6;const $i=i=>document.getElementById(i);
+const BT=((TIMING.summary.dialog||[]).find(d=>d.who==='both')||{}).t0||1e9;
+SCENE.anim=(o,T)=>{const dm=1-.72*easeOut(seg(T,BT-1.1,BT-.2));document.querySelectorAll('.card,.wm').forEach(e=>e.style.filter=dm<1?`opacity(${dm})`:'')};
+SCENE.char=makeChar([{k: "walk", t0: 0.15, t1: 1.2, x0: 2250, x1: 1560}, {k: "think", t0: 1.46, t1: 3.06}, {k: "prop", name: "book", t0: 5.34, t1: 7.94}, {k: "clap", t0: 9.83, t1: 11.43}, {k: "prop", name: "clock", t0: 13.26, t1: 15.86}, {k: "nod", t0: 17.45, t1: 19.05}],'lead');
+SCENE.char2=makeChar([{k: "walk", t0: 18.28, t1: 19.48, x0: 2300, x1: 1830}, {k: "nod", t0: 19.68, t1: 20.48}],'cameo');
+</script><script src="../../../lib/highlight.js"></script></body></html>

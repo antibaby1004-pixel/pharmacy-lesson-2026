@@ -1,0 +1,322 @@
+{
+ "name": "링거라이트",
+ "no": "14",
+ "name_en": "Ringer light soln 200 mL",
+ "voice": "hyunsu",
+ "chip": "링거라이트 Ringer light <i>· oral rehydration solution 200 mL</i>",
+ "cast": {
+  "lead": "haru",
+  "cameo": "park"
+ },
+ "props": [
+  "bag",
+  "clock",
+  "book",
+  "thermo"
+ ],
+ "highlight": {
+  "generic": [
+   "포도당",
+   "염화나트륨",
+   "구연산칼륨",
+   "구연산나트륨",
+   "구연산염"
+  ],
+  "target": [
+   "SGLT1",
+   "나트륨",
+   "중탄산염"
+  ],
+  "warn": [
+   "신부전",
+   "고칼륨혈증",
+   "칼륨",
+   "당뇨",
+   "중증 탈수",
+   "삼킴"
+  ]
+ },
+ "greet": {
+  "say": "안녕하세요, 신입 하루예요! 오늘은 링거라이트!",
+  "bubble": "신입 하루예요!<br>오늘은 링거라이트!"
+ },
+ "intro_title": "링거라이트 소개 · 마시는 수분 보충",
+ "intro": {
+  "title": "링거라이트",
+  "en": "Ringer light soln.",
+  "inn": "oral rehydration solution",
+  "photos": [
+   {
+    "draw": "bag",
+    "args": [
+     "200 mL",
+     "경구 수분 보충",
+     "#3A8FB7"
+    ],
+    "label": "링거라이트액 200 mL 백"
+   }
+  ],
+  "sents": [
+   "마시는 경구 수분·전해질 보충액이에요.",
+   [
+    "100 mL 안에 포도당 2.5 g과, 염화나트륨, 구연산칼륨, 구연산나트륨이 들어 있어요.",
+    "백 밀리리터 안에 포도당 이점오 그램과, 염화나트륨, 구연산칼륨, 구연산나트륨이 들어 있어요."
+   ],
+   [
+    "200 mL 백 단위로 마시는 제품이에요.",
+    "이백 밀리리터 백 단위로 마시는 제품이에요."
+   ],
+   "원외 처방용이던 것을 원내로 들였고, 2026년 5월부터 비급여로 바뀌었어요."
+  ],
+  "facts": [
+   {
+    "s": 1,
+    "lab": "100 mL 중",
+    "v": "포도당 2.5 g · 나트륨 · 칼륨 · 구연산염"
+   },
+   {
+    "s": 2,
+    "lab": "제형",
+    "v": "200 mL 백 · 경구"
+   },
+   {
+    "s": 3,
+    "lab": "도입",
+    "v": "원외 → 원내 · 비급여(2026.5~)",
+    "cls": "amb"
+   }
+  ]
+ },
+ "parts": [
+  {
+   "id": "m0",
+   "type": "mech",
+   "title": "SGLT1 · 포도당과 나트륨",
+   "sec": "<b>작용 기전</b> · 01 / 02",
+   "h1": "포도당과 나트륨이 손잡고 들어갑니다",
+   "sents": [
+    [
+     "핵심은 소장 상피의 SGLT1 운반체예요.",
+     "핵심은 소장 상피의 에스지엘티 원 운반체예요."
+    ],
+    "포도당 한 분자를 들여올 때, 나트륨을 함께 끌고 들어와요.",
+    "들어간 용질을 따라, 물이 삼투로 흡수돼요.",
+    "설사 중에도 이 흡수 길은 대개 살아 있어요."
+   ],
+   "steps": [
+    {
+     "s": 1,
+     "h": "포도당 + 나트륨 공수송",
+     "p": "SGLT1이 둘을 함께 들여옴"
+    },
+    {
+     "s": 2,
+     "h": "물이 따라 흡수",
+     "p": "용질을 따라 삼투로 이동"
+    },
+    {
+     "s": 3,
+     "h": "설사 중에도 작동",
+     "p": "분비가 늘어도 흡수 길은 대개 유지"
+    }
+   ],
+   "key": {
+    "s": 3,
+    "text": "포도당과 나트륨을 함께 → 물이 따라온다"
+   },
+   "fig": "<rect x=\"30\" y=\"40\" width=\"552\" height=\"120\" fill=\"#EEF6FB\"/><text x=\"50\" y=\"80\" font-size=\"22\" font-weight=\"700\" fill=\"#3E5872\">장 내강</text>\n<rect x=\"80\" y=\"160\" width=\"452\" height=\"320\" rx=\"20\" fill=\"#FFE9DF\" stroke=\"#C0704A\" stroke-width=\"4\"/><text x=\"100\" y=\"200\" font-size=\"22\" font-weight=\"700\" fill=\"#8E4A2E\">소장 상피세포</text>\n<rect x=\"30\" y=\"480\" width=\"552\" height=\"110\" fill=\"#FCE9E7\"/><text x=\"50\" y=\"570\" font-size=\"22\" font-weight=\"700\" fill=\"#8E2219\">혈액 쪽</text>\n<g transform=\"translate(306 160)\"><rect x=\"-34\" y=\"-26\" width=\"68\" height=\"52\" rx=\"12\" fill=\"#7FC6CA\" stroke=\"#243341\" stroke-width=\"3\"/><text y=\"7\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"700\">SGLT1</text></g>\n<g id=\"mv\"></g>",
+   "js": "let h='';for(let i=0;i<4;i++)h+=`<g id=\"g${i}\"><path d=\"M0 -14 l12 7 v14 l-12 7 l-12 -7 v-14z\" fill=\"#D96C00\"/></g><g id=\"n${i}\"><circle r=\"11\" fill=\"#1F6FD1\"/><text y=\"5\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"700\" fill=\"#fff\">Na</text></g>`;for(let i=0;i<8;i++)h+=`<path id=\"w${i}\" d=\"M0 -12 C8 0 8 8 0 10 C-8 8 -8 0 0 -12z\" fill=\"#5BB5E0\"/>`;$i('mv').innerHTML=h;\nSCENE.anim=o=>{const run=seg(o,S[1],S[1]+0.6),wat=seg(o,S[2],S[2]+0.6);\n for(let i=0;i<4;i++){const ph=((o*.35+i/4)%1);const y=lerp(90,540,ph);const g=$i('g'+i),n=$i('n'+i);g.setAttribute('transform',`translate(296 ${y})`);n.setAttribute('transform',`translate(320 ${y+4})`);g.style.opacity=run;n.style.opacity=run}\n for(let i=0;i<8;i++){const ph=((o*.35+i/8+0.06)%1);const e=$i('w'+i);e.setAttribute('transform',`translate(${250+(i%3)*50+((i*37)%30)} ${lerp(80,540,ph)})`);e.style.opacity=wat}};"
+  },
+  {
+   "id": "yt1",
+   "type": "ytslot",
+   "title": "기전 영상 · 링크 확정 전",
+   "sec": "<b>기전 영상</b> · VIDEO",
+   "h1": ""
+  },
+  {
+   "id": "m1",
+   "type": "mech",
+   "title": "왜 설탕물이 아닌가",
+   "sec": "<b>작용 기전</b> · 02 / 02",
+   "h1": "왜 설탕물이 아니라 경구수액인가",
+   "sents": [
+    "포도당만 있으면, 함께 들어갈 나트륨이 부족해 흡수가 잘 안 돼요.",
+    "나트륨만 있어도, 포도당이 없어서 마찬가지예요.",
+    "둘이 알맞은 비율로 함께 있어야 물이 들어가요.",
+    "함께 든 구연산염은 대사되어 중탄산염이 되고, 탈수에 동반된 산증을 보정해요."
+   ],
+   "steps": [
+    {
+     "s": 0,
+     "h": "포도당만",
+     "p": "나트륨 부족 → 흡수 잘 안 됨"
+    },
+    {
+     "s": 1,
+     "h": "나트륨만",
+     "p": "포도당 없음 → 마찬가지"
+    },
+    {
+     "s": 2,
+     "h": "둘이 함께",
+     "p": "알맞은 비율 → 물 흡수"
+    }
+   ],
+   "key": {
+    "s": 3,
+    "text": "구연산염 → 중탄산염 · 산증 보정"
+   },
+   "fig": "<g id=\"p0\" style=\"opacity:.2\"><g transform=\"translate(20 0)\"><text x=\"85\" y=\"80\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"700\" fill=\"#243341\">포도당만</text><rect x=\"10\" y=\"100\" width=\"150\" height=\"300\" rx=\"16\" fill=\"#FFE9DF\" stroke=\"#C0704A\" stroke-width=\"3\"/><rect x=\"55\" y=\"88\" width=\"60\" height=\"30\" rx=\"8\" fill=\"#C9D6E0\" stroke=\"#243341\" stroke-width=\"2\"/><path d=\"M60 50 l10 6 v12 l-10 6 l-10 -6 v-12z\" fill=\"#D96C00\" transform=\"translate(0 0)\"/><text x=\"85\" y=\"460\" text-anchor=\"middle\" font-size=\"48\" font-weight=\"700\" fill=\"#D2342A\">✕</text></g></g><g id=\"p1\" style=\"opacity:.2\"><g transform=\"translate(220 0)\"><text x=\"85\" y=\"80\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"700\" fill=\"#243341\">나트륨만</text><rect x=\"10\" y=\"100\" width=\"150\" height=\"300\" rx=\"16\" fill=\"#FFE9DF\" stroke=\"#C0704A\" stroke-width=\"3\"/><rect x=\"55\" y=\"88\" width=\"60\" height=\"30\" rx=\"8\" fill=\"#C9D6E0\" stroke=\"#243341\" stroke-width=\"2\"/><circle cx=\"110\" cy=\"62\" r=\"10\" fill=\"#1F6FD1\"/><text x=\"85\" y=\"460\" text-anchor=\"middle\" font-size=\"48\" font-weight=\"700\" fill=\"#D2342A\">✕</text></g></g><g id=\"p2\" style=\"opacity:.2\"><g transform=\"translate(420 0)\"><text x=\"85\" y=\"80\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"700\" fill=\"#243341\">둘 다</text><rect x=\"10\" y=\"100\" width=\"150\" height=\"300\" rx=\"16\" fill=\"#FFE9DF\" stroke=\"#C0704A\" stroke-width=\"3\"/><rect x=\"55\" y=\"88\" width=\"60\" height=\"30\" rx=\"8\" fill=\"#7FC6CA\" stroke=\"#243341\" stroke-width=\"2\"/><path d=\"M60 50 l10 6 v12 l-10 6 l-10 -6 v-12z\" fill=\"#D96C00\" transform=\"translate(0 0)\"/><circle cx=\"110\" cy=\"62\" r=\"10\" fill=\"#1F6FD1\"/><text x=\"85\" y=\"460\" text-anchor=\"middle\" font-size=\"48\" font-weight=\"700\" fill=\"#007F86\">○</text><g id=\"wat\"><path d=\"M60 150 c6 9 6 15 0 17 c-6 -2 -6 -8 0 -17z\" fill=\"#5BB5E0\"/><path d=\"M85 210 c6 9 6 15 0 17 c-6 -2 -6 -8 0 -17z\" fill=\"#5BB5E0\"/><path d=\"M110 270 c6 9 6 15 0 17 c-6 -2 -6 -8 0 -17z\" fill=\"#5BB5E0\"/><path d=\"M135 330 c6 9 6 15 0 17 c-6 -2 -6 -8 0 -17z\" fill=\"#5BB5E0\"/></g></g></g><g id=\"ci\" style=\"opacity:0\"><rect x=\"60\" y=\"520\" width=\"492\" height=\"70\" rx=\"16\" fill=\"#E2F2F3\" stroke=\"#007F86\" stroke-width=\"3\"/><text x=\"306\" y=\"563\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"700\" fill=\"#00666C\">구연산염 → 중탄산염 · 산증 보정</text></g>",
+   "js": "SCENE.anim=o=>{[0,1,2].forEach(i=>$i('p'+i).style.opacity=.2+.8*seg(o,S[i],S[i]+0.6));$i('ci').style.opacity=seg(o,S[3],S[3]+0.6)};"
+  },
+  {
+   "id": "5",
+   "type": "rows",
+   "title": "사용법",
+   "sec": "<b>용법</b> · HOW TO USE",
+   "h1": "주사가 아니라 마시는 제제",
+   "sents": [
+    "주사가 아니라 마시는 제제예요.",
+    "탈수 정도와 나이, 체중에 맞춰 처방된 양을 나눠서 천천히 마셔요.",
+    "구토가 있으면 조금씩 자주 마셔요.",
+    "정맥 수액이 필요한 중증 탈수는 따로 판단해요."
+   ],
+   "rows": [
+    {
+     "s": 0,
+     "lab": "투여",
+     "v": "경구 — 마시는 제제",
+     "cls": "amb"
+    },
+    {
+     "s": 1,
+     "lab": "용량",
+     "v": "탈수 정도·나이·체중에 맞춘 처방량을 나눠 천천히"
+    },
+    {
+     "s": 2,
+     "lab": "구토 시",
+     "v": "조금씩 자주"
+    },
+    {
+     "s": 3,
+     "lab": "중증 탈수",
+     "v": "정맥 수액 필요 여부 따로 판단",
+     "cls": "red"
+    }
+   ]
+  },
+  {
+   "id": "4",
+   "type": "rows",
+   "title": "주의사항",
+   "sec": "<b>주의점</b> · PRECAUTIONS",
+   "h1": "칼륨과 포도당이 들어 있습니다",
+   "sents": [
+    "칼륨이 들어 있어서, 신부전이나 고칼륨혈증 환자는 주의해요.",
+    "포도당이 들어 있으니, 당뇨 환자는 혈당을 살펴요.",
+    "의식이 떨어져 삼키기 어려운 환자에게는 쓰지 않아요.",
+    "이온음료와 달리, 조성이 정해진 의약품이에요."
+   ],
+   "rows": [
+    {
+     "s": 0,
+     "lab": "칼륨",
+     "v": "신부전 · 고칼륨혈증 주의",
+     "cls": "red"
+    },
+    {
+     "s": 1,
+     "lab": "포도당",
+     "v": "당뇨 환자 혈당 확인",
+     "cls": "amb"
+    },
+    {
+     "s": 2,
+     "lab": "삼킴",
+     "v": "의식 저하 · 삼킴 곤란 환자는 피하기"
+    },
+    {
+     "s": 3,
+     "lab": "구분",
+     "v": "이온음료 아님 — 조성이 정해진 의약품"
+    }
+   ]
+  },
+  {
+   "id": "summary",
+   "type": "summary",
+   "title": "Take-home message",
+   "sec": "<b>핵심 정리</b> · TAKE-HOME MESSAGE",
+   "h1": "링거라이트, 이 6가지만 기억하세요",
+   "sents": [
+    "정리할게요.",
+    "링거라이트는 마시는 수분·전해질 보충액이에요.",
+    [
+     "SGLT1이 포도당과 나트륨을 함께 들이고, 물이 따라 들어가요.",
+     "에스지엘티 원이 포도당과 나트륨을 함께 들이고, 물이 따라 들어가요."
+    ],
+    "그래서 설탕물이나 소금물로는 대신할 수 없어요.",
+    "구연산염은 중탄산염이 되어 산증을 보정해요.",
+    "칼륨이 들어 있으니 신부전 환자는 주의해요."
+   ],
+   "cards": [
+    {
+     "s": 1,
+     "lab": "제형",
+     "v": "마시는 경구<br>수분·전해질"
+    },
+    {
+     "s": 2,
+     "lab": "원리",
+     "v": "SGLT1<br>포도당 + 나트륨"
+    },
+    {
+     "s": 3,
+     "lab": "이유",
+     "v": "설탕물 · 소금물로는<br>대신 못 함"
+    },
+    {
+     "s": 4,
+     "lab": "구연산염",
+     "v": "→ 중탄산염<br>산증 보정"
+    },
+    {
+     "s": 5,
+     "lab": "주의",
+     "v": "칼륨 · 신부전",
+     "cls": "red"
+    },
+    {
+     "s": 1,
+     "lab": "구분",
+     "v": "비급여 · 원내 전환",
+     "cls": "amb"
+    }
+   ],
+   "cameo_say": "음… 하루, 오늘 설명 시원했어.",
+   "cameo_bubble": "음… 하루,<br>오늘 설명 시원했어."
+  }
+ ],
+ "lines": {
+  "m0": [
+   {
+    "who": "cameo",
+    "after": 2,
+    "say": "음… 물은 혼자 못 들어가. 손잡을 친구가 필요하지.",
+    "bubble": "음… 물은 혼자 못 들어가.<br>손잡을 친구가 필요하지.",
+    "act": "sip"
+   }
+  ],
+  "m1": [
+   {
+    "who": "lead",
+    "after": 2,
+    "say": "그래서 설탕물로는 안 되는 거군요?",
+    "bubble": "그래서 설탕물로는<br>안 되는 거군요?",
+    "act": "think"
+   }
+  ]
+ }
+}

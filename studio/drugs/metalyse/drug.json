@@ -1,0 +1,173 @@
+{
+ "name": "메탈라제",
+ "no": "13",
+ "name_en": "Metalyse inj 25 mg",
+ "parts": [
+  {
+   "part": "intro",
+   "scene": "intro.html"
+  },
+  {
+   "part": "m0",
+   "scene": "m0.html",
+   "video_dur": 14.94
+  },
+  {
+   "part": "yt1",
+   "scene": "yt1.html",
+   "video_dur": 7.11
+  },
+  {
+   "part": "m1",
+   "scene": "m1.html",
+   "video_dur": 21.65
+  },
+  {
+   "part": "dose",
+   "scene": "dose.html",
+   "video_dur": 21.85
+  },
+  {
+   "part": "5",
+   "scene": "5.html",
+   "video_dur": 13.22
+  },
+  {
+   "part": "cmp",
+   "scene": "cmp.html",
+   "video_dur": 20.18
+  },
+  {
+   "part": "4",
+   "scene": "4.html",
+   "video_dur": 15.79
+  },
+  {
+   "part": "summary",
+   "scene": "summary.html",
+   "video_dur": 21.14
+  }
+ ],
+ "order": [
+  "intro",
+  "m0",
+  "yt1",
+  "m1",
+  "dose",
+  "5",
+  "cmp",
+  "4",
+  "summary"
+ ],
+ "player_parts": [
+  "intro",
+  "m0",
+  "yt1",
+  "m1",
+  "dose",
+  "5",
+  "cmp",
+  "4",
+  "summary"
+ ],
+ "cast": {
+  "lead": "wang",
+  "cameo": "park"
+ },
+ "props": [
+  "vial",
+  "clock",
+  "book",
+  "magnifier"
+ ],
+ "highlight": {
+  "generic": [
+   "tenecteplase",
+   "alteplase",
+   "테넥테플라제",
+   "알테플라제",
+   "액티라제"
+  ],
+  "target": [
+   "plasminogen",
+   "plasmin",
+   "피브린",
+   "PAI-1",
+   "α2-antiplasmin",
+   "t-PA",
+   "T103N",
+   "N117Q",
+   "KHRR"
+  ],
+  "warn": [
+   "출혈",
+   "두개내 출혈",
+   "포도당",
+   "흔들지",
+   "잔량 폐기",
+   "금기",
+   "아나필락시스"
+  ]
+ },
+ "intro": {
+  "title": "메탈라제",
+  "en": "Metalyse inj.",
+  "inn": "tenecteplase",
+  "photos": [
+   {
+    "draw": "vial",
+    "args": [
+     "25 mg",
+     "tenecteplase",
+     "#3A8F8A"
+    ],
+    "label": "메탈라제주사 25 mg"
+   }
+  ],
+  "facts": [
+   {
+    "t": 4.59,
+    "lab": "함량",
+    "v": "25 mg 바이알 · 주사용수 5 mL (5 mg/mL)"
+   },
+   {
+    "t": 9.08,
+    "lab": "적응증",
+    "v": "성인 급성 허혈성 뇌졸중 · 4.5시간 이내"
+   },
+   {
+    "t": 14.03,
+    "lab": "도입",
+    "v": "원내 신약 · 액티라제와 병존",
+    "cls": "amb"
+   }
+  ],
+  "actions": [
+   {
+    "k": "walk",
+    "t0": 0.25,
+    "t1": 1.15,
+    "x0": 960,
+    "x1": 1640
+   },
+   {
+    "k": "prop",
+    "name": "clock",
+    "t0": 4.79,
+    "t1": 7.39
+   },
+   {
+    "k": "thumbs",
+    "t0": 9.28,
+    "t1": 10.88
+   },
+   {
+    "k": "prop",
+    "name": "book",
+    "t0": 14.23,
+    "t1": 16.83
+   }
+  ],
+  "chip": "메탈라제 Metalyse <i>· tenecteplase 25 mg</i>"
+ }
+}

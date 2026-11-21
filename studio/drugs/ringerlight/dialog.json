@@ -1,0 +1,125 @@
+{
+ "voices": {
+  "haru": {
+   "voice": "en-US-EmmaMultilingualNeural",
+   "rate": "+22%",
+   "pitch": "+20Hz",
+   "gain": 1.15
+  },
+  "park": {
+   "voice": "en-US-AndrewMultilingualNeural",
+   "rate": "+8%",
+   "pitch": "-8Hz",
+   "gain": 1.45
+  }
+ },
+ "lines": {
+  "intro": [
+   {
+    "who": "haru",
+    "bubble": "신입 하루예요!<br>오늘은 링거라이트!",
+    "say": "안녕하세요, 신입 하루예요! 오늘은 링거라이트!",
+    "at": 0.0,
+    "with": [
+     {
+      "k": "walk",
+      "dt": 0,
+      "len": 0.9,
+      "x0": 2250,
+      "x1": 960
+     },
+     {
+      "k": "wave",
+      "dt": 1.0,
+      "len": 1.6
+     },
+     {
+      "k": "hop",
+      "dt": 1.4,
+      "len": 1.0
+     }
+    ]
+   }
+  ],
+  "m0": [
+   {
+    "who": "park",
+    "bubble": "음… 물은 혼자 못 들어가.<br>손잡을 친구가 필요하지.",
+    "say": "음… 물은 혼자 못 들어가. 손잡을 친구가 필요하지.",
+    "at": 10.04,
+    "with": [
+     {
+      "k": "sip",
+      "dt": 0,
+      "len": 1.4
+     }
+    ]
+   }
+  ],
+  "m1": [
+   {
+    "who": "haru",
+    "bubble": "그래서 설탕물로는<br>안 되는 거군요?",
+    "say": "그래서 설탕물로는 안 되는 거군요?",
+    "at": 10.95,
+    "with": [
+     {
+      "k": "think",
+      "dt": 0,
+      "len": 1.4
+     }
+    ]
+   }
+  ],
+  "summary": [
+   {
+    "who": "park",
+    "bubble": "음… 하루,<br>오늘 설명 시원했어.",
+    "say": "음… 하루, 오늘 설명 시원했어.",
+    "at": 18.97,
+    "with": [
+     {
+      "k": "thumbs",
+      "dt": 0,
+      "len": 1.4
+     }
+    ]
+   },
+   {
+    "who": "both",
+    "bubble": "수고하셨습니다!<br>안녕~!",
+    "say": "수고하셨습니다! 안녕!",
+    "at": 19.07,
+    "with": [
+     {
+      "k": "walk",
+      "for": "haru",
+      "dt": 0,
+      "len": 1.1,
+      "x0": "cur",
+      "x1": 840
+     },
+     {
+      "k": "walk",
+      "for": "park",
+      "dt": 0,
+      "len": 1.1,
+      "x0": "cur",
+      "x1": 1090
+     },
+     {
+      "k": "wave",
+      "dt": 0.9,
+      "len": 2.2
+     },
+     {
+      "k": "hop",
+      "dt": 0.9,
+      "len": 2.2
+     }
+    ]
+   }
+  ]
+ },
+ "bridges": {}
+}
