@@ -100,7 +100,7 @@ const HARU_SVG=`
 function ambient(acts,HARU,seed){
  let h=0;for(const c of seed)h=(h*31+c.charCodeAt(0))>>>0;const rnd=()=>{h=(h*1664525+1013904223)>>>0;return h/4294967296};
  const G=HARU?['hop','memo','clap','spin','giggle','wink','lean','dance','nod','spark','think','cheer']:['nod','sip','lean','think','shrug','point','yawn','turn','sip','thumbs','facepalm','nod'];
- const ZX=HARU?[1740,1860]:[1540,1700];
+ const ZX=HARU?[1790,1870]:[1520,1610];
  const walks=acts.filter(a=>a.k==='walk').sort((p,q)=>p.t0-q.t0);
  const xAt=t=>{let x=walks.length?walks[0].x0:1700;for(const w of walks){if(w.t1<=t)x=w.x1}return x};
  const busy=acts.filter(a=>a.t0!==undefined&&a.k!=='blink').map(a=>[a.t0-.25,a.t1+.25]);
@@ -127,10 +127,11 @@ function makeChar(acts0,type){
  const MIN={splash:.6,spin:.8,memo:1.0,clap:.8,cheer:1.0,float:1.4,bow:.8,dance:1.2,giggle:.8,wink:.6,spark:.6,walk:.9,bubble:1.8,point:1.2,wave:1.0,thumbs:1.0,sip:1.0,yawn:1.4,think:1.4,facepalm:1.2,shrug:1.0,hop:.8,lean:.8,celebrate:1.2,turn:.6,nod:.8,talk:.8,sweat:1.0};
  const DLG=(CUR&&TIMING[CUR]&&TIMING[CUR].dialog)||[];const who=HARU?'haru':'park';
  const acts=acts0.filter(a=>!(DLG.length&&((a.k==='bubble'&&!a.keep)||a.k==='talk'))).map(a=>{const c={...a};if(a.t0!==undefined){c.t0=fwd(a.t0);c.t1=a.t1!==undefined?fwd(a.t1):c.t0+1.4;const m=MIN[a.k]||0;if(c.t1-c.t0<m)c.t1=c.t0+m;}return c});
- for(const d of DLG){if(d.who!==who)continue;acts.push({k:'bubble',t0:d.t0-0.05,t1:d.t1,text:d.text});acts.push({k:'talk',t0:d.t0,t1:d.t1-0.4});for(const w of (d.with||[])){const t0=d.t0+(w.dt||0);acts.push({...w,t0,t1:t0+(w.len||1.4)})}}
+ for(const d of DLG){const both=d.who==='both';if(d.who!==who&&!both)continue;if(!(both&&HARU))acts.push({k:'bubble',t0:d.t0-0.05,t1:d.t1,text:d.text,free:both});acts.push({k:'talk',t0:d.t0,t1:d.t1-0.4});for(const w of (d.with||[])){if(w.for&&w.for!==who)continue;const t0=d.t0+(w.dt||0);acts.push({...w,t0,t1:t0+(w.len||1.4)})}}
  acts.sort((p,q)=>(p.t0??0)-(q.t0??0));
  if(!window.NO_AMBIENT) ambient(acts,HARU,(CUR||'')+who);
  acts.sort((p,q)=>(p.t0??0)-(q.t0??0));
+ {let cx=null;for(const a of acts){if(a.k!=='walk')continue;if(a.x0==='cur')a.x0=cx??1700;cx=a.x1}}
  const S0=HARU?.64:.72, BASE=1030;
  const g=id=>svg.querySelector('#'+id)||document.createElementNS('http://www.w3.org/2000/svg','g'), show=(id,v)=>g(id).style.display=v?'':'none';
  const act=(k,t)=>acts.find(a=>a.k===k&&t>=a.t0&&t<a.t1);
@@ -215,7 +216,7 @@ function makeChar(acts0,type){
   // bubble
   const b=act('bubble',t);
   if(b&&visible){const bi=back(seg(t,b.t0,b.t0+.35)),bo=1-seg(t,b.t1-.25,b.t1);bub.innerHTML=b.text;bub.style.opacity=bo;bub.style.transform=`scale(${bi*bo})`;
-   let right=Math.min(Math.max(x+150,520),1890);const bw2=bub.offsetWidth||430;if(!window.BUBBLE_FREE)right=Math.min(1900,Math.max(right,1456+bw2));bub.style.left='auto';bub.style.right=(1920-right)+'px';bub.style.bottom=(1080-(top+70*S))+'px';}
+   let right=Math.min(Math.max(x+150,520),1890);const bw2=bub.offsetWidth||430;if(!window.BUBBLE_FREE&&!b.free)right=Math.min(1900,Math.max(right,1456+bw2));bub.style.left='auto';bub.style.right=(1920-right)+'px';bub.style.bottom=(1080-(top+70*S))+'px';}
   else bub.style.opacity=0;
  };
 }

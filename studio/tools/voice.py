@@ -7,6 +7,9 @@ sys.path.insert(0,os.path.dirname(__file__));import tts
 d,cfg=load_drug(sys.argv[1]);M=json.load(open(os.path.join(d,'build','map.json')));DL=json.load(open(os.path.join(d,'dialog.json')))
 V=DL['voices'];os.makedirs(os.path.join(d,'voice'),exist_ok=True)
 def line(who,say):
+    if who=='both':
+        a,b=line('park',say),line('haru',say);n=max(len(a),len(b))
+        return np.pad(a,(0,n-len(a)))*0.8+np.pad(b,(0,n-len(b)))*0.8
     v=V[who];h=hashlib.md5(f"{v['voice']}|{v['rate']}|{v['pitch']}|{say}".encode()).hexdigest()[:10]
     f=os.path.join(d,'voice',f'{who}_{h}.mp3')
     if not os.path.exists(f): tts.say(v['voice'],say,f,v['rate'],v['pitch'])
@@ -53,7 +56,8 @@ for P in cfg['parts']:
             la=line(L['who'],L['say']);du=len(la)/SR;t0=g+acc+off
             dialog.append({'who':L['who'],'text':L['bubble'],'t0':round(t0,3),'t1':round(t0+du+.45,3),'with':L.get('with',[])})
             gap+= [la,np.zeros(int(.3*SR),np.float32)];off+=du+.3
-        gap.append(np.zeros(int(.1*SR),np.float32));G=np.concatenate(gap);pieces.append(G);ins.append([round(g,4),round(len(G)/SR,4)]);acc+=len(G)/SR
+        gap.append(np.zeros(int((1.3 if g>=T-0.05 else .1)*SR),np.float32));   # 장면 끝 대사면 여운을 둠
+        G=np.concatenate(gap);pieces.append(G);ins.append([round(g,4),round(len(G)/SR,4)]);acc+=len(G)/SR
     pieces.append(a[last:]);write_wav(os.path.join(d,'build',f'f_{p}.wav'),np.concatenate(pieces))
     OUT[p]={'dur':round(M[p]['dur']+acc,3),'knots':M[p]['knots'],'ins':ins,'dialog':dialog,'cues':M[p].get('cues')};print(p,OUT[p]['dur'],len(dialog),'lines')
 json.dump(OUT,open(os.path.join(d,'build','final.json'),'w'),ensure_ascii=False,indent=1)

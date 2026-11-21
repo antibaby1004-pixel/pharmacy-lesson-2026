@@ -7,7 +7,7 @@
 .ic{width:56px;height:56px}
 </style></head><body><div class="stage">
 <div class="fade"><header class="top"><div class="sec"><b>핵심 정리</b> · TAKE-HOME MESSAGE</div><div class="chip">레파타 Repatha <i>· evolocumab</i></div></header>
-<h1>Take-home message</h1></div>
+<h1>레파타, 이 6가지만 기억하세요</h1></div>
 <div class="fade">
 <div class="wm">06</div>
 <div class="g">
@@ -22,7 +22,8 @@
 </div></div>
 <script src="../timing.js"></script><script src="../../../lib/core.js"></script><script>
 useTiming('summary');
-SCENE.anim=t=>{const h=seg(t,45.6,45.9)*(1-seg(t,49.5,50));$('#red').style.boxShadow=`0 0 0 ${h*(10+6*Math.sin((t-45.6)*6))}px rgba(180,35,24,${.16*h})`};
+const BT=((TIMING.summary.dialog||[]).find(d=>d.who==='both')||{}).t0||1e9;
+SCENE.anim=(t,T)=>{const dm=1-.72*easeOut(seg(T,BT-1.1,BT-.2));document.querySelectorAll('.card,.note,.wm').forEach(e=>e.style.filter=dm<1?`opacity(${dm})`:'');const h=seg(t,45.6,45.9)*(1-seg(t,49.5,50));$('#red').style.boxShadow=`0 0 0 ${h*(10+6*Math.sin((t-45.6)*6))}px rgba(180,35,24,${.16*h})`};
 SCENE.char=makeChar([
  {k:'walk',t0:0.4,t1:1.8,x0:2150,x1:1590},
  {k:'sip',t0:3.6,t1:5.0},{k:'nod',t0:9.6,t1:10.6},
