@@ -4,7 +4,7 @@ const H=(typeof DRUG_HL!=='undefined')?DRUG_HL:{};
 const esc=s=>s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
 const words=(a)=>a&&a.length?new RegExp('('+a.map(esc).sort((x,y)=>y.length-x.length).join('|')+')','g'):null;
 const DOSE=/((?:≤|≥|<|>)?\d+(?:[.,]\d+)?(?:\s?[–~-]\s?\d+(?:[.,]\d+)?)?\s?(?:mg|mL|mcg|μg|µg|g|IU|U|°C|℃|%|주마다|주|일|분|시간|개월|회|개)(?![A-Za-z가-힣]))/g;
-const WARN=words((H.warn||[]).concat(['즉시 진료','즉시','금지','금기','호흡곤란','숨이 차','부종','붓','알레르기','아나필락시스','응급','동결','얼리','재사용']));
+const WARN=words((H.warn||[]).concat(['즉시 진료','즉시','금지','금기','호흡곤란','숨이 차','부종','붓','알레르기','아나필락시스','응급','재사용']));
 const RULES=[['hl-gen',words(H.generic||[])],['hl-tgt',words(H.target||[])],['hl-warn',WARN],['hl-dose',DOSE]].filter(r=>r[1]);
 function mark(text){ // 겹치지 않게 앞에서부터 가장 먼저 맞는 규칙 적용
   const out=[];let i=0;

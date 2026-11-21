@@ -1,0 +1,22 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../../lib/common.css"><style>
+svg text{font-family:P}
+.g{position:absolute;left:96px;top:262px;width:1344px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.c{padding:26px 30px;height:300px;box-sizing:border-box}.c .v{font-size:38px;font-weight:600;line-height:52px;margin-top:16px}
+.c.red{border-color:#F2B8B2;background:#FCE9E7}.c.red .lab,.c.red .v{color:#8E2219}
+</style></head><body><div class="stage">
+<div class="fade"><header class="top"><div class="sec"><b>핵심 정리</b> · TAKE-HOME MESSAGE</div><div class="chip">스텔라라 Stelara <i>· ustekinumab</i></div></header><h1>스텔라라, 이 6가지만 기억하세요</h1></div>
+<div class="fade"><div class="wm">09</div><div class="g">
+<div class="card c" data-in="1.8"><span class="lab">제형</span><div class="v">바이알 = 유도<br>90 mg 시린지 = 유지</div></div>
+<div class="card c" data-in="8.4"><span class="lab">기전</span><div class="v">IL-12·23 공통<br>p40 차단</div></div>
+<div class="card c" data-in="12.3"><span class="lab">정맥 유도</span><div class="v">체중별 1회<br>바이알 130 mg/26 mL</div></div>
+<div class="card c" data-in="18.3"><span class="lab">희석</span><div class="v">최종 250 mL<br>필터 · 1시간 이상</div></div>
+<div class="card c" data-in="23.1"><span class="lab">유지</span><div class="v">8주 뒤 90 mg 피하<br>이후 12주마다</div></div>
+<div class="card c red" data-in="26.9"><span class="lab">투여 전</span><div class="v">결핵 검사<br>생백신 피하기</div></div></div></div>
+</div>
+<script src="../timing.js"></script><script src="../../../lib/core.js"></script><script>
+useTiming('summary');window.CENTER_FIRST=1.6;const $i=i=>document.getElementById(i);
+const BT=((TIMING.summary.dialog||[]).find(d=>d.who==='both')||{}).t0||1e9;
+SCENE.anim=(o,T)=>{const dm=1-.72*easeOut(seg(T,BT-1.1,BT-.2));document.querySelectorAll('.card,.wm').forEach(e=>e.style.filter=dm<1?`opacity(${dm})`:'')};
+SCENE.char=makeChar([{k:'walk',t0:0.15,t1:1.2,x0:2250,x1:1560},{k:'prop',name:'book',t0:2.2,t1:5.0},{k:'nod',t0:9.0,t1:10.0},{k:'prop',name:'vial',t0:12.6,t1:15.4},{k:'prop',name:'clock',t0:18.6,t1:21.2},{k:'prop',name:'syringe',t0:23.4,t1:26.0}],'lead');
+SCENE.char2=makeChar([{k:'walk',t0:28.0,t1:29.2,x0:2300,x1:1830,run:true},{k:'hop',t0:29.4,t1:30.2}],'cameo');
+</script><script src="../../../lib/highlight.js"></script></body></html>

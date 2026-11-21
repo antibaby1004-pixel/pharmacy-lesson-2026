@@ -1,0 +1,29 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../../lib/common.css"><style>
+svg text{font-family:P}
+.box{position:absolute;left:96px;width:1344px;padding:22px 32px;display:grid;grid-template-columns:240px 1fr;align-items:center;gap:24px}
+.box .lab{font-size:30px}.box .v{font-size:42px;font-weight:600;line-height:54px}.box .e{font-size:24px;color:var(--muted);letter-spacing:.06em;margin-top:4px}
+.box.red{border-color:#F2B8B2;background:#FCE9E7}.box.red .lab,.box.red .v{color:#8E2219}
+.box.amb{border-color:#F3C58A;background:#FFF7EC}.box.amb .lab,.box.amb .v{color:#7D4A00}.wt{position:absolute;left:96px;top:262px;width:1344px;padding:24px 32px}
+.wt .g{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:16px}
+.wt .c{border:2px solid var(--hair);border-radius:16px;padding:16px 22px;background:#fff}
+.wt .c b{display:block;font-size:30px;color:var(--muted)}.wt .c .dd{font-size:56px;font-weight:700;color:var(--acc)}.wt .c .n{font-size:30px;font-weight:600}
+.tl{position:absolute;left:96px;top:600px;width:1344px;padding:24px 32px}
+.bar{position:relative;height:120px;margin-top:10px}.ax{position:absolute;left:0;right:0;top:56px;height:4px;background:var(--hair)}
+.d{position:absolute;top:30px;width:150px;margin-left:-75px;text-align:center}.d i{display:block;width:26px;height:26px;border-radius:99px;background:var(--acc);margin:13px auto 6px}
+.d b{font-size:28px}.d span{display:block;font-size:24px;color:var(--muted)}
+</style></head><body><div class="stage">
+<div class="fade"><header class="top"><div class="sec"><b>용량과 사용법</b> · DOSAGE</div><div class="chip">스텔라라 Stelara <i>· ustekinumab</i></div></header><h1>첫 회는 체중별 정맥, 이후 90 mg 피하</h1></div>
+<div class="fade"><div class="card wt" data-in="0.1"><span class="lab">첫 1회 · 체중별 정맥주입</span><div class="g">
+<div class="c" data-in="4.9"><b>≤ 55 kg</b><div class="dd num">260 mg</div><div class="n" data-in="15.0">바이알 2개</div></div>
+<div class="c" data-in="8.0"><b>55 초과 – 85 kg</b><div class="dd num">390 mg</div><div class="n" data-in="15.6">바이알 3개</div></div>
+<div class="c" data-in="11.6"><b>&gt; 85 kg</b><div class="dd num">520 mg</div><div class="n" data-in="16.2">바이알 4개</div></div></div></div>
+<div class="card tl" data-in="17.7"><span class="lab">이후 유지 · 피하주사</span><div class="bar"><div class="ax"></div>
+<div class="d" style="left:6%"><i></i><b>0주</b><span>정맥 유도</span></div>
+<div class="d" style="left:36%" data-in="18.6"><i></i><b>8주</b><span>90 mg 피하</span></div>
+<div class="d" style="left:72%" data-in="20.4"><i></i><b>이후 12주마다</b><span>90 mg 피하</span></div></div>
+<div style="font-size:30px;color:#7D4A00;font-weight:600;margin-top:8px" data-in="23.0">반응 불충분·소실 시 허가 조건에 따라 8주 간격 조정 가능</div></div></div>
+</div>
+<script src="../timing.js"></script><script src="../../../lib/core.js"></script><script>
+useTiming('5');const $i=i=>document.getElementById(i);
+SCENE.char=makeChar([{k:'walk',t0:0.15,t1:1.2,x0:2250,x1:1620},{k:'prop',name:'clock',t0:1.6,t1:4.0},{k:'point',t0:5.0,t1:7.0,ang:100},{k:'prop',name:'vial',t0:15.0,t1:17.0},{k:'nod',t0:19.0,t1:20.0},{k:'think',t0:23.2,t1:25.4}],'lead');
+</script><script src="../../../lib/highlight.js"></script></body></html>

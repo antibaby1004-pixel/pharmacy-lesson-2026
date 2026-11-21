@@ -1,0 +1,138 @@
+{
+ "name": "스텔라라",
+ "no": 3,
+ "name_en": "Stelara · ustekinumab",
+ "parts": [
+  {
+   "part": "intro",
+   "scene": "intro.html",
+   "video_dur": 21.39
+  },
+  {
+   "part": "forms",
+   "scene": "forms.html",
+   "video_dur": 20.61
+  },
+  {
+   "part": "0",
+   "scene": "m0.html",
+   "video_dur": 9.65
+  },
+  {
+   "part": "1",
+   "scene": "m1.html",
+   "video_dur": 9.74
+  },
+  {
+   "part": "5",
+   "scene": "s5.html",
+   "video_dur": 27.57
+  },
+  {
+   "part": "iv",
+   "scene": "iv.html",
+   "video_dur": 24.06
+  },
+  {
+   "part": "storage",
+   "scene": "st.html",
+   "video_dur": 19.83
+  },
+  {
+   "part": "inj",
+   "scene": "inj.html",
+   "video_dur": 31.11
+  },
+  {
+   "part": "4a",
+   "scene": "s4a.html",
+   "video_dur": 17.17
+  },
+  {
+   "part": "4b",
+   "scene": "s4b.html",
+   "video_dur": 17.17
+  },
+  {
+   "part": "summary",
+   "scene": "sum.html",
+   "video_dur": 30.56
+  },
+  {
+   "part": "yt1",
+   "scene": "yt1.html",
+   "bridge": true
+  }
+ ],
+ "order": [
+  "intro",
+  "forms",
+  "0",
+  "1",
+  "yt1",
+  "5",
+  "iv",
+  "storage",
+  "inj",
+  "4a",
+  "4b",
+  "summary"
+ ],
+ "player_parts": [
+  "intro",
+  "forms",
+  "0",
+  "1",
+  "5",
+  "iv",
+  "storage",
+  "inj",
+  "4a",
+  "4b",
+  "summary"
+ ],
+ "cast": {
+  "lead": "wang",
+  "cameo": "haru"
+ },
+ "props": [
+  "book",
+  "vial",
+  "syringe",
+  "clock",
+  "magnifier",
+  "thermo",
+  "bag"
+ ],
+ "highlight": {
+  "generic": [
+   "ustekinumab",
+   "유스테키누맙"
+  ],
+  "target": [
+   "p40",
+   "IL-12",
+   "IL-23",
+   "인터루킨 12",
+   "인터루킨 23",
+   "인터루킨-12",
+   "인터루킨-23"
+  ],
+  "warn": [
+   "생백신",
+   "결핵",
+   "라텍스",
+   "호흡곤란",
+   "얼굴 부종",
+   "즉시 중단",
+   "다시 냉장 금지",
+   "다시 냉장하지",
+   "동시 주입 금지",
+   "흔들기 금지",
+   "동결",
+   "얼리거나",
+   "적용하지 않기",
+   "적용하면 안"
+  ]
+ }
+}

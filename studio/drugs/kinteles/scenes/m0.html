@@ -1,0 +1,17 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../../lib/common.css"><style>
+svg text{font-family:P}
+.grid{display:grid;grid-template-columns:680px 1fr;gap:52px;width:1344px}.fig{height:640px;position:relative;overflow:hidden}.s p{font-size:30px;line-height:42px}
+</style></head><body><div class="stage">
+<div class="fade"><header class="top"><div class="sec"><b>작용 기전</b> · 01 / 02</div><div class="chip">킨텔레스 Kinteles <i>· vedolizumab</i></div></header><h1>림프구는 α4β7로 장에 들어갑니다</h1></div>
+<div class="fade"><div class="grid"><div class="steps"><div class="s" data-on="0,4.3"><div class="n">1</div><div><h3>림프구가 장으로</h3><p>염증성 장질환에서 림프구가 장으로 계속 이동</p></div></div><div class="s" data-on="4.3,7.0"><div class="n">2</div><div><h3>α4β7 ↔ MAdCAM-1</h3><p>림프구 인테그린이 장 혈관 MAdCAM-1에 결합</p></div></div><div class="s" data-on="7.0"><div class="n">3</div><div><h3>장 염증 지속</h3><p>장 조직으로 들어가 염증을 키운다</p></div></div></div><div class="card fig"><svg width="100%" height="100%" viewBox="0 0 612 640"><rect x="0" y="40" width="612" height="230" fill="#FDECEC" stroke="#c97a7a" stroke-width="3"/><text x="16" y="74" font-size="22" fill="#a14b4b">장 혈관</text>
+<g id="mads"></g><rect x="0" y="270" width="612" height="370" fill="#F6F0E6"/><text x="16" y="620" font-size="22" fill="#7D4A00">장 조직</text>
+<g id="fire" style="opacity:0"><path d="M300 560 q-26 -40 6 -76 q4 30 24 40 q10 -26 2 -46 q40 30 26 82 q-20 26 -58 0z" fill="#F28C28" stroke="#c0562a" stroke-width="3"/></g>
+<g id="cells"></g><text id="lab" x="306" y="30" text-anchor="middle" font-size="24" font-weight="700" fill="#007F86">α4β7 인테그린</text></svg></div></div><div class="key" data-in="4.6"><span class="k">KEY</span><span>α4β7 + MAdCAM-1 → 장으로 이동</span></div><div class="fn">교육용 개념도</div></div>
+</div>
+<script src="../timing.js"></script><script src="../../../lib/core.js"></script><script>
+useTiming('0');const $i=i=>document.getElementById(i);
+let m='';for(let i=0;i<5;i++)m+=`<g transform="translate(${70+i*115} 262)"><path d="M0 0 v-26 m-12 -10 l12 10 l12 -10" stroke="#7D4A00" stroke-width="6" fill="none" stroke-linecap="round"/></g>`;$i('mads').innerHTML=m+'<text x="420" y="300" font-size="22" font-weight="700" fill="#7D4A00">MAdCAM-1</text>';
+let c='';for(let i=0;i<4;i++)c+=`<g id="L${i}"><circle r="30" fill="#B6D7F2" stroke="#243341" stroke-width="3"/><path d="M20 -12 l14 -8 M20 12 l14 8" stroke="#007F86" stroke-width="5" stroke-linecap="round"/><g class="ab" style="opacity:0"><path d="M34 -20 l16 -10 m0 0 l6 -12 m-6 12 l12 4" stroke="#1F6FD1" stroke-width="6" fill="none" stroke-linecap="round"/></g></g>`;$i('cells').innerHTML=c;SCENE.anim=o=>{for(let i=0;i<4;i++){const ph=(o*.22+i*.25)%1;const into=seg(o,4.4,9.6)>(i/4);let x=-60+ph*740,y=150;if(into&&ph>.4){const k=seg(ph,.4,.75);x=lerp(x,70+((i*2)%5)*115,0);y=lerp(150,420+((i*37)%120),k)}$i('L'+i).setAttribute('transform',`translate(${x} ${y})`)}
+ $i('fire').style.opacity=seg(o,7.0,8.0)};
+SCENE.char=makeChar([{k:'walk',t0:0.15,t1:1.2,x0:2250,x1:1620},{k:'sip',t0:1.6,t1:3.2},{k:'prop',name:'magnifier',t0:4.6,t1:7.6}],'lead');
+</script><script src="../../../lib/highlight.js"></script></body></html>

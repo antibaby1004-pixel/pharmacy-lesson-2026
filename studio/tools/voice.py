@@ -8,7 +8,7 @@ d,cfg=load_drug(sys.argv[1]);M=json.load(open(os.path.join(d,'build','map.json')
 V=DL['voices'];os.makedirs(os.path.join(d,'voice'),exist_ok=True)
 def line(who,say):
     if who=='both':
-        a,b=line('park',say),line('haru',say);n=max(len(a),len(b))
+        C=cfg.get('cast',{'lead':'park','cameo':'haru'});a,b=line(C['lead'],say),line(C['cameo'],say);n=max(len(a),len(b))
         return np.pad(a,(0,n-len(a)))*0.8+np.pad(b,(0,n-len(b)))*0.8
     v=V[who];h=hashlib.md5(f"{v['voice']}|{v['rate']}|{v['pitch']}|{say}".encode()).hexdigest()[:10]
     f=os.path.join(d,'voice',f'{who}_{h}.mp3')

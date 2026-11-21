@@ -1,0 +1,122 @@
+{
+ "name": "킨텔레스",
+ "no": 4,
+ "name_en": "Kinteles · vedolizumab",
+ "parts": [
+  {
+   "part": "intro",
+   "scene": "intro.html",
+   "video_dur": 17.21
+  },
+  {
+   "part": "0",
+   "scene": "m0.html",
+   "video_dur": 10.29
+  },
+  {
+   "part": "1",
+   "scene": "m1.html",
+   "video_dur": 11.6
+  },
+  {
+   "part": "cmp",
+   "scene": "cmp.html",
+   "video_dur": 31.14
+  },
+  {
+   "part": "5a",
+   "scene": "s5a.html",
+   "video_dur": 11.91
+  },
+  {
+   "part": "5b",
+   "scene": "s5b.html",
+   "video_dur": 19.28
+  },
+  {
+   "part": "storage",
+   "scene": "st.html",
+   "video_dur": 19.58
+  },
+  {
+   "part": "4",
+   "scene": "s4.html",
+   "video_dur": 22.55
+  },
+  {
+   "part": "summary",
+   "scene": "sum.html",
+   "video_dur": 20.98
+  },
+  {
+   "part": "yt1",
+   "scene": "yt1.html",
+   "bridge": true
+  }
+ ],
+ "order": [
+  "intro",
+  "0",
+  "1",
+  "yt1",
+  "cmp",
+  "5a",
+  "5b",
+  "storage",
+  "4",
+  "summary"
+ ],
+ "player_parts": [
+  "intro",
+  "0",
+  "1",
+  "cmp",
+  "5a",
+  "5b",
+  "storage",
+  "4",
+  "summary"
+ ],
+ "cast": {
+  "lead": "park",
+  "cameo": "skull"
+ },
+ "props": [
+  "vial",
+  "syringe",
+  "clock",
+  "thermo",
+  "magnifier",
+  "book",
+  "phone"
+ ],
+ "highlight": {
+  "generic": [
+   "vedolizumab",
+   "베돌리주맙",
+   "ustekinumab",
+   "유스테키누맙"
+  ],
+  "target": [
+   "α4β7",
+   "MAdCAM-1",
+   "p40",
+   "IL-12·23"
+  ],
+  "warn": [
+   "결핵",
+   "호흡곤란",
+   "두드러기",
+   "마비",
+   "시력 변화",
+   "혼동",
+   "투여 금지",
+   "사용 금지",
+   "단독 시작 ✗",
+   "적용하지 않기",
+   "적용하면 안",
+   "얼리지",
+   "단정하지"
+  ]
+ }
+}

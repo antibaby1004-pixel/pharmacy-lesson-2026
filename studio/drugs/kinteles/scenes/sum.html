@@ -1,0 +1,22 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../../lib/common.css"><style>
+svg text{font-family:P}
+.g{position:absolute;left:96px;top:262px;width:1344px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.c{padding:26px 30px;height:300px;box-sizing:border-box}.c .v{font-size:38px;font-weight:600;line-height:52px;margin-top:16px}
+.c.red{border-color:#F2B8B2;background:#FCE9E7}.c.red .lab,.c.red .v{color:#8E2219}
+</style></head><body><div class="stage">
+<div class="fade"><header class="top"><div class="sec"><b>핵심 정리</b> · TAKE-HOME MESSAGE</div><div class="chip">킨텔레스 Kinteles <i>· vedolizumab</i></div></header><h1>킨텔레스, 이 6가지만 기억하세요</h1></div>
+<div class="fade"><div class="wm">08</div><div class="g">
+<div class="card c" data-in="1.7"><span class="lab">기전</span><div class="v">α4β7 차단<br>장 선택적</div></div>
+<div class="card c" data-in="6.5"><span class="lab">정맥</span><div class="v">300 mg · 0·2·6주<br>이후 8주마다</div></div>
+<div class="card c" data-in="9.9"><span class="lab">피하 유지</span><div class="v">정맥 2회↑ 후 전환<br>108 mg 2주마다</div></div>
+<div class="card c" data-in="14.7"><span class="lab">보관</span><div class="v">2–8°C 냉장·차광<br>펜 30분 전 꺼내기</div></div>
+<div class="card c" data-in="16.2"><span class="lab">펜 실온</span><div class="v">상자째 25°C 이하<br>최대 7일</div></div>
+<div class="card c red" data-in="17.9"><span class="lab">확인</span><div class="v">감염 · 과민반응<br>새 신경학적 증상</div></div></div></div>
+</div>
+<script src="../timing.js"></script><script src="../../../lib/core.js"></script><script>
+useTiming('summary');window.CENTER_FIRST=1.6;const $i=i=>document.getElementById(i);
+const BT=((TIMING.summary.dialog||[]).find(d=>d.who==='both')||{}).t0||1e9;
+SCENE.anim=(o,T)=>{const dm=1-.72*easeOut(seg(T,BT-1.1,BT-.2));document.querySelectorAll('.card,.wm').forEach(e=>e.style.filter=dm<1?`opacity(${dm})`:'')};
+SCENE.char=makeChar([{k:'walk',t0:0.15,t1:1.2,x0:2250,x1:1560},{k:'sip',t0:2.0,t1:3.6},{k:'prop',name:'vial',t0:6.8,t1:9.4},{k:'prop',name:'syringe',t0:10.2,t1:13.2},{k:'prop',name:'thermo',t0:15.0,t1:17.4}],'lead');
+SCENE.char2=makeChar([{k:'walk',t0:18.2,t1:19.4,x0:2300,x1:1830},{k:'wink',t0:19.6,t1:20.4}],'cameo');
+</script><script src="../../../lib/highlight.js"></script></body></html>
