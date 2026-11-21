@@ -57,3 +57,10 @@ svg text{font-family:P}
 .bubble{font-size:38px;line-height:50px;max-width:500px;padding:22px 30px}
 .bubble{font-size:34px;line-height:46px;max-width:430px;padding:20px 26px}
 #char2{position:absolute;left:0;top:0;width:360px;height:640px;overflow:visible;transform-origin:0 0;z-index:16}
+/* v8: 기전 단계 가독성 — 단계 사이 여백·구분선, 영문 머리말 숨김, 비활성 단계도 읽히게 */
+.steps{gap:0}
+.s{padding:26px 0;border-top:1.5px solid var(--hair);opacity:.45;align-items:start}
+.s:first-child{border-top:0;padding-top:4px}
+.s .en{display:none}
+.s h3{margin:6px 0 10px}
+.s .n{margin-top:2px}
