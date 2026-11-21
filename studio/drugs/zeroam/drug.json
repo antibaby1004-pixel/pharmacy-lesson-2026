@@ -1,0 +1,118 @@
+{
+ "name": "제로암",
+ "name_en": "Gero-Am · gemcitabine",
+ "parts": [
+  {
+   "part": "intro",
+   "scene": "intro.html",
+   "video_dur": 28
+  },
+  {
+   "part": "0",
+   "scene": "m0.html",
+   "video_dur": 9.2
+  },
+  {
+   "part": "1",
+   "scene": "m1.html",
+   "video_dur": 7.6
+  },
+  {
+   "part": "2",
+   "scene": "m2.html",
+   "video_dur": 9.8
+  },
+  {
+   "part": "5",
+   "scene": "s5.html",
+   "video_dur": 20.2
+  },
+  {
+   "part": "recon",
+   "scene": "recon.html",
+   "video_dur": 33.1
+  },
+  {
+   "part": "storage",
+   "scene": "st.html",
+   "video_dur": 14.3
+  },
+  {
+   "part": "4",
+   "scene": "s4.html",
+   "video_dur": 17.4
+  },
+  {
+   "part": "summary",
+   "scene": "sum.html",
+   "video_dur": 23.3
+  },
+  {
+   "part": "yt1",
+   "scene": "yt1.html",
+   "bridge": true
+  }
+ ],
+ "order": [
+  "intro",
+  "0",
+  "1",
+  "2",
+  "yt1",
+  "5",
+  "recon",
+  "storage",
+  "4",
+  "summary"
+ ],
+ "player_parts": [
+  "intro",
+  "0",
+  "1",
+  "2",
+  "5",
+  "recon",
+  "storage",
+  "4",
+  "summary"
+ ],
+ "cast": {
+  "lead": "haru",
+  "cameo": "park"
+ },
+ "props": [
+  "vial",
+  "syringe",
+  "clock",
+  "thermo",
+  "bag",
+  "magnifier",
+  "book"
+ ],
+ "highlight": {
+  "generic": [
+   "gemcitabine",
+   "젬시타빈"
+  ],
+  "target": [
+   "DNA"
+  ],
+  "warn": [
+   "골수억제",
+   "냉장 금지",
+   "냉장하지",
+   "결정",
+   "출혈",
+   "발열",
+   "호흡곤란",
+   "소변량 감소",
+   "임신",
+   "수유",
+   "방사선",
+   "40 mg/mL로 계산하지 않기",
+   "임의 연장 금지",
+   "사용 금지"
+  ]
+ },
+ "no": 2
+}

@@ -1,0 +1,36 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../../lib/common.css"><style>
+.box{position:absolute;padding:26px 32px}
+.rx{left:96px;top:262px;width:820px;height:250px}
+.rx .chips{display:flex;flex-wrap:wrap;gap:14px;margin-top:22px}
+.rx .chips span{font-size:40px;font-weight:600;padding:12px 26px;border-radius:999px;border:2px solid var(--hair);background:#fff}
+.inf{left:944px;top:262px;width:496px;height:250px;display:grid;grid-template-columns:170px 1fr;align-items:center;gap:20px}
+.inf .v{font-size:66px;font-weight:700;color:var(--acc)}.inf .s{font-size:32px;font-weight:600}
+.cyc{left:96px;top:540px;width:1344px;height:270px}
+.tl{display:grid;grid-template-columns:200px 1fr;align-items:center;margin-top:18px}
+.tl b{font-size:36px}
+.bar{position:relative;height:56px}
+.bar .ax{position:absolute;left:0;right:0;top:26px;height:4px;background:var(--hair);border-radius:2px}
+.bar .d{position:absolute;top:2px;width:52px;height:52px;margin-left:-26px;border-radius:999px;background:var(--acc);color:#fff;font-size:22px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.bar .end{position:absolute;right:0;top:-30px;font-size:22px;color:var(--muted)}
+.warn{left:96px;top:836px;width:1344px;padding:22px 32px;display:flex;align-items:center;gap:22px;border-color:#F2B8B2;background:#FCE9E7}
+.warn .v{font-size:40px;font-weight:700;color:#8E2219}
+</style></head><body><div class="stage">
+<div class="fade"><header class="top"><div class="sec"><b>용량과 사용법</b> · DOSAGE</div><div class="chip">제로암 Gero-Am <i>· gemcitabine</i></div></header>
+<h1>보통 30분 정맥주입, 일정은 요법별로</h1></div>
+<div class="fade">
+<div class="wm">03</div>
+<div class="card box rx" data-in="0.1"><span class="lab">처방 확인</span><div class="chips"><span data-in="0.6">암종</span><span data-in="1.4">병용요법</span><span data-in="2.4">체표면적</span><span data-in="3.4">혈구수</span></div></div>
+<div class="card box inf" data-in="4.9"><svg width="160" height="160" viewBox="0 0 160 160"><circle cx="80" cy="80" r="70" fill="#fff" stroke="#243341" stroke-width="5"/><path id="arc" d="" fill="#FDE7CF"/><line x1="80" y1="80" x2="80" y2="24" stroke="#243341" stroke-width="6" stroke-linecap="round" id="hand"/><circle cx="80" cy="80" r="6" fill="#243341"/></svg><div><span class="lab">투여</span><div class="v num">30분</div><div class="s">정맥주입</div></div></div>
+<div class="card box cyc"><span class="lab" data-in="7.7">투여 주기 예시</span>
+ <div class="tl" data-in="7.8"><b>21일 주기</b><div class="bar"><div class="ax"></div><div class="d" style="left:0%" data-in="8.6">1</div><div class="d" style="left:33.3%" data-in="10.0">8</div><div class="end">21일</div></div></div>
+ <div class="tl" data-in="11.5"><b>28일 주기</b><div class="bar"><div class="ax"></div><div class="d" style="left:0%" data-in="12.2">1</div><div class="d" style="left:25%" data-in="13.0">8</div><div class="d" style="left:50%" data-in="14.0">15</div><div class="end">28일</div></div></div>
+</div>
+<div class="card box warn" data-in="15.5"><svg width="56" height="56" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#D2342A"/><path d="M11 6h2v8h-2zM11 16h2v2h-2z" fill="#fff"/></svg><div class="v">일정은 요법마다 다름 · 주입시간 임의 연장 금지</div></div>
+</div>
+</div>
+<script src="../timing.js"></script><script src="../../../lib/core.js"></script><script>
+useTiming('5');
+function arc(f){const a=-Math.PI/2+f*2*Math.PI;return f<=0?'':`M80 80 L80 14 A66 66 0 ${f>.5?1:0} 1 ${80+66*Math.cos(a)} ${80+66*Math.sin(a)} Z`}
+SCENE.anim=o=>{const f=seg(o,5.2,7.2)*.5;document.getElementById('arc').setAttribute('d',arc(f));const h=document.getElementById('hand');h.setAttribute('x2',80+56*Math.sin(f*2*Math.PI));h.setAttribute('y2',80-56*Math.cos(f*2*Math.PI))};
+SCENE.char=makeChar([{k:'walk',t0:0.2,t1:1.2,x0:2250,x1:1640,run:true},{k:'memo',t0:1.4,t1:3.6},{k:'prop',name:'clock',t0:5.0,t1:7.4},{k:'nod',t0:9.0,t1:10.0},{k:'point',t0:12.4,t1:14.4,ang:100}],'lead');
+</script><script src="../../../lib/highlight.js"></script></body></html>

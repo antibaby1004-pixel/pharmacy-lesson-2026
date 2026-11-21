@@ -1,0 +1,233 @@
+{
+ "voices": {
+  "park": {
+   "voice": "en-US-AndrewMultilingualNeural",
+   "rate": "-6%",
+   "pitch": "-8Hz",
+   "gain": 1.45
+  },
+  "haru": {
+   "voice": "en-US-EmmaMultilingualNeural",
+   "rate": "+10%",
+   "pitch": "+20Hz",
+   "gain": 1.15
+  }
+ },
+ "lines": {
+  "intro": [
+   {
+    "who": "haru",
+    "bubble": "신입 하루예요!<br>오늘은 제로암!",
+    "say": "안녕하세요, 신입 하루예요! 오늘은 제로암!",
+    "at": 3.5,
+    "with": [
+     {
+      "k": "wave",
+      "dt": 0,
+      "len": 1.6
+     },
+     {
+      "k": "hop",
+      "dt": 0.3,
+      "len": 1.0
+     }
+    ]
+   },
+   {
+    "who": "haru",
+    "bubble": "녹이는 거,<br>제가 제일 잘해요!",
+    "say": "녹이는 거, 제가 제일 잘해요!",
+    "at": 18.3,
+    "with": [
+     {
+      "k": "thumbs",
+      "dt": 0,
+      "len": 1.6
+     }
+    ]
+   }
+  ],
+  "1": [
+   {
+    "who": "haru",
+    "bubble": "진짜 재료인 줄 알고<br>속는 거예요?",
+    "say": "진짜 재료인 줄 알고 속는 거예요?",
+    "at": 3.2,
+    "with": [
+     {
+      "k": "think",
+      "dt": 0,
+      "len": 1.6
+     }
+    ]
+   }
+  ],
+  "2": [
+   {
+    "who": "haru",
+    "bubble": "그래서 빨리 자라는<br>암세포가 타격!",
+    "say": "그래서 빨리 자라는 암세포가 타격을 받는구나!",
+    "at": 7.7,
+    "with": [
+     {
+      "k": "cheer",
+      "dt": 0,
+      "len": 1.6
+     }
+    ]
+   }
+  ],
+  "5": [
+   {
+    "who": "haru",
+    "bubble": "천천히 길게 넣으면<br>더 순하지 않아요?",
+    "say": "천천히 길게 넣으면, 더 순하지 않아요?",
+    "at": 15.2,
+    "with": [
+     {
+      "k": "think",
+      "dt": 0,
+      "len": 1.6
+     }
+    ]
+   },
+   {
+    "who": "haru",
+    "bubble": "아, 길면 독성이<br>커질 수 있구나!",
+    "say": "아, 길게 하면 독성이 커질 수 있구나!",
+    "at": 19.8,
+    "with": [
+     {
+      "k": "facepalm",
+      "dt": 0,
+      "len": 1.4
+     }
+    ]
+   }
+  ],
+  "recon": [
+   {
+    "who": "park",
+    "bubble": "사십 아니고,<br>삼십팔!",
+    "say": "음… 사십 아니고, 삼십팔.",
+    "at": 23.8,
+    "with": [
+     {
+      "k": "point",
+      "dt": 0,
+      "len": 1.6,
+      "ang": 70
+     }
+    ]
+   },
+   {
+    "who": "haru",
+    "bubble": "앗, 선배!<br>메모했어요!",
+    "say": "앗, 선배! 메모했어요!",
+    "at": 23.9,
+    "with": [
+     {
+      "k": "memo",
+      "dt": 0,
+      "len": 1.6
+     }
+    ]
+   }
+  ],
+  "storage": [
+   {
+    "who": "haru",
+    "bubble": "냉장고는<br>절대 안 돼요!",
+    "say": "냉장고는, 절대 안 돼요!",
+    "at": 12.5,
+    "with": [
+     {
+      "k": "shrug",
+      "dt": 0,
+      "len": 1.4
+     }
+    ]
+   }
+  ],
+  "4": [
+   {
+    "who": "haru",
+    "bubble": "열나면<br>바로 알려 주세요!",
+    "say": "열나면, 바로 알려 주세요!",
+    "at": 12.8,
+    "with": [
+     {
+      "k": "wave",
+      "dt": 0,
+      "len": 1.4
+     }
+    ]
+   }
+  ],
+  "summary": [
+   {
+    "who": "park",
+    "bubble": "하루, 오늘<br>제법인데?",
+    "say": "음… 하루, 오늘 제법인데?",
+    "at": 22.9,
+    "with": [
+     {
+      "k": "thumbs",
+      "dt": 0,
+      "len": 1.6
+     }
+    ]
+   },
+   {
+    "who": "both",
+    "bubble": "수고하셨습니다!<br>안녕~!",
+    "say": "수고하셨습니다! 안녕!",
+    "at": 23.0,
+    "with": [
+     {
+      "k": "walk",
+      "for": "haru",
+      "dt": 0,
+      "len": 1.1,
+      "x0": "cur",
+      "x1": 1090,
+      "run": true
+     },
+     {
+      "k": "walk",
+      "for": "park",
+      "dt": 0,
+      "len": 1.1,
+      "x0": "cur",
+      "x1": 840
+     },
+     {
+      "k": "wave",
+      "dt": 0.9,
+      "len": 2.2
+     },
+     {
+      "k": "hop",
+      "dt": 0.9,
+      "len": 2.2
+     },
+     {
+      "k": "spark",
+      "for": "haru",
+      "dt": 1.0,
+      "len": 2.0
+     }
+    ]
+   }
+  ]
+ },
+ "bridges": {
+  "yt1": {
+   "who": "haru",
+   "bubble": "이제 원본 영상<br>볼게요!",
+   "say": "이제 원본 영상 볼게요!",
+   "at": 1.4,
+   "min_dur": 4.5
+  }
+ }
+}

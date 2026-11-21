@@ -1,0 +1,26 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../../lib/common.css"><style>
+.grid{display:grid;grid-template-columns:680px 1fr;gap:52px;width:1344px}
+.fig{height:640px;position:relative;overflow:hidden}
+.s p{font-size:30px;line-height:42px}
+svg text{font-family:P}
+</style></head><body><div class="stage">
+<div class="fade"><header class="top"><div class="sec"><b>작용 기전</b> · 03 / 03</div><div class="chip">제로암 Gero-Am <i>· gemcitabine</i></div></header>
+<h1>DNA 합성을 막아 암세포 증식을 억제합니다</h1></div>
+<div class="fade grid">
+ <div class="steps"><div class="s" data-on="0,3.9"><div class="n">1</div><div><h3>DNA에 끼어듦</h3><p>활성형이 새 가닥에 들어가 복제가 멈춘다</p></div></div><div class="s" data-on="3.9,6.5"><div class="n">2</div><div><h3>재료 공급 차단</h3><p>재료를 만드는 효소도 억제한다</p></div></div><div class="s" data-on="6.5"><div class="n">3</div><div><h3>암세포 증식 억제</h3><p>분열이 빠른 암세포가 늘지 못한다</p></div></div></div>
+ <div class="card fig"><svg id="F" width="100%" height="100%" viewBox="0 0 700 640"><line x1="40" y1="150" x2="660" y2="150" stroke="#3E5872" stroke-width="6"/>
+<g id="ns"></g><g id="stop" style="opacity:0"><circle cx="520" cy="210" r="40" fill="#D2342A"/><rect x="496" y="202" width="48" height="16" rx="4" fill="#fff"/></g>
+<text id="stopL" x="520" y="290" text-anchor="middle" font-size="26" font-weight="700" fill="#D2342A" style="opacity:0">복제 정지</text>
+<g id="rnr" transform="translate(180 450)"><path d="M-70 -30 q70 -70 140 0 q-10 70 -70 70 q-60 0 -70 -70z" fill="#E7A4A0" stroke="#243341" stroke-width="3"/><text y="6" text-anchor="middle" font-size="24" font-weight="700" fill="#243341">효소</text><text y="74" text-anchor="middle" font-size="20" fill="#5A6B7B">재료(dNTP)를 만드는 효소</text></g>
+<g id="rx" style="opacity:0"><path d="M120 400 l120 100 M240 400 l-120 100" stroke="#D2342A" stroke-width="12" stroke-linecap="round"/></g>
+<g id="cellsN" style="opacity:0"><circle cx="480" cy="460" r="44" fill="#F1F4F7" stroke="#5A6B7B" stroke-width="3"/><circle cx="590" cy="460" r="44" fill="#F1F4F7" stroke="#5A6B7B" stroke-width="3" stroke-dasharray="8 6"/><path d="M570 440 l40 40 M610 440 l-40 40" stroke="#D2342A" stroke-width="7" stroke-linecap="round"/><text x="535" y="540" text-anchor="middle" font-size="24" font-weight="700" fill="#243341">증식 억제</text></g></svg></div>
+</div>
+<div class="fade"><div class="key" data-in="7.0"><span class="k">KEY</span><span>복제 정지 + 재료 차단 → 증식 억제</span></div><div class="fn">교육용 개념도</div></div>
+</div>
+<script src="../timing.js"></script><script src="../../../lib/core.js"></script><script>
+useTiming('2');const $i=i=>document.getElementById(i);
+const C=['#7FC6CA','#F5C518','#E7A4A0','#B6C6D2'];let h='';for(let i=0;i<8;i++){const g=i===6;h+=`<g id="n${i}" style="opacity:0"><rect x="${50+i*56}" y="170" width="48" height="44" rx="8" fill="${g?'#9EC3F2':C[i%4]}" stroke="${g?'#1F6FD1':'#243341'}" stroke-width="${g?4:2.5}"/>${g?'<text x="'+(74+i*56)+'" y="198" text-anchor="middle" font-size="18" font-weight="700" fill="#1F6FD1">gem</text>':''}</g>`}$i('ns').innerHTML=h;
+SCENE.anim=o=>{for(let i=0;i<8;i++){$i('n'+i).style.opacity=i<7?seg(o,.2+i*.35,.5+i*.35):seg(o,2.8,3.0)}
+ const st=seg(o,3.0,3.4);$i('stop').style.opacity=st;$i('stopL').style.opacity=st;$i('rx').style.opacity=seg(o,5.0,5.4);$i('cellsN').style.opacity=seg(o,6.6,7.1)};
+SCENE.char=makeChar([{k:'walk',t0:0.2,t1:1.2,x0:2250,x1:1620},{k:'point',t0:3.0,t1:4.8,ang:96},{k:'cheer',t0:7.0,t1:8.4},{k:'walk',t0:8.6,t1:9.6,x0:1620,x1:1760,run:true}],'lead');
+</script><script src="../../../lib/highlight.js"></script></body></html>

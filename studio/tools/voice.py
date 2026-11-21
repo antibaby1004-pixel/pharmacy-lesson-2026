@@ -61,4 +61,4 @@ for P in cfg['parts']:
     pieces.append(a[last:]);write_wav(os.path.join(d,'build',f'f_{p}.wav'),np.concatenate(pieces))
     OUT[p]={'dur':round(M[p]['dur']+acc,3),'knots':M[p]['knots'],'ins':ins,'dialog':dialog,'cues':M[p].get('cues')};print(p,OUT[p]['dur'],len(dialog),'lines')
 json.dump(OUT,open(os.path.join(d,'build','final.json'),'w'),ensure_ascii=False,indent=1)
-open(os.path.join(d,'timing.js'),'w').write('const TIMING='+json.dumps(OUT,ensure_ascii=False)+';\nconst DRUG_HL='+json.dumps(cfg.get('highlight',{}),ensure_ascii=False)+';\n')
+open(os.path.join(d,'timing.js'),'w').write('const TIMING='+json.dumps(OUT,ensure_ascii=False)+';\nconst DRUG_HL='+json.dumps(cfg.get('highlight',{}),ensure_ascii=False)+';\nconst DRUG_CAST='+json.dumps(cfg.get('cast',{'lead':'park','cameo':'haru'}),ensure_ascii=False)+';\nconst DRUG_PROPS='+json.dumps(cfg.get('props',[]),ensure_ascii=False)+';\n')

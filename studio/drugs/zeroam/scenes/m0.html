@@ -1,0 +1,30 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../../lib/common.css"><style>
+.grid{display:grid;grid-template-columns:680px 1fr;gap:52px;width:1344px}
+.fig{height:640px;position:relative;overflow:hidden}
+.s p{font-size:30px;line-height:42px}
+svg text{font-family:P}
+</style></head><body><div class="stage">
+<div class="fade"><header class="top"><div class="sec"><b>작용 기전</b> · 01 / 03</div><div class="chip">제로암 Gero-Am <i>· gemcitabine</i></div></header>
+<h1>세포는 나뉘기 전에 DNA를 복사합니다</h1></div>
+<div class="fade grid">
+ <div class="steps"><div class="s" data-on="0,1.2"><div class="n">1</div><div><h3>유전물질 복제 필요</h3><p>세포가 분열하려면 DNA를 하나 더 만든다</p></div></div><div class="s" data-on="1.2,5.0"><div class="n">2</div><div><h3>새 가닥 합성</h3><p>기존 가닥을 본떠 새 가닥을 잇는다</p></div></div><div class="s" data-on="5.0"><div class="n">3</div><div><h3>재료: 뉴클레오사이드</h3><p>데옥시사이티딘(dC) 등이 재료로 쓰인다</p></div></div></div>
+ <div class="card fig"><svg id="F" width="100%" height="100%" viewBox="0 0 700 640"><line x1="60" y1="210" x2="650" y2="210" stroke="#3E5872" stroke-width="6"/><line x1="60" y1="400" x2="650" y2="400" stroke="#3E5872" stroke-width="6" id="tline"/>
+<text x="60" y="190" font-size="22" fill="#5A6B7B">기존 가닥</text><text x="60" y="450" font-size="22" fill="#5A6B7B" id="nlab">새 가닥이 만들어짐</text>
+<g id="top"></g><g id="bot"></g><g id="fly"></g>
+<g id="cells" style="opacity:0"><circle cx="230" cy="560" r="56" fill="#E2F2F3" stroke="#007F86" stroke-width="4"/><circle cx="470" cy="560" r="56" fill="#E2F2F3" stroke="#007F86" stroke-width="4"/><path d="M300 560 h100 m-18 -14 l18 14 l-18 14" stroke="#007F86" stroke-width="5" fill="none"/></g></svg></div>
+</div>
+<div class="fade"><div class="key" data-in="6.0"><span class="k">KEY</span><span>DNA 복제에는 dC 같은 재료가 필요</span></div><div class="fn">교육용 개념도</div></div>
+</div>
+<script src="../timing.js"></script><script src="../../../lib/core.js"></script><script>
+useTiming('0');const $i=i=>document.getElementById(i);
+
+function strand(id,y,n,col){let s='';for(let i=0;i<n;i++){s+=`<rect id="${id}${i}" x="${70+i*52}" y="${y}" width="44" height="40" rx="8" fill="${col}" stroke="#243341" stroke-width="2.5"/>`}return s}
+const C=['#7FC6CA','#F5C518','#E7A4A0','#B6C6D2'];
+$i('top').innerHTML=[...Array(11)].map((_,i)=>`<rect x="${70+i*52}" y="222" width="44" height="40" rx="8" fill="${C[i%4]}" stroke="#243341" stroke-width="2.5"/>`).join('');
+$i('bot').innerHTML=[...Array(11)].map((_,i)=>`<rect id="b${i}" x="${70+i*52}" y="350" width="44" height="40" rx="8" fill="${C[(i+2)%4]}" stroke="#243341" stroke-width="2.5" style="opacity:0"/>`).join('');
+$i('fly').innerHTML=`<g id="dc"><circle r="28" fill="#F5C518" stroke="#243341" stroke-width="3"/><text y="8" text-anchor="middle" font-size="22" font-weight="700" fill="#243341">dC</text></g><text id="dcl" x="60" y="540" font-size="24" font-weight="700" fill="#9a6f1c">재료: 데옥시사이티딘(dC)</text>`;
+SCENE.anim=o=>{const g=seg(o,1.2,8.2);for(let i=0;i<11;i++){$i('b'+i).style.opacity=seg(g,i/11,i/11+.06)}
+ const k=(o*0.9)%1, i=Math.min(10,Math.floor(g*11));$i('dc').setAttribute('transform',`translate(${lerp(640,96+i*52,k)} ${lerp(560,370,k)})`);$i('dc').style.opacity=o>5&&o<8.3?1-k*k:0;$i('dcl').style.opacity=seg(o,5.1,5.6);
+ $i('cells').style.opacity=seg(o,8.0,8.6)};
+SCENE.char=makeChar([{k:'walk',t0:0.2,t1:1.2,x0:2250,x1:1640,run:true},{k:'prop',name:'magnifier',t0:1.6,t1:4.4},{k:'point',t0:5.2,t1:7.4,ang:96}],'lead');
+</script><script src="../../../lib/highlight.js"></script></body></html>

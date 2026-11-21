@@ -72,3 +72,6 @@ svg text{font-family:P}
 .hl-tgt{color:var(--hl-tgt);font-weight:700}
 .chip .hl-gen,.chip .hl-dose{font-weight:600}
 h1 .hl-dose,h1 .hl-gen,h1 .hl-tgt,h1 .hl-warn{font-weight:inherit}
+/* v9: 캐릭터 공통 */
+svg.chr{position:absolute;left:0;top:0;width:360px;height:640px;overflow:visible;transform-origin:0 0;z-index:15}
+svg.chr.r2{z-index:16}

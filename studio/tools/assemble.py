@@ -20,7 +20,7 @@ for p in F:
     if F[p].get('cues'): L=[{'start':shift(p,c['start']),'end':shift(p,c['end']),'text':c['text']} for c in F[p]['cues']]
     elif p in cap: L=[{'start':round(fwd(p,c['start']),3),'end':round(fwd(p,c['end']),3),'text':c['text']} for c in cap[p]]
     else: continue
-    L+=[{'start':x['t0'],'end':x['t1'],'text':('박 선배' if x['who']=='park' else '하루')+': '+x['text'].replace('<br>',' ')} for x in F[p]['dialog']]
+    L+=[{'start':x['t0'],'end':x['t1'],'text':{'park':'박 선배','haru':'하루','wang':'왕교수','skull':'해골약사','both':'다 함께'}.get(x['who'],x['who'])+': '+x['text'].replace('<br>',' ')} for x in F[p]['dialog']]
     L.sort(key=lambda c:c['start'])
     for i in range(len(L)-1):
         if L[i]['end']>L[i+1]['start']: L[i]['end']=L[i+1]['start']
@@ -31,6 +31,7 @@ for f in os.listdir(os.path.join(STUDIO,'lib')):
     if f.endswith('.woff2'): shutil.copy(os.path.join(STUDIO,'lib',f),os.path.join(dist,'fonts',f))
 open(os.path.join(dist,'captions.js'),'w').write('const captions='+json.dumps(new,ensure_ascii=False)+';\nconst DRUG_HL='+json.dumps(cfg.get('highlight',{}),ensure_ascii=False)+';')
 shutil.copy(os.path.join(STUDIO,'lib','highlight.js'),dist)
+ix=os.path.join(dist,'index.html');h=open(ix).read().replace('{{NAME}}',cfg.get('name','')).replace('{{NO}}',str(cfg.get('no','01')).zfill(2));open(ix,'w').write(h)
 app=open(os.path.join(d,'source','app.js')).read()
 app=re.sub(r"file:('?[\w]+'?),duration:[\d.]+",lambda m:f"file:{m.group(1)},duration:{F[m.group(1).strip(chr(39))]['dur']}" if m.group(1).strip("'") in F else m.group(0),app)
 open(os.path.join(dist,'app.js'),'w').write(app)

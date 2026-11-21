@@ -29,7 +29,7 @@ const CHAR_SVG=`
  <path class="o" d="M70 480 L92 350 Q110 300 180 294 Q250 300 268 350 L290 480Z" fill="#fff"/>
  <path class="o" d="M150 298 L180 352 L210 298" fill="#007F86"/>
  <path class="o" d="M180 352 V478" fill="none" stroke-width="4"/>
- <rect x="210" y="370" width="50" height="26" rx="5" fill="#243341"/><text x="235" y="390" text-anchor="middle" font-weight="700" font-size="16" fill="#fff">야간</text>
+ <rect x="210" y="370" width="50" height="26" rx="5" fill="#243341"/><text x="235" y="390" text-anchor="middle" font-weight="700" font-size="16" fill="#fff">선배</text>
  <g id="head">
   <rect class="o" x="164" y="252" width="32" height="44" rx="8" fill="#e9c09c"/>
   <ellipse class="o" cx="180" cy="190" rx="84" ry="90" fill="#f3cfae"/>
@@ -96,48 +96,160 @@ const HARU_SVG=`
  </g></g>
 </g>`;
 
+
+window.EXTRA_SVG={wang:`
+<g id="cBody">
+ <g id="legL" ><rect class="o" x="-22" y="0" width="44" height="170" rx="14" fill="#6b6f78"/><ellipse class="o" cx="-12" cy="178" rx="34" ry="16" fill="#243341"/></g>
+ <g id="legR" ><rect class="o" x="-22" y="0" width="44" height="170" rx="14" fill="#6b6f78"/><ellipse class="o" cx="-12" cy="178" rx="34" ry="16" fill="#243341"/></g>
+ <path class="o" d="M70 480 L92 350 Q110 300 180 294 Q250 300 268 350 L290 480Z" fill="#fff"/>
+ <path class="o" d="M150 298 L180 340 L210 298" fill="#eaf0f6"/><path class="o" d="M162 312 l18 10 l18 -10 v20 l-18 -10 l-18 10z" fill="#c0392b"/>
+ <path class="o" d="M180 352 V478" fill="none" stroke-width="4"/>
+ <rect x="210" y="370" width="50" height="26" rx="5" fill="#7D4A00"/><text x="235" y="390" text-anchor="middle" font-weight="700" font-size="16" fill="#fff">교수</text>
+ <g id="head">
+  <rect class="o" x="164" y="252" width="32" height="44" rx="8" fill="#e9c09c"/>
+  <ellipse class="o" cx="180" cy="186" rx="86" ry="94" fill="#f3cfae"/>
+  <path d="M138 112 q22 -14 44 -6" stroke="#fff" stroke-width="8" fill="none" stroke-linecap="round" opacity=".7"/>
+  <path class="o" d="M98 210 q-22 -34 -6 -78 q12 26 26 34 q-12 18 -20 44z" fill="#eef1f5"/>
+  <path class="o" d="M262 210 q22 -34 6 -78 q-12 26 -26 34 q12 18 20 44z" fill="#eef1f5"/>
+  <path d="M120 166 q20 -14 42 -2 M198 164 q22 -12 42 2" stroke="#d7dde4" stroke-width="10" fill="none" stroke-linecap="round"/>
+  <g id="eyeN"><circle cx="141" cy="200" r="7" fill="#243341"/><circle cx="219" cy="200" r="7" fill="#243341"/></g>
+  <g id="eyeC" style="display:none"><path d="M128 202 q13 -10 26 0 M206 202 q13 -10 26 0" fill="none" stroke="#243341" stroke-width="5" stroke-linecap="round"/></g>
+  <g id="eyeW" style="display:none"><circle cx="141" cy="200" r="13" fill="#fff" stroke="#243341" stroke-width="3"/><circle cx="219" cy="200" r="13" fill="#fff" stroke="#243341" stroke-width="3"/><circle cx="141" cy="201" r="5" fill="#243341"/><circle cx="219" cy="201" r="5" fill="#243341"/></g>
+  <g id="eyeK" style="display:none"><path d="M128 202 q13 -10 26 0" fill="none" stroke="#243341" stroke-width="5" stroke-linecap="round"/><circle cx="219" cy="200" r="7" fill="#243341"/></g>
+  <circle class="o" cx="141" cy="200" r="27" fill="#ffffff44" stroke-width="5"/><circle class="o" cx="219" cy="200" r="27" fill="#ffffff44" stroke-width="5"/><path class="o" d="M168 198 q12 -8 24 0" fill="none" stroke-width="5"/>
+  <path class="o" d="M176 214 q4 16 -6 22" fill="none" stroke-width="4"/>
+  <path class="o" d="M134 248 q22 -18 46 -2 q24 -16 46 2 q-12 18 -46 8 q-34 10 -46 -8z" fill="#eef1f5"/>
+  <path id="mF" class="o" d="M168 266 q12 6 24 0" fill="none"/>
+  <ellipse id="mO" class="o" cx="180" cy="268" rx="12" ry="8" fill="#7a2e2e" style="display:none"/>
+  <ellipse id="mY" class="o" cx="180" cy="270" rx="16" ry="14" fill="#7a2e2e" style="display:none"/>
+  <path id="mS" class="o" d="M164 262 q16 14 32 0" fill="none" style="display:none"/>
+  <path id="sweat" d="M268 150 q10 18 0 28 q-10 -10 0 -28z" fill="#7ea6e0" style="opacity:0"/>
+  <text id="qm" x="292" y="96" font-size="72" font-weight="700" fill="#007F86" style="opacity:0">?</text>
+  <g id="bang" style="opacity:0"><path class="o" d="M60 70 l18 30 M40 120 l30 8 M300 70 l-18 30 M320 120 l-30 8" fill="none" stroke="#a86400" stroke-width="7"/></g>
+  <g id="spark" style="opacity:0" fill="#d9a441"><path d="M40 70 l6 14 l14 6 l-14 6 l-6 14 l-6 -14 l-14 -6 l14 -6z"/><path d="M310 60 l5 11 l11 5 l-11 5 l-5 11 l-5 -11 l-11 -5 l11 -5z"/></g>
+ </g>
+ <g id="armM"><g id="armMr"><rect class="o" x="-20" y="0" width="40" height="150" rx="18" fill="#fff"/><circle class="o" cx="0" cy="152" r="18" fill="#f3cfae"/>
+   <g id="mug" transform="translate(0 150)"><rect class="o" x="2" y="-44" width="70" height="88" rx="6" fill="#1f6fd1"/><rect x="10" y="-36" width="54" height="10" rx="3" fill="#cfe0f7"/><path d="M12 -10 h48 M12 4 h40" stroke="#cfe0f7" stroke-width="4"/></g></g></g>
+ <g id="armP"><g id="armPr"><rect class="o" x="-20" y="0" width="40" height="160" rx="18" fill="#fff"/>
+   <g id="hP"><circle class="o" cx="0" cy="162" r="18" fill="#f3cfae"/><path class="o" d="M0 176 v26" fill="none" stroke-width="10"/></g>
+   <g id="hW" style="display:none"><ellipse class="o" cx="0" cy="170" rx="22" ry="26" fill="#f3cfae"/><path class="o" d="M-12 190 v14 M0 194 v14 M12 190 v14" fill="none" stroke-width="5"/></g>
+   <g id="hT" style="display:none"><g id="hTi"><rect class="o" x="-22" y="148" width="44" height="38" rx="12" fill="#f3cfae"/><path d="M-4 160 h22 M-4 170 h22 M-4 180 h18" stroke="#243341" stroke-width="3.5" stroke-linecap="round"/><rect class="o" x="-22" y="112" width="18" height="44" rx="9" fill="#f3cfae"/></g></g>
+</g>
+ </g></g>
+</g>`,skull:`
+<g id="cBody">
+ <g id="legL" ><rect class="o" x="-22" y="0" width="44" height="170" rx="14" fill="#2b2f3a"/><ellipse class="o" cx="-12" cy="178" rx="34" ry="16" fill="#243341"/></g>
+ <g id="legR" ><rect class="o" x="-22" y="0" width="44" height="170" rx="14" fill="#2b2f3a"/><ellipse class="o" cx="-12" cy="178" rx="34" ry="16" fill="#243341"/></g>
+ <path class="o" d="M70 480 L92 350 Q110 300 180 294 Q250 300 268 350 L290 480Z" fill="#fff"/>
+ <path class="o" d="M150 298 L180 344 L210 298" fill="#6b4bb5"/>
+ <path class="o" d="M180 352 V478" fill="none" stroke-width="4"/>
+ <rect x="210" y="370" width="50" height="26" rx="5" fill="#6b4bb5"/><text x="235" y="390" text-anchor="middle" font-weight="700" font-size="16" fill="#fff">약사</text>
+ <g id="head">
+  <rect class="o" x="166" y="252" width="28" height="12" rx="4" fill="#efeadb"/><rect class="o" x="166" y="268" width="28" height="12" rx="4" fill="#efeadb"/><rect class="o" x="166" y="284" width="28" height="12" rx="4" fill="#efeadb"/>
+  <path class="o" d="M98 186 q0 -98 82 -98 q82 0 82 98 q0 34 -22 50 l0 22 q-60 14 -120 0 l0 -22 q-22 -16 -22 -50z" fill="#f7f3e8"/>
+  <path d="M120 120 q20 -18 40 -16" stroke="#fff" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <ellipse class="o" cx="142" cy="190" rx="26" ry="30" fill="#2b2f3a"/><ellipse class="o" cx="218" cy="190" rx="26" ry="30" fill="#2b2f3a"/>
+  <g id="eyeN"><circle cx="146" cy="192" r="7" fill="#7FE0D6"/><circle cx="222" cy="192" r="7" fill="#7FE0D6"/></g>
+  <g id="eyeC" style="display:none"><path d="M128 194 q14 -10 28 0 M204 194 q14 -10 28 0" fill="none" stroke="#7FE0D6" stroke-width="5" stroke-linecap="round"/></g>
+  <g id="eyeW" style="display:none"><circle cx="142" cy="190" r="13" fill="#7FE0D6"/><circle cx="218" cy="190" r="13" fill="#7FE0D6"/><circle cx="142" cy="190" r="5" fill="#fff"/><circle cx="218" cy="190" r="5" fill="#fff"/></g>
+  <g id="eyeK" style="display:none"><path d="M128 194 q14 -10 28 0" fill="none" stroke="#7FE0D6" stroke-width="5" stroke-linecap="round"/><circle cx="222" cy="192" r="7" fill="#7FE0D6"/></g>
+  <path class="o" d="M180 216 l-12 20 h24z" fill="#2b2f3a"/>
+  <path id="mF" class="o" d="M140 252 h80 M150 244 v16 M164 244 v16 M180 244 v16 M196 244 v16 M210 244 v16" fill="none" stroke-width="4"/>
+  <g id="mO" style="display:none"><rect class="o" x="150" y="242" width="60" height="22" rx="6" fill="#2b2f3a"/><path d="M160 242 v8 M172 242 v8 M184 242 v8 M196 242 v8" stroke="#f7f3e8" stroke-width="5"/></g>
+  <g id="mY" style="display:none"><rect class="o" x="148" y="240" width="64" height="34" rx="8" fill="#2b2f3a"/><path d="M158 240 v8 M170 240 v8 M182 240 v8 M194 240 v8 M206 240 v8" stroke="#f7f3e8" stroke-width="5"/></g>
+  <path id="mS" class="o" d="M138 244 q42 26 84 0 M152 252 v10 M166 256 v10 M180 258 v10 M194 256 v10 M208 252 v10" fill="none" stroke-width="4" style="display:none"/>
+  <path id="sweat" d="M268 150 q10 18 0 28 q-10 -10 0 -28z" fill="#7ea6e0" style="opacity:0"/>
+  <text id="qm" x="292" y="96" font-size="72" font-weight="700" fill="#007F86" style="opacity:0">?</text>
+  <g id="bang" style="opacity:0"><path class="o" d="M60 70 l18 30 M40 120 l30 8 M300 70 l-18 30 M320 120 l-30 8" fill="none" stroke="#a86400" stroke-width="7"/></g>
+  <g id="spark" style="opacity:0" fill="#d9a441"><path d="M40 70 l6 14 l14 6 l-14 6 l-6 14 l-6 -14 l-14 -6 l14 -6z"/><path d="M310 60 l5 11 l11 5 l-11 5 l-5 11 l-5 -11 l-11 -5 l11 -5z"/></g>
+ </g>
+ <g id="armM"><g id="armMr"><rect class="o" x="-20" y="0" width="40" height="150" rx="18" fill="#fff"/><circle class="o" cx="0" cy="152" r="18" fill="#f7f3e8"/>
+   <g id="mug" transform="translate(0 150)"><path class="o" d="M4 -10 h70 l-10 40 h-50z" fill="#cfd6de"/><path class="o" d="M30 -10 L64 -54" fill="none" stroke-width="12" stroke-linecap="round"/><path d="M14 0 h50" stroke="#9aa4ae" stroke-width="4"/></g></g></g>
+ <g id="armP"><g id="armPr"><rect class="o" x="-20" y="0" width="40" height="160" rx="18" fill="#fff"/>
+   <g id="hP"><circle class="o" cx="0" cy="162" r="18" fill="#f7f3e8"/><path class="o" d="M0 176 v26" fill="none" stroke-width="10"/></g>
+   <g id="hW" style="display:none"><ellipse class="o" cx="0" cy="170" rx="22" ry="26" fill="#f7f3e8"/><path class="o" d="M-12 190 v14 M0 194 v14 M12 190 v14" fill="none" stroke-width="5"/></g>
+   <g id="hT" style="display:none"><g id="hTi"><rect class="o" x="-22" y="148" width="44" height="38" rx="12" fill="#f7f3e8"/><path d="M-4 160 h22 M-4 170 h22 M-4 180 h18" stroke="#243341" stroke-width="3.5" stroke-linecap="round"/><rect class="o" x="-22" y="112" width="18" height="44" rx="9" fill="#f7f3e8"/></g></g>
+</g>
+ </g></g>
+</g>`};
+// ---- v9: 역할(주연/까메오)·소품·빈자리 찾기 ----
+const CAST=(typeof DRUG_CAST!=='undefined'&&DRUG_CAST)||{lead:'park',cameo:'haru'};
+function roleType(t){return (t==='lead'||t==='cameo')?CAST[t]:t}
+window.CHRS=window.CHRS||[];
+const PROPS={
+ vial:'<rect class="o" x="14" y="-40" width="44" height="80" rx="8" fill="#eaf4fb"/><rect class="o" x="10" y="-54" width="52" height="16" rx="4" fill="#4f7fc8"/><rect x="18" y="-6" width="36" height="40" rx="5" fill="#ffffff" stroke="#9bb3c8" stroke-width="3"/>',
+ syringe:'<rect class="o" x="4" y="-12" width="70" height="24" rx="6" fill="#ffffff"/><rect x="10" y="-6" width="40" height="12" fill="#bfe3e5"/><path class="o" d="M74 0 h22" fill="none" stroke-width="4"/><path class="o" d="M-10 -16 v32 M-10 0 h14" fill="none" stroke-width="5"/>',
+ magnifier:'<circle class="o" cx="44" cy="-18" r="28" fill="#e9f6f7"/><circle cx="44" cy="-18" r="18" fill="none" stroke="#9ccfd2" stroke-width="4"/><path class="o" d="M24 2 L4 30" fill="none" stroke-width="12" stroke-linecap="round"/>',
+ clock:'<circle class="o" cx="38" cy="-4" r="34" fill="#fff8e6"/><path d="M38 -4 v-20 M38 -4 h14" stroke="#243341" stroke-width="5" stroke-linecap="round"/><circle class="o" cx="12" cy="-34" r="9" fill="#d96c00"/><circle class="o" cx="64" cy="-34" r="9" fill="#d96c00"/>',
+ thermo:'<rect class="o" x="28" y="-56" width="20" height="86" rx="10" fill="#fff"/><circle class="o" cx="38" cy="36" r="16" fill="#d2342a"/><rect x="34" y="-20" width="8" height="52" fill="#d2342a"/>',
+ book:'<rect class="o" x="2" y="-44" width="70" height="88" rx="6" fill="#1f6fd1"/><rect x="10" y="-36" width="54" height="10" rx="3" fill="#cfe0f7"/><path d="M12 -10 h48 M12 4 h40" stroke="#cfe0f7" stroke-width="4"/>',
+ pill:'<rect class="o" x="12" y="-30" width="50" height="70" rx="10" fill="#f4a43a"/><rect class="o" x="8" y="-48" width="58" height="20" rx="5" fill="#fff"/><rect x="18" y="-8" width="38" height="26" rx="4" fill="#fff"/>',
+ phone:'<rect class="o" x="12" y="-50" width="48" height="92" rx="10" fill="#243341"/><rect x="18" y="-40" width="36" height="66" rx="4" fill="#bfe3e5"/>',
+ mega:'<path class="o" d="M6 -12 L58 -40 V40 L6 12 Z" fill="#f28c28"/><rect class="o" x="-6" y="-14" width="14" height="28" rx="4" fill="#fff"/>',
+ bag:'<path class="o" d="M10 -40 h52 l6 80 h-64 z" fill="#eaf4fb"/><rect x="26" y="-30" width="20" height="10" fill="#4f7fc8"/><path d="M36 -12 v40 M16 8 h40" stroke="#9bb3c8" stroke-width="4"/>'
+};
+function contentRects(){const st=$('.stage').getBoundingClientRect();
+ return [...document.querySelectorAll('.stage .card,.stage [data-in],.stage [data-on],.stage .figc,.stage .list,.stage .steps,.stage .fig,.stage .l,.stage .box')].filter(e=>!e.closest('svg.chr')&&!e.closest('header')&&!e.classList.contains('wm'))
+ .map(e=>{const r=e.getBoundingClientRect();return {l:r.left-st.left,r:r.right-st.left,t:r.top-st.top,b:r.bottom-st.top}}).filter(r=>r.r-r.l>4&&r.b-r.t>4)}
+function freeXs(top){const R=contentRects(),out=[];for(let x=130;x<=1860;x+=20){const L=x-120,Rr=x+120;if(!R.some(r=>r.l<Rr&&r.r>L&&r.t<1070&&r.b>top))out.push(x)}return out}
+function xAtW(walks,t,def){let x=walks.length?walks[0].x0:def;for(const w of walks){if(t>=w.t1)x=w.x1;else if(t>=w.t0)return lerp(w.x0,w.x1,seg(t,w.t0,w.t1))}return x}
+
 // 쉬는 구간을 다양한 동작·짧은 이동으로 자동으로 채움(장면마다 같은 결과가 나오도록 고정 난수)
 function ambient(acts,HARU,seed){
  let h=0;for(const c of seed)h=(h*31+c.charCodeAt(0))>>>0;const rnd=()=>{h=(h*1664525+1013904223)>>>0;return h/4294967296};
  const G=HARU?['hop','memo','clap','spin','giggle','wink','lean','dance','nod','spark','think','cheer']:['nod','sip','lean','think','shrug','point','yawn','turn','sip','thumbs','facepalm','nod'];
  const ZX=HARU?[1790,1870]:[1520,1610];
+ const FREE=freeXs(HARU?600:560).filter(x=>x>=140);
+ const others=window.CHRS.slice();
+ const okX=(nx,t)=>others.every(o=>Math.abs(xAtW(o.walks,t,1700)-nx)>250&&Math.abs(xAtW(o.walks,t+1.1,1700)-nx)>250);
+ const PL=(typeof DRUG_PROPS!=='undefined'&&DRUG_PROPS.length)?DRUG_PROPS:['magnifier','clock','book','phone'];
  const walks=acts.filter(a=>a.k==='walk').sort((p,q)=>p.t0-q.t0);
  const xAt=t=>{let x=walks.length?walks[0].x0:1700;for(const w of walks){if(w.t1<=t)x=w.x1}return x};
  const busy=acts.filter(a=>a.t0!==undefined&&a.k!=='blink').map(a=>[a.t0-.25,a.t1+.25]);
  const start=walks.length?walks[0].t1+.4:.6, end=DUR-.6;
  let t=start,n=0,last='';
  while(t<end-1.3){
-  const x=xAt(t);if(x<1450||x>1960){t+=.5;continue}
+  const x=xAt(t);if(x<-60||x>1990){t+=.5;continue}
   const len=1.2+rnd()*.5;
   if(busy.some(([a,b])=>t<b&&t+len>a)){t+=.3;continue}
   n++;
   if(n%3===0&&!acts.some(a=>a.k==='bubble'&&t<a.t1+.2&&t+1.1>a.t0-.2)){
-   let nx=ZX[0]+rnd()*(ZX[1]-ZX[0]);if(Math.abs(nx-x)<60)nx=x>ZX[0]+70?x-90:x+90;
+   let nx=null;const cand=(FREE.length?FREE:[...Array(9)].map((_,i)=>ZX[0]+i*(ZX[1]-ZX[0])/8)).filter(v=>Math.abs(v-x)>=80&&Math.abs(v-x)<=700&&okX(v,t));
+   if(cand.length)nx=cand[Math.floor(rnd()*cand.length)];else{t+=.5;continue}
    const w={k:'walk',t0:t,t1:t+1.0,x0:x,x1:Math.round(nx),run:HARU&&rnd()<.4};acts.push(w);walks.push(w);walks.sort((p,q)=>p.t0-q.t0);busy.push([t-.2,t+1.2]);t+=1.6+rnd()*.8;continue}
-  let k=G[Math.floor(rnd()*G.length)];if(k===last)k=G[(G.indexOf(k)+1)%G.length];last=k;
-  const a={k,t0:t,t1:t+len};if(k==='point')a.ang=88+rnd()*20;if(k==='lean')a.ang=(rnd()<.5?-1:1)*(8+rnd()*6);
+  let k=G[Math.floor(rnd()*G.length)];if(k===last)k=G[(G.indexOf(k)+1)%G.length];if(n%4===1)k='prop';last=k;
+  const a={k,t0:t,t1:t+len};if(k==='prop'){a.name=PL[Math.floor(rnd()*PL.length)];a.t1=t+2.2}if(k==='point')a.ang=88+rnd()*20;if(k==='lean')a.ang=(rnd()<.5?-1:1)*(8+rnd()*6);
   acts.push(a);busy.push([t-.2,t+len+.2]);t+=len+.9+rnd()*1.1;
  }
 }
 function makeChar(acts0,type){
+ const ROLE=type||'park';type=roleType(type||'park');if(!type)return ()=>{};
  const HARU=type==='haru';
- const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');svg.id=HARU?'char2':'char';svg.classList.add('chr');svg.setAttribute('viewBox','0 0 360 640');svg.innerHTML=HARU?HARU_SVG:CHAR_SVG;$('.stage').appendChild(svg);
+ const SV={park:CHAR_SVG,haru:HARU_SVG,...(window.EXTRA_SVG||{})};
+ const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');svg.id=type==='park'?'char':(type==='haru'?'char2':'chr_'+type);svg.classList.add('chr');if(window.CHRS.length)svg.classList.add('r2');svg.setAttribute('viewBox','0 0 360 640');svg.innerHTML=SV[type]||CHAR_SVG;$('.stage').appendChild(svg);
+ {const m=svg.querySelector('#mug');if(m){const d=document.createElementNS('http://www.w3.org/2000/svg','g');d.id='mugDef';while(m.firstChild)d.appendChild(m.firstChild);m.appendChild(d);const a=document.createElementNS('http://www.w3.org/2000/svg','g');a.id='mugAlt';m.appendChild(a)}}
+ let propNow=null;
  const bub=document.createElement('div');bub.className='bubble';bub.style.opacity=0;$('.stage').appendChild(bub);
  // times given in source (old) seconds -> convert to new timeline, enforce minimum lengths
  const MIN={splash:.6,spin:.8,memo:1.0,clap:.8,cheer:1.0,float:1.4,bow:.8,dance:1.2,giggle:.8,wink:.6,spark:.6,walk:.9,bubble:1.8,point:1.2,wave:1.0,thumbs:1.0,sip:1.0,yawn:1.4,think:1.4,facepalm:1.2,shrug:1.0,hop:.8,lean:.8,celebrate:1.2,turn:.6,nod:.8,talk:.8,sweat:1.0};
- const DLG=(CUR&&TIMING[CUR]&&TIMING[CUR].dialog)||[];const who=HARU?'haru':'park';
+ const DLG=(CUR&&TIMING[CUR]&&TIMING[CUR].dialog)||[];const who=type;
  const acts=acts0.filter(a=>!(DLG.length&&((a.k==='bubble'&&!a.keep)||a.k==='talk'))).map(a=>{const c={...a};if(a.t0!==undefined){c.t0=fwd(a.t0);c.t1=a.t1!==undefined?fwd(a.t1):c.t0+1.4;const m=MIN[a.k]||0;if(c.t1-c.t0<m)c.t1=c.t0+m;}return c});
  for(const d of DLG){const both=d.who==='both';if(d.who!==who&&!both)continue;if(!(both&&HARU))acts.push({k:'bubble',t0:d.t0-0.05,t1:d.t1,text:d.text,free:both});acts.push({k:'talk',t0:d.t0,t1:d.t1-0.4});for(const w of (d.with||[])){if(w.for&&w.for!==who)continue;const t0=d.t0+(w.dt||0);acts.push({...w,t0,t1:t0+(w.len||1.4)})}}
  acts.sort((p,q)=>(p.t0??0)-(q.t0??0));
- if(!window.NO_AMBIENT) ambient(acts,HARU,(CUR||'')+who);
  acts.sort((p,q)=>(p.t0??0)-(q.t0??0));
- {let cx=null;for(const a of acts){if(a.k!=='walk')continue;if(a.x0==='cur')a.x0=cx??1700;cx=a.x1}}
+ if(window.CENTER_FIRST!==undefined&&ROLE==='lead'){const w0=acts.find(a=>a.k==='walk');if(w0){const until=Math.max(fwd(window.CENTER_FIRST),w0.t1+2.0),orig=w0.x1;w0.x1=960;const fr=freeXs(560).filter(v=>v>1200);const tx=fr.length?fr.reduce((p,v)=>Math.abs(v-orig)<Math.abs(p-orig)?v:p,fr[0]):orig;acts.push({k:'walk',t0:until,t1:until+1.1,x0:960,x1:tx});acts.push({k:'wave',t0:w0.t1+.1,t1:Math.min(until-.1,w0.t1+1.6)})}}
+ acts.sort((p,q)=>(p.t0??0)-(q.t0??0));
+ const resolveCur=()=>{let cx=null;for(const a of acts){if(a.k!=='walk')continue;if(a.x0==='cur')a.cur=true;if(a.cur)a.x0=cx??1700;cx=a.x1}};resolveCur();
  const S0=HARU?.64:.72, BASE=1030;
  const g=id=>svg.querySelector('#'+id)||document.createElementNS('http://www.w3.org/2000/svg','g'), show=(id,v)=>g(id).style.display=v?'':'none';
  const act=(k,t)=>acts.find(a=>a.k===k&&t>=a.t0&&t<a.t1);
  const ramp=(a,t,r=.35)=>easeOut(seg(t,a.t0,a.t0+r))*(1-easeOut(seg(t,a.t1-r,a.t1)));
- const walks=acts.filter(a=>a.k==='walk').sort((p,q)=>p.t0-q.t0);
+ let walks=acts.filter(a=>a.k==='walk').sort((p,q)=>p.t0-q.t0);
+ const ENTRY={type,walks};window.CHRS.push(ENTRY);let prepared=false;
  return function(t){
+  if(!prepared){prepared=true;   // 모든 캐릭터가 만들어진 뒤 쉬는 동작을 채워 서로 겹치지 않게
+   if(!window.NO_AMBIENT){window.CHRS=window.CHRS.filter(c=>c!==ENTRY).concat([]);ambient(acts,HARU,(CUR||'')+who);window.CHRS.push(ENTRY)}
+   acts.sort((p,q)=>(p.t0??0)-(q.t0??0));resolveCur();walks=acts.filter(a=>a.k==='walk').sort((p,q)=>p.t0-q.t0);ENTRY.walks=walks}
   let x=null,walking=null;
   for(const w of walks){ if(t>=w.t0&&t<w.t1){x=lerp(w.x0,w.x1,ease(seg(t,w.t0,w.t1)));walking=w;break;} }
   if(x===null){const past=walks.filter(w=>w.t1<=t);const last=past[past.length-1];x=last?last.x1:(walks.length?walks[0].x0:1700);}
@@ -175,6 +287,8 @@ function makeChar(acts0,type){
   const mm=act('memo',t), cp=act('clap',t), ch=act('cheer',t);
   let ma=(walking&&!sl?sw*.6:0)+sv*112-shv*38;
   if(mm)ma=lerp(ma,44,ramp(mm,t,.3)); if(cp)ma=lerp(ma,40+Math.sin((t-cp.t0)*16)*10,ramp(cp,t,.2)); if(ch)ma=lerp(ma,-160,ramp(ch,t,.25)); if(dn)ma+=Math.cos((t-dn.t0)*7)*30*ramp(dn,t,.2); if(fl)ma=lerp(ma,40,fr2); if(sl)ma=-150;
+  const prp=act('prop',t),pn=prp?prp.name:null;if(pn!==propNow){propNow=pn;const a=svg.querySelector('#mugAlt'),dd=svg.querySelector('#mugDef');if(a&&dd){a.innerHTML=pn?(PROPS[pn]||''):'';dd.style.display=pn?'none':''}}
+  if(prp)ma=lerp(ma,70+Math.sin((t-prp.t0)*3)*6,ramp(prp,t,.3));
   g('armM').setAttribute('transform','translate(262 318)');g('armMr').setAttribute('transform',`rotate(${ma})`);g('mug').setAttribute('transform',`translate(0 150) rotate(${-ma})`);
   // gesture arm
   let pa=walking?-sw*.6:0, hand='P';
@@ -216,7 +330,7 @@ function makeChar(acts0,type){
   // bubble
   const b=act('bubble',t);
   if(b&&visible){const bi=back(seg(t,b.t0,b.t0+.35)),bo=1-seg(t,b.t1-.25,b.t1);bub.innerHTML=b.text;bub.style.opacity=bo;bub.style.transform=`scale(${bi*bo})`;
-   let right=Math.min(Math.max(x+150,520),1890);const bw2=bub.offsetWidth||430;if(!window.BUBBLE_FREE&&!b.free)right=Math.min(1900,Math.max(right,1456+bw2));bub.style.left='auto';bub.style.right=(1920-right)+'px';bub.style.bottom=(1080-(top+70*S))+'px';}
+   let right=Math.min(Math.max(x+150,520),1890);const bw2=bub.offsetWidth||430;if(!window.BUBBLE_FREE&&!b.free&&x>1300)right=Math.min(1900,Math.max(right,1456+bw2));bub.style.left='auto';bub.style.right=(1920-right)+'px';bub.style.bottom=(1080-(top+70*S))+'px';}
   else bub.style.opacity=0;
  };
 }

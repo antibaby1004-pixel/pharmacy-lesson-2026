@@ -1,0 +1,48 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../../lib/common.css"><style>
+.l{position:absolute;left:96px;top:200px;width:900px}
+.t1{font-size:120px;line-height:120px;font-weight:700;letter-spacing:-.03em;margin:0}
+.t1 span{font-size:60px;font-weight:600;color:var(--muted);margin-left:20px;letter-spacing:-.01em}
+.t2{font-size:46px;font-weight:600;margin:14px 0 0}
+.chg{margin-top:40px;display:flex;align-items:center;gap:22px;font-size:40px;font-weight:600}
+.pill{padding:10px 22px;border-radius:14px;border:2px solid var(--hair);background:#fff}
+.pill.old{color:var(--muted);text-decoration:line-through;text-decoration-thickness:3px}
+.pill.new{border-color:var(--acc);color:var(--acc-ink);background:var(--acc-t)}
+.why{margin-top:16px;font-size:30px;color:var(--muted)}
+.ind{margin-top:40px}
+.ind .lab{display:block;margin-bottom:16px}
+.chips{display:grid;grid-template-columns:repeat(3,auto);gap:14px 14px;justify-content:start}
+.chips span{font-size:38px;font-weight:600;padding:12px 24px;border-radius:999px;background:#fff;border:2px solid var(--hair)}
+.dose{position:absolute;left:1020px;top:200px;width:420px;padding:30px 34px}
+.dose .row{display:flex;align-items:baseline;gap:14px;margin-top:6px}
+.dose .big{font-size:84px;line-height:92px;font-weight:700;color:var(--acc)}
+.dose .sub{font-size:34px;line-height:46px;margin-top:12px;font-weight:500}
+.step{position:absolute;left:1020px;top:760px;width:420px;padding:26px 34px;border-color:#F3C58A;background:#FFF7EC}
+.step .v{font-size:40px;font-weight:700;color:#7D4A00;margin-top:6px;line-height:52px}
+</style></head><body><div class="stage">
+<div class="fade"><header class="top"><div class="sec"><b>약물 소개</b> · DRUG OVERVIEW</div><div class="chip">제로암 Gero-Am <i>· gemcitabine</i></div></header></div>
+<div class="fade">
+<div class="l">
+ <p class="t1" data-in="1.6">제로암<span>Gero-Am</span></p>
+ <p class="t2" data-in="2.0">gemcitabine</p>
+ <div data-in="7.9"><div class="chg"><span class="pill old">젬시트 액상</span><span>→</span><span class="pill new">제로암 분말</span></div>
+ <div class="why">안전성 문제로 진료과 요청 · 성분·항암 작용은 같음</div></div>
+ <div class="ind"><span class="lab" data-in="18.7">허가 적응증 6</span>
+  <div class="chips"><span data-in="19.4">비소세포폐암</span><span data-in="20.1">췌장암</span><span data-in="20.8">방광암</span><span data-in="21.5">유방암</span><span data-in="22.2">난소암</span><span data-in="22.9">담도암</span></div>
+ </div>
+</div>
+<div class="card dose" data-in="3.9"><span class="lab">원내 함량 · 제형</span>
+ <svg width="300" height="120" viewBox="0 0 300 120" style="margin-top:12px"><g><rect x="20" y="30" width="70" height="86" rx="10" fill="#eaf4fb" stroke="#243341" stroke-width="3"/><rect x="14" y="14" width="82" height="20" rx="5" fill="#4f7fc8" stroke="#243341" stroke-width="3"/><rect x="28" y="78" width="54" height="30" rx="5" fill="#fff"/></g><g transform="translate(150 -10) scale(1.2)"><rect x="20" y="30" width="70" height="86" rx="10" fill="#eaf4fb" stroke="#243341" stroke-width="3"/><rect x="14" y="14" width="82" height="20" rx="5" fill="#4f7fc8" stroke="#243341" stroke-width="3"/><rect x="28" y="78" width="54" height="30" rx="5" fill="#fff"/></g></svg>
+ <div class="row"><span class="big num">200 mg</span></div><div class="row"><span class="big num">1 g</span></div>
+ <div class="sub">동결건조 분말<br>정맥주입</div></div>
+<div class="card step" data-in="13.8"><span class="lab" style="color:#7D4A00">달라진 점</span><div class="v">투여 전 분말을<br>녹이는 단계 추가</div></div>
+</div>
+</div>
+<script src="../timing.js"></script><script src="../../../lib/core.js"></script><script>
+useTiming('intro');window.CENTER_FIRST=4.0;
+SCENE.char=makeChar([
+ {k:'walk',t0:0.15,t1:1.1,x0:2250,x1:1600,run:true},
+ {k:'prop',name:'vial',t0:4.2,t1:6.8},
+ {k:'point',t0:8.2,t1:10.4,ang:100},{k:'think',t0:14.0,t1:15.8},
+ {k:'memo',t0:19.2,t1:21.4},{k:'clap',t0:23.2,t1:24.4},{k:'nod',t0:25.0,t1:26.0}
+],'lead');
+</script><script src="../../../lib/highlight.js"></script></body></html>
