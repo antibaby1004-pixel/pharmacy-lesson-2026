@@ -123,12 +123,8 @@
   "inn": "evolocumab",
   "photos": [
    {
-    "draw": "pen",
-    "args": [
-     "140 mg / 1 mL",
-     "1회용 프리필드펜"
-    ],
-    "label": "레파타 프리필드펜 140 mg"
+    "img": "img/pen140.jpg",
+    "label": "레파타 프리필드펜 140 mg/mL"
    }
   ],
   "facts": [
@@ -222,6 +218,7 @@
     "x1": 2250,
     "run": true
    }
-  ]
+  ],
+  "photo_note": "제품 사진 (포장 표기는 해외판)"
  }
 }
