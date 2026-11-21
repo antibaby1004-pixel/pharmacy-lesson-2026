@@ -25,9 +25,9 @@ svg text{font-family:P}
 </div>
 <script src="../timing.js"></script><script src="../../../lib/core.js"></script><script>
 useTiming('intro');const $i=i=>document.getElementById(i);const TB=4.32;
-SCENE.anim=(o)=>{const k=ease(seg(o,TB-0.25,TB+0.75));
- $i('nm').style.transform=`scale(${lerp(1,.6,k)})`;$i('nm').style.opacity=seg(o,0.2,0.7);
- const ph=$i('ph');ph.style.opacity=seg(o,0.3,0.8);ph.style.transform=`translate(${lerp(0,834,k)}px,${lerp(0,-200,k)}px) scale(${lerp(1,.38,k)})`;
+SCENE.anim=(o,T)=>{const k=ease(seg(o,TB-0.25,TB+0.75));
+ $i('nm').style.transform=`scale(${lerp(1,.6,k)})`;$i('nm').style.opacity=Math.max(seg(o,0.2,0.7),seg(T||0,1.6,2.2));
+ const ph=$i('ph');ph.style.opacity=seg(o,0.8,1.3);ph.style.transform=`translate(${lerp(0,834,k)}px,${lerp(0,-200,k)}px) scale(${lerp(1,.38,k)})`;
  ph.querySelectorAll('figcaption,.cap').forEach(e=>e.style.opacity=1-seg(o,TB-0.3,TB+0.2))};
-SCENE.char=makeChar([{k: "walk", t0: 0.15, t1: 1.2, x0: 2250, x1: 1640}, {k: "sip", t0: 6.0, t1: 7.4}, {k: "point", t0: 10.5, t1: 13.0, ang: 96}, {k: "nod", t0: 16.5, t1: 17.6}, {k: "think", t0: 18.6, t1: 21.0}, {k: "point", t0: 23.4, t1: 25.6, ang: 96}],'lead');SCENE.char2=makeChar([{k: "walk", t0: 25.6, t1: 26.8, x0: 2200, x1: 1860, slide: true}, {k: "bow", t0: 26.9, t1: 27.9}, {k: "spin", t0: 28.2, t1: 29.0}, {k: "walk", t0: 29.4, t1: 30.6, x0: 1860, x1: 2250, run: true}],'cameo');
+SCENE.char=makeChar([{k: "walk", t0: 0.25, t1: 1.15, x0: 960, x1: 1640}, {k: "sip", t0: 6.0, t1: 7.4}, {k: "point", t0: 10.5, t1: 13.0, ang: 96}, {k: "nod", t0: 16.5, t1: 17.6}, {k: "think", t0: 18.6, t1: 21.0}, {k: "point", t0: 23.4, t1: 25.6, ang: 96}],'lead');SCENE.char2=makeChar([{k: "walk", t0: 25.6, t1: 26.8, x0: 2200, x1: 1860, slide: true}, {k: "bow", t0: 26.9, t1: 27.9}, {k: "spin", t0: 28.2, t1: 29.0}, {k: "walk", t0: 29.4, t1: 30.6, x0: 1860, x1: 2250, run: true}],'cameo');
 </script><script src="../../../lib/highlight.js"></script></body></html>
