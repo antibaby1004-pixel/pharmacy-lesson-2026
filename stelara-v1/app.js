@@ -1,5 +1,5 @@
 const steps=[
-{title:'스텔라라 소개 · 제형과 허가 적응증',file:'intro',duration:26.073},{title:'정맥주사 vs 프리필드시린지',file:'forms',duration:25.675},
+{title:'스텔라라 소개 · 제형과 허가 적응증',file:'intro',duration:23.378},{title:'정맥주사 vs 프리필드시린지',file:'forms',duration:25.675},
 {title:'IL-12 · IL-23 · 공통 p40',file:0,duration:10.141},{title:'p40 차단 · 염증 감소',file:1,duration:13.955},
 {title:'기전 영상 · 0:00–3:37',id:'KWHUwVdVICM',start:0,end:217},
 {title:'용량과 사용법',file:5,duration:32.66},{title:'정맥주사 조제 · 희석과 주입',file:'iv',duration:27.31},
