@@ -132,8 +132,12 @@
   "inn": "MF59 함유 인플루엔자 백신",
   "photos": [
    {
-    "img": "img/box.jpg",
-    "label": "플루아드 프리필드시린지주 0.5 mL"
+    "img": "img/boxkr.jpg",
+    "label": "플루아드 프리필드시린지주"
+   },
+   {
+    "img": "img/pfs.jpg",
+    "label": "0.5 mL 프리필드시린지"
    }
   ],
   "facts": [
@@ -196,6 +200,7 @@
     "t0": 22.2,
     "t1": 25.0
    }
-  ]
+  ],
+  "photo_note": "실제 제품 사진 · KIMS"
  }
 }
