@@ -29,7 +29,8 @@ dist=os.path.join(B,'dist');shutil.rmtree(dist,ignore_errors=True);shutil.copytr
 os.makedirs(os.path.join(dist,'fonts'),exist_ok=True)
 for f in os.listdir(os.path.join(STUDIO,'lib')):
     if f.endswith('.woff2'): shutil.copy(os.path.join(STUDIO,'lib',f),os.path.join(dist,'fonts',f))
-open(os.path.join(dist,'captions.js'),'w').write('const captions='+json.dumps(new,ensure_ascii=False)+';')
+open(os.path.join(dist,'captions.js'),'w').write('const captions='+json.dumps(new,ensure_ascii=False)+';\nconst DRUG_HL='+json.dumps(cfg.get('highlight',{}),ensure_ascii=False)+';')
+shutil.copy(os.path.join(STUDIO,'lib','highlight.js'),dist)
 app=open(os.path.join(d,'source','app.js')).read()
 app=re.sub(r"file:('?[\w]+'?),duration:[\d.]+",lambda m:f"file:{m.group(1)},duration:{F[m.group(1).strip(chr(39))]['dur']}" if m.group(1).strip("'") in F else m.group(0),app)
 open(os.path.join(dist,'app.js'),'w').write(app)

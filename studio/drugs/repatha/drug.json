@@ -63,9 +63,9 @@
    "bridge": true
   },
   {
-   "part": "yt2",
-   "scene": "yt2.html",
-   "bridge": true
+   "part": "inj",
+   "scene": "inj.html",
+   "video_dur": 60.0
   }
  ],
  "order": [
@@ -77,7 +77,7 @@
   "3",
   "5",
   "storage",
-  "yt2",
+  "inj",
   "4",
   "summary"
  ],
@@ -89,6 +89,7 @@
   "3",
   "5",
   "storage",
+  "inj",
   "4",
   "summary"
  ],
@@ -97,5 +98,18 @@
   "keep": 0.25,
   "tail_pad_if_short": 0.6
  },
- "notes": "원본 내레이션은 source/narration, 원본 자막은 source/captions.js(시각은 원본 기준). 캐릭터 대사는 dialog.json."
+ "notes": "원본 내레이션은 source/narration, 원본 자막은 source/captions.js(시각은 원본 기준). 캐릭터 대사는 dialog.json.",
+ "highlight": {
+  "generic": [
+   "evolocumab",
+   "에볼로쿠맙"
+  ],
+  "target": [
+   "PCSK9",
+   "LDL 수용체"
+  ],
+  "warn": [
+   "라텍스"
+  ]
+ }
 }

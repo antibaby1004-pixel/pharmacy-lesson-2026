@@ -1,7 +1,7 @@
 @font-face{font-family:Pretendard;src:url('fonts/Pretendard-Regular.woff2') format('woff2');font-weight:400;font-display:swap}
 @font-face{font-family:Pretendard;src:url('fonts/Pretendard-SemiBold.woff2') format('woff2');font-weight:600;font-display:swap}
 @font-face{font-family:Pretendard;src:url('fonts/Pretendard-Bold.woff2') format('woff2');font-weight:700;font-display:swap}
-:root{color-scheme:light;font-family:Pretendard,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;color:#243341;background:#FAFBFC}*{box-sizing:border-box}body{margin:0;word-break:keep-all}main{max-width:1150px;margin:auto;padding:38px 24px 60px}
+:root{color-scheme:light;font-family:Pretendard,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;color:#243341;background:#FAFBFC}*{box-sizing:border-box}body{margin:0;word-break:keep-all}main{max-width:min(96vw,calc((100vh - 190px)*16/9 + 48px),1880px);margin:auto;padding:22px 24px 40px}
 .eyebrow{color:#007F86;letter-spacing:3px;font-size:12px;font-weight:700}.headline{display:flex;align-items:center;justify-content:space-between;gap:20px}h1{font-size:32px;margin:10px 0;letter-spacing:-.01em}h1 span{font-size:23px;font-weight:400;color:#5A6B7B;margin-left:12px}small{white-space:nowrap;border:1px solid #DCE3EA;border-radius:20px;padding:7px 12px;color:#5A6B7B}.intro{color:#5A6B7B;font-size:16px;margin:12px 0 25px}
 .cinema{border:1px solid #DCE3EA;border-radius:16px;overflow:hidden;background:#FFFFFF;box-shadow:0 10px 36px rgba(31,42,55,.08)}.topline,.bottomline{display:flex;align-items:center;gap:14px;padding:13px 18px;background:#F1F4F7}.topline #position{color:#007F86;font-size:12px;font-weight:700}.topline strong{flex:1;font-size:15px}
 button,a{font:inherit}button{background:#FFFFFF;color:#243341;border:1px solid #d9d2c5;border-radius:8px;padding:9px 13px;cursor:pointer}button:hover{background:#E2F2F3}button:focus-visible,a:focus-visible{outline:3px solid #007F86;outline-offset:2px}button:disabled{opacity:.4;cursor:default}button.primary{color:#fff;background:#007F86;border-color:#007F86;font-weight:700}button.primary:hover{background:#7a3240}
@@ -19,10 +19,8 @@ details{margin-top:30px;border-top:1px solid #DCE3EA;padding-top:20px;color:#5A6
 @media(max-width:650px){.topline strong{font-size:18px}}
 .cinema:fullscreen .topline strong{font-size:28px}
 
-#youtubeWrap{position:absolute;inset:0;background:#FAFBFC;font-family:P,'Pretendard',sans-serif}
-#youtubeWrap .ytHead{position:absolute;left:5%;top:5.2%;right:5%;display:flex;align-items:center;gap:1.2em;color:#243341;font-size:clamp(11px,1.5vw,22px)}
-#youtubeWrap .ytTag{font-size:.75em;font-weight:700;letter-spacing:.08em;color:#007F86;border:1.5px solid #007F86;border-radius:999px;padding:.2em .8em}
-#youtubeWrap .ytHead strong{font-weight:700}
-#youtubeWrap .ytFrame{position:absolute;left:5%;top:15%;width:72%;aspect-ratio:16/9;border-radius:14px;overflow:hidden;box-shadow:0 10px 30px rgba(36,51,65,.18);background:#1B2733}
-#youtubeWrap .ytFrame iframe,#youtubeWrap #youtube{width:100%;height:100%;border:0;display:block}
-#youtubeWrap .ytChar{position:absolute;right:3%;bottom:4%;height:58%;pointer-events:none}
+
+.caption-line .hl-gen{color:#1F6FD1;font-weight:700}.caption-line .hl-dose{color:#D96C00;font-weight:700}.caption-line .hl-warn{color:#D2342A;font-weight:700}.caption-line .hl-tgt{color:#007F86;font-weight:700}
+
+#youtubeWrap{position:absolute;inset:0;background:#000}
+#youtubeWrap #youtube,#youtubeWrap iframe{width:100%;height:100%;border:0;display:block}

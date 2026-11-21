@@ -95,6 +95,30 @@ const HARU_SVG=`
    <g id="hT" style="display:none"><g id="hTi"><rect class="o" x="-22" y="148" width="44" height="38" rx="12" fill="#6e4630"/><path d="M-4 160 h22 M-4 170 h22 M-4 180 h18" stroke="#efdcc4" stroke-width="3.5" stroke-linecap="round"/><rect class="o" x="-22" y="112" width="18" height="44" rx="9" fill="#6e4630"/></g></g>
  </g></g>
 </g>`;
+
+// 쉬는 구간을 다양한 동작·짧은 이동으로 자동으로 채움(장면마다 같은 결과가 나오도록 고정 난수)
+function ambient(acts,HARU,seed){
+ let h=0;for(const c of seed)h=(h*31+c.charCodeAt(0))>>>0;const rnd=()=>{h=(h*1664525+1013904223)>>>0;return h/4294967296};
+ const G=HARU?['hop','memo','clap','spin','giggle','wink','lean','dance','nod','spark','think','cheer']:['nod','sip','lean','think','shrug','point','yawn','turn','sip','thumbs','facepalm','nod'];
+ const ZX=HARU?[1740,1860]:[1540,1700];
+ const walks=acts.filter(a=>a.k==='walk').sort((p,q)=>p.t0-q.t0);
+ const xAt=t=>{let x=walks.length?walks[0].x0:1700;for(const w of walks){if(w.t1<=t)x=w.x1}return x};
+ const busy=acts.filter(a=>a.t0!==undefined&&a.k!=='blink').map(a=>[a.t0-.25,a.t1+.25]);
+ const start=walks.length?walks[0].t1+.4:.6, end=DUR-.6;
+ let t=start,n=0,last='';
+ while(t<end-1.3){
+  const x=xAt(t);if(x<1450||x>1960){t+=.5;continue}
+  const len=1.2+rnd()*.5;
+  if(busy.some(([a,b])=>t<b&&t+len>a)){t+=.3;continue}
+  n++;
+  if(n%3===0&&!acts.some(a=>a.k==='bubble'&&t<a.t1+.2&&t+1.1>a.t0-.2)){
+   let nx=ZX[0]+rnd()*(ZX[1]-ZX[0]);if(Math.abs(nx-x)<60)nx=x>ZX[0]+70?x-90:x+90;
+   const w={k:'walk',t0:t,t1:t+1.0,x0:x,x1:Math.round(nx),run:HARU&&rnd()<.4};acts.push(w);walks.push(w);walks.sort((p,q)=>p.t0-q.t0);busy.push([t-.2,t+1.2]);t+=1.6+rnd()*.8;continue}
+  let k=G[Math.floor(rnd()*G.length)];if(k===last)k=G[(G.indexOf(k)+1)%G.length];last=k;
+  const a={k,t0:t,t1:t+len};if(k==='point')a.ang=88+rnd()*20;if(k==='lean')a.ang=(rnd()<.5?-1:1)*(8+rnd()*6);
+  acts.push(a);busy.push([t-.2,t+len+.2]);t+=len+.9+rnd()*1.1;
+ }
+}
 function makeChar(acts0,type){
  const HARU=type==='haru';
  const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');svg.id=HARU?'char2':'char';svg.classList.add('chr');svg.setAttribute('viewBox','0 0 360 640');svg.innerHTML=HARU?HARU_SVG:CHAR_SVG;$('.stage').appendChild(svg);
@@ -104,6 +128,8 @@ function makeChar(acts0,type){
  const DLG=(CUR&&TIMING[CUR]&&TIMING[CUR].dialog)||[];const who=HARU?'haru':'park';
  const acts=acts0.filter(a=>!(DLG.length&&((a.k==='bubble'&&!a.keep)||a.k==='talk'))).map(a=>{const c={...a};if(a.t0!==undefined){c.t0=fwd(a.t0);c.t1=a.t1!==undefined?fwd(a.t1):c.t0+1.4;const m=MIN[a.k]||0;if(c.t1-c.t0<m)c.t1=c.t0+m;}return c});
  for(const d of DLG){if(d.who!==who)continue;acts.push({k:'bubble',t0:d.t0-0.05,t1:d.t1,text:d.text});acts.push({k:'talk',t0:d.t0,t1:d.t1-0.4});for(const w of (d.with||[])){const t0=d.t0+(w.dt||0);acts.push({...w,t0,t1:t0+(w.len||1.4)})}}
+ acts.sort((p,q)=>(p.t0??0)-(q.t0??0));
+ if(!window.NO_AMBIENT) ambient(acts,HARU,(CUR||'')+who);
  acts.sort((p,q)=>(p.t0??0)-(q.t0??0));
  const S0=HARU?.64:.72, BASE=1030;
  const g=id=>svg.querySelector('#'+id)||document.createElementNS('http://www.w3.org/2000/svg','g'), show=(id,v)=>g(id).style.display=v?'':'none';

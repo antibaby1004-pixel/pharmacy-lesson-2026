@@ -12,7 +12,17 @@ def line(who,say):
     if not os.path.exists(f): tts.say(v['voice'],say,f,v['rate'],v['pitch'])
     a=read_audio(f);idx=np.where(np.abs(a)>300)[0]
     a=a[max(0,idx[0]-240):idx[-1]+480] if len(idx) else a
+    if say.rstrip().endswith('?'): a=rise(a)          # 의문문은 끝을 올림
     return a*v.get('gain',1.0)
+def rise(a,tail=0.55,up=1.45):
+    import pyworld as pw
+    x=a.astype(np.float64)/32768;f0,t=pw.harvest(x,SR,frame_period=5);sp=pw.cheaptrick(x,f0,t,SR);ap=pw.d4c(x,f0,t,SR)
+    v=np.where(f0>0)[0]
+    if len(v)<10: return a
+    end=t[v[-1]];k=(t>end-tail)&(t<=end+0.05);r=np.clip((t-(end-tail))/tail,0,1)
+    f0=np.where(k&(f0>0),f0*(1+(up-1)*r**1.6),f0)
+    y=pw.synthesize(f0,sp,ap,SR,frame_period=5)[:len(x)]
+    return (y*32768).astype(np.float32)
 def fwd_tight(p,o):
     K=M[p]['knots']
     for i in range(len(K)-1):
@@ -47,4 +57,4 @@ for P in cfg['parts']:
     pieces.append(a[last:]);write_wav(os.path.join(d,'build',f'f_{p}.wav'),np.concatenate(pieces))
     OUT[p]={'dur':round(M[p]['dur']+acc,3),'knots':M[p]['knots'],'ins':ins,'dialog':dialog,'cues':M[p].get('cues')};print(p,OUT[p]['dur'],len(dialog),'lines')
 json.dump(OUT,open(os.path.join(d,'build','final.json'),'w'),ensure_ascii=False,indent=1)
-open(os.path.join(d,'timing.js'),'w').write('const TIMING='+json.dumps(OUT,ensure_ascii=False)+';\n')
+open(os.path.join(d,'timing.js'),'w').write('const TIMING='+json.dumps(OUT,ensure_ascii=False)+';\nconst DRUG_HL='+json.dumps(cfg.get('highlight',{}),ensure_ascii=False)+';\n')

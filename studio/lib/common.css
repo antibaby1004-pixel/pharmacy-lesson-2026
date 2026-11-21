@@ -64,3 +64,11 @@ svg text{font-family:P}
 .s .en{display:none}
 .s h3{margin:6px 0 10px}
 .s .n{margin-top:2px}
+/* v8: 핵심어 색 */
+:root{--hl-gen:#1F6FD1;--hl-dose:#D96C00;--hl-warn:#D2342A;--hl-tgt:#007F86}
+.hl-gen{color:var(--hl-gen);font-weight:700}
+.hl-dose{color:var(--hl-dose);font-weight:700}
+.hl-warn{color:var(--hl-warn);font-weight:700}
+.hl-tgt{color:var(--hl-tgt);font-weight:700}
+.chip .hl-gen,.chip .hl-dose{font-weight:600}
+h1 .hl-dose,h1 .hl-gen,h1 .hl-tgt,h1 .hl-warn{font-weight:inherit}
