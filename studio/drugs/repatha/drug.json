@@ -1,0 +1,101 @@
+{
+ "name": "레파타",
+ "name_en": "Repatha · evolocumab",
+ "accent": "#8c3b4a",
+ "parts": [
+  {
+   "part": "intro",
+   "scene": "intro.html",
+   "narration": "source/narration/partintro.flac",
+   "video_dur": 30.7
+  },
+  {
+   "part": "0",
+   "scene": "m0.html",
+   "narration": "source/narration/part0.flac",
+   "video_dur": 8.45
+  },
+  {
+   "part": "1",
+   "scene": "m1.html",
+   "narration": "source/narration/part1.flac",
+   "video_dur": 10.1
+  },
+  {
+   "part": "2",
+   "scene": "m2.html",
+   "narration": "source/narration/part2.flac",
+   "video_dur": 12.818
+  },
+  {
+   "part": "3",
+   "scene": "s3.html",
+   "narration": "source/narration/part3.flac",
+   "video_dur": 32.4
+  },
+  {
+   "part": "4",
+   "scene": "s4.html",
+   "narration": "source/narration/part4.flac",
+   "video_dur": 25.4
+  },
+  {
+   "part": "5",
+   "scene": "s5.html",
+   "narration": "source/narration/part5.flac",
+   "video_dur": 41.8
+  },
+  {
+   "part": "storage",
+   "scene": "st.html",
+   "narration": "source/narration/partstorage.flac",
+   "video_dur": 38.1
+  },
+  {
+   "part": "summary",
+   "scene": "sum.html",
+   "narration": "source/narration/partsummary.flac",
+   "video_dur": 50.7
+  },
+  {
+   "part": "yt1",
+   "scene": "yt1.html",
+   "bridge": true
+  },
+  {
+   "part": "yt2",
+   "scene": "yt2.html",
+   "bridge": true
+  }
+ ],
+ "order": [
+  "intro",
+  "0",
+  "1",
+  "2",
+  "yt1",
+  "3",
+  "4",
+  "5",
+  "storage",
+  "yt2",
+  "summary"
+ ],
+ "player_parts": [
+  "intro",
+  "0",
+  "1",
+  "2",
+  "3",
+  "4",
+  "5",
+  "storage",
+  "summary"
+ ],
+ "tighten": {
+  "threshold": 0.7,
+  "keep": 0.25,
+  "tail_pad_if_short": 0.6
+ },
+ "notes": "원본 내레이션은 source/narration, 원본 자막은 source/captions.js(시각은 원본 기준). 캐릭터 대사는 dialog.json."
+}

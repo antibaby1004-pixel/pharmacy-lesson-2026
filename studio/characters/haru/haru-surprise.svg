@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="660" viewBox="-100 -20 560 660" style=""><style>.o{stroke:#1f2a37;stroke-width:6;stroke-linejoin:round;stroke-linecap:round}text{font-family:Pretendard,"Apple SD Gothic Neo","Malgun Gothic",sans-serif}</style>
+<g id="cBody" transform="translate(0 0) rotate(1.4815325108927069 180 620)">
+ <g id="drops" style="opacity:0" fill="#7ea6e0"><circle id="d1" cx="0" cy="0" r="10"></circle><circle id="d2" cx="0" cy="0" r="7"></circle><circle id="d3" cx="0" cy="0" r="12"></circle><circle id="d4" cx="0" cy="0" r="6"></circle><circle id="d5" cx="0" cy="0" r="8"></circle></g>
+ <g id="tail" transform="rotate(5.400528885367411 246 450)"><path class="o" d="M246 450 q96 44 128 -8 q10 -22 -12 -26 q-30 32 -116 4z" fill="#8a5a3c"></path></g>
+ <g id="legL" transform="translate(150 430) rotate(19.753766811902757)"><rect class="o" x="-22" y="0" width="44" height="170" rx="14" fill="#6e4630"></rect><ellipse class="o" cx="-12" cy="178" rx="34" ry="16" fill="#4a2f20"></ellipse></g>
+ <g id="legR" transform="translate(210 430) rotate(-19.753766811902757)"><rect class="o" x="-22" y="0" width="44" height="170" rx="14" fill="#6e4630"></rect><ellipse class="o" cx="-12" cy="178" rx="34" ry="16" fill="#4a2f20"></ellipse></g>
+ <path class="o" d="M70 480 L92 350 Q110 300 180 294 Q250 300 268 350 L290 480Z" fill="#fff"></path>
+ <path class="o" d="M150 298 L180 340 L210 298" fill="#f3d7a2"></path>
+ <path class="o" d="M180 340 V478" fill="none" stroke-width="4"></path>
+ <rect x="204" y="368" width="58" height="28" rx="6" fill="#3d7a6e"></rect><text x="233" y="389" text-anchor="middle" font-weight="700" font-size="17" fill="#fff">신입</text>
+ <g id="head" transform="rotate(0 180 260)">
+  <rect class="o" x="164" y="252" width="32" height="44" rx="8" fill="#6e4630"></rect>
+  <circle class="o" cx="112" cy="120" r="20" fill="#8a5a3c"></circle><circle class="o" cx="248" cy="120" r="20" fill="#8a5a3c"></circle><circle cx="112" cy="120" r="8" fill="#5a3826"></circle><circle cx="248" cy="120" r="8" fill="#5a3826"></circle>
+  <ellipse class="o" cx="180" cy="196" rx="90" ry="86" fill="#8a5a3c"></ellipse>
+  <path class="o" d="M108 214 Q116 170 180 170 Q244 170 252 214 Q248 276 180 280 Q112 276 108 214Z" fill="#efdcc4"></path>
+  <g id="eyeN" style="display: none;"><circle cx="142" cy="198" r="11" fill="#1f2a37"></circle><circle cx="218" cy="198" r="11" fill="#1f2a37"></circle><circle cx="146" cy="193" r="4.5" fill="#fff"></circle><circle cx="222" cy="193" r="4.5" fill="#fff"></circle></g>
+  <g id="eyeC" style="display:none"><path d="M126 202 q16 -16 32 0 M202 202 q16 -16 32 0" fill="none" stroke="#1f2a37" stroke-width="7" stroke-linecap="round"></path></g>
+  <g id="eyeW" style=""><circle class="o" cx="142" cy="196" r="18" fill="#fff"></circle><circle class="o" cx="218" cy="196" r="18" fill="#fff"></circle><circle cx="142" cy="198" r="8" fill="#1f2a37"></circle><circle cx="218" cy="198" r="8" fill="#1f2a37"></circle></g>
+  <g id="eyeK" style="display:none"><path d="M126 202 q16 -16 32 0" fill="none" stroke="#1f2a37" stroke-width="7" stroke-linecap="round"></path><circle cx="218" cy="198" r="11" fill="#1f2a37"></circle><circle cx="222" cy="193" r="4.5" fill="#fff"></circle></g>
+  <ellipse class="o" cx="180" cy="224" rx="16" ry="11" fill="#3a2418"></ellipse>
+  <path d="M116 226 h-36 M118 238 l-34 8 M244 226 h36 M242 238 l34 8" stroke="#3a2418" stroke-width="3" stroke-linecap="round"></path>
+  <circle cx="122" cy="246" r="10" fill="#f4a9a0" opacity=".8"></circle><circle cx="238" cy="246" r="10" fill="#f4a9a0" opacity=".8"></circle>
+  <path id="mF" class="o" d="M164 244 q8 8 16 0 q8 8 16 0" fill="none" stroke-width="5" style="display: none;"></path>
+  <ellipse id="mO" class="o" cx="180" cy="250" rx="12" ry="10" fill="#7a2e2e" style=""></ellipse>
+  <ellipse id="mY" class="o" cx="180" cy="254" rx="18" ry="22" fill="#7a2e2e" style="display:none"></ellipse>
+  <g id="mS" style="display:none"><path class="o" d="M158 244 q22 24 44 0Z" fill="#7a2e2e"></path><path d="M166 246 h28" stroke="#fff" stroke-width="5"></path></g>
+  <path id="sweat" d="M276 150 q10 18 0 28 q-10 -10 0 -28z" fill="#7ea6e0" style="opacity:0" transform="translate(0 0)"></path>
+  <text id="qm" x="296" y="96" font-size="72" font-weight="700" fill="#3d7a6e" style="opacity:0" transform="translate(0 0)">?</text>
+  <g id="bang" style="opacity: 1;"><path class="o" d="M60 70 l18 30 M40 120 l30 8 M300 70 l-18 30 M320 120 l-30 8" fill="none" stroke="#a86400" stroke-width="7"></path></g>
+  <g id="spark" style="opacity:0" fill="#d9a441"><path d="M40 70 l6 14 l14 6 l-14 6 l-6 14 l-6 -14 l-14 -6 l14 -6z"></path><path d="M310 60 l5 11 l11 5 l-11 5 l-5 11 l-5 -11 l-11 -5 l11 -5z"></path><path d="M330 150 l4 9 l9 4 l-9 4 l-4 9 l-4 -9 l-9 -4 l9 -4z"></path></g>
+ </g>
+ <g id="armM" transform="translate(262 318)"><g id="armMr" transform="rotate(11.852260087141653)"><rect class="o" x="-20" y="0" width="40" height="150" rx="18" fill="#fff"></rect><ellipse class="o" cx="0" cy="152" rx="20" ry="18" fill="#6e4630"></ellipse>
+   <g id="mug" transform="translate(0 150) rotate(-11.852260087141653)"><rect class="o" x="2" y="-46" width="70" height="92" rx="8" fill="#e3efeb"></rect><rect x="22" y="-54" width="30" height="14" rx="4" fill="#3f5a6b"></rect><path d="M14 -18 l8 8 l14 -16" stroke="#3d7a6e" stroke-width="5" fill="none" stroke-linecap="round"></path><path d="M14 10 h44 M14 26 h30" stroke="#a9bcb9" stroke-width="4"></path></g></g></g>
+ <g id="armP" transform="translate(98 318)"><g id="armPr" transform="rotate(-11.852260087141653)"><rect class="o" x="-20" y="0" width="40" height="160" rx="18" fill="#fff"></rect>
+   <g id="hP"><ellipse class="o" cx="0" cy="164" rx="20" ry="18" fill="#6e4630"></ellipse><path class="o" d="M0 178 v22" fill="none" stroke-width="10" stroke="#6e4630"></path></g>
+   <g id="hW" style="display:none"><ellipse class="o" cx="0" cy="170" rx="24" ry="24" fill="#6e4630"></ellipse><path class="o" d="M-14 186 v12 M0 190 v12 M14 186 v12" fill="none" stroke-width="5"></path></g>
+   <g id="hT" style="display:none"><g id="hTi" transform="rotate(11.852260087141653 0 166)"><rect class="o" x="-22" y="148" width="44" height="38" rx="12" fill="#6e4630"></rect><path d="M-4 160 h22 M-4 170 h22 M-4 180 h18" stroke="#efdcc4" stroke-width="3.5" stroke-linecap="round"></path><rect class="o" x="-22" y="112" width="18" height="44" rx="9" fill="#6e4630"></rect></g></g>
+ </g></g>
+</g></svg>

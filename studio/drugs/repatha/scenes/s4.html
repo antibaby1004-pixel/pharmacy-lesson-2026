@@ -1,0 +1,44 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../../lib/common.css"><style>
+.W{position:absolute;left:96px;width:1344px}
+.lead{top:232px;font-size:38px;font-weight:600;color:var(--muted)}
+.lead b{color:var(--acc);font-size:40px;margin-right:2px}
+.tier{border-radius:24px;padding:24px 36px;display:grid;grid-template-columns:86px 1fr;gap:28px;align-items:start;border:2px solid var(--hair);background:var(--card)}
+.tier .tl{font-size:30px;letter-spacing:.06em;font-weight:700;margin-bottom:10px}
+.tier .v{font-size:46px;line-height:58px;font-weight:600}
+.tier .e{font-size:24px;letter-spacing:.08em;color:var(--muted);font-weight:600;margin-top:4px;text-transform:uppercase}
+.two{display:grid;grid-template-columns:1.3fr .7fr;gap:24px}
+.t1{top:300px}.t1 .tl{color:var(--slate)}
+.t2{top:584px;background:var(--cau-t);border-color:#e6c48c}.t2 .tl{color:var(--cau-ink)}
+.t3{top:800px;background:var(--red-t);border-color:var(--red);border-width:3px}.t3 .tl{color:var(--red)}
+.tag{display:inline-block;border:2px solid currentColor;border-radius:999px;padding:0 14px;margin-right:12px;font-size:26px}
+</style></head><body><div class="stage">
+<div class="fade"><header class="top"><div class="sec"><b>주의점과 부작용</b> · PRECAUTIONS</div><div class="chip">레파타 Repatha <i>· evolocumab</i></div></header>
+<h1>주의점과 부작용</h1></div>
+<div class="fade">
+<div class="wm">03</div>
+<div class="W lead" data-in="0.1"><b>3</b>가지만 확인합니다</div>
+<div class="W tier t1" data-in="2.8"><svg width="86" height="86" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#3f5a6b"/><path d="M11 10h2v8h-2zM11 6h2v2h-2z" fill="#fff"/></svg>
+ <div><div class="tl"><span class="tag">1</span>나타날 수 있는 이상반응</div><div class="two">
+  <div><div class="v">주사부위 반응 · 감기 같은 증상</div><div class="e">Injection-site reactions · Influenza-like illness</div></div>
+  <div data-in="6.6"><div class="v">근육통 · 관절통</div><div class="e">Myalgia · Arthralgia</div></div></div></div></div>
+<div class="W tier t2" data-in="9.9"><svg width="86" height="86" viewBox="0 0 24 24"><path d="M12 1.5 23 21H1z" fill="#a86400"/><path d="M11 9h2v6h-2zM11 16.5h2v2h-2z" fill="#fbf0dc"/></svg>
+ <div><div class="tl"><span class="tag">2</span>투여 전 확인</div><div class="v">약 성분 과민반응 · 라텍스 알레르기 병력 확인</div><div class="e">Hypersensitivity · Latex allergy</div></div></div>
+<div class="W tier t3" id="red" data-in="14.5"><svg width="86" height="86" viewBox="0 0 24 24"><path d="M7.1 1h9.8L23 7.1v9.8L16.9 23H7.1L1 16.9V7.1z" fill="#b42318"/><path d="M11 6h2v8h-2zM11 16h2v2h-2z" fill="#fbe7e4"/></svg>
+ <div><div class="tl"><span class="tag">3</span>즉시 진료</div><div class="v">호흡곤란 · 얼굴이나 목의 부종</div><div class="e">Dyspnea · Facial or throat swelling</div></div></div>
+</div></div>
+<script src="../timing.js"></script><script src="../../../lib/core.js"></script><script>
+useTiming('4');
+SCENE.anim=t=>{const h=seg(t,15.0,15.3)*(1-seg(t,19.5,20));$('#red').style.boxShadow=`0 0 0 ${h*(10+6*Math.sin((t-15)*6))}px rgba(180,35,24,${.16*h})`};
+SCENE.char=makeChar([
+ {k:'walk',t0:0.3,t1:1.5,x0:2150,x1:1700,run:true},
+ {k:'hop',t0:1.5,t1:2.4},{k:'bubble',t0:1.6,t1:3.8,text:'딱 세 개만!'},
+ {k:'sip',t0:5.0,t1:6.4},
+ {k:'lean',t0:7.0,t1:8.6,ang:-10},
+ {k:'think',t0:10.2,t1:12.6},
+ {k:'walk',t0:13.2,t1:14.2,x0:1700,x1:1640},
+ {k:'bubble',t0:15.3,t1:19.2,text:'이건 아침까지<br>기다리면 안 됩니다.'},
+ {k:'sweat',t0:18.8,t1:20.4},{k:'nod',t0:19.2,t1:20.2},
+ {k:'walk',t0:20.4,t1:21.2,x0:1640,x1:2250,run:true}
+]);
+render(0);
+</script></body></html>

@@ -1,0 +1,48 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../../lib/common.css"><style>
+.grid{display:grid;grid-template-columns:680px 1fr;gap:52px}
+.fig{height:640px;position:relative;overflow:hidden}
+.s p{font-size:30px;line-height:42px}
+</style></head><body><div class="stage">
+<div class="fade"><header class="top"><div class="sec"><b>작용 기전</b> · 03 / 03</div><div class="chip">레파타 Repatha <i>· evolocumab</i></div></header>
+<h1>레파타는 PCSK9을 차단해 수용체를 보호합니다</h1></div>
+<div class="fade grid">
+ <div class="steps">
+  <div class="s" data-on="0,3.0"><div class="n">1</div><div><div class="en">PCSK9 blockade</div><h3>evolocumab이 PCSK9에 결합</h3><p>혈액 속 PCSK9이 수용체에 붙지 못하게 막는다</p></div></div>
+  <div class="s" data-on="3.0,5.7"><div class="n">2</div><div><div class="en">Uptake without PCSK9</div><h3>LDL만 싣고 세포 안으로</h3><p>수용체는 LDL을 세포 안으로 들인다</p></div></div>
+  <div class="s" data-on="5.7"><div class="n">3</div><div><div class="en">Receptor preserved</div><h3>수용체가 표면으로 복귀</h3><p>다시 쓰이는 수용체가 늘어 콜레스테롤 제거가 늘어난다</p></div></div>
+ </div>
+ <div class="card fig"><svg id="fig" width="100%" height="100%" viewBox="0 0 1056 640"></svg></div>
+</div>
+<div class="fade"><div class="key" data-in="6.4"><span class="k">KEY</span><span>수용체 보존 → 저밀도 지단백 콜레스테롤 감소</span></div>
+<div class="fn">PCSK9: proprotein convertase subtilisin/kexin type 9 · 교육용 개념도</div></div>
+</div>
+<script src="../timing.js"></script><script src="../../../lib/core.js"></script><script src="../../../lib/mech.js"></script><script>
+useTiming('2');
+const svg=$('#fig');baseFig(svg);const SC=1.4;
+const endo=el('ellipse',{cx:470,cy:450,rx:130,ry:100,fill:'#fffdf9',stroke:'#a9bcb9','stroke-width':3},svg);
+const endoL=lbl(svg,470,580,'엔도솜 · endosome','#5b6573',22,'middle');
+const crumbs=el('g',{fill:'#d9a441'},svg,'<circle cx="440" cy="420" r="7"/><circle cx="500" cy="440" r="6"/><circle cx="460" cy="480" r="5"/><circle cx="515" cy="490" r="7"/><circle cx="425" cy="465" r="5"/>');
+const rec=el('path',{d:'M598 420 C 650 370, 690 330, 700 290',stroke:'#3d7a6e','stroke-width':5,fill:'none','stroke-linecap':'round'},svg);
+const recH=el('path',{d:'M686 300 l14 -10 l4 18',stroke:'#3d7a6e','stroke-width':5,fill:'none','stroke-linecap':'round','stroke-linejoin':'round'},svg);
+const recL=lbl(svg,300,140,'수용체 재활용','#3d7a6e',26,'start',700);const recL2=lbl(svg,300,180,'→ 다시 LDL 제거','#3d7a6e',24,'start',600);
+const R=grp(svg,RECEPTOR),L=grp(svg,LDL),P=grp(svg,PCSK),A=grp(svg,AB);
+const aL=lbl(svg,600,70,'evolocumab','#8c3b4a',28,'start',700),aL2=lbl(svg,600,104,'PCSK9 결합 차단','#8c3b4a',24,'start',600);
+const pL=lbl(svg,860,210,'PCSK9','#a3606b',24,'start',700);
+SCENE.anim=t=>{
+ const ab=ease(seg(t,.4,2.4)), p2=ease(seg(t,3.0,5.0)), p3=ease(seg(t,5.7,8.2));
+ setT(P,880,150,SC,1);
+ setT(A,lerp(1040,926,ab),lerp(20,124,ab),SC,seg(t,.2,.6),lerp(30,-50,ab));
+ [aL,aL2].forEach(e=>e.style.opacity=seg(t,1.6,2.2));pL.style.opacity=seg(t,.2,.6)*(1-seg(t,2.2,2.6));
+ let cx,cy,cs;
+ if(t<5.7){cx=lerp(250,470,p2);cy=lerp(200,470,p2);cs=lerp(SC,SC*.85,p2)}else{cx=lerp(470,700,p3);cy=lerp(470,200,p3);cs=lerp(SC*.85,SC,p3)}
+ setT(R,cx,cy,cs);setT(L,t<5.7?cx:470,t<5.7?cy-66*cs:404,cs,1-seg(t,4.9,5.6));
+ crumbs.style.opacity=seg(t,5.0,5.6)*.8;
+ endo.style.opacity=seg(t,2.8,3.4);endoL.style.opacity=seg(t,3.0,3.6);
+ pathDraw(rec,seg(t,5.7,7.8));recH.style.opacity=seg(t,7.6,7.9);recL.style.opacity=seg(t,7.0,7.6);recL2.style.opacity=seg(t,8.2,8.8);
+};
+SCENE.char=makeChar([
+ {k:'walk',t0:9.3,t1:10.5,x0:2150,x1:1720,run:true},
+ {k:'wave',t0:10.6,t1:12.8},{k:'bubble',t0:10.6,t1:12.8,text:'원본 영상,<br>같이 보시죠.'},{k:'hop',t0:11.6,t1:12.6}
+]);
+render(0);
+</script></body></html>
