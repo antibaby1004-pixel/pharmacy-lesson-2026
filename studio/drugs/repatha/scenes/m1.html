@@ -19,19 +19,19 @@
 <script src="../timing.js"></script><script src="../../../lib/core.js"></script><script src="../../../lib/mech.js"></script><script>
 useTiming('1');
 const svg=$('#fig');baseFig(svg);const SC=1.4;
-const endo=el('ellipse',{cx:470,cy:450,rx:130,ry:100,fill:'#fffdf9',stroke:'#a9bcb9','stroke-width':3},svg);
-const endoL=lbl(svg,470,580,'엔도솜 · endosome','#5b6573',22,'middle');
+const endo=el('ellipse',{cx:470,cy:450,rx:130,ry:100,fill:'#FFFFFF',stroke:'#a9bcb9','stroke-width':3},svg);
+const endoL=lbl(svg,470,580,'엔도솜 · endosome','#5A6B7B',22,'middle');
 const rec=el('path',{d:'M590 400 C 660 350, 700 320, 720 290',stroke:'#a9bcb9','stroke-width':4,fill:'none','stroke-dasharray':'10 10'},svg);
-const X=el('g',{transform:'translate(655 345)'},svg,'<circle r="26" fill="#fffdf9" stroke="#8c3b4a" stroke-width="3"/><path d="M-11 -11 L11 11 M11 -11 L-11 11" stroke="#8c3b4a" stroke-width="4" stroke-linecap="round"/>');
-const XL=lbl(svg,694,336,'재활용 차단','#8c3b4a',24,'start',700);
-const toL=el('path',{d:'M600 470 C 680 490, 730 486, 786 480',stroke:'#8c3b4a','stroke-width':5,fill:'none','stroke-linecap':'round'},svg);
-const lyso=el('circle',{cx:890,cy:470,r:104,fill:'#f4e7e9',stroke:'#8c3b4a','stroke-width':3},svg);
-const lysoL=lbl(svg,890,604,'리소좀 · 수용체 분해','#8c3b4a',22,'middle',700);
-const frag=el('g',{stroke:'#3f5a6b','stroke-width':12,'stroke-linecap':'round'},svg,'<path d="M850 450 l22 -16"/><path d="M900 500 l26 6"/><path d="M920 440 l-6 26"/><path d="M870 510 l-10 -18"/>');
+const X=el('g',{transform:'translate(655 345)'},svg,'<circle r="26" fill="#FFFFFF" stroke="#007F86" stroke-width="3"/><path d="M-11 -11 L11 11 M11 -11 L-11 11" stroke="#007F86" stroke-width="4" stroke-linecap="round"/>');
+const XL=lbl(svg,694,336,'재활용 차단','#007F86',24,'start',700);
+const toL=el('path',{d:'M600 470 C 680 490, 730 486, 786 480',stroke:'#007F86','stroke-width':5,fill:'none','stroke-linecap':'round'},svg);
+const lyso=el('circle',{cx:890,cy:470,r:104,fill:'#E2F2F3',stroke:'#007F86','stroke-width':3},svg);
+const lysoL=lbl(svg,890,604,'리소좀 · 수용체 분해','#007F86',22,'middle',700);
+const frag=el('g',{stroke:'#3E5872','stroke-width':12,'stroke-linecap':'round'},svg,'<path d="M850 450 l22 -16"/><path d="M900 500 l26 6"/><path d="M920 440 l-6 26"/><path d="M870 510 l-10 -18"/>');
 const R=grp(svg,RECEPTOR),L=grp(svg,LDL),P=grp(svg,PCSK);
 const pL=lbl(svg,520,120,'PCSK9','#a3606b',28,'start',700);
 const pLn=el('line',{x1:514,y1:112,x2:340,y2:150,stroke:'#a3606b','stroke-width':2},svg);
-const ldlL=lbl(svg,40,96,'LDL','#1f2a37',24);const ldlLn=el('line',{x1:92,y1:90,x2:196,y2:104,stroke:'#1f2a37','stroke-width':2},svg);
+const ldlL=lbl(svg,40,96,'LDL','#243341',24);const ldlLn=el('line',{x1:92,y1:90,x2:196,y2:104,stroke:'#243341','stroke-width':2},svg);
 SCENE.anim=t=>{
  const pb=ease(seg(t,.8,2.6)), p2=ease(seg(t,2.8,5.0)), p3=ease(seg(t,5.8,8.0));
  let cx,cy,cs;

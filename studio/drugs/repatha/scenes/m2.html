@@ -19,14 +19,14 @@
 <script src="../timing.js"></script><script src="../../../lib/core.js"></script><script src="../../../lib/mech.js"></script><script>
 useTiming('2');
 const svg=$('#fig');baseFig(svg);const SC=1.4;
-const endo=el('ellipse',{cx:470,cy:450,rx:130,ry:100,fill:'#fffdf9',stroke:'#a9bcb9','stroke-width':3},svg);
-const endoL=lbl(svg,470,580,'엔도솜 · endosome','#5b6573',22,'middle');
+const endo=el('ellipse',{cx:470,cy:450,rx:130,ry:100,fill:'#FFFFFF',stroke:'#a9bcb9','stroke-width':3},svg);
+const endoL=lbl(svg,470,580,'엔도솜 · endosome','#5A6B7B',22,'middle');
 const crumbs=el('g',{fill:'#d9a441'},svg,'<circle cx="440" cy="420" r="7"/><circle cx="500" cy="440" r="6"/><circle cx="460" cy="480" r="5"/><circle cx="515" cy="490" r="7"/><circle cx="425" cy="465" r="5"/>');
-const rec=el('path',{d:'M598 420 C 650 370, 690 330, 700 290',stroke:'#3d7a6e','stroke-width':5,fill:'none','stroke-linecap':'round'},svg);
-const recH=el('path',{d:'M686 300 l14 -10 l4 18',stroke:'#3d7a6e','stroke-width':5,fill:'none','stroke-linecap':'round','stroke-linejoin':'round'},svg);
-const recL=lbl(svg,300,140,'수용체 재활용','#3d7a6e',26,'start',700);const recL2=lbl(svg,300,180,'→ 다시 LDL 제거','#3d7a6e',24,'start',600);
+const rec=el('path',{d:'M598 420 C 650 370, 690 330, 700 290',stroke:'#007F86','stroke-width':5,fill:'none','stroke-linecap':'round'},svg);
+const recH=el('path',{d:'M686 300 l14 -10 l4 18',stroke:'#007F86','stroke-width':5,fill:'none','stroke-linecap':'round','stroke-linejoin':'round'},svg);
+const recL=lbl(svg,300,140,'수용체 재활용','#007F86',26,'start',700);const recL2=lbl(svg,300,180,'→ 다시 LDL 제거','#007F86',24,'start',600);
 const R=grp(svg,RECEPTOR),L=grp(svg,LDL),P=grp(svg,PCSK),A=grp(svg,AB);
-const aL=lbl(svg,600,70,'evolocumab','#8c3b4a',28,'start',700),aL2=lbl(svg,600,104,'PCSK9 결합 차단','#8c3b4a',24,'start',600);
+const aL=lbl(svg,600,70,'evolocumab','#007F86',28,'start',700),aL2=lbl(svg,600,104,'PCSK9 결합 차단','#007F86',24,'start',600);
 const pL=lbl(svg,860,210,'PCSK9','#a3606b',24,'start',700);
 SCENE.anim=t=>{
  const ab=ease(seg(t,.4,2.4)), p2=ease(seg(t,3.0,5.0)), p3=ease(seg(t,5.7,8.2));

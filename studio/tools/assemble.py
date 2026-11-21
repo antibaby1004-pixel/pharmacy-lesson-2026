@@ -14,9 +14,12 @@ def fwd(p,o):
     if tau is None: tau=K[-1][0]+(o-K[-1][1])
     return min(F[p]['dur'],tau+sum(x for t,x in F[p]['ins'] if t<tau-1e-6))
 src=open(os.path.join(d,'source','captions.js')).read();cap=json.loads(src[src.index('{'):src.rindex('}')+1]);new={}
-for p,cues in cap.items():
-    if p not in F: continue
-    L=[{'start':round(fwd(p,c['start']),3),'end':round(fwd(p,c['end']),3),'text':c['text']} for c in cues]
+def shift(p,t): return round(t+sum(x for ti,x in F[p]['ins'] if ti<t-1e-6),3)
+for p in F:
+    if F[p].get('knots') is None: continue
+    if F[p].get('cues'): L=[{'start':shift(p,c['start']),'end':shift(p,c['end']),'text':c['text']} for c in F[p]['cues']]
+    elif p in cap: L=[{'start':round(fwd(p,c['start']),3),'end':round(fwd(p,c['end']),3),'text':c['text']} for c in cap[p]]
+    else: continue
     L+=[{'start':x['t0'],'end':x['t1'],'text':('박 선배' if x['who']=='park' else '하루')+': '+x['text'].replace('<br>',' ')} for x in F[p]['dialog']]
     L.sort(key=lambda c:c['start'])
     for i in range(len(L)-1):

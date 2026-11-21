@@ -2,12 +2,13 @@ const steps=[
 {title:'레파타 소개 · 치료 목적과 허가 적응증',file:'intro',duration:30.7},
 {title:'정상 생리 · 수용체 재활용',file:0,duration:8.426},{title:'분해 단백질 · 수용체 분해',file:1,duration:10.1},{title:'evolocumab · 수용체 보존',file:2,duration:12.818},
 {title:'공식 기전 영상 · 0:40–3:23',id:'8mvyOSj83dg',start:40,end:203},
-{title:'특징과 사용 이유',file:3,duration:32.378},{title:'주의점과 부작용',file:4,duration:25.4},{title:'용량과 사용법',file:5,duration:41.8},
+{title:'특징과 사용 이유',file:3,duration:32.378},{title:'용량과 사용법',file:5,duration:41.8},
 {title:'주사 전 · 1회용 펜과 보관',file:'storage',duration:38.1},
 {title:'자가주사 시연 · 1:30–4:40',id:'I_Vir4DcvYk',start:90,end:280},
+{title:'주의점과 부작용',file:4,duration:25.4},
 {title:'Take-home message',file:'summary',duration:50.7}];
 const $=id=>document.getElementById(id),local=$('local');
-let index=0,yt,ytReady=false,ytLoading=false,wantsPlay=false,slideRate=1.15,pendingOffset=0,ended=false,dragging=false;
+let index=0,yt,ytReady=false,ytLoading=false,wantsPlay=false,slideRate=1,pendingOffset=0,ended=false,dragging=false;
 const isYT=()=>!!steps[index].id;
 const message=s=>$('status').textContent=s;
 const length=s=>s.id?s.end-s.start:s.duration/slideRate;
@@ -19,7 +20,7 @@ function elapsed(){return before(index)+(isYT()?(currentYT()?Math.max(0,yt.getCu
 function sync(){updateCaption();if(!dragging)$('timeline').value=Math.min(total(),elapsed());$('timeline').max=total();$('time').textContent=format(elapsed())+' / '+format(total());$('play').textContent=wantsPlay?'일시정지':'재생';$('play').setAttribute('aria-label',wantsPlay?'일시정지':'재생')}
 function smallYouTubeCaptions(){try{if(yt&&yt.getOptions('captions').includes('fontSize'))yt.setOption('captions','fontSize',-1)}catch{}}
 function updateCaption(){const box=$('localCaption');if(transitionPending){box.textContent='';return;}box.hidden=isYT();if(isYT()){box.textContent='';return}const cue=(captions[steps[index].file]||[]).find(c=>local.currentTime>=c.start&&local.currentTime<c.end);box.textContent=cue?cue.text:''}
-function update(){const s=steps[index];$('title').textContent=s.title;$('position').textContent=String(index+1).padStart(2,'0')+' / '+steps.length;$('ytNote').hidden=!isYT();$('ytNote').textContent=steps[index].id==='8mvyOSj83dg'?'기전 영상 0:40–3:23 · 영어 원음. ⚙ → 자막 → 자동 번역 → 한국어.':'자가주사 시연 1:30–4:40 · 한국어 자막이 없으면 ⚙ → 자막 → 자동 번역 → 한국어';if(isYT()){$('original').href='https://www.youtube.com/watch?v='+s.id+'&t='+Math.floor(s.start+pendingOffset)+'s'}sync()}
+function update(){const s=steps[index];$('title').textContent=s.title;if($('ytTitle'))$('ytTitle').textContent=s.id?s.title:'';$('position').textContent=String(index+1).padStart(2,'0')+' / '+steps.length;$('ytNote').hidden=!isYT();$('ytNote').textContent=steps[index].id==='8mvyOSj83dg'?'기전 영상 0:40–3:23 · 영어 원음. ⚙ → 자막 → 자동 번역 → 한국어.':'자가주사 시연 1:30–4:40 · 한국어 자막이 없으면 ⚙ → 자막 → 자동 번역 → 한국어';if(isYT()){$('original').href='https://www.youtube.com/watch?v='+s.id+'&t='+Math.floor(s.start+pendingOffset)+'s'}sync()}
 function error(t){revealScene();message(t);$('errorText').textContent=t;$('fallback').hidden=false;wantsPlay=false;sync()}
 function playLocal(){const token=transitionId;local.playbackRate=slideRate;local.play().catch(()=>{if(token!==transitionId||isYT()||transitionPhase==='covering')return;wantsPlay=false;localFrameReady();sync();message('재생 버튼을 눌러 주세요.')})}
 function playYT(){const s=steps[index],clip={videoId:s.id,startSeconds:s.start+pendingOffset,endSeconds:s.end};wantsPlay?yt.loadVideoById(clip):yt.cueVideoById(clip);yt.setPlaybackRate(1)}

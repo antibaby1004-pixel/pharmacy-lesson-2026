@@ -2,9 +2,9 @@
 @font-face{font-family:P;src:url('Pretendard-Medium.woff2');font-weight:500}
 @font-face{font-family:P;src:url('Pretendard-SemiBold.woff2');font-weight:600}
 @font-face{font-family:P;src:url('Pretendard-Bold.woff2');font-weight:700}
-:root{--paper:#f8f6f1;--paper2:#f2eee6;--card:#fffdf9;--ink:#1f2a37;--muted:#5b6573;--hair:#e4ded3;--acc:#8c3b4a;--acc-t:#f4e7e9;--acc-ink:#6e2a37;
---slate:#3f5a6b;--mem:#a9bcb9;--ldl:#d9a441;--pcsk:#c98b93;--pcsk-d:#a3606b;--recyc:#3d7a6e;--recyc-t:#e3efeb;
---cau:#a86400;--cau-t:#fbf0dc;--cau-ink:#7d4a00;--red:#b42318;--red-t:#fbe7e4}
+:root{--paper:#FAFBFC;--paper2:#F1F4F7;--card:#FFFFFF;--ink:#243341;--muted:#5A6B7B;--hair:#DCE3EA;--acc:#007F86;--acc-t:#E2F2F3;--acc-ink:#00636A;
+--slate:#3E5872;--mem:#B6C6D2;--ldl:#E0A93B;--pcsk:#D9828F;--pcsk-d:#A9505F;--recyc:#007F86;--recyc-t:#E2F2F3;
+--cau:#B26A00;--cau-t:#FDF3E1;--cau-ink:#7D4A00;--red:#C0362C;--red-t:#FCE9E7}
 *{box-sizing:border-box}
 html,body{margin:0;width:1920px;height:1080px;overflow:hidden;background:var(--paper);font-family:P;color:var(--ink);word-break:keep-all;-webkit-font-smoothing:antialiased}
 .stage{position:relative;width:1920px;height:1080px;padding:84px 96px 0}
@@ -31,7 +31,7 @@ h1{font-size:60px;line-height:72px;font-weight:700;margin:0 0 48px;letter-spacin
 .s h3{margin:6px 0 6px;font-size:36px;line-height:46px;font-weight:600}.s p{margin:0;font-size:28px;line-height:42px;color:var(--muted)}
 svg text{font-family:P}
 /* bubble */
-.bubble{position:absolute;max-width:440px;background:#fff;border:4px solid var(--ink);border-radius:26px;padding:20px 28px;font-size:32px;line-height:44px;font-weight:700;color:var(--ink);transform-origin:85% 110%;z-index:20;box-shadow:0 6px 0 rgba(31,42,55,.08)}
+.bubble{position:absolute;max-width:440px;background:#fff;border:4px solid var(--ink);border-radius:26px;padding:20px 28px;font-size:32px;line-height:44px;font-weight:700;color:var(--ink);transform-origin:85% 110%;z-index:20;box-shadow:0 6px 0 rgba(36,51,65,.10)}
 .bubble:after{content:"";position:absolute;right:70px;bottom:-30px;width:34px;height:34px;background:#fff;border-right:4px solid var(--ink);border-bottom:4px solid var(--ink);transform:skewX(-22deg) rotate(45deg)}
 #char{position:absolute;left:0;top:0;width:360px;height:640px;overflow:visible;transform-origin:0 0;z-index:15}
 .o{stroke:#1f2a37;stroke-width:6;stroke-linejoin:round;stroke-linecap:round}
