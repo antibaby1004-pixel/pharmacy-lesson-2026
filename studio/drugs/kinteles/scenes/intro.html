@@ -1,19 +1,42 @@
 <!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../../lib/common.css"><style>
 svg text{font-family:P}
-.l{position:absolute;left:96px;top:200px;width:880px}
-.t1{font-size:116px;line-height:120px;font-weight:700;letter-spacing:-.03em;margin:0}.t1 span{font-size:58px;font-weight:600;color:var(--muted);margin-left:18px}
-.t2{font-size:46px;font-weight:600;margin:14px 0 0}
-.ind{margin-top:50px;font-size:38px;line-height:54px;font-weight:600}.ind .lab{display:block;margin-bottom:12px}
-.f{position:absolute;left:1000px;width:440px;padding:26px 32px}.f .v{font-size:44px;font-weight:700;line-height:56px;margin-top:8px}.f .s{font-size:30px;margin-top:6px;color:var(--muted);font-weight:600}
-.f1{top:200px}.f2{top:470px}
+.nm{position:absolute;left:96px;top:170px;transform-origin:0 0;white-space:nowrap}
+.nm .t{font-size:128px;line-height:136px;font-weight:700;letter-spacing:-.03em;margin:0}
+.nm .t span{font-size:60px;font-weight:600;color:var(--muted);margin-left:20px;letter-spacing:0}
+.nm .inn{font-size:52px;line-height:64px;font-weight:700;margin:4px 0 0}
+.ph{position:absolute;left:96px;top:390px;width:1344px;height:620px;box-sizing:border-box;padding:26px 30px 18px;transform-origin:0 0;display:flex;flex-direction:column;z-index:4}
+.ph .im{flex:1;display:flex;gap:36px;justify-content:center;align-items:stretch;min-height:0}
+.ph figure{margin:0;flex:1 1 0;min-width:0;display:flex;flex-direction:column;align-items:center;gap:12px}
+.ph figure img,.ph figure svg{flex:1;min-height:0;width:100%;object-fit:contain;border-radius:12px}
+.ph figcaption{font-size:38px;font-weight:700;color:#243341;text-align:center}
+.ph .cap{font-size:26px;color:var(--muted);font-weight:600;margin-top:6px}
+.facts{position:absolute;left:96px;top:322px;width:810px;display:flex;flex-direction:column;gap:16px}
+.fr{display:grid;grid-template-columns:190px 1fr;gap:22px;align-items:center;padding:20px 28px}
+.fr .lab{font-size:30px}.fr .v{font-size:42px;line-height:54px;font-weight:700}
+.fr.amb{border-color:#F3C58A;background:#FFF7EC}.fr.amb .lab,.fr.amb .v{color:#7D4A00}
+.fr.red{border-color:#F2B8B2;background:#FCE9E7}.fr.red .lab,.fr.red .v{color:#8E2219}
 </style></head><body><div class="stage">
 <div class="fade"><header class="top"><div class="sec"><b>약물 소개</b> · DRUG OVERVIEW</div><div class="chip">킨텔레스 Kinteles <i>· vedolizumab</i></div></header></div>
-<div class="fade"><div class="l"><p class="t1" data-in="1.4">킨텔레스<span>Kinteles</span></p><p class="t2" data-in="1.8">vedolizumab</p>
-<div class="ind" data-in="10.8"><span class="lab">허가 적응증 (두 제형 공통)</span>성인 중등도~중증 활동성<br>궤양성 대장염 · 크론병<br><span style="font-size:30px;color:var(--muted)">기존 치료 반응 불충분·불내약 시</span></div></div>
-<div class="card f f1" data-in="4.0"><span class="lab">정맥 · 유도+유지</span><div class="v">300 mg 바이알</div><div class="s">정맥주입 30분</div></div>
-<div class="card f f2" data-in="7.2"><span class="lab">피하 · 유지</span><div class="v">108 mg 프리필드 펜</div><div class="s">정맥 치료 후 전환</div></div></div>
+<div class="fade">
+<div class="nm" id="nm"><p class="t">킨텔레스<span>Kinteles</span></p><p class="inn">vedolizumab</p></div>
+<div class="card ph" id="ph"><div class="im"><figure><svg viewBox="0 0 300 420"><rect x="95" y="40" width="110" height="44" rx="8" fill="#C0504D" stroke="#243341" stroke-width="6"/>
+<rect x="110" y="84" width="80" height="26" fill="#DDE4EA" stroke="#243341" stroke-width="5"/>
+<path d="M80 110 h140 a20 20 0 0 1 20 20 v220 a30 30 0 0 1 -30 30 h-120 a30 30 0 0 1 -30 -30 v-220 a20 20 0 0 1 20 -20z" fill="#fff" stroke="#243341" stroke-width="6"/>
+<rect x="84" y="200" width="132" height="110" rx="10" fill="#F3F7FA" stroke="#9FB4C6" stroke-width="3"/>
+<text x="150" y="252" text-anchor="middle" font-size="36" font-weight="700" fill="#243341">300 mg</text>
+<text x="150" y="290" text-anchor="middle" font-size="22" font-weight="600" fill="#3F4D5A">정맥주사용</text></svg><figcaption>정맥 300 mg 바이알</figcaption></figure><figure><svg viewBox="0 0 640 300"><rect x="70" y="110" width="440" height="80" rx="40" fill="#fff" stroke="#243341" stroke-width="7"/>
+<rect x="150" y="128" width="160" height="44" rx="10" fill="#EEF6FB" stroke="#9FB4C6" stroke-width="3"/><rect x="440" y="104" width="120" height="92" rx="30" fill="#3A8F8A" stroke="#243341" stroke-width="7"/>
+<rect x="30" y="126" width="60" height="48" rx="14" fill="#B6C6D2" stroke="#243341" stroke-width="6"/>
+<text x="320" y="262" text-anchor="middle" font-size="44" font-weight="700" fill="#243341">108 mg</text>
+<text x="320" y="60" text-anchor="middle" font-size="30" font-weight="600" fill="#3F4D5A">프리필드 펜</text></svg><figcaption>피하 108 mg 프리필드 펜</figcaption></figure></div><div class="cap" id="cap">제품 그림 · 실제 사진 준비 중</div></div>
+<div class="facts"><div class="card fr " data-in="4.0"><span class="lab">정맥</span><div class="v">300 mg 바이알 · 유도 + 유지</div></div><div class="card fr " data-in="7.0"><span class="lab">피하</span><div class="v">108 mg 프리필드 펜 · 정맥 치료 후 유지</div></div><div class="card fr " data-in="10.8"><span class="lab">대상</span><div class="v">기존 치료 반응 부족·불내 성인</div></div><div class="card fr " data-in="13.5"><span class="lab">적응증</span><div class="v">중등도~중증 궤양성 대장염 · 크론병</div></div></div>
+</div>
 </div>
 <script src="../timing.js"></script><script src="../../../lib/core.js"></script><script>
-useTiming('intro');window.CENTER_FIRST=3.6;const $i=i=>document.getElementById(i);
-SCENE.char=makeChar([{k:'walk',t0:0.15,t1:1.2,x0:2250,x1:1600,run:true},{k:'sip',t0:4.4,t1:6.0},{k:'prop',name:'vial',t0:7.4,t1:10.0},{k:'point',t0:11.0,t1:13.0,ang:96},{k:'yawn',t0:14.0,t1:15.8}],'lead');
+useTiming('intro');const $i=i=>document.getElementById(i);const TB=3.98;
+SCENE.anim=(o)=>{const k=ease(seg(o,TB-0.25,TB+0.75));
+ $i('nm').style.transform=`scale(${lerp(1,.6,k)})`;$i('nm').style.opacity=seg(o,0.2,0.7);
+ const ph=$i('ph');ph.style.opacity=seg(o,0.3,0.8);ph.style.transform=`translate(${lerp(0,834,k)}px,${lerp(0,-200,k)}px) scale(${lerp(1,.38,k)})`;
+ ph.querySelectorAll('figcaption,.cap').forEach(e=>e.style.opacity=1-seg(o,TB-0.3,TB+0.2))};
+SCENE.char=makeChar([{k: "walk", t0: 0.15, t1: 1.2, x0: 2250, x1: 1640, run: true}, {k: "sip", t0: 4.4, t1: 6.0}, {k: "prop", name: "vial", t0: 7.4, t1: 10.0}, {k: "point", t0: 11.0, t1: 13.0, ang: 96}, {k: "yawn", t0: 14.0, t1: 15.8}],'lead');
 </script><script src="../../../lib/highlight.js"></script></body></html>

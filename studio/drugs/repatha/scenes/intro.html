@@ -1,65 +1,37 @@
 <!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../../lib/common.css"><style>
-.l{position:absolute;left:96px;top:200px;width:910px}
-.t1{font-size:120px;line-height:120px;font-weight:700;letter-spacing:-.03em;margin:0}
-.t1 span{font-size:64px;font-weight:600;color:var(--muted);margin-left:20px;letter-spacing:-.01em}
-.t2{font-size:46px;font-weight:500;color:var(--muted);margin:14px 0 0;letter-spacing:.01em}
-.goal{margin-top:44px;display:flex;gap:28px;align-items:center}
-.goal .v{font-size:50px;font-weight:600}
-.ind{margin-top:34px}
-.ind .lab{display:block;margin-bottom:18px}
-.row{display:grid;grid-template-columns:72px 1fr;align-items:center;padding:18px 0;border-top:1.5px solid var(--hair);font-size:44px;line-height:56px}
-.row:last-child{border-bottom:1.5px solid var(--hair)}
-.row b{font-size:32px;color:var(--acc);font-weight:700}
-.row small{display:block;font-size:32px;margin-left:0;color:var(--muted);font-weight:500;margin-left:14px}
-.dose{position:absolute;left:1020px;top:200px;width:450px;padding:34px 36px}
-.dose .big{white-space:nowrap;font-size:96px;line-height:100px;font-weight:700;color:var(--acc);letter-spacing:-.02em}
-.dose .sub{font-size:38px;line-height:50px;color:var(--ink);margin-top:14px;font-weight:500}
-.why{position:absolute;left:1020px;top:610px;width:450px;padding:26px 36px}
-.why .v{font-size:46px;font-weight:600;margin-top:8px}
+svg text{font-family:P}
+.nm{position:absolute;left:96px;top:170px;transform-origin:0 0;white-space:nowrap}
+.nm .t{font-size:128px;line-height:136px;font-weight:700;letter-spacing:-.03em;margin:0}
+.nm .t span{font-size:60px;font-weight:600;color:var(--muted);margin-left:20px;letter-spacing:0}
+.nm .inn{font-size:52px;line-height:64px;font-weight:700;margin:4px 0 0}
+.ph{position:absolute;left:96px;top:390px;width:1344px;height:620px;box-sizing:border-box;padding:26px 30px 18px;transform-origin:0 0;display:flex;flex-direction:column;z-index:4}
+.ph .im{flex:1;display:flex;gap:36px;justify-content:center;align-items:stretch;min-height:0}
+.ph figure{margin:0;flex:1 1 0;min-width:0;display:flex;flex-direction:column;align-items:center;gap:12px}
+.ph figure img,.ph figure svg{flex:1;min-height:0;width:100%;object-fit:contain;border-radius:12px}
+.ph figcaption{font-size:38px;font-weight:700;color:#243341;text-align:center}
+.ph .cap{font-size:26px;color:var(--muted);font-weight:600;margin-top:6px}
+.facts{position:absolute;left:96px;top:322px;width:810px;display:flex;flex-direction:column;gap:16px}
+.fr{display:grid;grid-template-columns:190px 1fr;gap:22px;align-items:center;padding:20px 28px}
+.fr .lab{font-size:30px}.fr .v{font-size:42px;line-height:54px;font-weight:700}
+.fr.amb{border-color:#F3C58A;background:#FFF7EC}.fr.amb .lab,.fr.amb .v{color:#7D4A00}
+.fr.red{border-color:#F2B8B2;background:#FCE9E7}.fr.red .lab,.fr.red .v{color:#8E2219}
 </style></head><body><div class="stage">
+<div class="fade"><header class="top"><div class="sec"><b>약물 소개</b> · DRUG OVERVIEW</div><div class="chip">레파타 Repatha <i>· evolocumab</i></div></header></div>
 <div class="fade">
-<header class="top"><div class="sec"><b>약물 소개</b> · DRUG OVERVIEW</div><div class="chip">레파타 Repatha <i>· evolocumab</i></div></header>
-</div>
-<div class="fade">
-<div class="l">
- <p class="t1" data-in="0.1">레파타<span>Repatha</span></p>
- <p class="t2" data-in="0.4">evolocumab</p>
- <div class="goal" data-in="9.1"><span class="lab">치료 목적</span><span class="v">저밀도 지단백 콜레스테롤 감소</span></div>
- <div class="ind"><span class="lab" data-in="10.5">국내 허가 적응증</span>
-  <div class="row" data-in="11.2"><b>01</b><span>원발성 고콜레스테롤혈증 · 혼합형 이상지질혈증</span></div>
-  <div class="row" data-in="18.6"><b>02</b><span>동형접합 가족성 고콜레스테롤혈증</span></div>
-  <div class="row" data-in="23.2"><b>03</b><span>확립된 죽상경화성 심혈관계 질환<small data-in="25.1">심혈관계 위험 감소</small></span></div>
- </div>
-</div>
-<div class="card dose" data-in="1.2">
- <svg width="378" height="70" viewBox="0 0 348 70"><rect x="2" y="17" width="300" height="36" rx="18" fill="#FFFFFF" stroke="#3E5872" stroke-width="3"/><rect x="214" y="17" width="88" height="36" rx="18" fill="#007F86"/><rect x="60" y="26" width="90" height="18" rx="6" fill="#E2F2F3" stroke="#a3606b" stroke-width="2"/><rect x="300" y="27" width="40" height="16" rx="5" fill="#a9bcb9"/></svg>
- <div class="big num">140<span class="unit">mg / 1 mL</span></div>
- <div class="sub">1회용 프리필드펜<br>피하주사</div>
-</div>
-<div class="card why" data-in="4.4"><span class="lab">원내 도입 목적</span><div class="v">입원환자 사용</div></div>
+<div class="nm" id="nm"><p class="t">레파타<span>Repatha</span></p><p class="inn">evolocumab</p></div>
+<div class="card ph" id="ph"><div class="im"><figure><svg viewBox="0 0 640 300"><rect x="70" y="110" width="440" height="80" rx="40" fill="#fff" stroke="#243341" stroke-width="7"/>
+<rect x="150" y="128" width="160" height="44" rx="10" fill="#EEF6FB" stroke="#9FB4C6" stroke-width="3"/><rect x="440" y="104" width="120" height="92" rx="30" fill="#5B7FA6" stroke="#243341" stroke-width="7"/>
+<rect x="30" y="126" width="60" height="48" rx="14" fill="#B6C6D2" stroke="#243341" stroke-width="6"/>
+<text x="320" y="262" text-anchor="middle" font-size="44" font-weight="700" fill="#243341">140 mg / 1 mL</text>
+<text x="320" y="60" text-anchor="middle" font-size="30" font-weight="600" fill="#3F4D5A">1회용 프리필드펜</text></svg><figcaption>레파타 프리필드펜 140 mg</figcaption></figure></div><div class="cap" id="cap">제품 그림 · 실제 사진 준비 중</div></div>
+<div class="facts"><div class="card fr " data-in="4.3"><span class="lab">원내 목적</span><div class="v">입원 환자 치료 · 피하주사제</div></div><div class="card fr " data-in="9.1"><span class="lab">작용</span><div class="v">LDL 콜레스테롤 ↓</div></div><div class="card fr " data-in="12.5"><span class="lab">적응증</span><div class="v">원발성 고콜레스테롤혈증 · 혼합형 이상지질혈증</div></div><div class="card fr " data-in="17.5"><span class="lab"></span><div class="v">동형접합 가족성 고콜레스테롤혈증</div></div><div class="card fr amb" data-in="21.5"><span class="lab"></span><div class="v">죽상경화성 심혈관 질환 → 심혈관 사건 위험 ↓</div></div></div>
 </div>
 </div>
 <script src="../timing.js"></script><script src="../../../lib/core.js"></script><script>
-useTiming('intro');
-SCENE.char=makeChar([
- {k:'walk',t0:0.6,t1:2.2,x0:2150,x1:1700,run:true},
- {k:'wave',t0:2.3,t1:4.0},{k:'bubble',t0:2.4,t1:5.6,text:'커피약사 박 선배입니다.<br>오늘은 레파타!'},
- {k:'sip',t0:6.0,t1:7.4},
- {k:'walk',t0:9.1,t1:10.3,x0:1700,x1:1600},
- {k:'point',t0:10.5,t1:13.0,ang:86},
- {k:'lean',t0:13.6,t1:15.2,ang:-10},
- {k:'nod',t0:16.5,t1:17.6},
- {k:'think',t0:18.6,t1:21.0},
- {k:'walk',t0:21.4,t1:22.4,x0:1600,x1:1590},
- {k:'point',t0:23.4,t1:26.0,ang:84},{k:'talk',t0:23.6,t1:25.4},
- {k:'surprise',t0:26.4},{k:'nod',t0:28.0,t1:29.0},
- {k:'walk',t0:29.3,t1:30.6,x0:1590,x1:2250,run:true}
-]);
-SCENE.char2=makeChar([
- {k:'walk',t0:25.6,t1:26.8,x0:2200,x1:1790,slide:true},
- {k:'bow',t0:26.9,t1:27.9},{k:'bubble',t0:26.9,t1:29.2,text:'신입 하루예요!<br>잘 부탁드려요!'},
- {k:'spin',t0:28.2,t1:29.0},
- {k:'walk',t0:29.4,t1:30.6,x0:1790,x1:2250,run:true}
-],'haru');
-render(0);
+useTiming('intro');const $i=i=>document.getElementById(i);const TB=4.32;
+SCENE.anim=(o)=>{const k=ease(seg(o,TB-0.25,TB+0.75));
+ $i('nm').style.transform=`scale(${lerp(1,.6,k)})`;$i('nm').style.opacity=seg(o,0.2,0.7);
+ const ph=$i('ph');ph.style.opacity=seg(o,0.3,0.8);ph.style.transform=`translate(${lerp(0,834,k)}px,${lerp(0,-200,k)}px) scale(${lerp(1,.38,k)})`;
+ ph.querySelectorAll('figcaption,.cap').forEach(e=>e.style.opacity=1-seg(o,TB-0.3,TB+0.2))};
+SCENE.char=makeChar([{k: "walk", t0: 0.15, t1: 1.2, x0: 2250, x1: 1640}, {k: "sip", t0: 6.0, t1: 7.4}, {k: "point", t0: 10.5, t1: 13.0, ang: 96}, {k: "nod", t0: 16.5, t1: 17.6}, {k: "think", t0: 18.6, t1: 21.0}, {k: "point", t0: 23.4, t1: 25.6, ang: 96}],'lead');SCENE.char2=makeChar([{k: "walk", t0: 25.6, t1: 26.8, x0: 2200, x1: 1860, slide: true}, {k: "bow", t0: 26.9, t1: 27.9}, {k: "spin", t0: 28.2, t1: 29.0}, {k: "walk", t0: 29.4, t1: 30.6, x0: 1860, x1: 2250, run: true}],'cameo');
 </script><script src="../../../lib/highlight.js"></script></body></html>

@@ -111,5 +111,75 @@
    "칼슘이 두 배",
    "바꾸지 않"
   ]
+ },
+ "intro": {
+  "title": "라베피드정",
+  "en": "Rabepid",
+  "inn": "rabeprazole + calcium carbonate",
+  "photos": [
+   {
+    "img": "img/10.jpg",
+    "label": "10/600 mg (RC1)"
+   },
+   {
+    "img": "img/20.jpg",
+    "label": "20/600 mg (RC2)"
+   }
+  ],
+  "facts": [
+   {
+    "t": 2.5,
+    "lab": "성분",
+    "v": "rabeprazole sodium + calcium carbonate (CaCO₃)"
+   },
+   {
+    "t": 7.4,
+    "lab": "함량",
+    "v": "10/600 mg · 20/600 mg"
+   },
+   {
+    "t": 11.5,
+    "lab": "작용",
+    "v": "위산 분비 억제 + 산 중화"
+   },
+   {
+    "t": 15.8,
+    "lab": "주의",
+    "v": "역류 증상 완화 적응증 = 10/600 mg만",
+    "cls": "amb"
+   }
+  ],
+  "actions": [
+   {
+    "k": "walk",
+    "t0": 0.15,
+    "t1": 1.2,
+    "x0": 2250,
+    "x1": 1640
+   },
+   {
+    "k": "prop",
+    "name": "pill",
+    "t0": 3.0,
+    "t1": 6.0
+   },
+   {
+    "k": "point",
+    "t0": 7.6,
+    "t1": 9.8,
+    "ang": 96
+   },
+   {
+    "k": "dance",
+    "t0": 11.6,
+    "t1": 13.0
+   },
+   {
+    "k": "think",
+    "t0": 16.0,
+    "t1": 18.0
+   }
+  ],
+  "photo_note": "실제 제품 사진 · 약학정보원"
  }
 }
