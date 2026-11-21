@@ -51,11 +51,11 @@ for P in cfg['parts']:
         groups.setdefault(round(min(cand,key=lambda x:abs(x-tau)),3),[]).append(L)
     pieces=[];last=0;acc=0;ins=[];dialog=[]
     for g in sorted(groups):
-        i=int(g*SR);pieces.append(a[last:i]);last=i;gap=[np.zeros(int(.3*SR),np.float32)];off=.3
+        i=int(g*SR);pieces.append(a[last:i]);last=i;gap=[np.zeros(int(.15*SR),np.float32)];off=.15
         for L in groups[g]:
             la=line(L['who'],L['say']);du=len(la)/SR;t0=g+acc+off
             dialog.append({'who':L['who'],'text':L['bubble'],'t0':round(t0,3),'t1':round(t0+du+.45,3),'with':L.get('with',[])})
-            gap+= [la,np.zeros(int(.3*SR),np.float32)];off+=du+.3
+            gap+= [la,np.zeros(int(.15*SR),np.float32)];off+=du+.15
         gap.append(np.zeros(int((1.3 if g>=T-0.05 else .1)*SR),np.float32));   # 장면 끝 대사면 여운을 둠
         G=np.concatenate(gap);pieces.append(G);ins.append([round(g,4),round(len(G)/SR,4)]);acc+=len(G)/SR
     pieces.append(a[last:]);write_wav(os.path.join(d,'build',f'f_{p}.wav'),np.concatenate(pieces))

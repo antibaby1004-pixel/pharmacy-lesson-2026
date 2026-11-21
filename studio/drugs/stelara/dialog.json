@@ -2,19 +2,19 @@
  "voices": {
   "wang": {
    "voice": "en-US-BrianMultilingualNeural",
-   "rate": "-8%",
+   "rate": "+6%",
    "pitch": "-14Hz",
    "gain": 1.35
   },
   "haru": {
    "voice": "en-US-EmmaMultilingualNeural",
-   "rate": "+10%",
+   "rate": "+22%",
    "pitch": "+20Hz",
    "gain": 1.15
   },
   "park": {
    "voice": "en-US-AndrewMultilingualNeural",
-   "rate": "-6%",
+   "rate": "+8%",
    "pitch": "-8Hz",
    "gain": 1.45
   }
@@ -226,7 +226,7 @@
    "bubble": "자, 원본 영상을<br>봅시다.",
    "say": "자, 원본 영상을 봅시다.",
    "at": 1.4,
-   "min_dur": 4.5
+   "min_dur": 7.0
   }
  }
 }

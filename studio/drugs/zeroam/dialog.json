@@ -2,13 +2,13 @@
  "voices": {
   "park": {
    "voice": "en-US-AndrewMultilingualNeural",
-   "rate": "-6%",
+   "rate": "+8%",
    "pitch": "-8Hz",
    "gain": 1.45
   },
   "haru": {
    "voice": "en-US-EmmaMultilingualNeural",
-   "rate": "+10%",
+   "rate": "+22%",
    "pitch": "+20Hz",
    "gain": 1.15
   }
@@ -227,7 +227,7 @@
    "bubble": "이제 원본 영상<br>볼게요!",
    "say": "이제 원본 영상 볼게요!",
    "at": 1.4,
-   "min_dur": 4.5
+   "min_dur": 7.0
   }
  }
 }

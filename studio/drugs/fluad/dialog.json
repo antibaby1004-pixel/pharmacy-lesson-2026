@@ -2,13 +2,13 @@
  "voices": {
   "wang": {
    "voice": "en-US-BrianMultilingualNeural",
-   "rate": "-8%",
+   "rate": "+6%",
    "pitch": "-14Hz",
    "gain": 1.35
   },
   "park": {
    "voice": "en-US-AndrewMultilingualNeural",
-   "rate": "-6%",
+   "rate": "+8%",
    "pitch": "-8Hz",
    "gain": 1.45
   }
