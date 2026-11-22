@@ -23,7 +23,7 @@ function entries(t){
  one(t,'.stage .box[data-in]');one(t,'.stage .g>.c[data-in]');
 }
 // v16: 한 화면에 한 가지 — 가장 최근에 나온 줄·카드만 크게(cur), 나머지는 숨김
-function one(t,sel){const L=$$(sel);if(L.length<2)return;let cur=null;L.forEach(e=>{if(t>=+e.dataset.in)cur=e});L.forEach(e=>e.classList.toggle('cur',e===cur));L.forEach(e=>e.classList.toggle('gone',!!cur&&e!==cur))}
+function one(t,sel){const L=$$(sel);if(L.length<2||L.some(e=>e.querySelector('svg,canvas,.tl,.bar,.W')))return;let cur=null;L.forEach(e=>{if(t>=+e.dataset.in)cur=e});L.forEach(e=>e.classList.toggle('cur',e===cur));L.forEach(e=>e.classList.toggle('gone',!!cur&&e!==cur))}
 /* ---------------- character ---------------- */
 const CHAR_SVG=`
 <g id="cBody">
