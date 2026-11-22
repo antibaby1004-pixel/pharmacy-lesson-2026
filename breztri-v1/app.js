@@ -1,5 +1,5 @@
 const steps=[
-{title: "브레즈트리 소개 · 3제 흡입제", file: "intro", duration: 25},
+{title: "브레즈트리 소개 · 3제 흡입제", file: "intro", duration: 27},
 {title: "세 경로 · 기도 넓히기", file: "m0", duration: 22},
 {title: "기전 영상 · 링크 확정 전", file: "yt1", duration: 9},
 {title: "제형 · 함량 표기", file: "form", duration: 24},
