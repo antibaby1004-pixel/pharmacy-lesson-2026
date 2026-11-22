@@ -26,3 +26,35 @@ details{margin-top:30px;border-top:1px solid #DCE3EA;padding-top:20px;color:#5A6
 #youtubeWrap #youtube,#youtubeWrap iframe{width:100%;height:100%;border:0;display:block}
 
 #cover{position:absolute;inset:0;z-index:20;cursor:pointer;background:#FAFBFC}#cover img{width:100%;height:100%;object-fit:contain;display:block}#bigPlay{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:clamp(60px,14%,132px);aspect-ratio:1;height:auto;border-radius:50%;border:0;background:rgba(0,127,134,.92);color:#fff;font-size:clamp(26px,6%,56px);padding-left:10px;box-shadow:0 10px 30px rgba(0,0,0,.25);cursor:pointer}
+
+/* v14: 휴대폰 가로 보기 · 전체 화면 — 영상이 화면 높이를 꽉 채우고 조작줄은 아래 한 줄 */
+@media (orientation:landscape) and (max-height:600px){
+body main{max-width:none;padding:0}
+body header,body .intro,body #ytNote,body details,body #chapters{display:none}
+body .cinema{position:relative;border:0;border-radius:0;box-shadow:none;height:100vh;height:100dvh;display:flex;flex-direction:column;padding-bottom:46px;background:#FAFBFC}
+body .topline{position:absolute;top:0;right:0;z-index:30;background:transparent;padding:6px}
+body .topline #position,body .topline strong{display:none}
+body #fullscreen{padding:5px 10px;font-size:13px;background:rgba(255,255,255,.85)}
+body #stage{flex:1;min-height:0;aspect-ratio:auto}
+body #stage video,body #cover img{object-fit:contain}
+body .caption-line{position:absolute;left:0;right:0;bottom:46px;z-index:25;min-height:0;font-size:15px;line-height:1.4;padding:4px 12px;background:rgba(255,255,255,.88);border:0}
+body .caption-line:empty{display:none}
+body .bottomline{position:absolute;left:0;bottom:0;height:46px;width:120px;padding:6px 10px;gap:6px;flex-wrap:nowrap;z-index:26}
+body .bottomline label,body .bottomline select,body #status{display:none}
+body .seekline{position:absolute;left:120px;right:0;bottom:0;height:46px;padding:6px 14px;z-index:26}
+}
+body.pfs-on main{max-width:none;padding:0}
+body.pfs-on header,body.pfs-on .intro,body.pfs-on #ytNote,body.pfs-on details,body.pfs-on #chapters{display:none}
+body.pfs-on .cinema{position:relative;border:0;border-radius:0;box-shadow:none;height:100vh;height:100dvh;display:flex;flex-direction:column;padding-bottom:46px;background:#FAFBFC}
+body.pfs-on .topline{position:absolute;top:0;right:0;z-index:30;background:transparent;padding:6px}
+body.pfs-on .topline #position,body.pfs-on .topline strong{display:none}
+body.pfs-on #fullscreen{padding:5px 10px;font-size:13px;background:rgba(255,255,255,.85)}
+body.pfs-on #stage{flex:1;min-height:0;aspect-ratio:auto}
+body.pfs-on #stage video,body.pfs-on #cover img{object-fit:contain}
+body.pfs-on .caption-line{position:absolute;left:0;right:0;bottom:46px;z-index:25;min-height:0;font-size:15px;line-height:1.4;padding:4px 12px;background:rgba(255,255,255,.88);border:0}
+body.pfs-on .caption-line:empty{display:none}
+body.pfs-on .bottomline{position:absolute;left:0;bottom:0;height:46px;width:120px;padding:6px 10px;gap:6px;flex-wrap:nowrap;z-index:26}
+body.pfs-on .bottomline label,body.pfs-on .bottomline select,body.pfs-on #status{display:none}
+body.pfs-on .seekline{position:absolute;left:120px;right:0;bottom:0;height:46px;padding:6px 14px;z-index:26}
+body.pfs-on{overflow:hidden}body.pfs-on .cinema{position:fixed;inset:0;z-index:9999}
+.cinema:fullscreen{padding-bottom:46px;position:relative}.cinema:fullscreen .topline{position:absolute;top:0;right:0;z-index:30;background:transparent;padding:6px}.cinema:fullscreen .topline #position,.cinema:fullscreen .topline strong{display:none}.cinema:fullscreen .caption-line{position:absolute;left:0;right:0;bottom:46px;z-index:25;background:rgba(255,255,255,.88);border:0}.cinema:fullscreen .caption-line:empty{display:none}.cinema:fullscreen .bottomline{position:absolute;left:0;bottom:0;height:46px;width:120px;padding:6px 10px;z-index:26}.cinema:fullscreen .bottomline label,.cinema:fullscreen .bottomline select,.cinema:fullscreen #status{display:none}.cinema:fullscreen .seekline{position:absolute;left:120px;right:0;bottom:0;height:46px;padding:6px 14px;z-index:26}

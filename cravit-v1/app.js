@@ -74,7 +74,7 @@ local.addEventListener('ended',()=>{if(!isYT())advance()});
 local.addEventListener('error',()=>{if(!isYT()&&transitionPhase!=='covering')error('영상 파일을 읽지 못했습니다. 새로고침해 주세요.')});
 $('speed').onchange=e=>{slideRate=Number(e.target.value);local.playbackRate=slideRate;sync()};
 $('continue').onclick=advance;
-$('fullscreen').onclick=async()=>{try{document.fullscreenElement?await document.exitFullscreen():await document.querySelector('.cinema').requestFullscreen()}catch{message('전체 화면을 지원하지 않습니다.')}};
+$('fullscreen').onclick=async()=>{const c=document.querySelector('.cinema'),b=document.body;if(document.fullscreenElement||document.webkitFullscreenElement){try{screen.orientation.unlock()}catch{}(document.exitFullscreen||document.webkitExitFullscreen).call(document);return}if(b.classList.contains('pfs-on')){b.classList.remove('pfs-on');$('fullscreen').textContent='전체 화면';return}try{if(c.requestFullscreen){await c.requestFullscreen();try{await screen.orientation.lock('landscape')}catch{}}else if(c.webkitRequestFullscreen){c.webkitRequestFullscreen()}else throw 0}catch{b.classList.add('pfs-on');$('fullscreen').textContent='닫기'}};
 setInterval(()=>{if(!transitionPending&&currentYT()&&yt.getPlayerState()===1&&steps[index].end!=null&&yt.getCurrentTime()>=steps[index].end-.45){advance(true)}sync()},50);
 update();
 
