@@ -104,13 +104,8 @@
   "inn": "budesonide · glycopyrronium · formoterol",
   "photos": [
    {
-    "draw": "inhaler",
-    "args": [
-     "160/7.2/5",
-     "120회 분사",
-     "#E0703A"
-    ],
-    "label": "에어로스피어 흡입제 120회"
+    "img": "img/inhaler.jpg",
+    "label": "에어로스피어 흡입기 120회"
    }
   ],
   "facts": [
@@ -162,6 +157,7 @@
     "ang": 100
    }
   ],
+  "photo_note": "실제 제품 사진",
   "full": "브레즈트리 에어로스피어 흡입제 160/7.2/5.0 µg",
   "full_en": "BREZTRI AEROSPHERE INHALER 160/7.2/5.0 µg · 120회",
   "itype": {
