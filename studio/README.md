@@ -31,3 +31,17 @@ python tools/assemble.py drugs/repatha        # 이어붙이기만
 2. GPT 자료를 `source/`에 넣기(내레이션 음성 또는 대본 → 음성 합성, 자막, 강의 슬라이드 내용)
 3. 장면 HTML의 글·그림을 새 약 내용으로 바꾸고 `drug.json` 강조색·장면 목록 수정
 4. `dialog.json`에 박 선배·하루 추임새 작성 → `python tools/make.py drugs/<새약>`
+
+## 2026-11 현재 작업 방식 (신규 10품목 이후 · 이 절이 최신)
+- 새 약은 `drugs/<약>/spec.json` 하나로 만든다(소개 문장·사실 줄·도입 구분·장면 parts·캐릭터 대사·강조 단어). 장면 HTML·drug.json·dialog.json·플레이어 app.js는 `tools/build_drug.py`가 생성
+- 장면 종류(parts.type): `mech`(번호 단계 + 그림 fig/js) · `rows`(표 줄) · `summary`(카드) · `yt`(유튜브: vid·start·end·rate·label·desc·say) · `ytslot`(링크 미정 자리)
+- 첫 화면 사진: `spec.json` → `intro.photos`에 `{"img":"img/파일.jpg","label":"..."}`, 파일은 `drugs/<약>/scenes/img/`
+- 원내 도입 구분: `itype.json` (신약·대체·용량추가·원외→원내), 반영은 `tools/apply_itype.py`
+- 순서: `python tools/build_drug.py <약>`(drugs 폴더에서) → `python tools/narrate.py .` → `python tools/voice.py .`(약 폴더에서) → `python tools/render.py . [장면…]` → `python tools/assemble.py .` → `sh tools/publish.sh <약> <게시폴더> ...`
+- 게시 주소: https://antibaby1004-pixel.github.io/pharmacy-lesson-2026/ (첫 화면 = 15품목 목록 index.html), 약별 `<약>-v1/` (레파타만 `repatha-v8/`)
+- 공통 스타일 `lib/common.css`: 설명 중인 번호만 진하게, 나머지는 옅게(v13)
+- 클래리마신(clarimacin)은 원내 통과 품목에서 탈락 → 목록에서 제외(작업 폴더·clarimacin-v1 페이지는 보관)
+## 다른 PC에서 이어서 하기
+1. `git clone https://github.com/antibaby1004-pixel/pharmacy-lesson-2026.git`
+2. `cd pharmacy-lesson-2026/studio && pip install -r requirements.txt && python -m playwright install chromium` (ffmpeg 필요, 음성 합성은 edge-tts로 인터넷 필요)
+3. `build/` 폴더(렌더 결과)는 저장소에 없으므로, 고칠 약은 `render.py . `로 전체 장면을 한 번 다시 찍은 뒤 assemble
