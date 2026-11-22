@@ -1,8 +1,8 @@
 const steps=[
 {title: "브레즈트리 소개 · 3제 흡입제", file: "intro", duration: 27},
-{title: "세 경로 · 기도 넓히기", file: "m0", duration: 22},
-{title: "3제 흡입제 영상 · 0:32–4:20", id: "368GamSlc_0", start: 32, end: 260, note: "기전 영상 0:32–4:20 · 영어 원음. ⚙ → 자막 → 자동 번역 → 한국어."},
 {title: "흡입제 계열 영상 · 1:17–4:22", id: "BT516MnZJ7s", start: 77, end: 262, note: "기전 영상 1:17–4:22 · 영어 원음. ⚙ → 자막 → 자동 번역 → 한국어."},
+{title: "세 경로 · 기도 넓히기", file: "m0", duration: 29},
+{title: "3제 흡입제 영상 · 0:32–4:20", id: "368GamSlc_0", start: 32, end: 260, note: "기전 영상 0:32–4:20 · 영어 원음. ⚙ → 자막 → 자동 번역 → 한국어."},
 {title: "제형 · 함량 표기", file: "form", duration: 24},
 {title: "용법과 흡입 방법", file: "5", duration: 18},
 {title: "주의사항", file: "4", duration: 19},
