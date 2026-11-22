@@ -20,10 +20,10 @@ function sceneFade(t){const a=easeOut(seg(t,0,.35))*(1-seg(t,DUR-.35,DUR));$$('.
 function entries(t){
  $$('[data-in]').forEach(e=>{const t0=+e.dataset.in;const p=easeOut(seg(t,t0,t0+.55));e.style.opacity=p;e.style.transform=`translateY(${(1-p)*24}px)`});
  $$('[data-on]').forEach(e=>{const [a,b]=e.dataset.on.split(',').map(Number);e.classList.toggle('on',t>=a&&t<(isNaN(b)?1e9:b))});
- one(t,'.stage .box[data-in]');one(t,'.stage .g>.c[data-in]');
+ one(t,'.stage .box[data-in]');one(t,'.stage .g>.c[data-in]',3.2);
 }
 // v16: 한 화면에 한 가지 — 가장 최근에 나온 줄·카드만 크게(cur), 나머지는 숨김
-function one(t,sel){const L=$$(sel);if(L.length<2||L.some(e=>e.querySelector('svg,canvas,.tl,.bar,.W')))return;let cur=null;L.forEach(e=>{if(t>=+e.dataset.in)cur=e});L.forEach(e=>e.classList.toggle('cur',e===cur));L.forEach(e=>e.classList.toggle('gone',!!cur&&e!==cur))}
+function one(t,sel,hold){const L=$$(sel);if(L.length<2||L.some(e=>e.querySelector('svg,canvas,.tl,.bar,.W')))return;let cur=null;L.forEach(e=>{if(t>=+e.dataset.in)cur=e});if(hold&&cur===L[L.length-1]&&t>=+cur.dataset.in+hold)cur=null;L.forEach(e=>e.classList.toggle('cur',e===cur));L.forEach(e=>e.classList.toggle('gone',!!cur&&e!==cur))}
 /* ---------------- character ---------------- */
 const CHAR_SVG=`
 <g id="cBody">
