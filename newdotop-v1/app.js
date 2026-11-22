@@ -1,5 +1,5 @@
 const steps=[
-{title: "뉴도탑 소개 · 리도카인 첩부제", file: "intro", duration: 17},
+{title: "뉴도탑 소개 · 리도카인 첩부제 · 신약", file: "intro", duration: 20},
 {title: "나트륨 채널 차단", file: "m0", duration: 19},
 {title: "기전 영상 · 링크 확정 전", file: "yt1", duration: 9},
 {title: "용법", file: "5", duration: 17},
