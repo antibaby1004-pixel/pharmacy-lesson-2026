@@ -2,11 +2,11 @@ const steps=[
 {title: "맥시알록 소개 · PONV 예방 · 대체", file: "intro", duration: 20},
 {title: "세로토닌 · 5-HT3 · 구토중추", file: "m0", duration: 17},
 {title: "기전 영상 · 링크 확정 전", file: "yt1", duration: 9},
-{title: "2세대의 차이 · 긴 반감기", file: "m1", duration: 15},
+{title: "2세대의 차이 · 긴 반감기", file: "m1", duration: 18},
 {title: "규격 혼동 주의", file: "check", duration: 17},
 {title: "용법", file: "5", duration: 16},
 {title: "주의사항", file: "4", duration: 15},
-{title: "Take-home message", file: "summary", duration: 22}];
+{title: "Take-home message", file: "summary", duration: 24}];
 const $=id=>document.getElementById(id),local=$('local');
 let index=0,yt,ytReady=false,ytLoading=false,wantsPlay=false,slideRate=1,pendingOffset=0,ended=false,dragging=false;
 const isYT=()=>!!steps[index].id;
@@ -20,7 +20,7 @@ function elapsed(){return before(index)+(isYT()?(currentYT()?Math.max(0,yt.getCu
 function sync(){updateCaption();if(!dragging)$('timeline').value=Math.min(total(),elapsed());$('timeline').max=total();$('time').textContent=format(elapsed())+' / '+format(total());$('play').textContent=wantsPlay?'일시정지':'재생';$('play').setAttribute('aria-label',wantsPlay?'일시정지':'재생')}
 function smallYouTubeCaptions(){try{if(yt&&yt.getOptions('captions').includes('fontSize'))yt.setOption('captions','fontSize',-1)}catch{}}
 function updateCaption(){const box=$('localCaption');if(transitionPending){box.textContent='';return;}box.hidden=isYT();if(isYT()){box.textContent='';return}const cue=(captions[steps[index].file]||[]).find(c=>local.currentTime>=c.start&&local.currentTime<c.end);box.innerHTML=cue?(window.hlHTML?hlHTML(cue.text):cue.text):''}
-function update(){const s=steps[index];$('title').textContent=s.title;if($('ytTitle'))$('ytTitle').textContent=s.id?s.title:'';$('position').textContent=String(index+1).padStart(2,'0')+' / '+steps.length;$('ytNote').hidden=!isYT();$('ytNote').textContent=steps[index].id==='CksGufrYhPI'?'기전 영상 처음부터 끝까지 · 영어 원음. ⚙ → 자막 → 자동 번역 → 한국어.':'자가주사 시연 1:30–4:40 · 한국어 자막이 없으면 ⚙ → 자막 → 자동 번역 → 한국어';if(isYT()){$('original').href='https://www.youtube.com/watch?v='+s.id+'&t='+Math.floor(s.start+pendingOffset)+'s'}sync()}
+function update(){const s=steps[index];$('title').textContent=s.title;if($('ytTitle'))$('ytTitle').textContent=s.id?s.title:'';$('position').textContent=String(index+1).padStart(2,'0')+' / '+steps.length;$('ytNote').hidden=!isYT();$('ytNote').textContent=(steps[index].note||'기전 영상 · 영어 원음. ⚙ → 자막 → 자동 번역 → 한국어.');if(isYT()){$('original').href='https://www.youtube.com/watch?v='+s.id+'&t='+Math.floor(s.start+pendingOffset)+'s'}sync()}
 function error(t){revealScene();try{local.pause();if(ytReady)yt.stopVideo()}catch{}message(t);$('errorText').textContent=t;$('fallback').hidden=false;wantsPlay=false;sync()}
 function playLocal(){const token=transitionId;local.playbackRate=slideRate;local.play().catch(()=>{if(token!==transitionId||isYT()||transitionPhase==='covering')return;wantsPlay=false;localFrameReady();sync();message('재생 버튼을 눌러 주세요.')})}
 let ytLoadedFor=-1;function playYT(){if(ytLoadedFor===transitionId)return;ytLoadedFor=transitionId;try{local.pause()}catch{}const s=steps[index],clip={videoId:s.id,startSeconds:s.start+pendingOffset,endSeconds:s.end};wantsPlay?yt.loadVideoById(clip):yt.cueVideoById(clip);yt.setPlaybackRate(1)}

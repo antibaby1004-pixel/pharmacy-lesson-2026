@@ -10,38 +10,38 @@
   {
    "part": "m0",
    "scene": "m0.html",
-   "video_dur": 26.04
+   "video_dur": 31.19
   },
   {
-   "part": "yt1",
-   "scene": "yt1.html",
-   "video_dur": 7.11
+   "part": "m1",
+   "scene": "m1.html",
+   "video_dur": 25.74
   },
   {
    "part": "read",
    "scene": "read.html",
-   "video_dur": 12.97
+   "video_dur": 43.71
   },
   {
    "part": "5",
    "scene": "5.html",
-   "video_dur": 11.0
+   "video_dur": 22.46
   },
   {
    "part": "4",
    "scene": "4.html",
-   "video_dur": 18.67
+   "video_dur": 21.15
   },
   {
    "part": "summary",
    "scene": "summary.html",
-   "video_dur": 16.29
+   "video_dur": 20.83
   }
  ],
  "order": [
   "intro",
   "m0",
-  "yt1",
+  "m1",
   "read",
   "5",
   "4",
@@ -50,7 +50,7 @@
  "player_parts": [
   "intro",
   "m0",
-  "yt1",
+  "m1",
   "read",
   "5",
   "4",
@@ -85,13 +85,29 @@
    "SOD2",
    "글루타치온 과산화효소",
    "보조인자",
-   "기저핵"
+   "기저핵",
+   "담즙",
+   "신장",
+   "담창구",
+   "전혈",
+   "CRP",
+   "ESPEN"
   ],
   "warn": [
    "신경독성",
    "축적",
    "담도 폐쇄",
-   "신부전"
+   "신부전",
+   "담즙정체",
+   "간부전",
+   "T1 고신호",
+   "호중구 감소",
+   "골수이형성증후군",
+   "벤질알코올",
+   "정맥염",
+   "신생아",
+   "미숙아",
+   "담도폐쇄"
   ]
  },
  "intro": {
@@ -111,12 +127,12 @@
   ],
   "facts": [
    {
-    "t": 3.68,
-    "lab": "성분",
-    "v": "Zn · Cu · Mn · Cr · Se"
+    "t": 4.44,
+    "lab": "효능",
+    "v": "정맥영양 시 미량원소 5종 보급"
    },
    {
-    "t": 6.66,
+    "t": 8.17,
     "lab": "1 mL 중",
     "v": "Zn 1 mg · Cu 0.4 mg · Mn 0.1 mg · Cr 4 µg · Se 20 µg"
    }
@@ -132,28 +148,28 @@
    {
     "k": "prop",
     "name": "magnifier",
-    "t0": 3.88,
-    "t1": 6.48
+    "t0": 4.64,
+    "t1": 7.24
    },
    {
     "k": "thumbs",
-    "t0": 6.86,
-    "t1": 8.46
+    "t0": 8.37,
+    "t1": 9.97
    },
    {
     "k": "prop",
     "name": "book",
-    "t0": 15.59,
-    "t1": 18.19
+    "t0": 17.11,
+    "t1": 19.71
    }
   ],
+  "full": "네오블루 5 주",
+  "full_en": "Neoblue 5 inj.",
   "itype": {
    "kind": "대체",
    "detail": "멀티블루5주(라이트팜텍) → 네오블루5<br>조성 5종 동일",
-   "t": 15.39
+   "t": 16.91
   },
-  "chip": "네오블루5 Neoblue 5 <i>· trace elements</i>",
-  "full": "네오블루 5 주",
-  "full_en": "Neoblue 5 inj."
+  "chip": "네오블루5 Neoblue 5 <i>· trace elements</i>"
  }
 }

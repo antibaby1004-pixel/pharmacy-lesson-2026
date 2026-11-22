@@ -20,7 +20,7 @@
   {
    "part": "m1",
    "scene": "m1.html",
-   "video_dur": 18.22
+   "video_dur": 23.67
   },
   {
    "part": "5",
@@ -142,13 +142,13 @@
     "t1": 18.34
    }
   ],
+  "full": "크라비트 주 750 mg/150 mL",
+  "full_en": "Cravit inj. 750 mg/150 mL",
   "itype": {
    "kind": "용량추가",
    "detail": "기존 레브록신주 250 · 500 mg은 유지<br>750 mg 고용량 규격 추가",
    "t": 8.17
   },
-  "chip": "크라비트 Cravit <i>· levofloxacin 750 mg/150 mL</i>",
-  "full": "크라비트 주 750 mg/150 mL",
-  "full_en": "Cravit inj. 750 mg/150 mL"
+  "chip": "크라비트 Cravit <i>· levofloxacin 750 mg/150 mL</i>"
  }
 }

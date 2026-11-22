@@ -38,7 +38,7 @@
   "say": "해골약사 등장! 오늘은 맥시알록!",
   "bubble": "해골약사 등장!<br>오늘은 맥시알록!"
  },
- "intro_title": "맥시알록 소개 · PONV 예방",
+ "intro_title": "맥시알록 소개 · PONV 예방 · 대체",
  "intro": {
   "title": "맥시알록",
   "en": "Maxialox prefilled inj.",
@@ -143,11 +143,11 @@
    "type": "mech",
    "title": "2세대의 차이 · 긴 반감기",
    "sec": "<b>작용 기전</b> · 02 / 02",
-   "h1": "오래 붙어 있어 지연성까지 덮습니다",
+   "h1": "오래 붙어 있어 작용이 깁니다",
    "sents": [
     "1세대와 다른 점은, 수용체에 붙는 방식이에요.",
     "알로스테릭하게 결합하고 수용체 내재화를 일으켜, 효과가 오래가요.",
-    "반감기가 약 40시간으로 길어서, 급성뿐 아니라 지연성 구역까지 덮어요."
+    "반감기가 약 40시간으로 길어서, 항암제 구토에서는 지연성 구역까지 덮어요. 다만 수술 후 용량의 효과는 24시간까지만 확인됐어요."
    ],
    "steps": [
     {
@@ -163,12 +163,12 @@
     {
      "s": 2,
      "h": "반감기 약 40시간",
-     "p": "급성 + 지연성 구역"
+     "p": "CINV: 지연성까지 · PONV: 24시간까지 확인"
     }
    ],
    "key": {
     "s": 2,
-    "text": "긴 반감기 → 지연성까지"
+    "text": "긴 반감기 → CINV 지연성까지 · PONV는 24시간"
    },
    "fig": "<text x=\"40\" y=\"70\" font-size=\"22\" font-weight=\"700\" fill=\"#3F4D5A\">작용 지속 시간 (개념)</text>\n<line x1=\"40\" y1=\"440\" x2=\"580\" y2=\"440\" stroke=\"#243341\" stroke-width=\"3\"/>\n<rect x=\"40\" y=\"450\" width=\"130\" height=\"30\" fill=\"#FFF7EC\"/><text x=\"105\" y=\"472\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#7D4A00\">급성 (~24 h)</text>\n<rect x=\"170\" y=\"450\" width=\"410\" height=\"30\" fill=\"#FCE9E7\"/><text x=\"375\" y=\"472\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#8E2219\">지연성 (24–120 h)</text>\n<text x=\"40\" y=\"170\" font-size=\"22\" font-weight=\"700\" fill=\"#5B7FA6\">1세대</text><rect id=\"g1\" x=\"40\" y=\"185\" width=\"0\" height=\"50\" rx=\"10\" fill=\"#9FB4C6\"/>\n<text x=\"40\" y=\"300\" font-size=\"22\" font-weight=\"700\" fill=\"#007F86\">palonosetron · 반감기 약 40시간</text><rect id=\"g2\" x=\"40\" y=\"315\" width=\"0\" height=\"50\" rx=\"10\" fill=\"#007F86\"/>\n<g id=\"ai\" style=\"opacity:0\" transform=\"translate(470 150)\"><rect x=\"-26\" y=\"-40\" width=\"52\" height=\"80\" rx=\"12\" fill=\"#B9A7E0\" stroke=\"#243341\" stroke-width=\"3\"/><circle cx=\"-34\" cy=\"0\" r=\"12\" fill=\"#007F86\"/><path d=\"M0 50 v40\" stroke=\"#5B5FA8\" stroke-width=\"5\" marker-end=\"url(#m)\"/><text y=\"120\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#5B5FA8\">내재화</text></g>\n<defs><marker id=\"m\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"5\" markerHeight=\"5\" orient=\"auto\"><path d=\"M0 0 L10 5 L0 10z\" fill=\"#5B5FA8\"/></marker></defs>\n<text x=\"306\" y=\"560\" text-anchor=\"middle\" font-size=\"20\" fill=\"#3F4D5A\">막대 길이는 상대 비교용 개념도</text>",
    "js": "SCENE.anim=o=>{$i('g1').setAttribute('width',110*seg(o,S[0]+0.3,S[0]+1.2));$i('ai').style.opacity=seg(o,S[1],S[1]+0.6);$i('g2').setAttribute('width',520*easeOut(seg(o,S[2],S[2]+1.6)))};"
@@ -301,7 +301,7 @@
    "sents": [
     "정리할게요.",
     "맥시알록은 5-HT3 수용체를 막아 구토 신호를 끊어요.",
-    "2세대라서 반감기가 길고 지연성까지 덮어요.",
+    "2세대라서 반감기가 길고, 수술 후 용량은 24시간 예방 효과가 확인됐어요.",
     [
      "0.075 mg, 1.5 mL는 수술 후 오심·구토 예방 용량이에요.",
      "영점영칠오 밀리그램, 일점오 밀리리터는, 수술 후 오심 구토 예방 용량이에요."
@@ -318,7 +318,7 @@
     {
      "s": 2,
      "lab": "2세대",
-     "v": "반감기 약 40시간<br>지연성까지"
+     "v": "반감기 약 40시간<br>PONV 24시간 확인"
     },
     {
      "s": 3,

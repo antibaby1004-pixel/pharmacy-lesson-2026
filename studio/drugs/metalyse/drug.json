@@ -20,7 +20,7 @@
   {
    "part": "m1",
    "scene": "m1.html",
-   "video_dur": 21.65
+   "video_dur": 22.1
   },
   {
    "part": "dose",
@@ -162,13 +162,13 @@
     "t1": 16.83
    }
   ],
+  "full": "메탈라제 주사 25 mg",
+  "full_en": "Metalyse inj. 25 mg",
   "itype": {
    "kind": "신약",
    "detail": "원내 신약 · 액티라제와 병존<br>대체 아님 (겹치는 적응증은 뇌졸중뿐)",
    "t": 14.03
   },
-  "chip": "메탈라제 Metalyse <i>· tenecteplase 25 mg</i>",
-  "full": "메탈라제 주사 25 mg",
-  "full_en": "Metalyse inj. 25 mg"
+  "chip": "메탈라제 Metalyse <i>· tenecteplase 25 mg</i>"
  }
 }

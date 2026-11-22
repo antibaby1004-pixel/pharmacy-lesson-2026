@@ -20,7 +20,7 @@
   {
    "part": "m1",
    "scene": "m1.html",
-   "video_dur": 12.97
+   "video_dur": 16.75
   },
   {
    "part": "check",
@@ -40,7 +40,7 @@
   {
    "part": "summary",
    "scene": "summary.html",
-   "video_dur": 20.23
+   "video_dur": 22.05
   }
  ],
  "order": [
@@ -146,13 +146,13 @@
     "t1": 16.98
    }
   ],
+  "full": "맥시알록 프리필드 주 1.5 mL",
+  "full_en": "Maxialox prefilled inj. 1.5 mL",
   "itype": {
    "kind": "대체",
    "detail": "팔로논주 1.5 mL(명문제약)<br>→ 맥시알록으로 대체",
    "t": 14.18
   },
-  "chip": "맥시알록 Maxialox <i>· palonosetron 0.075 mg/1.5 mL</i>",
-  "full": "맥시알록 프리필드 주 1.5 mL",
-  "full_en": "Maxialox prefilled inj. 1.5 mL"
+  "chip": "맥시알록 Maxialox <i>· palonosetron 0.075 mg/1.5 mL</i>"
  }
 }

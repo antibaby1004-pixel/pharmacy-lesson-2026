@@ -33,20 +33,36 @@
    "SOD2",
    "글루타치온 과산화효소",
    "보조인자",
-   "기저핵"
+   "기저핵",
+   "담즙",
+   "신장",
+   "담창구",
+   "전혈",
+   "CRP",
+   "ESPEN"
   ],
   "warn": [
    "신경독성",
    "축적",
    "담도 폐쇄",
-   "신부전"
+   "신부전",
+   "담즙정체",
+   "간부전",
+   "T1 고신호",
+   "호중구 감소",
+   "골수이형성증후군",
+   "벤질알코올",
+   "정맥염",
+   "신생아",
+   "미숙아",
+   "담도폐쇄"
   ]
  },
  "greet": {
   "say": "해골약사 등장! 오늘은 네오블루 파이브!",
   "bubble": "해골약사 등장!<br>오늘은 네오블루5!"
  },
- "intro_title": "네오블루5 소개 · 미량원소 5종",
+ "intro_title": "네오블루5 소개 · 미량원소 5종 · 대체",
  "intro": {
   "title": "네오블루5",
   "en": "Neoblue 5 inj.",
@@ -63,8 +79,8 @@
    }
   ],
   "sents": [
-   "다섯 가지 미량원소를 담은 정맥영양용 첨가제예요.",
-   "아연, 구리, 망간, 크롬, 셀레늄이 들어 있어요.",
+   "아연, 구리, 망간, 크롬, 셀레늄, 다섯 가지를 담은 미량원소 제제예요.",
+   "정맥영양을 하는 환자에게 미량원소를 보급할 때 써요.",
    [
     "1 mL 안에 아연 1 mg, 구리 0.4 mg, 망간 0.1 mg, 크롬 4 µg, 셀레늄 20 µg이에요.",
     "1 밀리리터 안에 아연 1 밀리그램, 구리 영점사 밀리그램, 망간 영점일 밀리그램, 크롬 4 마이크로그램, 셀레늄 20 마이크로그램이에요."
@@ -77,8 +93,8 @@
   "facts": [
    {
     "s": 1,
-    "lab": "성분",
-    "v": "Zn · Cu · Mn · Cr · Se"
+    "lab": "효능",
+    "v": "정맥영양 시 미량원소 5종 보급"
    },
    {
     "s": 2,
@@ -102,145 +118,206 @@
    "sec": "<b>작용 기전</b> · MECHANISM",
    "h1": "원소마다 들어갈 효소 자리가 있습니다",
    "sents": [
-    "정맥영양 수액에 이 바이알을 더하면, 다섯 원소가 각자 효소 자리에 들어가요.",
-    "아연은 300종이 넘는 효소의 보조인자로, 상처치유와 면역에 관여해요.",
+    "정맥영양 수액에는 보통 미량원소가 들어 있지 않아서, 따로 보급해야 해요.",
+    "아연은 300종이 넘는 효소에 들어가서, 부족하면 피부염과 상처치유 지연이 생겨요.",
     [
-     "구리는 세룰로플라스민과 사이토크롬 c 산화효소에 들어가 철 대사를 도와요.",
-     "구리는 세룰로플라스민과 사이토크롬 씨 산화효소에 들어가 철 대사를 도와요."
+     "구리는 세룰로플라스민으로 철을 산화시켜 트랜스페린에 실어요. 부족하면 철분제로 안 낫는 빈혈과 호중구 감소가 와요.",
+     "구리는 세룰로플라스민으로 철을 산화시켜 트랜스페린에 실어요. 부족하면 철분제로 안 낫는 빈혈과 호중구 감소가 와요."
     ],
     [
-     "망간은 SOD2 같은 항산화 효소, 셀레늄은 글루타치온 과산화효소의 활성 중심이에요.",
-     "망간은 에스오디 투 같은 항산화 효소, 셀레늄은 글루타치온 과산화효소의 활성 중심이에요."
+     "셀레늄은 글루타치온 과산화효소와 갑상선 호르몬 전환에, 망간은 SOD2에 쓰여요. 크롬은 인슐린 작용을 돕는다고 하지만 근거가 약해요.",
+     "셀레늄은 글루타치온 과산화효소와 갑상선 호르몬 전환에, 망간은 에스오디 투에 쓰여요. 크롬은 인슐린 작용을 돕는다고 하지만 근거가 약해요."
     ],
-    "크롬은 인슐린 작용을 돕는다고 알려져 있지만, 근거는 제한적이에요."
+    "그래서 부족하면, 원소마다 다른 신호로 드러나요."
    ],
    "steps": [
     {
      "s": 1,
      "h": "아연 Zn",
-     "p": "300종 이상 효소의 보조인자 · 상처치유·면역"
+     "p": "300종+ 효소 · 부족 → 피부염·상처치유 지연·미각 저하"
     },
     {
      "s": 2,
      "h": "구리 Cu",
-     "p": "세룰로플라스민·사이토크롬 c 산화효소 · 철 대사"
+     "p": "세룰로플라스민 · 부족 → 철분제로 안 낫는 빈혈·호중구 감소"
     },
     {
      "s": 3,
-     "h": "망간 Mn · 셀레늄 Se · 크롬 Cr",
-     "p": "SOD2 · 글루타치온 과산화효소 — 항산화 · 크롬은 인슐린 보조(근거 제한적)"
+     "h": "셀레늄 Se · 망간 Mn · 크롬 Cr",
+     "p": "Se 글루타치온 과산화효소·T4→T3 · Mn SOD2 · Cr 인슐린 보조(근거 약함)"
     }
    ],
    "key": {
     "s": 4,
-    "text": "미량원소 = 효소의 부품"
+    "text": "원소 = 효소의 부품 → 부족하면 원소마다 다른 신호"
    },
    "fig": "<path d=\"M90 40 h170 a18 18 0 0 1 18 18 v150 a30 30 0 0 1 -30 30 h-146 a30 30 0 0 1 -30 -30 v-150 a18 18 0 0 1 18 -18z\" fill=\"#EEF6FB\" stroke=\"#243341\" stroke-width=\"4\"/>\n<text x=\"175\" y=\"130\" text-anchor=\"middle\" font-size=\"26\" font-weight=\"700\" fill=\"#3E5872\">정맥영양 수액</text>\n<g id=\"vial\" transform=\"translate(430 60)\"><rect x=\"-26\" y=\"0\" width=\"52\" height=\"20\" rx=\"4\" fill=\"#2F6FB0\"/><rect x=\"-36\" y=\"20\" width=\"72\" height=\"110\" rx=\"14\" fill=\"#fff\" stroke=\"#243341\" stroke-width=\"4\"/><text y=\"86\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#243341\">미량원소</text></g><rect x=\"250\" y=\"274\" width=\"330\" height=\"52\" rx=\"12\" fill=\"#fff\" stroke=\"#C9D6E0\" stroke-width=\"3\"/><text x=\"300\" y=\"309\" font-size=\"22\" font-weight=\"700\" fill=\"#243341\">300종+ 효소</text><g id=\"e0\"><circle r=\"26\" fill=\"#5B7FA6\"/><text y=\"8\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"700\" fill=\"#fff\">Zn</text></g><rect x=\"250\" y=\"338\" width=\"330\" height=\"52\" rx=\"12\" fill=\"#fff\" stroke=\"#C9D6E0\" stroke-width=\"3\"/><text x=\"300\" y=\"373\" font-size=\"22\" font-weight=\"700\" fill=\"#243341\">세룰로플라스민 · COX</text><g id=\"e1\"><circle r=\"26\" fill=\"#C0704A\"/><text y=\"8\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"700\" fill=\"#fff\">Cu</text></g><rect x=\"250\" y=\"402\" width=\"330\" height=\"52\" rx=\"12\" fill=\"#fff\" stroke=\"#C9D6E0\" stroke-width=\"3\"/><text x=\"300\" y=\"437\" font-size=\"22\" font-weight=\"700\" fill=\"#243341\">SOD2</text><g id=\"e2\"><circle r=\"26\" fill=\"#7B4FB8\"/><text y=\"8\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"700\" fill=\"#fff\">Mn</text></g><rect x=\"250\" y=\"466\" width=\"330\" height=\"52\" rx=\"12\" fill=\"#fff\" stroke=\"#C9D6E0\" stroke-width=\"3\"/><text x=\"300\" y=\"501\" font-size=\"22\" font-weight=\"700\" fill=\"#243341\">GPx · 탈요오드효소</text><g id=\"e3\"><circle r=\"26\" fill=\"#2F8F6A\"/><text y=\"8\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"700\" fill=\"#fff\">Se</text></g><rect x=\"250\" y=\"530\" width=\"330\" height=\"52\" rx=\"12\" fill=\"#fff\" stroke=\"#C9D6E0\" stroke-width=\"3\"/><text x=\"300\" y=\"565\" font-size=\"22\" font-weight=\"700\" fill=\"#243341\">인슐린 작용 보조</text><g id=\"e4\"><circle r=\"26\" fill=\"#8A8F99\"/><text y=\"8\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"700\" fill=\"#fff\">Cr</text></g><text x=\"415\" y=\"630\" text-anchor=\"middle\" font-size=\"24\" font-weight=\"700\" fill=\"#007F86\">원소 = 효소의 부품(보조인자 · 활성 중심)</text>",
-   "js": "const ORD=[[0,1],[1,2],[2,3],[3,3],[4,4]];\nSCENE.anim=o=>{const v=seg(o,0.3,1.4);$i('vial').setAttribute('transform',`translate(${lerp(430,175,ease(v))} ${lerp(60,150,ease(v))}) rotate(${lerp(0,160,ease(v))})`);$i('vial').style.opacity=1-seg(o,1.6,2.0);\n ORD.forEach(([i,si])=>{const k=easeOut(seg(o,S[si]+0.2*(i===3?1:0),S[si]+1.1+0.2*(i===3?1:0)));const y=300+i*64;const e=$i('e'+i);e.setAttribute('transform',`translate(${lerp(175,240,k)} ${lerp(200,y,k)})`);e.style.opacity=seg(o,1.8,2.2)})};"
+   "js": "const ORD=[[0,1],[1,2],[2,3],[3,3],[4,3]];\nSCENE.anim=o=>{const v=seg(o,0.3,1.4);$i('vial').setAttribute('transform',`translate(${lerp(430,175,ease(v))} ${lerp(60,150,ease(v))}) rotate(${lerp(0,160,ease(v))})`);$i('vial').style.opacity=1-seg(o,1.6,2.0);\n ORD.forEach(([i,si])=>{const k=easeOut(seg(o,S[si]+0.2*(i>=3?(i-2)*0.6:0),S[si]+1.1+0.2*(i>=3?(i-2)*0.6:0)));const y=300+i*64;const e=$i('e'+i);e.setAttribute('transform',`translate(${lerp(175,240,k)} ${lerp(200,y,k)})`);e.style.opacity=seg(o,1.8,2.2)})};"
   },
   {
-   "id": "yt1",
-   "type": "ytslot",
-   "title": "기전 영상 · 링크 확정 전",
-   "sec": "<b>기전 영상</b> · VIDEO",
-   "h1": ""
+   "id": "m1",
+   "type": "mech",
+   "title": "두 갈래 출구 · 쌓이는 곳",
+   "sec": "<b>배설 경로</b> · EXCRETION",
+   "h1": "출구가 막히면 그 원소가 쌓입니다",
+   "sents": [
+    "들어간 원소는 두 갈래 출구로 빠져나가요.",
+    "구리와 망간은 간에서 담즙으로 나가서, 담즙정체나 담도폐쇄가 있으면 쌓여요.",
+    "아연과 셀레늄은 신장과 장으로, 크롬은 주로 신장으로 나가서, 신부전에서 쌓일 수 있어요.",
+    [
+     "특히 망간은 뇌의 담창구에 쌓여 MRI T1 고신호와 파킨슨 같은 증상을 만들고, 되돌아오지 않을 수 있어요.",
+     "특히 망간은 뇌의 담창구에 쌓여, 엠알아이 티 원 고신호와 파킨슨 같은 증상을 만들고, 되돌아오지 않을 수 있어요."
+    ],
+    "출구가 막힌 환자는, 투여량을 줄이거나 쉬면서 농도를 확인해요."
+   ],
+   "steps": [
+    {
+     "s": 1,
+     "h": "간 → 담즙 · Cu · Mn",
+     "p": "담즙정체·담도폐쇄면 쌓임"
+    },
+    {
+     "s": 2,
+     "h": "신장 · 장 → Zn · Se · Cr",
+     "p": "Zn·Se 소변+대변 · Cr 주로 소변 · 신부전이면 쌓임"
+    },
+    {
+     "s": 3,
+     "h": "망간 과잉 → 뇌 담창구",
+     "p": "MRI T1 고신호 · 파킨슨 유사 증상 · 비가역 가능"
+    }
+   ],
+   "key": {
+    "s": 4,
+    "text": "출구가 막힌 환자 → 투여량 조절 · 농도 확인"
+   },
+   "fig": "<rect x=\"156\" y=\"30\" width=\"300\" height=\"94\" rx=\"18\" fill=\"#FDECEC\" stroke=\"#243341\" stroke-width=\"4\"/><text x=\"306\" y=\"60\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"700\" fill=\"#9B3B3B\">혈액</text>\n<path d=\"M306 124 L150 262 M150 336 L150 430 M306 124 L460 258 M460 342 L460 430\" stroke=\"#9AAAB8\" stroke-width=\"4\" stroke-dasharray=\"10 8\" fill=\"none\"/>\n<path d=\"M306 124 L306 540\" stroke=\"#C9B6E4\" stroke-width=\"4\" stroke-dasharray=\"6 8\" fill=\"none\"/>\n<path d=\"M66 286 q50 -58 170 -30 q22 34 -24 76 q-74 30 -146 -4 z\" fill=\"#D99A78\" stroke=\"#243341\" stroke-width=\"4\"/><text x=\"150\" y=\"306\" text-anchor=\"middle\" font-size=\"24\" font-weight=\"700\" fill=\"#fff\">간</text>\n<ellipse cx=\"432\" cy=\"300\" rx=\"28\" ry=\"42\" fill=\"#C56B6B\" stroke=\"#243341\" stroke-width=\"4\"/><ellipse cx=\"490\" cy=\"300\" rx=\"28\" ry=\"42\" fill=\"#C56B6B\" stroke=\"#243341\" stroke-width=\"4\"/><text x=\"560\" y=\"308\" text-anchor=\"middle\" font-size=\"24\" font-weight=\"700\" fill=\"#243341\">신장</text>\n<rect x=\"60\" y=\"430\" width=\"180\" height=\"96\" rx=\"14\" fill=\"#FFF6E5\" stroke=\"#B35C00\" stroke-width=\"3\"/><text x=\"150\" y=\"462\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"700\" fill=\"#B35C00\">담즙 → 대변</text>\n<rect x=\"370\" y=\"430\" width=\"180\" height=\"96\" rx=\"14\" fill=\"#EAF3FB\" stroke=\"#1F6FD1\" stroke-width=\"3\"/><text x=\"460\" y=\"462\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"700\" fill=\"#1F6FD1\">소변</text>\n<g id=\"blk\" style=\"opacity:0\"><rect x=\"70\" y=\"366\" width=\"160\" height=\"40\" rx=\"10\" fill=\"#D64545\"/><text x=\"150\" y=\"394\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"700\" fill=\"#fff\">담즙정체 · 막힘</text></g>\n<g transform=\"translate(306 588)\"><ellipse rx=\"92\" ry=\"44\" fill=\"#F1EAF9\" stroke=\"#243341\" stroke-width=\"4\"/><ellipse id=\"brainR\" rx=\"92\" ry=\"44\" fill=\"#E07B7B\" style=\"opacity:0\"/><text y=\"8\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"700\" fill=\"#243341\">뇌 · 담창구</text></g>\n<text id=\"t1\" x=\"440\" y=\"594\" font-size=\"20\" font-weight=\"700\" fill=\"#D64545\" style=\"opacity:0\">T1 고신호</text>\n<g id=\"x0\"><circle r=\"22\" fill=\"#5B7FA6\"/><text y=\"7\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#fff\">Zn</text></g>\n<g id=\"x1\"><circle r=\"22\" fill=\"#C0704A\"/><text y=\"7\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#fff\">Cu</text></g>\n<g id=\"x2\"><circle r=\"22\" fill=\"#7B4FB8\"/><text y=\"7\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#fff\">Mn</text></g>\n<g id=\"x3\"><circle r=\"22\" fill=\"#2F8F6A\"/><text y=\"7\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#fff\">Se</text></g>\n<g id=\"x4\"><circle r=\"22\" fill=\"#8A8F99\"/><text y=\"7\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#fff\">Cr</text></g>\n<g id=\"x5\" style=\"opacity:0\"><circle r=\"22\" fill=\"#7B4FB8\" stroke=\"#D64545\" stroke-width=\"4\"/><text y=\"7\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#fff\">Mn</text></g>",
+   "js": "const B=[[186,96],[246,96],[306,96],[366,96],[426,96]];\nconst L3=(pts,k)=>{const n=pts.length-1,t=Math.min(k*n,n-1e-6),i=Math.floor(t),f=t-i;return [lerp(pts[i][0],pts[i+1][0],f),lerp(pts[i][1],pts[i+1][1],f)]};\nconst R={1:[[150,300],[132,500]],2:[[150,300],[168,500]],0:[[432,300],[420,500]],3:[[461,300],[460,500]],4:[[490,300],[500,500]]};\nconst W={1:[1,0],2:[1,0.4],0:[2,0],3:[2,0.4],4:[2,0.8]};\nSCENE.anim=o=>{[0,1,2,3,4].forEach(i=>{const [si,d]=W[i];const k=ease(seg(o,S[si]+0.3+d,S[si]+2.4+d));const p=L3([B[i],...R[i]],k);const e=$i('x'+i);e.setAttribute('transform',`translate(${p[0]} ${p[1]})`);e.style.opacity=seg(o,0.2,0.8)});\n$i('blk').style.opacity=seg(o,S[3],S[3]+0.5);const k5=ease(seg(o,S[3]+0.5,S[3]+2.6));const p5=L3([[306,96],[306,330],[306,546]],k5);$i('x5').setAttribute('transform',`translate(${p5[0]} ${p5[1]})`);$i('x5').style.opacity=seg(o,S[3]+0.3,S[3]+0.7);\n$i('brainR').style.opacity=0.85*seg(o,S[3]+2.2,S[3]+2.8);$i('t1').style.opacity=seg(o,S[3]+2.4,S[3]+3.0)};",
+   "fn": "교육용 개념도 · 미량원소 5종 허가사항 · ESPEN 미량영양소 지침"
   },
   {
    "id": "read",
    "type": "rows",
    "title": "함량 읽는 법",
    "sec": "<b>함량</b> · ELEMENTAL DOSE",
-   "h1": "염 무게가 아니라 원소량으로 읽습니다",
+   "h1": "원소량으로 읽고, 허가 용량과 최신 권고를 함께 봅니다",
    "sents": [
     "함량은 염의 무게가 아니라 원소의 무게로 읽어야 해요.",
     [
      "예를 들어 황산아연수화물 4.39 mg은 아연으로 1 mg이에요.",
      "예를 들어 황산아연수화물 사점삼구 밀리그램은, 아연으로 1 밀리그램이에요."
     ],
-    "라벨의 큰 숫자를 원소량으로 착각하지 않도록 주의해요."
+    [
+     "1 mL에는 아연 1 mg, 구리 0.4 mg, 망간 100 µg, 크롬 4 µg, 셀레늄 20 µg이 들어 있어요.",
+     "1 밀리리터에는 아연 1 밀리그램, 구리 영점사 밀리그램, 망간 백 마이크로그램, 크롬 4 마이크로그램, 셀레늄 20 마이크로그램이 들어 있어요."
+    ],
+    [
+     "허가사항의 성인 하루 용량은 예전 기준이라, 망간 0.15에서 0.8 mg, 셀레늄 20에서 40 µg으로 적혀 있어요.",
+     "허가사항의 성인 하루 용량은 예전 기준이라, 망간 영점일오에서 영점팔 밀리그램, 셀레늄 20에서 40 마이크로그램으로 적혀 있어요."
+    ],
+    [
+     "최신 ESPEN 권고는 망간 55 µg, 셀레늄 60에서 100 µg이라, 이 기준으로 보면 망간은 1 mL로 이미 넘고 셀레늄은 모자라요.",
+     "최신 이에스펜 권고는 망간 55 마이크로그램, 셀레늄 60에서 100 마이크로그램이라, 이 기준으로 보면 망간은 1 밀리리터로 이미 넘고 셀레늄은 모자라요."
+    ],
+    "그래서 셀레늄을 채우려고 양을 늘리면 망간도 같이 늘어나요. 필요하면 단일 제제 보충을 검토해요."
    ],
    "rows": [
     {
      "s": 0,
      "lab": "원칙",
-     "v": "염 중량 ≠ 원소량 → 원소 기준으로 읽기",
+     "v": "염 중량 ≠ 원소량 · 황산아연수화물 4.39 mg = 아연 1 mg",
      "cls": "amb"
-    },
-    {
-     "s": 1,
-     "lab": "예시",
-     "v": "황산아연수화물 4.39 mg = 아연 1 mg"
     },
     {
      "s": 2,
      "lab": "1 mL 원소량",
-     "v": "Zn 1 mg · Cu 0.4 mg · Mn 0.1 mg · Cr 4 µg · Se 20 µg"
+     "v": "Zn 1 mg · Cu 0.4 mg · Mn 100 µg · Cr 4 µg · Se 20 µg"
+    },
+    {
+     "s": 3,
+     "lab": "허가 1일 · 성인",
+     "v": "Zn 2.5–4 mg · Cu 0.5–1.5 mg · Mn 0.15–0.8 mg · Cr 10–15 µg · Se 20–40 µg"
+    },
+    {
+     "s": 4,
+     "lab": "ESPEN 1일",
+     "v": "Zn 3–5 mg · Cu 0.3–0.5 mg · Mn 55 µg · Se 60–100 µg → Mn 초과 · Se 부족",
+     "cls": "red"
     }
    ]
   },
   {
    "id": "5",
    "type": "rows",
-   "title": "용법과 조제",
+   "title": "용법 · 금기",
    "sec": "<b>용법</b> · DOSAGE",
-   "h1": "정맥영양 수액에 무균 첨가",
+   "h1": "수액에 섞어서, 신생아에겐 쓰지 않습니다",
    "sents": [
-    "정맥영양 수액에 섞어서 정맥으로 투여해요.",
-    "용량은 환자 상태에 맞춰 처방하고, 혈중 미량원소 농도를 보며 조절해요.",
-    "수액에 넣을 때는 무균 조작으로 첨가해요."
+    "희석하지 않고 바로 주사하면 정맥염이 생길 수 있어서, 반드시 수액에 섞어 정맥으로 투여해요.",
+    "용량은 환자 상태에 맞춰 처방하고, 혈장 미량원소 농도를 보며 조절해요.",
+    "보존제로 벤질알코올이 들어 있어서, 신생아와 미숙아에게는 쓰지 않아요.",
+    "혈청 아연은 염증이 있으면 낮게 나오니 CRP와 같이 보고, 망간은 혈청이 아니라 전혈로 확인해요."
    ],
    "rows": [
     {
      "s": 0,
      "lab": "투여",
-     "v": "정맥영양 수액에 첨가 → 정맥 투여"
+     "v": "반드시 수액에 섞어 정맥 투여 · 희석 없이 주사 금지(정맥염)"
     },
     {
      "s": 1,
      "lab": "용량",
-     "v": "환자 상태에 따라 처방 · 혈중 농도 보며 조절"
+     "v": "환자 상태에 따라 처방 · 혈장 미량원소 보며 조절"
     },
     {
      "s": 2,
-     "lab": "조제",
-     "v": "무균 조작으로 첨가"
+     "lab": "금기",
+     "v": "신생아 · 미숙아 — 벤질알코올 함유",
+     "cls": "red"
+    },
+    {
+     "s": 3,
+     "lab": "모니터링",
+     "v": "혈청 아연 + CRP 함께 · 망간은 전혈",
+     "cls": "amb"
     }
    ]
   },
   {
    "id": "4",
    "type": "rows",
-   "title": "주의 · 축적",
+   "title": "부족 · 과잉 신호",
    "sec": "<b>주의점</b> · PRECAUTIONS",
-   "h1": "빠져나가지 못하면 쌓입니다",
+   "h1": "끊으면 늦게, 넘치면 오래 갑니다",
    "sents": [
-    "4주 넘게 정맥영양을 하면, 망간이 뇌의 기저핵에 쌓여 신경독성을 일으킬 수 있어요.",
-    "구리와 망간은 담즙으로 배설되므로, 담도 폐쇄가 있으면 쌓일 수 있어요.",
-    "아연, 크롬, 셀레늄은 신장으로 나가므로 신부전에서도 주의해요.",
-    "장기 투여 환자는 미량원소 농도를 정기적으로 확인해요."
+    "구리는 끊고 5개월에서 15개월 뒤에 빈혈과 호중구 감소로 나타난 증례가 있고, 골수이형성증후군으로 오진되기도 해요.",
+    [
+     "장루, 누공, 설사로 잃는 양이 많으면 아연이 더 필요해서, ESPEN은 하루 12 mg까지 권해요.",
+     "장루, 누공, 설사로 잃는 양이 많으면 아연이 더 필요해서, 이에스펜은 하루 12 밀리그램까지 권해요."
+    ],
+    [
+     "망간은 장기 정맥영양이나 담즙정체에서 전혈 농도를 확인하고, 신경 증상이 있을 때 MRI를 봐요.",
+     "망간은 장기 정맥영양이나 담즙정체에서 전혈 농도를 확인하고, 신경 증상이 있을 때 엠알아이를 봐요."
+    ]
    ],
    "rows": [
     {
      "s": 0,
-     "lab": "망간",
-     "v": "장기 정맥영양(4주 이상) → 기저핵 축적 · 신경독성",
+     "lab": "구리 결핍",
+     "v": "중단 후 5–15개월 → 빈혈·호중구 감소 · MDS 오진 주의",
      "cls": "red"
     },
     {
      "s": 1,
-     "lab": "담즙 배설",
-     "v": "구리 · 망간 — 담도 폐쇄 시 축적",
+     "lab": "아연 손실",
+     "v": "장루·누공·설사 → ESPEN 최대 12 mg/일",
      "cls": "amb"
     },
     {
      "s": 2,
-     "lab": "신장 배설",
-     "v": "아연 · 크롬 · 셀레늄 — 신부전 시 주의"
-    },
-    {
-     "s": 3,
-     "lab": "모니터링",
-     "v": "장기 투여 시 혈중 미량원소 정기 확인"
+     "lab": "망간 과잉",
+     "v": "장기 PN·담즙정체 → 전혈 Mn · 신경 증상 시 MRI",
+     "cls": "red"
     }
    ]
   },
@@ -252,44 +329,48 @@
    "h1": "네오블루5, 이 6가지만 기억하세요",
    "sents": [
     "정리할게요.",
-    "네오블루5는 미량원소 다섯 가지를 담은 정맥영양 첨가제예요.",
-    "각 원소는 효소의 부품처럼 작동해요.",
-    "함량은 원소 기준으로 읽어요.",
-    "망간과 구리는 빠져나가지 못하면 쌓여요.",
-    "장기 투여에서는 혈중 농도를 확인해요."
+    "네오블루5는 미량원소 다섯 가지를 담은 미량원소 제제예요.",
+    "각 원소는 효소의 부품이라, 부족하면 원소마다 다른 신호가 나와요.",
+    "구리와 망간은 담즙으로, 아연과 셀레늄, 크롬은 신장으로 나가요.",
+    "함량은 원소량으로 읽고, 하루 권고와 비교해요.",
+    [
+     "아연은 CRP와 함께, 망간은 전혈로 확인해요.",
+     "아연은 씨알피와 함께, 망간은 전혈로 확인해요."
+    ]
    ],
    "cards": [
     {
      "s": 1,
      "lab": "구성",
-     "v": "미량원소 5종<br>Zn·Cu·Mn·Cr·Se"
+     "v": "미량원소 제제<br>Zn·Cu·Mn·Cr·Se"
     },
     {
      "s": 2,
      "lab": "역할",
-     "v": "효소의 부품<br>(보조인자)"
+     "v": "효소의 부품<br>부족 신호는 원소마다"
     },
     {
      "s": 3,
-     "lab": "읽는 법",
-     "v": "염 중량 말고<br>원소량",
-     "cls": "amb"
-    },
-    {
-     "s": 1,
-     "lab": "투여",
-     "v": "정맥영양 수액에<br>무균 첨가"
+     "lab": "출구",
+     "v": "담즙: Cu·Mn<br>신장: Zn·Se·Cr",
+     "cls": "red"
     },
     {
      "s": 4,
-     "lab": "축적",
-     "v": "망간 · 구리<br>장기 투여 · 담도 폐쇄",
+     "lab": "읽는 법",
+     "v": "원소량으로<br>하루 권고와 비교",
+     "cls": "amb"
+    },
+    {
+     "s": 4,
+     "lab": "망간",
+     "v": "1 mL = 100 µg<br>ESPEN 55 µg/일",
      "cls": "red"
     },
     {
      "s": 5,
      "lab": "확인",
-     "v": "혈중 미량원소<br>정기 모니터링"
+     "v": "아연 + CRP<br>망간은 전혈"
     }
    ],
    "cameo_say": "음… 해골약사, 깔끔했어.",
@@ -300,16 +381,16 @@
   "m0": [
    {
     "who": "cameo",
-    "after": 4,
-    "say": "음… 아연은 상처 회복에 중요하지.",
-    "bubble": "음… 아연은<br>상처 회복에 중요하지.",
+    "after": 2,
+    "say": "음… 구리 결핍은 골수 질환으로 오진되기 쉽지.",
+    "bubble": "음… 구리 결핍은<br>골수 질환으로 오진되기 쉽지.",
     "act": "nod"
    }
   ],
-  "4": [
+  "m1": [
    {
     "who": "lead",
-    "after": 0,
+    "after": 4,
     "say": "쌓이는 건, 제 뼈 속 칼슘이면 충분해요!",
     "bubble": "쌓이는 건 제 뼈 속<br>칼슘이면 충분해요!",
     "act": "shrug"

@@ -8,9 +8,14 @@
    "scene": "intro.html"
   },
   {
+   "part": "yt2",
+   "scene": "yt2.html",
+   "bridge": true
+  },
+  {
    "part": "m0",
    "scene": "m0.html",
-   "video_dur": 20.43
+   "video_dur": 27.2
   },
   {
    "part": "yt1",
@@ -20,7 +25,7 @@
   {
    "part": "form",
    "scene": "form.html",
-   "video_dur": 22.31
+   "video_dur": 26.55
   },
   {
    "part": "5",
@@ -40,6 +45,7 @@
  ],
  "order": [
   "intro",
+  "yt2",
   "m0",
   "yt1",
   "form",
