@@ -99,3 +99,6 @@ h1{font-size:66px;line-height:78px;margin-bottom:40px}
 .prod .cap b{color:var(--acc);font-size:24px}
 .prod img{flex:1 1 0;min-width:0;width:0}
 .stage .box .e{display:none}
+/* v13: 지금 설명 중인 번호만 진하게 — 아직 안 한 번호·지나간 번호는 옅게(색도 빼서) */
+.stage .steps>.s:not(.on),.stage .list .st:not(.on){opacity:.26;filter:grayscale(1)}
+.stage .steps>.s.on,.stage .list .st.on{opacity:1;filter:none}
