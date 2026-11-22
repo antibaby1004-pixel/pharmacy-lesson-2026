@@ -88,7 +88,7 @@ svg text{{font-family:P}}
 .nm .t{{font-size:128px;line-height:136px;font-weight:700;letter-spacing:-.03em;margin:0}}
 .nm .t .en2{{font-size:60px;font-weight:600;color:var(--muted);margin-left:20px;letter-spacing:0}}
 .nm .inn{{font-size:44px;line-height:56px;font-weight:700;margin:6px 0 0;color:#3F4D5A}}.nm .inn .ig{{font-size:40px;color:#1F6FD1}}
-.ph{{position:absolute;left:96px;top:390px;width:1344px;height:620px;box-sizing:border-box;padding:26px 30px 18px;transform-origin:0 0;display:flex;flex-direction:column;z-index:4}}
+.ph{{position:absolute;left:96px;top:412px;width:1344px;height:598px;box-sizing:border-box;padding:26px 30px 18px;transform-origin:0 0;display:flex;flex-direction:column;z-index:4}}
 .ph .im{{flex:1;display:flex;gap:36px;justify-content:center;align-items:stretch;min-height:0}}
 .ph figure{{margin:0;flex:1 1 0;min-width:0;display:flex;flex-direction:column;align-items:center;gap:12px}}
 .ph figure img,.ph figure svg{{flex:1;min-height:0;width:100%;object-fit:contain;border-radius:12px}}
@@ -116,7 +116,7 @@ useTiming('intro');const $i=i=>document.getElementById(i);
 (function(){{const t=$i('nm').querySelector('.t');let fs=128;while(t.scrollWidth>1344&&fs>60){{fs-=4;t.style.fontSize=fs+'px';t.style.lineHeight=(fs+8)+'px'}}const n=$i('nm').querySelector('.inn');let f2=44;while(n.scrollWidth>1344&&f2>26){{f2-=2;n.style.fontSize=f2+'px'}}}})();const TB={tB};const ITT={(T or {}).get('t', 999)};
 SCENE.anim=(o,T)=>{{const k=ease(seg(o,TB-0.25,TB+0.75));
  $i('nm').style.transform=`scale(${{lerp(1,.6,k)}})`;$i('nm').style.opacity=Math.max(seg(o,0.2,0.7),seg(T||0,1.6,2.2));
- const ph=$i('ph');ph.style.opacity=seg(o,0.8,1.3);ph.style.transform=`translate(${{lerp(0,834,k)}}px,${{lerp(0,-200,k)}}px) scale(${{lerp(1,.38,k)}})`;
+ const ph=$i('ph');ph.style.opacity=seg(o,0.8,1.3);ph.style.transform=`translate(${{lerp(0,834,k)}}px,${{lerp(0,-222,k)}}px) scale(${{lerp(1,.38,k)}})`;
  ph.querySelectorAll('figcaption,.cap').forEach(e=>e.style.opacity=1-seg(o,TB-0.3,TB+0.2));
  const it=$i('ity');if(it){{it.style.opacity=seg(o,TB+0.7,TB+1.2);const p=seg(o,ITT,ITT+0.5)*(1-seg(o,ITT+1.6,ITT+2.2));it.style.transform=`scale(${{1+0.06*Math.sin(Math.PI*p)}})`;it.style.boxShadow=p>0?`0 0 0 ${{8*p}}px rgba(0,127,134,.15)`:''}}}};
 SCENE.char=makeChar({acts},'lead');{char2}

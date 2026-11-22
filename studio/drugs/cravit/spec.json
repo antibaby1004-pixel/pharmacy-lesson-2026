@@ -48,12 +48,7 @@
   "inn": "levofloxacin",
   "photos": [
    {
-    "draw": "vial",
-    "args": [
-     "750 mg",
-     "150 mL",
-     "#E0A030"
-    ],
+    "img": "img/vial750.jpg",
     "label": "크라비트주 750 mg/150 mL"
    }
   ],
@@ -90,7 +85,8 @@
    "s": 2
   },
   "full": "크라비트 주 750 mg/150 mL",
-  "full_en": "Cravit inj. 750 mg/150 mL"
+  "full_en": "Cravit inj. 750 mg/150 mL",
+  "photo_note": "실제 제품 사진 · KIMS"
  },
  "parts": [
   {
