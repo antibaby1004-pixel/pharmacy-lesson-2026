@@ -1,5 +1,5 @@
 const steps=[
-{title: "클래리마신 소개 · 원내 전환", file: "intro", duration: 19},
+{title: "클래리마신 소개 · 원내 전환", file: "intro", duration: 21},
 {title: "50S 출구 터널 차단", file: "m0", duration: 19},
 {title: "기전 영상 · 링크 확정 전", file: "yt1", duration: 9},
 {title: "CYP3A4 억제 · 상호작용", file: "m1", duration: 19},
