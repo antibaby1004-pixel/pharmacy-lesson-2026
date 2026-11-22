@@ -15,12 +15,12 @@
   {
    "part": "yt1",
    "scene": "yt1.html",
-   "video_dur": 7.11
+   "bridge": true
   },
   {
    "part": "m1",
    "scene": "m1.html",
-   "video_dur": 23.67
+   "video_dur": 25.18
   },
   {
    "part": "5",
@@ -50,7 +50,6 @@
  "player_parts": [
   "intro",
   "m0",
-  "yt1",
   "m1",
   "5",
   "4",

@@ -89,7 +89,8 @@ def yt_scene(S, slug, P):
     tpl = re.sub(r'<div class="tt"([^>]*)>.*?</div>', lambda m: f'<div class="tt"{m.group(1)}>{P.get("label","기전 영상")}</div>', tpl, count=1)
     tpl = re.sub(r'<p class="sub"([^>]*)>.*?</p>', lambda m: f'<p class="sub"{m.group(1)}>{P.get("desc","")}</p>', tpl, count=1)
     tpl = re.sub(r'<svg width="340" height="340".*?</svg>', qr, tpl, count=1, flags=re.S)
-    tpl = re.sub(r'<b>[^<]*구간</b>', f'<b>{rng} 구간</b>', tpl, count=1)
+    sp = f" · {P['rate']}배속" if P.get('rate') else ''
+    tpl = re.sub(r'<b>[^<]*구간</b>', f'<b>{rng} 구간{sp}</b>', tpl, count=1)
     tpl = re.sub(r'<div class="url"([^>]*)>.*?</div>', lambda m: f'<div class="url"{m.group(1)}>{url.replace("https://","")}</div>', tpl, count=1)
     tpl = re.sub(r'<div class="src">.*?</div>', f'<div class="src">출처: YouTube youtu.be/{P["vid"]} · {rng} 구간 · 원내 교육용으로만 시청</div>', tpl, count=1)
     tpl = tpl.replace("useTiming('yt1')", f"useTiming('{P['id']}')")
@@ -122,11 +123,13 @@ def build(dr):
         pid = P['id']; seed += 1
         if P['type'] == 'yt':
             html, rng = yt_scene(S, S.get('slug', os.path.basename(os.path.abspath(dr)) + '-v1'), P)
+            if P.get('rate'): rng += f" · {P['rate']}배속"
             open(os.path.join(dr, 'scenes', f'{pid}.html'), 'w').write(html)
             parts.append({"part": pid, "scene": f"{pid}.html", "bridge": True})
             bridges[pid] = {"who": cast['lead'], "bubble": P.get('bubble', '기전 영상,<br>시작!'), "say": P.get('say', '기전 영상, 시작!'), "at": 1.4, "min_dur": 7.0}
             st = {"title": P.get('title', f'기전 영상 · {rng}'), "id": P['vid'], "start": P['start'], "end": P.get('end')}
             if not P.get('end'): st['est'] = P.get('est', 180)
+            if P.get('rate'): st['rate'] = P['rate']
             st['note'] = P.get('note', f'기전 영상 {rng} · 영어 원음. ⚙ → 자막 → 자동 번역 → 한국어.')
             steps.append(st); continue
         if P['type'] == 'ytslot':
@@ -196,6 +199,15 @@ def build(dr):
     stj = 'const steps=[\n' + ',\n'.join(jsobj(s) for s in steps) + '];'
     app = app[:i] + stj + app[j:]
     app = re.sub(r"\$\('ytNote'\)\.textContent=steps\[index\]\.id===[^;]*?;", "$('ytNote').textContent=(steps[index].note||'기전 영상 · 영어 원음. ⚙ → 자막 → 자동 번역 → 한국어.');", app)
+    # YouTube playback rate per step (steps[i].rate)
+    R = [("s.id?((s.end??s.est??180)-s.start)", "s.id?((s.end??s.est??180)-s.start)/(s.rate||1)"),
+         ("Math.max(0,yt.getCurrentTime()-steps[index].start):pendingOffset)", "Math.max(0,yt.getCurrentTime()-steps[index].start)/(steps[index].rate||1):pendingOffset/(steps[index].rate||1))"),
+         ("yt.setPlaybackRate(1)", "yt.setPlaybackRate(s.rate||1)"),
+         ("if(e.data===1){", "if(e.data===1){if(yt.getPlaybackRate()!==(steps[index].rate||1))yt.setPlaybackRate(steps[index].rate||1);"),
+         ("*(steps[i].id?1:slideRate)", "*(steps[i].id?(steps[i].rate||1):slideRate)")]
+    for a, b in R:
+        assert a in app, a
+        app = app.replace(a, b)
     open(os.path.join(dr, 'source', 'app.js'), 'w').write(app)
     open(os.path.join(dr, 'source', 'captions.js'), 'w').write('const captions={};')
     subprocess.run([sys.executable, os.path.join(ROOT, 'tools', 'intro_gen.py'), dr], check=True)

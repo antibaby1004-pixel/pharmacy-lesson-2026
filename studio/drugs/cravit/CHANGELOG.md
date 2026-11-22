@@ -8,3 +8,7 @@
 
 # 사진 (2026-11-22)
 - KIMS 제품 사진(scenes/img/vial750.jpg)으로 첫 화면 교체
+
+# 기전 영상 (2026-11-23)
+- youtu.be/IkKZ_gxAOXI 1:45–7:07, 1.2배속 (웹플레이어 setPlaybackRate, 진행바 시간도 배속 반영)
+- 기전2 첫 문장을 영상과 연결
