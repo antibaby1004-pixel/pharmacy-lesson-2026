@@ -1,5 +1,5 @@
 const steps=[
-{title: "캡박시브 소개 · 성인용 21가 접합 백신", file: "intro", duration: 19},
+{title: "캡박시브 소개 · 성인용 21가 접합 백신 · 신약", file: "intro", duration: 19},
 {title: "다당 vs 단백 접합", file: "m0", duration: 21},
 {title: "기전 영상 · 링크 확정 전", file: "yt1", duration: 9},
 {title: "혈청형 구성", file: "sero", duration: 17},
