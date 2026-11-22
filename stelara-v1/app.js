@@ -4,7 +4,7 @@ const steps=[
 {title:'기전 영상 · 0:00–3:37',id:'KWHUwVdVICM',start:0,end:217},
 {title:'용량과 사용법',file:5,duration:32.66},{title:'정맥주사 조제 · 희석과 주입',file:'iv',duration:27.31},
 {title:'프리필드시린지 보관',file:'storage',duration:24.822},{title:'프리필드시린지 주사 방법',file:'inj',duration:35.941},
-{title:'주의점 1 · 감염과 생백신',file:'4a',duration:16.859},{title:'주의점 2 · 결핵과 과민반응',file:'4b',duration:20.358},
+{title:'주의점 1 · 감염과 생백신',file:'4a',duration:16.859},{title:'주의점 2 · 결핵과 과민반응',file:'4b',duration:23.242},
 {title:'Take-home message',file:'summary',duration:39.239}];
 const $=id=>document.getElementById(id),local=$('local');
 let index=0,yt,ytReady=false,ytLoading=false,wantsPlay=false,slideRate=1,pendingOffset=0,ended=false,dragging=false;
