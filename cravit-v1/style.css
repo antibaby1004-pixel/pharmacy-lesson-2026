@@ -58,3 +58,6 @@ body.pfs-on .bottomline label,body.pfs-on .bottomline select,body.pfs-on #status
 body.pfs-on .seekline{position:absolute;left:120px;right:0;bottom:0;height:46px;padding:6px 14px;z-index:26}
 body.pfs-on{overflow:hidden}body.pfs-on .cinema{position:fixed;inset:0;z-index:9999}
 .cinema:fullscreen{padding-bottom:46px;position:relative}.cinema:fullscreen .topline{position:absolute;top:0;right:0;z-index:30;background:transparent;padding:6px}.cinema:fullscreen .topline #position,.cinema:fullscreen .topline strong{display:none}.cinema:fullscreen .caption-line{position:absolute;left:0;right:0;bottom:46px;z-index:25;background:rgba(255,255,255,.88);border:0}.cinema:fullscreen .caption-line:empty{display:none}.cinema:fullscreen .bottomline{position:absolute;left:0;bottom:0;height:46px;width:120px;padding:6px 10px;z-index:26}.cinema:fullscreen .bottomline label,.cinema:fullscreen .bottomline select,.cinema:fullscreen #status{display:none}.cinema:fullscreen .seekline{position:absolute;left:120px;right:0;bottom:0;height:46px;padding:6px 14px;z-index:26}
+
+/* v15: 재생 중 대본(자막 줄) 숨김 — 영상 화면을 최대한 크게 */
+.caption-line,#localCaption{display:none!important}
