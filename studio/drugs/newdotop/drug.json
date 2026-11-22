@@ -84,13 +84,8 @@
   "inn": "lidocaine",
   "photos": [
    {
-    "draw": "patch",
-    "args": [
-     "700 mg",
-     "10 × 14 cm",
-     "#F2E6D8"
-    ],
-    "label": "뉴도탑 카타플라스마 (5매)"
+    "img": "img/pouch.jpg",
+    "label": "파우치 · 700 mg 5매"
    }
   ],
   "facts": [
@@ -131,13 +126,14 @@
     "t1": 14.4
    }
   ],
+  "photo_note": "실제 제품 사진 · KIMS",
+  "full": "뉴도탑 카타플라스마",
+  "full_en": "Newdotop cataplasma (5매)",
   "itype": {
    "kind": "신약",
    "detail": "원내 신약 · 원내에 없던 리도카인 첩부제<br>경구 신경통약의 대체가 아닌 보조",
    "t": 11.6
   },
-  "chip": "뉴도탑 Newdotop <i>· lidocaine 700 mg cataplasma</i>",
-  "full": "뉴도탑 카타플라스마",
-  "full_en": "Newdotop cataplasma (5매)"
+  "chip": "뉴도탑 Newdotop <i>· lidocaine 700 mg cataplasma</i>"
  }
 }

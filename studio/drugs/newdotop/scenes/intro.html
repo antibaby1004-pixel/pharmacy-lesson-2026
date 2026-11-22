@@ -4,7 +4,7 @@ svg text{font-family:P}
 .nm .t{font-size:128px;line-height:136px;font-weight:700;letter-spacing:-.03em;margin:0}
 .nm .t .en2{font-size:60px;font-weight:600;color:var(--muted);margin-left:20px;letter-spacing:0}
 .nm .inn{font-size:44px;line-height:56px;font-weight:700;margin:6px 0 0;color:#3F4D5A}.nm .inn .ig{font-size:40px;color:#1F6FD1}
-.ph{position:absolute;left:96px;top:390px;width:1344px;height:620px;box-sizing:border-box;padding:26px 30px 18px;transform-origin:0 0;display:flex;flex-direction:column;z-index:4}
+.ph{position:absolute;left:96px;top:432px;width:1344px;height:578px;box-sizing:border-box;padding:26px 30px 18px;transform-origin:0 0;display:flex;flex-direction:column;z-index:4}
 .ph .im{flex:1;display:flex;gap:36px;justify-content:center;align-items:stretch;min-height:0}
 .ph figure{margin:0;flex:1 1 0;min-width:0;display:flex;flex-direction:column;align-items:center;gap:12px}
 .ph figure img,.ph figure svg{flex:1;min-height:0;width:100%;object-fit:contain;border-radius:12px}
@@ -23,8 +23,7 @@ svg text{font-family:P}
 <div class="fade"><header class="top"><div class="sec"><b>약물 소개</b> · DRUG OVERVIEW</div><div class="chip">뉴도탑 Newdotop <i>· lidocaine 700 mg cataplasma</i></div></header></div>
 <div class="fade">
 <div class="nm" id="nm"><p class="t no-hl">뉴도탑 카타플라스마</p><p class="inn"><span class="no-hl">Newdotop cataplasma (5매)</span><br><span class="ig">lidocaine</span></p></div>
-<div class="card ph" id="ph"><div class="im"><figure><svg viewBox="0 0 460 340"><rect x="40" y="40" width="380" height="230" rx="26" fill="#F2E6D8" stroke="#243341" stroke-width="7"/><rect x="70" y="70" width="320" height="170" rx="16" fill="#fff" opacity=".6" stroke="#C9B79F" stroke-width="3" stroke-dasharray="10 8"/>
-<text x="230" y="160" text-anchor="middle" font-size="40" font-weight="700" fill="#243341">700 mg</text><text x="230" y="205" text-anchor="middle" font-size="24" font-weight="600" fill="#3F4D5A">10 × 14 cm</text></svg><figcaption>뉴도탑 카타플라스마 (5매)</figcaption></figure></div><div class="cap" id="cap">제품 그림 · 실제 사진 준비 중</div></div>
+<div class="card ph" id="ph"><div class="im"><figure><img src="img/pouch.jpg"><figcaption>파우치 · 700 mg 5매</figcaption></figure></div><div class="cap" id="cap">실제 제품 사진 · KIMS</div></div>
 <div class="facts"><div class="card fr " data-in="4.44"><span class="lab">함량</span><div class="v">lidocaine 700 mg/매 · 10 × 14 cm</div></div><div class="card fr " data-in="9.08"><span class="lab">적응증</span><div class="v">대상포진 후 신경통증 완화</div></div></div><div class="card ity" id="ity" style="border-color:#007F86"><span class="t">원내 도입 구분</span><span class="k" style="background:#007F86">신약</span><span class="d">원내 신약 · 원내에 없던 리도카인 첩부제<br>경구 신경통약의 대체가 아닌 보조</span></div>
 </div>
 </div>
@@ -33,7 +32,7 @@ useTiming('intro');const $i=i=>document.getElementById(i);
 (function(){const t=$i('nm').querySelector('.t');let fs=128;while(t.scrollWidth>1344&&fs>60){fs-=4;t.style.fontSize=fs+'px';t.style.lineHeight=(fs+8)+'px'}const n=$i('nm').querySelector('.inn');let f2=44;while(n.scrollWidth>1344&&f2>26){f2-=2;n.style.fontSize=f2+'px'}})();const TB=4.44;const ITT=11.6;
 SCENE.anim=(o,T)=>{const k=ease(seg(o,TB-0.25,TB+0.75));
  $i('nm').style.transform=`scale(${lerp(1,.6,k)})`;$i('nm').style.opacity=Math.max(seg(o,0.2,0.7),seg(T||0,1.6,2.2));
- const ph=$i('ph');ph.style.opacity=seg(o,0.8,1.3);ph.style.transform=`translate(${lerp(0,834,k)}px,${lerp(0,-200,k)}px) scale(${lerp(1,.38,k)})`;
+ const ph=$i('ph');ph.style.opacity=seg(o,0.8,1.3);ph.style.transform=`translate(${lerp(0,834,k)}px,${lerp(0,-242,k)}px) scale(${lerp(1,.38,k)})`;
  ph.querySelectorAll('figcaption,.cap').forEach(e=>e.style.opacity=1-seg(o,TB-0.3,TB+0.2));
  const it=$i('ity');if(it){it.style.opacity=seg(o,TB+0.7,TB+1.2);const p=seg(o,ITT,ITT+0.5)*(1-seg(o,ITT+1.6,ITT+2.2));it.style.transform=`scale(${1+0.06*Math.sin(Math.PI*p)})`;it.style.boxShadow=p>0?`0 0 0 ${8*p}px rgba(0,127,134,.15)`:''}};
 SCENE.char=makeChar([{k: "walk", t0: 0.25, t1: 1.15, x0: 960, x1: 1640}, {k: "prop", name: "book", t0: 4.64, t1: 7.24}, {k: "thumbs", t0: 9.28, t1: 10.88}, {k: "prop", name: "magnifier", t0: 11.8, t1: 14.4}],'lead');

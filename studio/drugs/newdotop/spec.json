@@ -44,13 +44,8 @@
   "inn": "lidocaine",
   "photos": [
    {
-    "draw": "patch",
-    "args": [
-     "700 mg",
-     "10 × 14 cm",
-     "#F2E6D8"
-    ],
-    "label": "뉴도탑 카타플라스마 (5매)"
+    "img": "img/pouch.jpg",
+    "label": "파우치 · 700 mg 5매"
    }
   ],
   "sents": [
@@ -86,7 +81,8 @@
    "s": 3
   },
   "full": "뉴도탑 카타플라스마",
-  "full_en": "Newdotop cataplasma (5매)"
+  "full_en": "Newdotop cataplasma (5매)",
+  "photo_note": "실제 제품 사진 · KIMS"
  },
  "parts": [
   {

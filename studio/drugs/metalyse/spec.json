@@ -54,13 +54,12 @@
   "inn": "tenecteplase",
   "photos": [
    {
-    "draw": "vial",
-    "args": [
-     "25 mg",
-     "tenecteplase",
-     "#3A8F8A"
-    ],
-    "label": "메탈라제주사 25 mg"
+    "img": "img/vial.jpg",
+    "label": "바이알 25 mg"
+   },
+   {
+    "img": "img/box.jpg",
+    "label": "포장"
    }
   ],
   "sents": [
@@ -93,7 +92,8 @@
    "s": 3
   },
   "full": "메탈라제 주사 25 mg",
-  "full_en": "Metalyse inj. 25 mg"
+  "full_en": "Metalyse inj. 25 mg",
+  "photo_note": "실제 제품 사진 · KIMS"
  },
  "parts": [
   {

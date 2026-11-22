@@ -99,13 +99,8 @@
   "inn": "amitriptyline hydrochloride",
   "photos": [
    {
-    "draw": "tablet",
-    "args": [
-     "5 mg",
-     "amitriptyline",
-     "#E8F1FB"
-    ],
-    "label": "에나폰정 5 mg"
+    "img": "img/tab.jpg",
+    "label": "정 5 mg · E5 각인"
    }
   ],
   "facts": [
@@ -153,13 +148,14 @@
     "t1": 17.13
    }
   ],
+  "photo_note": "실제 제품 사진 · KIMS",
+  "full": "에나폰 정 5 mg",
+  "full_en": "Enafon tab. 5 mg",
   "itype": {
    "kind": "용량추가",
    "detail": "원내 에나폰정 10 mg은 유지<br>5 mg 저용량 규격 추가",
    "t": 3.23
   },
-  "chip": "에나폰 Enafon <i>· amitriptyline 5 mg</i>",
-  "full": "에나폰 정 5 mg",
-  "full_en": "Enafon tab. 5 mg"
+  "chip": "에나폰 Enafon <i>· amitriptyline 5 mg</i>"
  }
 }
