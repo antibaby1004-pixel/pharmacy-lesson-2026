@@ -1,3 +1,4 @@
+const BL={};function pre(i){const s=steps[i];if(!s||s.id||!s.file||BL[s.file])return;BL[s.file]='p';fetch('part'+s.file+'.mp4').then(r=>{if(!r.ok)throw 0;return r.blob()}).then(b=>{BL[s.file]=URL.createObjectURL(b)}).catch(()=>{delete BL[s.file]})}
 const steps=[
 {title: "브레즈트리 소개 · 3제 흡입제 · 신약", file: "intro", duration: 27},
 {title: "흡입제 계열 영상 · 1:17–4:22", id: "BT516MnZJ7s", start: 77, end: 262, note: "기전 영상 1:17–4:22 · 영어 원음. ⚙ → 자막 → 자동 번역 → 한국어."},
@@ -31,7 +32,7 @@ function revealScene(token=transitionId){
 }
 function localFrameReady(){
  if(isYT()||transitionPhase!=='loading'||frameRequested||local.readyState<2||local.seeking)return;
- if(!local.currentSrc.endsWith('part'+steps[index].file+'.mp4'))return;
+ if(!local.currentSrc.endsWith('part'+steps[index].file+'.mp4')&&local.currentSrc!==BL[steps[index].file])return;
  if(Math.abs(local.currentTime-pendingOffset)>1)return;
  const token=transitionId;frameRequested=true;
  const reveal=()=>{if(token===transitionId&&!isYT()&&transitionPhase==='loading')revealScene(token);};
@@ -50,7 +51,7 @@ function show(i,auto=true,offset=0,finishOutgoing=false){
   local.pause();if(ytReady)yt.stopVideo();
   index=i;pendingOffset=offset;ended=false;transitionPhase='loading';$('fallback').hidden=true;
   local.removeAttribute('poster');local.hidden=isYT();$('youtubeWrap').hidden=!isYT();
-  if(!isYT()){local.src='part'+steps[i].file+'.mp4';local.load();}
+  if(!isYT()){const u=BL[steps[i].file];local.src=(u&&u!=='p')?u:'part'+steps[i].file+'.mp4';local.load();}pre(i+1);pre(i+2);
   update();message('구간이 끝나면 자동으로 이어집니다.');
   transitionWatchdog=setTimeout(()=>{
    if(token!==transitionId||!transitionPending)return;

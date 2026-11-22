@@ -1,3 +1,4 @@
+const BL={};function pre(i){const s=steps[i];if(!s||s.id||!s.file||BL[s.file])return;BL[s.file]='p';fetch('part'+s.file+'.mp4').then(r=>{if(!r.ok)throw 0;return r.blob()}).then(b=>{BL[s.file]=URL.createObjectURL(b)}).catch(()=>{delete BL[s.file]})}
 const steps=[
 {title:'제로암 소개 · 함량과 허가 적응증 · 대체',file:'intro',duration:37.501},
 {title:'DNA 복제 · 재료가 필요하다',file:0,duration:10.044},{title:'닮은꼴 재료 · 인산화',file:1,duration:11.124},{title:'DNA 합성 억제 · 증식 억제',file:2,duration:14.158},
@@ -29,7 +30,7 @@ function revealScene(token=transitionId){
 }
 function localFrameReady(){
  if(isYT()||transitionPhase!=='loading'||frameRequested||local.readyState<2||local.seeking)return;
- if(!local.currentSrc.endsWith('part'+steps[index].file+'.mp4'))return;
+ if(!local.currentSrc.endsWith('part'+steps[index].file+'.mp4')&&local.currentSrc!==BL[steps[index].file])return;
  if(Math.abs(local.currentTime-pendingOffset)>1)return;
  const token=transitionId;frameRequested=true;
  const reveal=()=>{if(token===transitionId&&!isYT()&&transitionPhase==='loading')revealScene(token);};
@@ -48,7 +49,7 @@ function show(i,auto=true,offset=0,finishOutgoing=false){
   local.pause();if(ytReady)yt.stopVideo();
   index=i;pendingOffset=offset;ended=false;transitionPhase='loading';$('fallback').hidden=true;
   local.removeAttribute('poster');local.hidden=isYT();$('youtubeWrap').hidden=!isYT();
-  if(!isYT()){local.src='part'+steps[i].file+'.mp4';local.load();}
+  if(!isYT()){const u=BL[steps[i].file];local.src=(u&&u!=='p')?u:'part'+steps[i].file+'.mp4';local.load();}pre(i+1);pre(i+2);
   update();message('구간이 끝나면 자동으로 이어집니다.');
   transitionWatchdog=setTimeout(()=>{
    if(token!==transitionId||!transitionPending)return;

@@ -119,3 +119,9 @@ h1{font-size:66px;line-height:78px;margin-bottom:40px}
 .stage .g>.c.cur .v{font-size:72px!important;line-height:94px!important}
 .list:has(.st.on) .st:not(.on){display:none}
 .stage .list .st.on .h{font-size:60px!important;line-height:72px!important}.stage .list .st.on .d{font-size:44px!important;line-height:58px!important}
+/* v17: 흐릿함 개선 — 단계 시작 전에도 또렷하게, 보조 글씨 진하게, 각주·분류 글씨 키움 */
+:root{--muted:#2E3A46}
+.steps:not(:has(>.s.on))>.s{opacity:1!important;filter:none!important}
+.stage .sec{font-size:28px}.stage .chip{font-size:26px}.stage .fn{font-size:24px;line-height:32px}
+.stage .box.cur{margin-top:110px!important;border-width:3px!important}
+.stage .box.cur .lab{color:var(--acc-ink)}

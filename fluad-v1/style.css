@@ -61,3 +61,11 @@ body.pfs-on{overflow:hidden}body.pfs-on .cinema{position:fixed;inset:0;z-index:9
 
 /* v15: 재생 중 대본(자막 줄) 숨김 — 영상 화면을 최대한 크게 */
 .caption-line,#localCaption{display:none!important}
+
+/* v18: 목록으로 돌아가기 버튼 */
+#back{flex:none;font-size:15px;font-weight:700;color:#00636A;text-decoration:none;border:1.5px solid #CFE3E5;border-radius:999px;padding:6px 12px;background:#fff;margin-right:4px}
+@media (orientation:landscape) and (max-height:600px){body .topline{left:0;right:0;display:flex;justify-content:space-between}body #back{font-size:13px;padding:5px 10px;background:rgba(255,255,255,.85)}}
+body.pfs-on .topline{left:0;right:0;display:flex;justify-content:space-between}
+
+/* v19: 휴대폰 세로 — 위 설명 글을 숨겨 영상을 화면 위쪽으로 */
+@media (max-width:600px) and (orientation:portrait){header{display:none}main{padding-top:8px}.topline strong{font-size:13px;line-height:1.35}#back{font-size:13px;padding:5px 9px}}
