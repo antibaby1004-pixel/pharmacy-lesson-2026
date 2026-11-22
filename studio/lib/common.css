@@ -102,3 +102,20 @@ h1{font-size:66px;line-height:78px;margin-bottom:40px}
 /* v13: 지금 설명 중인 번호만 진하게 — 아직 안 한 번호·지나간 번호는 옅게(색도 빼서) */
 .stage .steps>.s:not(.on),.stage .list .st:not(.on){opacity:.26;filter:grayscale(1)}
 .stage .steps>.s.on,.stage .list .st.on{opacity:1;filter:none}
+/* v16: 한 화면에 한 가지 — 휴대폰에서도 크게 보이도록 */
+.steps:has(>.s.on)>.s:not(.on){display:none}
+.stage .steps>.s.on{padding:10px 0;border-top:0;opacity:1}
+.stage .steps>.s.on .n{width:84px;height:84px;font-size:38px}
+.stage .steps>.s.on{grid-template-columns:84px 1fr;gap:26px}
+.stage .steps>.s.on h3{font-size:64px;line-height:76px;margin:2px 0 14px}
+.stage .steps>.s.on p{font-size:50px;line-height:66px}
+.stage .key{font-size:46px}
+.stage .box.gone,.stage .g>.c.gone{display:none!important}
+.stage .box.cur{padding:40px 48px!important;grid-template-columns:1fr!important;gap:14px!important;margin-top:10px!important}
+.stage .box.cur .lab{font-size:40px!important}
+.stage .box.cur .v{font-size:64px!important;line-height:84px!important}
+.stage .g>.c.cur{grid-column:1/-1;height:auto!important;min-height:420px;padding:44px 52px!important}
+.stage .g>.c.cur .lab{font-size:40px}
+.stage .g>.c.cur .v{font-size:72px!important;line-height:94px!important}
+.list:has(.st.on) .st:not(.on){display:none}
+.stage .list .st.on .h{font-size:60px!important;line-height:72px!important}.stage .list .st.on .d{font-size:44px!important;line-height:58px!important}
