@@ -2,8 +2,8 @@
 svg text{font-family:P}
 .nm{position:absolute;left:96px;top:170px;transform-origin:0 0;white-space:nowrap}
 .nm .t{font-size:128px;line-height:136px;font-weight:700;letter-spacing:-.03em;margin:0}
-.nm .t span{font-size:60px;font-weight:600;color:var(--muted);margin-left:20px;letter-spacing:0}
-.nm .inn{font-size:52px;line-height:64px;font-weight:700;margin:4px 0 0}
+.nm .t .en2{font-size:60px;font-weight:600;color:var(--muted);margin-left:20px;letter-spacing:0}
+.nm .inn{font-size:44px;line-height:56px;font-weight:700;margin:6px 0 0;color:#3F4D5A}.nm .inn .ig{font-size:40px;color:#1F6FD1}
 .ph{position:absolute;left:96px;top:390px;width:1344px;height:620px;box-sizing:border-box;padding:26px 30px 18px;transform-origin:0 0;display:flex;flex-direction:column;z-index:4}
 .ph .im{flex:1;display:flex;gap:36px;justify-content:center;align-items:stretch;min-height:0}
 .ph figure{margin:0;flex:1 1 0;min-width:0;display:flex;flex-direction:column;align-items:center;gap:12px}
@@ -22,14 +22,15 @@ svg text{font-family:P}
 </style></head><body><div class="stage">
 <div class="fade"><header class="top"><div class="sec"><b>약물 소개</b> · DRUG OVERVIEW</div><div class="chip">클래리마신 Clarimacin <i>· clarithromycin 250 mg</i></div></header></div>
 <div class="fade">
-<div class="nm" id="nm"><p class="t">클래리마신<span>Clarimacin tab.</span></p><p class="inn">clarithromycin</p></div>
+<div class="nm" id="nm"><p class="t no-hl">클래리마신 정 250 mg</p><p class="inn"><span class="no-hl">Clarimacin tab. 250 mg</span><br><span class="ig">clarithromycin</span></p></div>
 <div class="card ph" id="ph"><div class="im"><figure><svg viewBox="0 0 420 300"><ellipse cx="210" cy="130" rx="150" ry="95" fill="#FFF7D6" stroke="#243341" stroke-width="7"/><path d="M60 130 h300" stroke="#C9D6E0" stroke-width="4"/>
 <text x="210" y="270" text-anchor="middle" font-size="40" font-weight="700" fill="#243341">250 mg</text><text x="210" y="122" text-anchor="middle" font-size="26" font-weight="600" fill="#3F4D5A">clarithromycin</text></svg><figcaption>클래리마신정 250 mg</figcaption></figure></div><div class="cap" id="cap">제품 그림 · 실제 사진 준비 중</div></div>
 <div class="facts"><div class="card fr " data-in="3.98"><span class="lab">함량</span><div class="v">250 mg 정제</div></div><div class="card fr " data-in="14.48"><span class="lab">쓰임</span><div class="v">H. pylori 제균 · 비정형 폐렴 등</div></div></div><div class="card ity" id="ity" style="border-color:#6B4FB8"><span class="t">원내 도입 구분</span><span class="k" style="background:#6B4FB8">원외→원내</span><span class="d">원내 클래리시드 250 · 500 mg 품절<br>→ 원외 코드 클래리마신을 원내로</span></div>
 </div>
 </div>
 <script src="../timing.js"></script><script src="../../../lib/core.js"></script><script>
-useTiming('intro');const $i=i=>document.getElementById(i);const TB=3.98;const ITT=6.96;
+useTiming('intro');const $i=i=>document.getElementById(i);
+(function(){const t=$i('nm').querySelector('.t');let fs=128;while(t.scrollWidth>1344&&fs>60){fs-=4;t.style.fontSize=fs+'px';t.style.lineHeight=(fs+8)+'px'}const n=$i('nm').querySelector('.inn');let f2=44;while(n.scrollWidth>1344&&f2>26){f2-=2;n.style.fontSize=f2+'px'}})();const TB=3.98;const ITT=6.96;
 SCENE.anim=(o,T)=>{const k=ease(seg(o,TB-0.25,TB+0.75));
  $i('nm').style.transform=`scale(${lerp(1,.6,k)})`;$i('nm').style.opacity=Math.max(seg(o,0.2,0.7),seg(T||0,1.6,2.2));
  const ph=$i('ph');ph.style.opacity=seg(o,0.8,1.3);ph.style.transform=`translate(${lerp(0,834,k)}px,${lerp(0,-200,k)}px) scale(${lerp(1,.38,k)})`;

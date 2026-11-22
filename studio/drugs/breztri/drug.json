@@ -15,7 +15,7 @@
   {
    "part": "yt1",
    "scene": "yt1.html",
-   "video_dur": 7.11
+   "bridge": true
   },
   {
    "part": "form",
@@ -50,7 +50,6 @@
  "player_parts": [
   "intro",
   "m0",
-  "yt1",
   "form",
   "5",
   "4",
@@ -157,6 +156,8 @@
     "ang": 100
    }
   ],
+  "full": "브레즈트리 에어로스피어 흡입제 160/7.2/5.0 µg",
+  "full_en": "BREZTRI AEROSPHERE INHALER 160/7.2/5.0 µg · 120회",
   "itype": {
    "kind": "신약",
    "detail": "원내 첫 3제 흡입제(원내 신약)<br>원외 트림보우·트렐리지와 같은 계열",

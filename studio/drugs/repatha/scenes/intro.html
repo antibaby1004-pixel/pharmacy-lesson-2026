@@ -2,8 +2,8 @@
 svg text{font-family:P}
 .nm{position:absolute;left:96px;top:170px;transform-origin:0 0;white-space:nowrap}
 .nm .t{font-size:128px;line-height:136px;font-weight:700;letter-spacing:-.03em;margin:0}
-.nm .t span{font-size:60px;font-weight:600;color:var(--muted);margin-left:20px;letter-spacing:0}
-.nm .inn{font-size:52px;line-height:64px;font-weight:700;margin:4px 0 0}
+.nm .t .en2{font-size:60px;font-weight:600;color:var(--muted);margin-left:20px;letter-spacing:0}
+.nm .inn{font-size:44px;line-height:56px;font-weight:700;margin:6px 0 0;color:#3F4D5A}.nm .inn .ig{font-size:40px;color:#1F6FD1}
 .ph{position:absolute;left:96px;top:390px;width:1344px;height:620px;box-sizing:border-box;padding:26px 30px 18px;transform-origin:0 0;display:flex;flex-direction:column;z-index:4}
 .ph .im{flex:1;display:flex;gap:36px;justify-content:center;align-items:stretch;min-height:0}
 .ph figure{margin:0;flex:1 1 0;min-width:0;display:flex;flex-direction:column;align-items:center;gap:12px}
@@ -22,13 +22,14 @@ svg text{font-family:P}
 </style></head><body><div class="stage">
 <div class="fade"><header class="top"><div class="sec"><b>약물 소개</b> · DRUG OVERVIEW</div><div class="chip">레파타 Repatha <i>· evolocumab</i></div></header></div>
 <div class="fade">
-<div class="nm" id="nm"><p class="t">레파타<span>Repatha</span></p><p class="inn">evolocumab</p></div>
+<div class="nm" id="nm"><p class="t no-hl">레파타 주 프리필드펜</p><p class="inn"><span class="no-hl">Repatha inj. prefilled pen 140 mg/mL</span><br><span class="ig">evolocumab</span></p></div>
 <div class="card ph" id="ph"><div class="im"><figure><img src="img/pen140.jpg"><figcaption>레파타 프리필드펜 140 mg/mL</figcaption></figure></div><div class="cap" id="cap">제품 사진 (포장 표기는 해외판)</div></div>
 <div class="facts"><div class="card fr " data-in="4.3"><span class="lab">원내 목적</span><div class="v">입원 환자 치료 · 피하주사제</div></div><div class="card fr " data-in="9.1"><span class="lab">작용</span><div class="v">LDL 콜레스테롤 ↓</div></div><div class="card fr " data-in="12.5"><span class="lab">적응증</span><div class="v">원발성 고콜레스테롤혈증 · 혼합형 이상지질혈증</div></div><div class="card fr " data-in="17.5"><span class="lab"></span><div class="v">동형접합 가족성 고콜레스테롤혈증</div></div><div class="card fr amb" data-in="21.5"><span class="lab"></span><div class="v">죽상경화성 심혈관 질환 → 심혈관 사건 위험 ↓</div></div></div><div class="card ity" id="ity" style="border-color:#6B4FB8"><span class="t">원내 도입 구분</span><span class="k" style="background:#6B4FB8">원외→원내</span><span class="d">원외 전용 코드 → 원내 입고<br>대체하는 원내 약 없음</span></div>
 </div>
 </div>
 <script src="../timing.js"></script><script src="../../../lib/core.js"></script><script>
-useTiming('intro');const $i=i=>document.getElementById(i);const TB=4.32;const ITT=31.01;
+useTiming('intro');const $i=i=>document.getElementById(i);
+(function(){const t=$i('nm').querySelector('.t');let fs=128;while(t.scrollWidth>1344&&fs>60){fs-=4;t.style.fontSize=fs+'px';t.style.lineHeight=(fs+8)+'px'}const n=$i('nm').querySelector('.inn');let f2=44;while(n.scrollWidth>1344&&f2>26){f2-=2;n.style.fontSize=f2+'px'}})();const TB=4.32;const ITT=31.01;
 SCENE.anim=(o,T)=>{const k=ease(seg(o,TB-0.25,TB+0.75));
  $i('nm').style.transform=`scale(${lerp(1,.6,k)})`;$i('nm').style.opacity=Math.max(seg(o,0.2,0.7),seg(T||0,1.6,2.2));
  const ph=$i('ph');ph.style.opacity=seg(o,0.8,1.3);ph.style.transform=`translate(${lerp(0,834,k)}px,${lerp(0,-200,k)}px) scale(${lerp(1,.38,k)})`;

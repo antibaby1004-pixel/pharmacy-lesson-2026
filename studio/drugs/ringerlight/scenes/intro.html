@@ -2,8 +2,8 @@
 svg text{font-family:P}
 .nm{position:absolute;left:96px;top:170px;transform-origin:0 0;white-space:nowrap}
 .nm .t{font-size:128px;line-height:136px;font-weight:700;letter-spacing:-.03em;margin:0}
-.nm .t span{font-size:60px;font-weight:600;color:var(--muted);margin-left:20px;letter-spacing:0}
-.nm .inn{font-size:52px;line-height:64px;font-weight:700;margin:4px 0 0}
+.nm .t .en2{font-size:60px;font-weight:600;color:var(--muted);margin-left:20px;letter-spacing:0}
+.nm .inn{font-size:44px;line-height:56px;font-weight:700;margin:6px 0 0;color:#3F4D5A}.nm .inn .ig{font-size:40px;color:#1F6FD1}
 .ph{position:absolute;left:96px;top:390px;width:1344px;height:620px;box-sizing:border-box;padding:26px 30px 18px;transform-origin:0 0;display:flex;flex-direction:column;z-index:4}
 .ph .im{flex:1;display:flex;gap:36px;justify-content:center;align-items:stretch;min-height:0}
 .ph figure{margin:0;flex:1 1 0;min-width:0;display:flex;flex-direction:column;align-items:center;gap:12px}
@@ -22,7 +22,7 @@ svg text{font-family:P}
 </style></head><body><div class="stage">
 <div class="fade"><header class="top"><div class="sec"><b>약물 소개</b> · DRUG OVERVIEW</div><div class="chip">링거라이트 Ringer light <i>· oral rehydration solution 200 mL</i></div></header></div>
 <div class="fade">
-<div class="nm" id="nm"><p class="t">링거라이트<span>Ringer light soln.</span></p><p class="inn">oral rehydration solution</p></div>
+<div class="nm" id="nm"><p class="t no-hl">링거라이트 액 200 mL</p><p class="inn"><span class="no-hl">Ringer light soln. 200 mL</span><br><span class="ig">oral rehydration solution</span></p></div>
 <div class="card ph" id="ph"><div class="im"><figure><svg viewBox="0 0 320 420"><path d="M60 40 h200 a20 20 0 0 1 20 20 v260 a40 40 0 0 1 -40 40 h-160 a40 40 0 0 1 -40 -40 v-260 a20 20 0 0 1 20 -20z" fill="#EEF6FB" stroke="#243341" stroke-width="7"/>
 <rect x="135" y="360" width="50" height="40" rx="8" fill="#3A8FB7" stroke="#243341" stroke-width="5"/><rect x="80" y="120" width="160" height="120" rx="12" fill="#fff" stroke="#9FB4C6" stroke-width="3"/>
 <text x="160" y="175" text-anchor="middle" font-size="34" font-weight="700" fill="#243341">200 mL</text><text x="160" y="215" text-anchor="middle" font-size="22" font-weight="600" fill="#3F4D5A">경구 수분 보충</text></svg><figcaption>링거라이트액 200 mL 백</figcaption></figure></div><div class="cap" id="cap">제품 그림 · 실제 사진 준비 중</div></div>
@@ -30,7 +30,8 @@ svg text{font-family:P}
 </div>
 </div>
 <script src="../timing.js"></script><script src="../../../lib/core.js"></script><script>
-useTiming('intro');const $i=i=>document.getElementById(i);const TB=2.92;const ITT=12.21;
+useTiming('intro');const $i=i=>document.getElementById(i);
+(function(){const t=$i('nm').querySelector('.t');let fs=128;while(t.scrollWidth>1344&&fs>60){fs-=4;t.style.fontSize=fs+'px';t.style.lineHeight=(fs+8)+'px'}const n=$i('nm').querySelector('.inn');let f2=44;while(n.scrollWidth>1344&&f2>26){f2-=2;n.style.fontSize=f2+'px'}})();const TB=2.92;const ITT=12.21;
 SCENE.anim=(o,T)=>{const k=ease(seg(o,TB-0.25,TB+0.75));
  $i('nm').style.transform=`scale(${lerp(1,.6,k)})`;$i('nm').style.opacity=Math.max(seg(o,0.2,0.7),seg(T||0,1.6,2.2));
  const ph=$i('ph');ph.style.opacity=seg(o,0.8,1.3);ph.style.transform=`translate(${lerp(0,834,k)}px,${lerp(0,-200,k)}px) scale(${lerp(1,.38,k)})`;

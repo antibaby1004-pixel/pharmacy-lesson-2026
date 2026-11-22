@@ -2,8 +2,8 @@
 svg text{font-family:P}
 .nm{position:absolute;left:96px;top:170px;transform-origin:0 0;white-space:nowrap}
 .nm .t{font-size:128px;line-height:136px;font-weight:700;letter-spacing:-.03em;margin:0}
-.nm .t span{font-size:60px;font-weight:600;color:var(--muted);margin-left:20px;letter-spacing:0}
-.nm .inn{font-size:52px;line-height:64px;font-weight:700;margin:4px 0 0}
+.nm .t .en2{font-size:60px;font-weight:600;color:var(--muted);margin-left:20px;letter-spacing:0}
+.nm .inn{font-size:44px;line-height:56px;font-weight:700;margin:6px 0 0;color:#3F4D5A}.nm .inn .ig{font-size:40px;color:#1F6FD1}
 .ph{position:absolute;left:96px;top:390px;width:1344px;height:620px;box-sizing:border-box;padding:26px 30px 18px;transform-origin:0 0;display:flex;flex-direction:column;z-index:4}
 .ph .im{flex:1;display:flex;gap:36px;justify-content:center;align-items:stretch;min-height:0}
 .ph figure{margin:0;flex:1 1 0;min-width:0;display:flex;flex-direction:column;align-items:center;gap:12px}
@@ -22,13 +22,14 @@ svg text{font-family:P}
 </style></head><body><div class="stage">
 <div class="fade"><header class="top"><div class="sec"><b>약물 소개</b> · DRUG OVERVIEW</div><div class="chip">라베피드 Rabepid <i>· rabeprazole + CaCO₃</i></div></header></div>
 <div class="fade">
-<div class="nm" id="nm"><p class="t">라베피드정<span>Rabepid</span></p><p class="inn">rabeprazole + calcium carbonate</p></div>
+<div class="nm" id="nm"><p class="t no-hl">라베피드 정 10/600 mg · 20/600 mg</p><p class="inn"><span class="no-hl">Rabepid tab. 10/600 mg · 20/600 mg</span><br><span class="ig">rabeprazole + calcium carbonate</span></p></div>
 <div class="card ph" id="ph"><div class="im"><figure><img src="img/10.jpg"><figcaption>10/600 mg (RC1)</figcaption></figure><figure><img src="img/20.jpg"><figcaption>20/600 mg (RC2)</figcaption></figure></div><div class="cap" id="cap">실제 제품 사진 · 약학정보원</div></div>
 <div class="facts"><div class="card fr " data-in="2.5"><span class="lab">성분</span><div class="v">rabeprazole sodium + calcium carbonate (CaCO₃)</div></div><div class="card fr " data-in="7.4"><span class="lab">함량</span><div class="v">10/600 mg · 20/600 mg</div></div><div class="card fr " data-in="11.5"><span class="lab">작용</span><div class="v">위산 분비 억제 + 산 중화</div></div><div class="card fr amb" data-in="15.8"><span class="lab">주의</span><div class="v">역류 증상 완화 적응증 = 10/600 mg만</div></div></div><div class="card ity" id="ity" style="border-color:#007F86"><span class="t">원내 도입 구분</span><span class="k" style="background:#007F86">신약</span><span class="d">원내 신약 · 라베린정(rabeprazole 단일제)은<br>그대로 유지 — 대체 아님</span></div>
 </div>
 </div>
 <script src="../timing.js"></script><script src="../../../lib/core.js"></script><script>
-useTiming('intro');const $i=i=>document.getElementById(i);const TB=2.47;const ITT=19.52;
+useTiming('intro');const $i=i=>document.getElementById(i);
+(function(){const t=$i('nm').querySelector('.t');let fs=128;while(t.scrollWidth>1344&&fs>60){fs-=4;t.style.fontSize=fs+'px';t.style.lineHeight=(fs+8)+'px'}const n=$i('nm').querySelector('.inn');let f2=44;while(n.scrollWidth>1344&&f2>26){f2-=2;n.style.fontSize=f2+'px'}})();const TB=2.47;const ITT=19.52;
 SCENE.anim=(o,T)=>{const k=ease(seg(o,TB-0.25,TB+0.75));
  $i('nm').style.transform=`scale(${lerp(1,.6,k)})`;$i('nm').style.opacity=Math.max(seg(o,0.2,0.7),seg(T||0,1.6,2.2));
  const ph=$i('ph');ph.style.opacity=seg(o,0.8,1.3);ph.style.transform=`translate(${lerp(0,834,k)}px,${lerp(0,-200,k)}px) scale(${lerp(1,.38,k)})`;

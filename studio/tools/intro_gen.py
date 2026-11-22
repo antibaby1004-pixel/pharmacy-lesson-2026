@@ -72,6 +72,10 @@ def build(dr):
     if T:
         c = COL.get(T['kind'], '#007F86')
         ity = f'<div class="card ity" id="ity" style="border-color:{c}"><span class="t">원내 도입 구분</span><span class="k" style="background:{c}">{T["kind"]}</span><span class="d">{T["detail"]}</span></div>'
+    if I.get('full'):
+        NAMEHTML = f'<p class="t no-hl">{I["full"]}</p><p class="inn"><span class="no-hl">{I.get("full_en","")}</span><br><span class="ig">{I["inn"]}</span></p>'
+    else:
+        NAMEHTML = f'<p class="t">{I["title"]}<span class="en2">{I["en"]}</span></p><p class="inn">{I["inn"]}</p>'
     acts = json.dumps(I.get('actions', []), ensure_ascii=False)
     acts = re.sub(r'"(\w+)":', r'\1:', acts)
     char2 = ''
@@ -82,8 +86,8 @@ def build(dr):
 svg text{{font-family:P}}
 .nm{{position:absolute;left:96px;top:170px;transform-origin:0 0;white-space:nowrap}}
 .nm .t{{font-size:128px;line-height:136px;font-weight:700;letter-spacing:-.03em;margin:0}}
-.nm .t span{{font-size:60px;font-weight:600;color:var(--muted);margin-left:20px;letter-spacing:0}}
-.nm .inn{{font-size:52px;line-height:64px;font-weight:700;margin:4px 0 0}}
+.nm .t .en2{{font-size:60px;font-weight:600;color:var(--muted);margin-left:20px;letter-spacing:0}}
+.nm .inn{{font-size:44px;line-height:56px;font-weight:700;margin:6px 0 0;color:#3F4D5A}}.nm .inn .ig{{font-size:40px;color:#1F6FD1}}
 .ph{{position:absolute;left:96px;top:390px;width:1344px;height:620px;box-sizing:border-box;padding:26px 30px 18px;transform-origin:0 0;display:flex;flex-direction:column;z-index:4}}
 .ph .im{{flex:1;display:flex;gap:36px;justify-content:center;align-items:stretch;min-height:0}}
 .ph figure{{margin:0;flex:1 1 0;min-width:0;display:flex;flex-direction:column;align-items:center;gap:12px}}
@@ -102,13 +106,14 @@ svg text{{font-family:P}}
 </style></head><body><div class="stage">
 <div class="fade"><header class="top"><div class="sec"><b>약물 소개</b> · DRUG OVERVIEW</div><div class="chip">{chip}</div></header></div>
 <div class="fade">
-<div class="nm" id="nm"><p class="t">{I['title']}<span>{I['en']}</span></p><p class="inn">{I['inn']}</p></div>
+<div class="nm" id="nm">{NAMEHTML}</div>
 <div class="card ph" id="ph"><div class="im">{figs}</div><div class="cap" id="cap">{capsrc}</div></div>
 <div class="facts">{rows}</div>{ity}
 </div>
 </div>
 <script src="../timing.js"></script><script src="../../../lib/core.js"></script><script>
-useTiming('intro');const $i=i=>document.getElementById(i);const TB={tB};const ITT={(T or {}).get('t', 999)};
+useTiming('intro');const $i=i=>document.getElementById(i);
+(function(){{const t=$i('nm').querySelector('.t');let fs=128;while(t.scrollWidth>1344&&fs>60){{fs-=4;t.style.fontSize=fs+'px';t.style.lineHeight=(fs+8)+'px'}}const n=$i('nm').querySelector('.inn');let f2=44;while(n.scrollWidth>1344&&f2>26){{f2-=2;n.style.fontSize=f2+'px'}}}})();const TB={tB};const ITT={(T or {}).get('t', 999)};
 SCENE.anim=(o,T)=>{{const k=ease(seg(o,TB-0.25,TB+0.75));
  $i('nm').style.transform=`scale(${{lerp(1,.6,k)}})`;$i('nm').style.opacity=Math.max(seg(o,0.2,0.7),seg(T||0,1.6,2.2));
  const ph=$i('ph');ph.style.opacity=seg(o,0.8,1.3);ph.style.transform=`translate(${{lerp(0,834,k)}}px,${{lerp(0,-200,k)}}px) scale(${{lerp(1,.38,k)}})`;

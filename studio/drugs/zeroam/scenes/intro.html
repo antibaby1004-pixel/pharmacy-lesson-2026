@@ -2,8 +2,8 @@
 svg text{font-family:P}
 .nm{position:absolute;left:96px;top:170px;transform-origin:0 0;white-space:nowrap}
 .nm .t{font-size:128px;line-height:136px;font-weight:700;letter-spacing:-.03em;margin:0}
-.nm .t span{font-size:60px;font-weight:600;color:var(--muted);margin-left:20px;letter-spacing:0}
-.nm .inn{font-size:52px;line-height:64px;font-weight:700;margin:4px 0 0}
+.nm .t .en2{font-size:60px;font-weight:600;color:var(--muted);margin-left:20px;letter-spacing:0}
+.nm .inn{font-size:44px;line-height:56px;font-weight:700;margin:6px 0 0;color:#3F4D5A}.nm .inn .ig{font-size:40px;color:#1F6FD1}
 .ph{position:absolute;left:96px;top:390px;width:1344px;height:620px;box-sizing:border-box;padding:26px 30px 18px;transform-origin:0 0;display:flex;flex-direction:column;z-index:4}
 .ph .im{flex:1;display:flex;gap:36px;justify-content:center;align-items:stretch;min-height:0}
 .ph figure{margin:0;flex:1 1 0;min-width:0;display:flex;flex-direction:column;align-items:center;gap:12px}
@@ -22,13 +22,14 @@ svg text{font-family:P}
 </style></head><body><div class="stage">
 <div class="fade"><header class="top"><div class="sec"><b>약물 소개</b> · DRUG OVERVIEW</div><div class="chip">제로암 Gero-Am <i>· gemcitabine</i></div></header></div>
 <div class="fade">
-<div class="nm" id="nm"><p class="t">제로암<span>Gero-Am</span></p><p class="inn">gemcitabine</p></div>
+<div class="nm" id="nm"><p class="t no-hl">제로암 주 1 g · 200 mg</p><p class="inn"><span class="no-hl">Gero-Am inj. 1 g · 200 mg</span><br><span class="ig">gemcitabine</span></p></div>
 <div class="card ph" id="ph"><div class="im"><figure><img src="img/box200.jpg"><figcaption>200 mg 포장</figcaption></figure><figure><img src="img/v200.jpg"><figcaption>200 mg 바이알</figcaption></figure><figure><img src="img/v1g.jpg"><figcaption>1 g 바이알</figcaption></figure></div><div class="cap" id="cap">실제 제품 사진 · KIMS</div></div>
 <div class="facts"><div class="card fr " data-in="3.8"><span class="lab">함량·제형</span><div class="v">200 mg · 1 g 동결건조 분말</div></div><div class="card fr " data-in="7.9"><span class="lab">바뀐 이유</span><div class="v">젬시트 액상 → 분말 (안전성 · 진료과 요청)</div></div><div class="card fr amb" data-in="12.8"><span class="lab">달라진 점</span><div class="v">성분·작용 같음 · 투여 전 녹이기 추가</div></div><div class="card fr " data-in="17.8"><span class="lab">적응증</span><div class="v">비소세포폐암 · 췌장암 · 방광암 · 유방암 · 난소암 · 담도암</div></div><div class="card fr " data-in="23.2"><span class="lab">사용</span><div class="v">단독 또는 다른 항암제와 병용</div></div></div><div class="card ity" id="ity" style="border-color:#B35C00"><span class="t">원내 도입 구분</span><span class="k" style="background:#B35C00">대체</span><span class="d">젬시트주 1 g · 200 mg(액상, 동아에스티)<br>→ 제로암(분말)으로 대체</span></div>
 </div>
 </div>
 <script src="../timing.js"></script><script src="../../../lib/core.js"></script><script>
-useTiming('intro');const $i=i=>document.getElementById(i);const TB=3.83;const ITT=7.87;
+useTiming('intro');const $i=i=>document.getElementById(i);
+(function(){const t=$i('nm').querySelector('.t');let fs=128;while(t.scrollWidth>1344&&fs>60){fs-=4;t.style.fontSize=fs+'px';t.style.lineHeight=(fs+8)+'px'}const n=$i('nm').querySelector('.inn');let f2=44;while(n.scrollWidth>1344&&f2>26){f2-=2;n.style.fontSize=f2+'px'}})();const TB=3.83;const ITT=7.87;
 SCENE.anim=(o,T)=>{const k=ease(seg(o,TB-0.25,TB+0.75));
  $i('nm').style.transform=`scale(${lerp(1,.6,k)})`;$i('nm').style.opacity=Math.max(seg(o,0.2,0.7),seg(T||0,1.6,2.2));
  const ph=$i('ph');ph.style.opacity=seg(o,0.8,1.3);ph.style.transform=`translate(${lerp(0,834,k)}px,${lerp(0,-200,k)}px) scale(${lerp(1,.38,k)})`;

@@ -167,6 +167,8 @@
    "detail": "원내 신약 · 액티라제와 병존<br>대체 아님 (겹치는 적응증은 뇌졸중뿐)",
    "t": 14.03
   },
-  "chip": "메탈라제 Metalyse <i>· tenecteplase 25 mg</i>"
+  "chip": "메탈라제 Metalyse <i>· tenecteplase 25 mg</i>",
+  "full": "메탈라제 주사 25 mg",
+  "full_en": "Metalyse inj. 25 mg"
  }
 }

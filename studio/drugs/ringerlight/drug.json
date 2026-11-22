@@ -146,6 +146,8 @@
    "detail": "원외 처방용 → 원내 입고<br>2026.5부터 비급여",
    "t": 12.21
   },
-  "chip": "링거라이트 Ringer light <i>· oral rehydration solution 200 mL</i>"
+  "chip": "링거라이트 Ringer light <i>· oral rehydration solution 200 mL</i>",
+  "full": "링거라이트 액 200 mL",
+  "full_en": "Ringer light soln. 200 mL"
  }
 }

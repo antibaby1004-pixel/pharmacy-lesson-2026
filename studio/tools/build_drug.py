@@ -77,13 +77,31 @@ YTCSS = '''.slot{position:absolute;left:96px;top:270px;width:1344px;height:620px
 .slot .pl{width:150px;height:150px;border-radius:50%;background:#C9D6E0;display:flex;align-items:center;justify-content:center}
 .slot .t{font-size:56px;font-weight:700;color:#243341}.slot .d{font-size:36px;font-weight:600;color:#3F4D5A;text-align:center;line-height:50px}'''
 
+def yt_scene(S, slug, P):
+    import qrcode
+    url = f"https://antibaby1004-pixel.github.io/pharmacy-lesson-2026/{slug}/"
+    q = qrcode.QRCode(border=1, error_correction=qrcode.constants.ERROR_CORRECT_M); q.add_data(url); q.make(); m = q.get_matrix(); n = len(m)
+    rects = ''.join(f'<rect x="{x}" y="{y}" width="1.02" height="1.02"/>' for y, row in enumerate(m) for x, v in enumerate(row) if v)
+    qr = f'<svg width="340" height="340" viewBox="0 0 {n} {n}" shape-rendering="crispEdges"><rect width="{n}" height="{n}" fill="#fff"/><g fill="#1B2733">{rects}</g></svg>'
+    tpl = open(os.path.join(ROOT, 'drugs', 'rabepid', 'scenes', 'yt1.html')).read()
+    rng = f"{P['start']//60}:{P['start']%60:02d}–{P['end']//60}:{P['end']%60:02d}" if P.get('end') else "처음부터 끝까지"
+    tpl = re.sub(r'<div class="chip">.*?</div>', f'<div class="chip">{S["chip"]}</div>', tpl, count=1)
+    tpl = re.sub(r'<div class="tt"([^>]*)>.*?</div>', lambda m: f'<div class="tt"{m.group(1)}>{P.get("label","기전 영상")}</div>', tpl, count=1)
+    tpl = re.sub(r'<p class="sub"([^>]*)>.*?</p>', lambda m: f'<p class="sub"{m.group(1)}>{P.get("desc","")}</p>', tpl, count=1)
+    tpl = re.sub(r'<svg width="340" height="340".*?</svg>', qr, tpl, count=1, flags=re.S)
+    tpl = re.sub(r'<b>[^<]*구간</b>', f'<b>{rng} 구간</b>', tpl, count=1)
+    tpl = re.sub(r'<div class="url"([^>]*)>.*?</div>', lambda m: f'<div class="url"{m.group(1)}>{url.replace("https://","")}</div>', tpl, count=1)
+    tpl = re.sub(r'<div class="src">.*?</div>', f'<div class="src">출처: YouTube youtu.be/{P["vid"]} · {rng} 구간 · 원내 교육용으로만 시청</div>', tpl, count=1)
+    tpl = tpl.replace("useTiming('yt1')", f"useTiming('{P['id']}')")
+    return tpl, rng
+
 def build(dr):
     S = json.load(open(os.path.join(dr, 'spec.json')))
     os.makedirs(os.path.join(dr, 'scenes'), exist_ok=True); os.makedirs(os.path.join(dr, 'source'), exist_ok=True)
     nv, nr = NARR[S.get('voice', 'sunhi')]
     NARRJ = {"voices": {"A": {"voice": nv, "rate": nr, "pitch": "+0Hz", "gain": 1.0, "role": "전체 내레이션"}}, "gap": 0.35, "lead": 0.15, "tail": 0.45, "parts": {}}
     cast = S['cast']; props = S.get('props', ['book', 'magnifier', 'clock', 'pill'])
-    parts = [{"part": "intro", "scene": "intro.html"}]; steps = []; lines = {}
+    parts = [{"part": "intro", "scene": "intro.html"}]; steps = []; lines = {}; bridges = {}
     # ---- intro
     NI = ts(S['intro']['sents']); NARRJ['parts']['intro'] = NI
     I = S['intro']
@@ -91,6 +109,8 @@ def build(dr):
     ia = [{"k": "walk", "t0": 0.25, "t1": 1.15, "x0": 960, "x1": 1640}] + acts_for(NI, props, 1)[1:]
     intro = {"title": I['title'], "en": I['en'], "inn": I['inn'], "photos": I['photos'], "facts": facts, "actions": ia}
     if I.get('photo_note'): intro['photo_note'] = I['photo_note']
+    for k in ('full', 'full_en'):
+        if I.get(k): intro[k] = I[k]
     if I.get('itype'): intro['itype'] = {"kind": I['itype']['kind'], "detail": I['itype']['detail'], "t": round(NI[I['itype']['s']]['old'][0], 2)}
     if S.get('chip'): intro['chip'] = S['chip']
     g = S['greet']
@@ -100,6 +120,15 @@ def build(dr):
     seed = 0
     for P in S['parts']:
         pid = P['id']; seed += 1
+        if P['type'] == 'yt':
+            html, rng = yt_scene(S, S.get('slug', os.path.basename(os.path.abspath(dr)) + '-v1'), P)
+            open(os.path.join(dr, 'scenes', f'{pid}.html'), 'w').write(html)
+            parts.append({"part": pid, "scene": f"{pid}.html", "bridge": True})
+            bridges[pid] = {"who": cast['lead'], "bubble": P.get('bubble', '기전 영상,<br>시작!'), "say": P.get('say', '기전 영상, 시작!'), "at": 1.4, "min_dur": 7.0}
+            st = {"title": P.get('title', f'기전 영상 · {rng}'), "id": P['vid'], "start": P['start'], "end": P.get('end')}
+            if not P.get('end'): st['est'] = P.get('est', 180)
+            st['note'] = P.get('note', f'기전 영상 {rng} · 영어 원음. ⚙ → 자막 → 자동 번역 → 한국어.')
+            steps.append(st); continue
         if P['type'] == 'ytslot':
             P.setdefault('sents', ["이 자리에는 기전 원본 영상이 들어갈 예정이에요.", "링크가 정해지면 이 구간에서 바로 이어서 재생돼요."])
         N = ts(P['sents']); NARRJ['parts'][pid] = N
@@ -157,15 +186,17 @@ def build(dr):
     open(os.path.join(dr, 'scenes', 'intro.html'), 'w').write(f'<div class="chip">{S["chip"]}</div>')
     json.dump(NARRJ, open(os.path.join(dr, 'narration.json'), 'w'), ensure_ascii=False, indent=1)
     order = ["intro"] + [P['id'] for P in S['parts']]
-    drug = {"name": S['name'], "no": S.get('no', ''), "name_en": S.get('name_en', ''), "parts": parts, "order": order, "player_parts": order,
+    drug = {"name": S['name'], "no": S.get('no', ''), "name_en": S.get('name_en', ''), "parts": parts, "order": order, "player_parts": [o for o in order if not any(p['part'] == o and p.get('bridge') for p in parts)],
             "cast": cast, "props": props, "highlight": S.get('highlight', {}), "intro": intro}
     json.dump(drug, open(os.path.join(dr, 'drug.json'), 'w'), ensure_ascii=False, indent=1)
     V = {k: VOICES[k] for k in (cast['lead'], cast['cameo'])}
-    json.dump({"voices": V, "lines": lines, "bridges": {}}, open(os.path.join(dr, 'dialog.json'), 'w'), ensure_ascii=False, indent=1)
+    json.dump({"voices": V, "lines": lines, "bridges": bridges}, open(os.path.join(dr, 'dialog.json'), 'w'), ensure_ascii=False, indent=1)
     app = open(os.path.join(ROOT, 'drugs', 'kinteles', 'source', 'app.js')).read()
     i = app.index('const steps=['); j = app.index('];', i) + 2
     stj = 'const steps=[\n' + ',\n'.join(jsobj(s) for s in steps) + '];'
-    open(os.path.join(dr, 'source', 'app.js'), 'w').write(app[:i] + stj + app[j:])
+    app = app[:i] + stj + app[j:]
+    app = re.sub(r"\$\('ytNote'\)\.textContent=steps\[index\]\.id===[^;]*?;", "$('ytNote').textContent=(steps[index].note||'기전 영상 · 영어 원음. ⚙ → 자막 → 자동 번역 → 한국어.');", app)
+    open(os.path.join(dr, 'source', 'app.js'), 'w').write(app)
     open(os.path.join(dr, 'source', 'captions.js'), 'w').write('const captions={};')
     subprocess.run([sys.executable, os.path.join(ROOT, 'tools', 'intro_gen.py'), dr], check=True)
     print('built', dr, order)

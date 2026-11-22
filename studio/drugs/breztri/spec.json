@@ -101,7 +101,9 @@
    "kind": "신약",
    "detail": "원내 첫 3제 흡입제(원내 신약)<br>원외 트림보우·트렐리지와 같은 계열",
    "s": 4
-  }
+  },
+  "full": "브레즈트리 에어로스피어 흡입제 160/7.2/5.0 µg",
+  "full_en": "BREZTRI AEROSPHERE INHALER 160/7.2/5.0 µg · 120회"
  },
  "parts": [
   {
@@ -152,10 +154,14 @@
   },
   {
    "id": "yt1",
-   "type": "ytslot",
-   "title": "기전 영상 · 링크 확정 전",
-   "sec": "<b>기전 영상</b> · VIDEO",
-   "h1": ""
+   "type": "yt",
+   "vid": "368GamSlc_0",
+   "start": 32,
+   "end": 260,
+   "label": "3제 흡입제 기전 영상",
+   "desc": "ICS · LAMA · LABA가 기도에서 작용하는 과정",
+   "bubble": "이제 영상으로<br>볼까요?",
+   "say": "이제 영상으로 볼까요?"
   },
   {
    "id": "form",

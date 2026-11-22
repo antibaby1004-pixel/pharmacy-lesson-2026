@@ -53,6 +53,6 @@ for slug in sys.argv[2:]:
     j = h.index('<script src="../timing.js"'); i = h.rindex('</div>', 0, j); h = h[:i] + pill + h[i:]
     open(fp, 'w').write(h)
     ap = os.path.join(dr, 'source', 'app.js'); a = open(ap).read()
-    a = re.sub(r"(title:\s*'[^']*?)(?: · (?:신약|대체|용량추가|원외→원내))?'(,\s*file:\s*'intro')", lambda m: m.group(1) + f" · {T['kind']}'" + m.group(2), a, count=1)
+    a = re.sub(r"(title:\s*(['\"])(?:(?!\2).)*?)(?: · (?:신약|대체|용량추가|원외→원내))?\2(,\s*file:\s*['\"]intro['\"])", lambda m: m.group(1) + f" · {T['kind']}" + m.group(2) + m.group(3), a, count=1)
     open(ap, 'w').write(a)
     print(slug, T['kind'], 'ok')

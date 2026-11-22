@@ -1,5 +1,5 @@
 const steps=[
-{title: "링거라이트 소개 · 마시는 수분 보충", file: "intro", duration: 20},
+{title: "링거라이트 소개 · 마시는 수분 보충 · 원외→원내", file: "intro", duration: 20},
 {title: "SGLT1 · 포도당과 나트륨", file: "m0", duration: 15},
 {title: "기전 영상 · 링크 확정 전", file: "yt1", duration: 9},
 {title: "왜 설탕물이 아닌가", file: "m1", duration: 18},

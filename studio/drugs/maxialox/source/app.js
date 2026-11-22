@@ -1,5 +1,5 @@
 const steps=[
-{title: "맥시알록 소개 · PONV 예방", file: "intro", duration: 20},
+{title: "맥시알록 소개 · PONV 예방 · 대체", file: "intro", duration: 20},
 {title: "세로토닌 · 5-HT3 · 구토중추", file: "m0", duration: 17},
 {title: "기전 영상 · 링크 확정 전", file: "yt1", duration: 9},
 {title: "2세대의 차이 · 긴 반감기", file: "m1", duration: 15},

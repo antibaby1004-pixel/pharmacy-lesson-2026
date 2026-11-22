@@ -1,5 +1,5 @@
 const steps=[
-{title: "에나폰 5 소개 · 저용량 규격", file: "intro", duration: 21},
+{title: "에나폰 5 소개 · 저용량 규격 · 용량추가", file: "intro", duration: 21},
 {title: "하행 통증억제 경로", file: "m0", duration: 20},
 {title: "기전 영상 · 링크 확정 전", file: "yt1", duration: 9},
 {title: "용량 축 · 부작용 수용체", file: "m1", duration: 22},
