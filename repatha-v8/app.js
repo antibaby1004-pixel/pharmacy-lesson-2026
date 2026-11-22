@@ -1,5 +1,5 @@
 const steps=[
-{title:'레파타 소개 · 치료 목적과 허가 적응증',file:'intro',duration:32.053},
+{title:'레파타 소개 · 치료 목적과 허가 적응증 · 원외→원내',file:'intro',duration:37.994},
 {title:'정상 생리 · 수용체 재활용',file:0,duration:6.75},{title:'분해 단백질 · 수용체 분해',file:1,duration:7.603},{title:'evolocumab · 수용체 보존',file:2,duration:12.487},
 {title:'공식 기전 영상 · 0:40–3:23',id:'8mvyOSj83dg',start:40,end:203},
 {title:'특징과 사용 이유',file:3,duration:27.687},{title:'용량과 사용법',file:5,duration:31.868},
