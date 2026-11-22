@@ -31,7 +31,7 @@ for f in os.listdir(os.path.join(STUDIO,'lib')):
     if f.endswith('.woff2'): shutil.copy(os.path.join(STUDIO,'lib',f),os.path.join(dist,'fonts',f))
 open(os.path.join(dist,'captions.js'),'w').write('const captions='+json.dumps(new,ensure_ascii=False)+';\nconst DRUG_HL='+json.dumps(cfg.get('highlight',{}),ensure_ascii=False)+';')
 shutil.copy(os.path.join(STUDIO,'lib','highlight.js'),dist)
-ix=os.path.join(dist,'index.html');h=open(ix).read().replace('{{NAME}}',cfg.get('name','')).replace('{{NO}}',str(cfg.get('no','01')).zfill(2));open(ix,'w').write(h)
+ix=os.path.join(dist,'index.html');BEN=json.load(open(os.path.join(STUDIO,'brand_en.json'))).get(os.path.basename(os.path.abspath(d)));NM=cfg.get('name','')+(f' ({BEN})' if BEN else '');h=open(ix).read().replace('{{NAME}}',NM).replace('{{NO}}',str(cfg.get('no','01')).zfill(2));open(ix,'w').write(h)
 app=open(os.path.join(d,'source','app.js')).read()
 app=re.sub(r"file:('?[\w]+'?),duration:[\d.]+",lambda m:f"file:{m.group(1)},duration:{F[m.group(1).strip(chr(39))]['dur']}" if m.group(1).strip("'") in F else m.group(0),app)
 open(os.path.join(dist,'app.js'),'w').write(app)
