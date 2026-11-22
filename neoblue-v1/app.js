@@ -1,5 +1,5 @@
 const steps=[
-{title: "네오블루5 소개 · 미량원소 5종", file: "intro", duration: 22},
+{title: "네오블루5 소개 · 미량원소 5종 · 대체", file: "intro", duration: 22},
 {title: "다섯 원소 · 효소의 부품", file: "m0", duration: 32},
 {title: "두 갈래 출구 · 쌓이는 곳", file: "m1", duration: 25},
 {title: "함량 읽는 법", file: "read", duration: 31},
