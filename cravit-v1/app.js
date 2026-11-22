@@ -1,5 +1,5 @@
 const steps=[
-{title: "크라비트 750 소개 · 고용량 규격", file: "intro", duration: 20},
+{title: "크라비트 750 소개 · 고용량 규격", file: "intro", duration: 24},
 {title: "DNA gyrase · topoisomerase IV", file: "m0", duration: 24},
 {title: "기전 영상 · 링크 확정 전", file: "yt1", duration: 9},
 {title: "농도의존 살균 · 1일 1회", file: "m1", duration: 20},
