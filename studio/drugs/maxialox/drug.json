@@ -99,13 +99,8 @@
   "inn": "palonosetron",
   "photos": [
    {
-    "draw": "pfs",
-    "args": [
-     "0.075 mg",
-     "1.5 mL 프리필드",
-     "#C0504D"
-    ],
-    "label": "맥시알록 프리필드주 1.5 mL"
+    "img": "img/box.jpg",
+    "label": "프리필드 주 1.5 mL × 5"
    }
   ],
   "facts": [
@@ -146,6 +141,7 @@
     "t1": 16.98
    }
   ],
+  "photo_note": "실제 제품 사진 · KIMS",
   "full": "맥시알록 프리필드 주 1.5 mL",
   "full_en": "Maxialox prefilled inj. 1.5 mL",
   "itype": {

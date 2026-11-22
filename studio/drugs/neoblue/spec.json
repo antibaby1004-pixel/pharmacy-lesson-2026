@@ -69,13 +69,8 @@
   "inn": "zinc · copper · manganese · chromium · selenium",
   "photos": [
    {
-    "draw": "vial",
-    "args": [
-     "5종",
-     "미량원소",
-     "#2F6FB0"
-    ],
-    "label": "네오블루5주 바이알"
+    "img": "img/vial.jpg",
+    "label": "바이알 10 mL"
    }
   ],
   "sents": [
@@ -108,7 +103,8 @@
    "s": 3
   },
   "full": "네오블루 5 주",
-  "full_en": "Neoblue 5 inj."
+  "full_en": "Neoblue 5 inj.",
+  "photo_note": "실제 제품 사진 · KIMS"
  },
  "parts": [
   {
