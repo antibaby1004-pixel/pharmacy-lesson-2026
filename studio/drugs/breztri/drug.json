@@ -123,12 +123,6 @@
     "t": 15.24,
     "lab": "적응증",
     "v": "성인 COPD 유지 치료"
-   },
-   {
-    "t": 18.97,
-    "lab": "도입",
-    "v": "원내 신약",
-    "cls": "amb"
    }
   ],
   "actions": [
@@ -163,6 +157,11 @@
     "ang": 100
    }
   ],
+  "itype": {
+   "kind": "신약",
+   "detail": "원내 첫 3제 흡입제(원내 신약)<br>원외 트림보우·트렐리지와 같은 계열",
+   "t": 18.97
+  },
   "chip": "브레즈트리 Breztri <i>· budesonide / glycopyrronium / formoterol</i>"
  }
 }

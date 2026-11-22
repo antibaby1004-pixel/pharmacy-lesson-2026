@@ -146,6 +146,11 @@
     "t1": 14.71
    }
   ],
+  "itype": {
+   "kind": "신약",
+   "detail": "원내 신약 · 성인 전용 21가<br>기존 폐렴구균 백신과의 관계는 확인 중",
+   "t": 11.91
+  },
   "chip": "캡박시브 Capvaxive <i>· pneumococcal 21-valent conjugate vaccine</i>"
  }
 }

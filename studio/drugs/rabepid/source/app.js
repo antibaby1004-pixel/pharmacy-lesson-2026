@@ -1,5 +1,5 @@
 const steps=[
-{title:'라베피드 소개 · 두 함량과 작용',file:'intro',duration:20},
+{title:'라베피드 소개 · 두 함량과 작용 · 신약',file:'intro',duration:20},
 {title:'rabeprazole · 위산 분비 억제',file:0,duration:7},{title:'탄산칼슘 · 산 중화',file:1,duration:9},
 {title:'기전 영상 · 위산 분비 억제 0:00–1:58',id:'oAEwnbi9Cio',start:0,end:118},
 {title:'기전 영상 · 탄산칼슘',id:'EmcCMQ-xkLA',start:0,end:null,est:120},

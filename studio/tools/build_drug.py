@@ -91,6 +91,7 @@ def build(dr):
     ia = [{"k": "walk", "t0": 0.25, "t1": 1.15, "x0": 960, "x1": 1640}] + acts_for(NI, props, 1)[1:]
     intro = {"title": I['title'], "en": I['en'], "inn": I['inn'], "photos": I['photos'], "facts": facts, "actions": ia}
     if I.get('photo_note'): intro['photo_note'] = I['photo_note']
+    if I.get('itype'): intro['itype'] = {"kind": I['itype']['kind'], "detail": I['itype']['detail'], "t": round(NI[I['itype']['s']]['old'][0], 2)}
     if S.get('chip'): intro['chip'] = S['chip']
     g = S['greet']
     lines['intro'] = [{"who": cast['lead'], "bubble": g['bubble'], "say": g['say'], "at": 0.0,

@@ -6,7 +6,7 @@
   {
    "part": "intro",
    "scene": "intro.html",
-   "video_dur": 25.68
+   "video_dur": 28.66
   },
   {
    "part": "0",
@@ -201,6 +201,11 @@
     "t1": 25.0
    }
   ],
-  "photo_note": "실제 제품 사진 · KIMS"
+  "photo_note": "실제 제품 사진 · KIMS",
+  "itype": {
+   "kind": "신약",
+   "detail": "원내 신약<br>만 65세 이상 MF59 독감 백신",
+   "t": 25.68
+  }
  }
 }

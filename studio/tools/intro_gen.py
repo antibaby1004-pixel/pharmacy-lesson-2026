@@ -66,6 +66,12 @@ def build(dr):
     rows = ''.join(
         f'<div class="card fr {r.get("cls","")}" data-in="{r["t"]}"><span class="lab">{r["lab"]}</span><div class="v">{r["v"]}</div></div>'
         for r in I['facts'])
+    COL = {'신약': '#007F86', '대체': '#B35C00', '용량추가': '#1F6FD1', '원외→원내': '#6B4FB8'}
+    T = I.get('itype')
+    ity = ''
+    if T:
+        c = COL.get(T['kind'], '#007F86')
+        ity = f'<div class="card ity" id="ity" style="border-color:{c}"><span class="t">원내 도입 구분</span><span class="k" style="background:{c}">{T["kind"]}</span><span class="d">{T["detail"]}</span></div>'
     acts = json.dumps(I.get('actions', []), ensure_ascii=False)
     acts = re.sub(r'"(\w+)":', r'\1:', acts)
     char2 = ''
@@ -89,20 +95,25 @@ svg text{{font-family:P}}
 .fr .lab{{font-size:30px}}.fr .v{{font-size:42px;line-height:54px;font-weight:700}}
 .fr.amb{{border-color:#F3C58A;background:#FFF7EC}}.fr.amb .lab,.fr.amb .v{{color:#7D4A00}}
 .fr.red{{border-color:#F2B8B2;background:#FCE9E7}}.fr.red .lab,.fr.red .v{{color:#8E2219}}
+.ity{{position:absolute;left:930px;top:452px;width:510px;box-sizing:border-box;padding:18px 24px;display:flex;flex-direction:column;gap:10px;border-width:3px;opacity:0}}
+.ity .k{{align-self:flex-start;font-size:40px;font-weight:800;color:#fff;padding:6px 20px;border-radius:14px}}
+.ity .d{{font-size:30px;line-height:42px;font-weight:700;color:#243341}}
+.ity .t{{font-size:22px;font-weight:700;color:var(--muted);letter-spacing:.04em}}
 </style></head><body><div class="stage">
 <div class="fade"><header class="top"><div class="sec"><b>약물 소개</b> · DRUG OVERVIEW</div><div class="chip">{chip}</div></header></div>
 <div class="fade">
 <div class="nm" id="nm"><p class="t">{I['title']}<span>{I['en']}</span></p><p class="inn">{I['inn']}</p></div>
 <div class="card ph" id="ph"><div class="im">{figs}</div><div class="cap" id="cap">{capsrc}</div></div>
-<div class="facts">{rows}</div>
+<div class="facts">{rows}</div>{ity}
 </div>
 </div>
 <script src="../timing.js"></script><script src="../../../lib/core.js"></script><script>
-useTiming('intro');const $i=i=>document.getElementById(i);const TB={tB};
+useTiming('intro');const $i=i=>document.getElementById(i);const TB={tB};const ITT={(T or {}).get('t', 999)};
 SCENE.anim=(o,T)=>{{const k=ease(seg(o,TB-0.25,TB+0.75));
  $i('nm').style.transform=`scale(${{lerp(1,.6,k)}})`;$i('nm').style.opacity=Math.max(seg(o,0.2,0.7),seg(T||0,1.6,2.2));
  const ph=$i('ph');ph.style.opacity=seg(o,0.8,1.3);ph.style.transform=`translate(${{lerp(0,834,k)}}px,${{lerp(0,-200,k)}}px) scale(${{lerp(1,.38,k)}})`;
- ph.querySelectorAll('figcaption,.cap').forEach(e=>e.style.opacity=1-seg(o,TB-0.3,TB+0.2))}};
+ ph.querySelectorAll('figcaption,.cap').forEach(e=>e.style.opacity=1-seg(o,TB-0.3,TB+0.2));
+ const it=$i('ity');if(it){{it.style.opacity=seg(o,TB+0.7,TB+1.2);const p=seg(o,ITT,ITT+0.5)*(1-seg(o,ITT+1.6,ITT+2.2));it.style.transform=`scale(${{1+0.06*Math.sin(Math.PI*p)}})`;it.style.boxShadow=p>0?`0 0 0 ${{8*p}}px rgba(0,127,134,.15)`:''}}}};
 SCENE.char=makeChar({acts},'lead');{char2}
 </script><script src="../../../lib/highlight.js"></script></body></html>
 '''

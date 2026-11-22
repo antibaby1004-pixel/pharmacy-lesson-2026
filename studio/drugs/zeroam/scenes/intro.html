@@ -15,19 +15,24 @@ svg text{font-family:P}
 .fr .lab{font-size:30px}.fr .v{font-size:42px;line-height:54px;font-weight:700}
 .fr.amb{border-color:#F3C58A;background:#FFF7EC}.fr.amb .lab,.fr.amb .v{color:#7D4A00}
 .fr.red{border-color:#F2B8B2;background:#FCE9E7}.fr.red .lab,.fr.red .v{color:#8E2219}
+.ity{position:absolute;left:930px;top:452px;width:510px;box-sizing:border-box;padding:18px 24px;display:flex;flex-direction:column;gap:10px;border-width:3px;opacity:0}
+.ity .k{align-self:flex-start;font-size:40px;font-weight:800;color:#fff;padding:6px 20px;border-radius:14px}
+.ity .d{font-size:30px;line-height:42px;font-weight:700;color:#243341}
+.ity .t{font-size:22px;font-weight:700;color:var(--muted);letter-spacing:.04em}
 </style></head><body><div class="stage">
 <div class="fade"><header class="top"><div class="sec"><b>약물 소개</b> · DRUG OVERVIEW</div><div class="chip">제로암 Gero-Am <i>· gemcitabine</i></div></header></div>
 <div class="fade">
 <div class="nm" id="nm"><p class="t">제로암<span>Gero-Am</span></p><p class="inn">gemcitabine</p></div>
 <div class="card ph" id="ph"><div class="im"><figure><img src="img/box200.jpg"><figcaption>200 mg 포장</figcaption></figure><figure><img src="img/v200.jpg"><figcaption>200 mg 바이알</figcaption></figure><figure><img src="img/v1g.jpg"><figcaption>1 g 바이알</figcaption></figure></div><div class="cap" id="cap">실제 제품 사진 · KIMS</div></div>
-<div class="facts"><div class="card fr " data-in="3.8"><span class="lab">함량·제형</span><div class="v">200 mg · 1 g 동결건조 분말</div></div><div class="card fr " data-in="7.9"><span class="lab">바뀐 이유</span><div class="v">젬시트 액상 → 분말 (안전성 · 진료과 요청)</div></div><div class="card fr amb" data-in="13.7"><span class="lab">달라진 점</span><div class="v">성분·작용 같음 · 투여 전 녹이기 추가</div></div><div class="card fr " data-in="18.7"><span class="lab">적응증</span><div class="v">비소세포폐암 · 췌장암 · 방광암 · 유방암 · 난소암 · 담도암</div></div><div class="card fr " data-in="24.1"><span class="lab">사용</span><div class="v">단독 또는 다른 항암제와 병용</div></div></div>
+<div class="facts"><div class="card fr " data-in="3.8"><span class="lab">함량·제형</span><div class="v">200 mg · 1 g 동결건조 분말</div></div><div class="card fr " data-in="7.9"><span class="lab">바뀐 이유</span><div class="v">젬시트 액상 → 분말 (안전성 · 진료과 요청)</div></div><div class="card fr amb" data-in="12.8"><span class="lab">달라진 점</span><div class="v">성분·작용 같음 · 투여 전 녹이기 추가</div></div><div class="card fr " data-in="17.8"><span class="lab">적응증</span><div class="v">비소세포폐암 · 췌장암 · 방광암 · 유방암 · 난소암 · 담도암</div></div><div class="card fr " data-in="23.2"><span class="lab">사용</span><div class="v">단독 또는 다른 항암제와 병용</div></div></div><div class="card ity" id="ity" style="border-color:#B35C00"><span class="t">원내 도입 구분</span><span class="k" style="background:#B35C00">대체</span><span class="d">젬시트주 1 g · 200 mg(액상, 동아에스티)<br>→ 제로암(분말)으로 대체</span></div>
 </div>
 </div>
 <script src="../timing.js"></script><script src="../../../lib/core.js"></script><script>
-useTiming('intro');const $i=i=>document.getElementById(i);const TB=3.83;
+useTiming('intro');const $i=i=>document.getElementById(i);const TB=3.83;const ITT=7.87;
 SCENE.anim=(o,T)=>{const k=ease(seg(o,TB-0.25,TB+0.75));
  $i('nm').style.transform=`scale(${lerp(1,.6,k)})`;$i('nm').style.opacity=Math.max(seg(o,0.2,0.7),seg(T||0,1.6,2.2));
  const ph=$i('ph');ph.style.opacity=seg(o,0.8,1.3);ph.style.transform=`translate(${lerp(0,834,k)}px,${lerp(0,-200,k)}px) scale(${lerp(1,.38,k)})`;
- ph.querySelectorAll('figcaption,.cap').forEach(e=>e.style.opacity=1-seg(o,TB-0.3,TB+0.2))};
-SCENE.char=makeChar([{k: "walk", t0: 0.25, t1: 1.15, x0: 960, x1: 1640, run: true}, {k: "prop", name: "vial", t0: 4.2, t1: 6.8}, {k: "point", t0: 8.2, t1: 10.4, ang: 96}, {k: "think", t0: 14.0, t1: 15.8}, {k: "memo", t0: 19.2, t1: 21.4}, {k: "clap", t0: 23.2, t1: 24.4}, {k: "nod", t0: 25.0, t1: 26.0}],'lead');
+ ph.querySelectorAll('figcaption,.cap').forEach(e=>e.style.opacity=1-seg(o,TB-0.3,TB+0.2));
+ const it=$i('ity');if(it){it.style.opacity=seg(o,TB+0.7,TB+1.2);const p=seg(o,ITT,ITT+0.5)*(1-seg(o,ITT+1.6,ITT+2.2));it.style.transform=`scale(${1+0.06*Math.sin(Math.PI*p)})`;it.style.boxShadow=p>0?`0 0 0 ${8*p}px rgba(0,127,134,.15)`:''}};
+SCENE.char=makeChar([{k: "walk", t0: 0.25, t1: 1.15, x0: 960, x1: 1640, run: true}, {k: "prop", name: "vial", t0: 4.2, t1: 6.8}, {k: "point", t0: 8.2, t1: 10.4, ang: 96}, {k: "think", t0: 13.1, t1: 14.9}, {k: "memo", t0: 18.3, t1: 20.5}, {k: "clap", t0: 22.3, t1: 23.5}, {k: "nod", t0: 24.1, t1: 25.1}],'lead');
 </script><script src="../../../lib/highlight.js"></script></body></html>

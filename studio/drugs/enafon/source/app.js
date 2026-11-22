@@ -1,11 +1,11 @@
 const steps=[
-{title: "에나폰 5 소개 · 저용량 규격", file: "intro", duration: 19},
+{title: "에나폰 5 소개 · 저용량 규격", file: "intro", duration: 21},
 {title: "하행 통증억제 경로", file: "m0", duration: 20},
 {title: "기전 영상 · 링크 확정 전", file: "yt1", duration: 9},
-{title: "용량 축 · 부작용 수용체", file: "m1", duration: 20},
+{title: "용량 축 · 부작용 수용체", file: "m1", duration: 22},
 {title: "용법", file: "5", duration: 16},
 {title: "주의사항", file: "4", duration: 19},
-{title: "Take-home message", file: "summary", duration: 23}];
+{title: "Take-home message", file: "summary", duration: 24}];
 const $=id=>document.getElementById(id),local=$('local');
 let index=0,yt,ytReady=false,ytLoading=false,wantsPlay=false,slideRate=1,pendingOffset=0,ended=false,dragging=false;
 const isYT=()=>!!steps[index].id;

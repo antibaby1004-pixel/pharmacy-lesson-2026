@@ -15,20 +15,25 @@ svg text{font-family:P}
 .fr .lab{font-size:30px}.fr .v{font-size:42px;line-height:54px;font-weight:700}
 .fr.amb{border-color:#F3C58A;background:#FFF7EC}.fr.amb .lab,.fr.amb .v{color:#7D4A00}
 .fr.red{border-color:#F2B8B2;background:#FCE9E7}.fr.red .lab,.fr.red .v{color:#8E2219}
+.ity{position:absolute;left:930px;top:452px;width:510px;box-sizing:border-box;padding:18px 24px;display:flex;flex-direction:column;gap:10px;border-width:3px;opacity:0}
+.ity .k{align-self:flex-start;font-size:40px;font-weight:800;color:#fff;padding:6px 20px;border-radius:14px}
+.ity .d{font-size:30px;line-height:42px;font-weight:700;color:#243341}
+.ity .t{font-size:22px;font-weight:700;color:var(--muted);letter-spacing:.04em}
 </style></head><body><div class="stage">
 <div class="fade"><header class="top"><div class="sec"><b>약물 소개</b> · DRUG OVERVIEW</div><div class="chip">뉴도탑 Newdotop <i>· lidocaine 700 mg cataplasma</i></div></header></div>
 <div class="fade">
 <div class="nm" id="nm"><p class="t">뉴도탑<span>Newdotop cataplasma</span></p><p class="inn">lidocaine</p></div>
 <div class="card ph" id="ph"><div class="im"><figure><svg viewBox="0 0 460 340"><rect x="40" y="40" width="380" height="230" rx="26" fill="#F2E6D8" stroke="#243341" stroke-width="7"/><rect x="70" y="70" width="320" height="170" rx="16" fill="#fff" opacity=".6" stroke="#C9B79F" stroke-width="3" stroke-dasharray="10 8"/>
 <text x="230" y="160" text-anchor="middle" font-size="40" font-weight="700" fill="#243341">700 mg</text><text x="230" y="205" text-anchor="middle" font-size="24" font-weight="600" fill="#3F4D5A">10 × 14 cm</text></svg><figcaption>뉴도탑 카타플라스마 (5매)</figcaption></figure></div><div class="cap" id="cap">제품 그림 · 실제 사진 준비 중</div></div>
-<div class="facts"><div class="card fr " data-in="4.44"><span class="lab">함량</span><div class="v">lidocaine 700 mg/매 · 10 × 14 cm</div></div><div class="card fr " data-in="9.08"><span class="lab">적응증</span><div class="v">대상포진 후 신경통증 완화</div></div><div class="card fr amb" data-in="11.6"><span class="lab">도입</span><div class="v">원내 신약 · 5매 포장</div></div></div>
+<div class="facts"><div class="card fr " data-in="4.44"><span class="lab">함량</span><div class="v">lidocaine 700 mg/매 · 10 × 14 cm</div></div><div class="card fr " data-in="9.08"><span class="lab">적응증</span><div class="v">대상포진 후 신경통증 완화</div></div></div><div class="card ity" id="ity" style="border-color:#007F86"><span class="t">원내 도입 구분</span><span class="k" style="background:#007F86">신약</span><span class="d">원내 신약 · 원내에 없던 리도카인 첩부제<br>경구 신경통약의 대체가 아닌 보조</span></div>
 </div>
 </div>
 <script src="../timing.js"></script><script src="../../../lib/core.js"></script><script>
-useTiming('intro');const $i=i=>document.getElementById(i);const TB=4.44;
+useTiming('intro');const $i=i=>document.getElementById(i);const TB=4.44;const ITT=11.6;
 SCENE.anim=(o,T)=>{const k=ease(seg(o,TB-0.25,TB+0.75));
  $i('nm').style.transform=`scale(${lerp(1,.6,k)})`;$i('nm').style.opacity=Math.max(seg(o,0.2,0.7),seg(T||0,1.6,2.2));
  const ph=$i('ph');ph.style.opacity=seg(o,0.8,1.3);ph.style.transform=`translate(${lerp(0,834,k)}px,${lerp(0,-200,k)}px) scale(${lerp(1,.38,k)})`;
- ph.querySelectorAll('figcaption,.cap').forEach(e=>e.style.opacity=1-seg(o,TB-0.3,TB+0.2))};
+ ph.querySelectorAll('figcaption,.cap').forEach(e=>e.style.opacity=1-seg(o,TB-0.3,TB+0.2));
+ const it=$i('ity');if(it){it.style.opacity=seg(o,TB+0.7,TB+1.2);const p=seg(o,ITT,ITT+0.5)*(1-seg(o,ITT+1.6,ITT+2.2));it.style.transform=`scale(${1+0.06*Math.sin(Math.PI*p)})`;it.style.boxShadow=p>0?`0 0 0 ${8*p}px rgba(0,127,134,.15)`:''}};
 SCENE.char=makeChar([{k: "walk", t0: 0.25, t1: 1.15, x0: 960, x1: 1640}, {k: "prop", name: "book", t0: 4.64, t1: 7.24}, {k: "thumbs", t0: 9.28, t1: 10.88}, {k: "prop", name: "magnifier", t0: 11.8, t1: 14.4}],'lead');
 </script><script src="../../../lib/highlight.js"></script></body></html>

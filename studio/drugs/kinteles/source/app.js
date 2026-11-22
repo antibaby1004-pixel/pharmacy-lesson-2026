@@ -1,5 +1,5 @@
 const steps=[
-{title:'킨텔레스 소개 · 두 제형과 적응증',file:'intro',duration:20},
+{title:'킨텔레스 소개 · 두 제형과 적응증 · 신약',file:'intro',duration:20},
 {title:'림프구 · α4β7 · MAdCAM-1',file:0,duration:11},{title:'α4β7 차단 · 장 선택적',file:1,duration:12},
 {title:'기전 영상 · 처음부터 끝까지',id:'CksGufrYhPI',start:0,end:null,est:180},
 {title:'vedolizumab vs ustekinumab',file:'cmp',duration:32},{title:'용량 · 정맥주사',file:'5a',duration:13},{title:'용량 · 프리필드 펜',file:'5b',duration:20},

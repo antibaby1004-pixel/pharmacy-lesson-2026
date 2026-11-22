@@ -6,7 +6,7 @@
   {
    "part": "intro",
    "scene": "intro.html",
-   "video_dur": 19.52
+   "video_dur": 23.4
   },
   {
    "part": "0",
@@ -180,6 +180,11 @@
     "t1": 18.0
    }
   ],
-  "photo_note": "실제 제품 사진 · 약학정보원"
+  "photo_note": "실제 제품 사진 · 약학정보원",
+  "itype": {
+   "kind": "신약",
+   "detail": "원내 신약 · 라베린정(rabeprazole 단일제)은<br>그대로 유지 — 대체 아님",
+   "t": 19.52
+  }
  }
 }
