@@ -1,11 +1,11 @@
 const steps=[
-{title: "네오블루5 소개 · 미량원소 5종 · 대체", file: "intro", duration: 22},
-{title: "다섯 원소 · 효소의 부품", file: "m0", duration: 32},
-{title: "두 갈래 출구 · 쌓이는 곳", file: "m1", duration: 25},
-{title: "함량 읽는 법", file: "read", duration: 31},
-{title: "용법과 조제", file: "5", duration: 19},
+{title: "네오블루5 소개 · 미량원소 5종 · 대체", file: "intro", duration: 24},
+{title: "다섯 원소 · 효소의 부품", file: "m0", duration: 33},
+{title: "두 갈래 출구 · 쌓이는 곳", file: "m1", duration: 27},
+{title: "함량 읽는 법", file: "read", duration: 45},
+{title: "용법 · 금기", file: "5", duration: 24},
 {title: "부족 · 과잉 신호", file: "4", duration: 23},
-{title: "Take-home message", file: "summary", duration: 23}];
+{title: "Take-home message", file: "summary", duration: 22}];
 const $=id=>document.getElementById(id),local=$('local');
 let index=0,yt,ytReady=false,ytLoading=false,wantsPlay=false,slideRate=1,pendingOffset=0,ended=false,dragging=false;
 const isYT=()=>!!steps[index].id;
