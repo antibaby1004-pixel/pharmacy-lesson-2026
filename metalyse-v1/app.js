@@ -1,5 +1,5 @@
 const steps=[
-{title: "메탈라제 소개 · 급성 허혈성 뇌졸중", file: "intro", duration: 20},
+{title: "메탈라제 소개 · 급성 허혈성 뇌졸중 · 신약", file: "intro", duration: 20},
 {title: "plasminogen → plasmin", file: "m0", duration: 17},
 {title: "기전 영상 · 링크 확정 전", file: "yt1", duration: 9},
 {title: "세 군데를 고쳤더니", file: "m1", duration: 23},
