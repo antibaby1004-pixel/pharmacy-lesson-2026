@@ -46,13 +46,12 @@
   "inn": "pneumococcal 21-valent conjugate vaccine (CRM197)",
   "photos": [
    {
-    "draw": "pfs",
-    "args": [
-     "0.5 mL",
-     "프리필드시린지",
-     "#7FC6CA"
-    ],
-    "label": "캡박시브 프리필드시린지"
+    "img": "img/box.jpg",
+    "label": "포장"
+   },
+   {
+    "img": "img/pfs.jpg",
+    "label": "프리필드시린지 0.5 mL"
    }
   ],
   "sents": [
@@ -91,7 +90,8 @@
    "s": 3
   },
   "full": "캡박시브 프리필드시린지",
-  "full_en": "Capvaxive prefilled syringe"
+  "full_en": "Capvaxive prefilled syringe",
+  "photo_note": "실제 제품 사진 · KIMS"
  },
  "parts": [
   {
