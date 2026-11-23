@@ -1,12 +1,12 @@
 const BL={},BP={};function getB(f){if(!BP[f])BP[f]=fetch('part'+f+'.mp4').then(r=>{if(!r.ok)throw 0;return r.blob()}).then(b=>(BL[f]=URL.createObjectURL(b))).catch(()=>{delete BP[f];return 'part'+f+'.mp4'});return BP[f]}
 function pre(i){const s=steps[i];if(s&&!s.id&&s.file)getB(s.file)}
 const steps=[
-{title:'제로암 소개 · 함량과 허가 적응증 · 대체',file:'intro',duration:37.501},
-{title:'DNA 복제 · 재료가 필요하다',file:0,duration:10.044},{title:'닮은꼴 재료 · 인산화',file:1,duration:11.124},{title:'DNA 합성 억제 · 증식 억제',file:2,duration:14.158},
+{title:'제로암 소개 · 함량과 허가 적응증 · 대체',file:'intro',duration:38.317},
+{title:'DNA 복제 · 재료가 필요하다',file:0,duration:10.29},{title:'닮은꼴 재료 · 인산화',file:1,duration:11.505},{title:'DNA 합성 억제 · 증식 억제',file:2,duration:14.6},
 {title:'기전 영상 · 0:15–2:45',id:'QA5ufAU1NSk',start:15,end:165},
-{title:'용량과 사용법',file:5,duration:31.29},{title:'조제 · 녹이는 순서',file:'recon',duration:43.647},
-{title:'보관',file:'storage',duration:19.176},{title:'주의점과 부작용',file:4,duration:24.56},
-{title:'Take-home message',file:'summary',duration:33.496}];
+{title:'용량과 사용법',file:5,duration:31.958},{title:'조제 · 녹이는 순서',file:'recon',duration:44.742},
+{title:'보관',file:'storage',duration:19.68},{title:'주의점과 부작용',file:4,duration:25.037},
+{title:'Take-home message',file:'summary',duration:34.478}];
 const $=id=>document.getElementById(id),local=$('local');
 let index=0,yt,ytReady=false,ytLoading=false,wantsPlay=false,slideRate=1,pendingOffset=0,ended=false,dragging=false;
 const isYT=()=>!!steps[index].id;
