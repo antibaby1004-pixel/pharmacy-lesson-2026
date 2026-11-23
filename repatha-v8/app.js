@@ -1,14 +1,14 @@
 const BL={},BP={};function getB(f){if(!BP[f])BP[f]=fetch('part'+f+'.mp4').then(r=>{if(!r.ok)throw 0;return r.blob()}).then(b=>(BL[f]=URL.createObjectURL(b))).catch(()=>{delete BP[f];return 'part'+f+'.mp4'});return BP[f]}
 function pre(i){const s=steps[i];if(s&&!s.id&&s.file)getB(s.file)}
 const steps=[
-{title:'레파타 소개 · 치료 목적과 허가 적응증 · 원외→원내',file:'intro',duration:37.994},
-{title:'정상 생리 · 수용체 재활용',file:0,duration:6.75},{title:'분해 단백질 · 수용체 분해',file:1,duration:7.603},{title:'evolocumab · 수용체 보존',file:2,duration:12.487},
+{title:'레파타 소개 · 치료 목적과 허가 적응증 · 원외→원내',file:'intro',duration:38.573},
+{title:'정상 생리 · 수용체 재활용',file:0,duration:6.852},{title:'분해 단백질 · 수용체 분해',file:1,duration:7.798},{title:'evolocumab · 수용체 보존',file:2,duration:12.84},
 {title:'공식 기전 영상 · 0:40–3:23',id:'8mvyOSj83dg',start:40,end:203},
-{title:'특징과 사용 이유',file:3,duration:27.687},{title:'용량과 사용법',file:5,duration:31.868},
-{title:'주사 전 · 1회용 펜과 보관',file:'storage',duration:33.073},
-{title:'주사 방법 · 프리필드펜 순서',file:'inj',duration:63.462},
-{title:'주의점과 부작용',file:4,duration:20.603},
-{title:'Take-home message',file:'summary',duration:44.651}];
+{title:'특징과 사용 이유',file:3,duration:28.184},{title:'용량과 사용법',file:5,duration:32.589},
+{title:'주사 전 · 1회용 펜과 보관',file:'storage',duration:33.815},
+{title:'주사 방법 · 프리필드펜 순서',file:'inj',duration:64.545},
+{title:'주의점과 부작용',file:4,duration:21.148},
+{title:'Take-home message',file:'summary',duration:45.669}];
 const $=id=>document.getElementById(id),local=$('local');
 let index=0,yt,ytReady=false,ytLoading=false,wantsPlay=false,slideRate=1,pendingOffset=0,ended=false,dragging=false;
 const isYT=()=>!!steps[index].id;
