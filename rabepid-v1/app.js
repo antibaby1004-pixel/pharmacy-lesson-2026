@@ -1,11 +1,11 @@
 const BL={},BP={};function getB(f){if(!BP[f])BP[f]=fetch('part'+f+'.mp4').then(r=>{if(!r.ok)throw 0;return r.blob()}).then(b=>(BL[f]=URL.createObjectURL(b))).catch(()=>{delete BP[f];return 'part'+f+'.mp4'});return BP[f]}
 function pre(i){const s=steps[i];if(s&&!s.id&&s.file)getB(s.file)}
 const steps=[
-{title:'라베피드 소개 · 두 함량과 작용 · 신약',file:'intro',duration:32.384},
-{title:'rabeprazole · 위산 분비 억제',file:0,duration:7.191},{title:'탄산칼슘 · 산 중화',file:1,duration:13.136},
+{title:'라베피드 소개 · 두 함량과 작용 · 신약',file:'intro',duration:33.237},
+{title:'rabeprazole · 위산 분비 억제',file:0,duration:7.453},{title:'탄산칼슘 · 산 중화',file:1,duration:13.46},
 {title:'기전 영상 · 위산 분비 억제 0:00–1:58',id:'oAEwnbi9Cio',start:0,end:118},
 {title:'기전 영상 · 탄산칼슘',id:'EmcCMQ-xkLA',start:0,end:null,est:120},
-{title:'용량과 사용법',file:5,duration:34.945},{title:'주의점과 부작용',file:4,duration:33.374},{title:'복용 및 보관',file:'storage',duration:22.321},{title:'Take-home message',file:'summary',duration:30.592}];
+{title:'용량과 사용법',file:5,duration:35.647},{title:'주의점과 부작용',file:4,duration:34.556},{title:'복용 및 보관',file:'storage',duration:22.861},{title:'Take-home message',file:'summary',duration:31.418}];
 const $=id=>document.getElementById(id),local=$('local');
 let index=0,yt,ytReady=false,ytLoading=false,wantsPlay=false,slideRate=1,pendingOffset=0,ended=false,dragging=false;
 const isYT=()=>!!steps[index].id;
