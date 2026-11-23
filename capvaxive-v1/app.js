@@ -4,10 +4,12 @@ const steps=[
 {title: "캡박시브 소개 · 성인용 21가 접합 백신 · 신약", file: "intro", duration: 19},
 {title: "다당 vs 단백 접합", file: "m0", duration: 21},
 {title: "기전 영상 · 링크 확정 전", file: "yt1", duration: 9},
-{title: "혈청형 구성", file: "sero", duration: 17},
+{title: "PPSV와 PCV", file: "types", duration: 34},
+{title: "혈청형 비교", file: "sero", duration: 32},
+{title: "교차 접종", file: "seq", duration: 29},
 {title: "용법과 보관", file: "5", duration: 12},
 {title: "주의사항", file: "4", duration: 18},
-{title: "Take-home message", file: "summary", duration: 19}];
+{title: "Take-home message", file: "summary", duration: 21}];
 const $=id=>document.getElementById(id),local=$('local');
 let index=0,yt,ytReady=false,ytLoading=false,wantsPlay=false,slideRate=1,pendingOffset=0,ended=false,dragging=false;
 const isYT=()=>!!steps[index].id;
@@ -66,7 +68,7 @@ function show(i,auto=true,offset=0,finishOutgoing=false){
 function advance(finishOutgoing=false){if(transitionPending)return;if(index<steps.length-1)show(index+1,true,0,finishOutgoing);else{ended=true;wantsPlay=false;if(currentYT())yt.pauseVideo();else local.pause();message('교육이 끝났습니다.');sync()}}
 function seek(t){const auto=wantsPlay;let i=0;while(i<steps.length-1&&t>=length(steps[i])){t-=length(steps[i]);i++}show(i,auto,Math.min(t,length(steps[i])-.05)*(steps[i].id?(steps[i].rate||1):slideRate))}
 function loadYT(){if(ytLoading)return;ytLoading=true;const s=document.createElement('script');s.src='https://www.youtube.com/iframe_api';s.onerror=()=>{ytLoading=false;error('YouTube를 불러오지 못했습니다.')};document.head.appendChild(s)}
-window.onYouTubeIframeAPIReady=()=>{yt=new YT.Player('youtube',{width:'100%',height:'100%',playerVars:{playsinline:1,cc_load_policy:1,cc_lang_pref:'ko',hl:'ko',origin:location.origin},events:{onApiChange:smallYouTubeCaptions,onReady:()=>{ytReady=true;smallYouTubeCaptions();if(isYT())playYT()},onStateChange:e=>{if(!currentYT()||transitionPhase==='covering')return;if(e.data===0)advance();if(e.data===1){smallYouTubeCaptions();setTimeout(smallYouTubeCaptions,1500);setTimeout(smallYouTubeCaptions,4000);if(yt.getPlaybackRate()!==(steps[index].rate||1))yt.setPlaybackRate(steps[index].rate||1);if(steps[index].end==null){const d=yt.getDuration();if(d>0)steps[index].end=d}if(transitionPhase==='loading')revealScene();try{local.pause()}catch{}wantsPlay=true;smallYouTubeCaptions();$('fallback').hidden=true}if(e.data===2&&!transitionPending)wantsPlay=false;if(e.data===5&&!wantsPlay)revealScene();sync()},onAutoplayBlocked:()=>{if(!isYT()||transitionPhase==='covering')return;revealScene();wantsPlay=false;sync();message('영상의 재생 버튼을 눌러 주세요.')},onError:e=>error('YouTube 재생 오류 '+e.data)}})};
+window.onYouTubeIframeAPIReady=()=>{yt=new YT.Player('youtube',{width:'100%',height:'100%',playerVars:{playsinline:1,cc_load_policy:1,cc_lang_pref:'ko',hl:'ko',origin:location.origin},events:{onApiChange:smallYouTubeCaptions,onReady:()=>{ytReady=true;smallYouTubeCaptions();if(isYT())playYT()},onStateChange:e=>{if(!currentYT()||transitionPhase==='covering')return;if(e.data===0)advance();if(e.data===1){if(yt.getPlaybackRate()!==(steps[index].rate||1))yt.setPlaybackRate(steps[index].rate||1);smallYouTubeCaptions();setTimeout(smallYouTubeCaptions,1500);setTimeout(smallYouTubeCaptions,4000);if(steps[index].end==null){const d=yt.getDuration();if(d>0)steps[index].end=d}if(transitionPhase==='loading')revealScene();try{local.pause()}catch{}wantsPlay=true;smallYouTubeCaptions();$('fallback').hidden=true}if(e.data===2&&!transitionPending)wantsPlay=false;if(e.data===5&&!wantsPlay)revealScene();sync()},onAutoplayBlocked:()=>{if(!isYT()||transitionPhase==='covering')return;revealScene();wantsPlay=false;sync();message('영상의 재생 버튼을 눌러 주세요.')},onError:e=>error('YouTube 재생 오류 '+e.data)}})};
 $('play').onclick=()=>{if(!$('fallback').hidden){show(index,true,pendingOffset);return;}if(transitionPending){wantsPlay=!wantsPlay;sync();return;}if(ended){show(0,true);return}wantsPlay=!wantsPlay;if(isYT()){if(ytReady)wantsPlay?yt.playVideo():yt.pauseVideo();else loadYT()}else wantsPlay?playLocal():local.pause();sync()};
 $('timeline').addEventListener('input',()=>{dragging=true;$('time').textContent=format(Number($('timeline').value))+' / '+format(total())});
 $('timeline').addEventListener('change',()=>{const t=Number($('timeline').value);dragging=false;seek(t)});
