@@ -1,4 +1,4 @@
-"""3단계: 장면 HTML을 30fps·2560×1440으로 찍고 최종 음성을 붙여 build/parts/part<part>.mp4를 만든다.
+"""3단계: 장면 HTML을 30fps·1920×1080으로 찍고 최종 음성을 붙여 build/parts/part<part>.mp4를 만든다.
 사용: python tools/render.py drugs/<약> [part ...]   (part를 안 주면 전부)
 필요: Google Chrome(또는 Chromium), playwright, ffmpeg"""
 import sys,os,json,math,asyncio,subprocess,shutil
@@ -11,7 +11,7 @@ chrome=shutil.which('google-chrome') or shutil.which('chromium') or shutil.which
 async def one(b,P):
     p=P['part'];D=F[p]['dur'];N=math.ceil(D*FPS);out=os.path.join(d,'build','parts',f'part{p}.mp4')
     ff=subprocess.Popen(['ffmpeg','-y','-loglevel','error','-f','image2pipe','-framerate',str(FPS),'-i','-','-i',os.path.join(d,'build',f'f_{p}.wav'),'-map','0:v','-map','1:a','-c:v','libx264','-preset','veryfast','-crf','18','-pix_fmt','yuv420p','-c:a','aac','-b:a','96k','-ar','24000','-af','apad','-t',f'{D:.3f}','-movflags','+faststart',out],stdin=subprocess.PIPE)
-    ctx=await b.new_context(viewport={'width':1920,'height':1080},device_scale_factor=4/3);pg=await ctx.new_page()
+    ctx=await b.new_context(viewport={'width':1920,'height':1080},device_scale_factor=1);pg=await ctx.new_page()
     await pg.goto('file://'+os.path.join(d,'scenes',P['scene']));await pg.wait_for_timeout(600)
     for i in range(N):
         await pg.evaluate(f'render({min(i/FPS,D-0.001)})');ff.stdin.write(await pg.screenshot(type='jpeg',quality=93))

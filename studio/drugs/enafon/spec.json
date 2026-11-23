@@ -125,12 +125,12 @@
    "steps": [
     {
      "s": 0,
-     "h": "하행 억제 경로",
+     "h": "Descending inhibitory pathway (하행 억제 경로)",
      "p": "뇌간 → 척수 · 노르에피네프린 · 세로토닌"
     },
     {
      "s": 1,
-     "h": "재흡수 억제",
+     "h": "Reuptake inhibition (재흡수 억제)",
      "p": "두 물질이 시냅스에 더 오래"
     },
     {
@@ -170,7 +170,7 @@
     {
      "s": 1,
      "lab": "신경병증 통증",
-     "v": "대상포진 후 신경통 · 당뇨병성 — 지침상 1차 약"
+     "v": "Postherpetic neuralgia (대상포진 후 신경통) · 당뇨병성 — 지침상 1차 약"
     },
     {
      "s": 2,
@@ -209,12 +209,12 @@
     {
      "s": 0,
      "lab": "야뇨증",
-     "v": "수면 중 소변 지림 ≠ 야간뇨"
+     "v": "수면 중 소변 지림 ≠ Nocturia (야간뇨)"
     },
     {
      "s": 1,
      "lab": "말초",
-     "v": "항콜린 → 방광 이완 · 용적 ↑"
+     "v": "Anticholinergic (항콜린) → Bladder relaxation (방광 이완) · 용적 ↑"
     },
     {
      "s": 2,
@@ -259,7 +259,7 @@
     {
      "s": 2,
      "h": "H1 · M1 · α1 차단",
-     "p": "졸림 · 입마름·변비 · 기립성 저혈압"
+     "p": "Sedation (졸림) · Dry mouth (입마름)·Constipation (변비) · Orthostatic hypotension (기립성 저혈압)"
     },
     {
      "s": 3,
@@ -335,19 +335,19 @@
     {
      "s": 1,
      "lab": "심장",
-     "v": "QT 연장 · 부정맥 — 심장 질환 주의",
+     "v": "QT prolongation (QT 연장) · Arrhythmia (부정맥) — 심장 질환 주의",
      "cls": "red"
     },
     {
      "s": 2,
      "lab": "항콜린",
-     "v": "녹내장 · 전립선비대 · 변비 악화",
+     "v": "Glaucoma (녹내장) · BPH (전립선비대) · Constipation (변비) 악화",
      "cls": "amb"
     },
     {
      "s": 3,
      "lab": "정신",
-     "v": "젊은 환자 자살 생각 경고 → 기분 변화 관찰",
+     "v": "젊은 환자 Suicidal ideation (자살 생각) 경고 → 기분 변화 관찰",
      "cls": "amb"
     }
    ]

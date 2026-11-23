@@ -118,7 +118,7 @@
     {
      "s": 1,
      "h": "DNA gyrase",
-     "p": "복제 앞쪽의 초나선 풀기 (topoisomerase II)"
+     "p": "복제 앞쪽의 Supercoiling (초나선) 풀기 (topoisomerase II)"
     },
     {
      "s": 2,
@@ -171,7 +171,7 @@
    "steps": [
     {
      "s": 0,
-     "h": "농도의존 살균",
+     "h": "Concentration-dependent killing (농도의존 살균)",
      "p": "농도가 높을수록 빨리, 많이 죽인다"
     },
     {
@@ -245,25 +245,25 @@
     {
      "s": 0,
      "lab": "심장",
-     "v": "QT 연장 — QT 연장 약물 병용 주의",
+     "v": "QT prolongation (QT 연장) — QT 연장 약물 병용 주의",
      "cls": "red"
     },
     {
      "s": 1,
      "lab": "힘줄",
-     "v": "힘줄염 · 힘줄 파열 (고령 · 스테로이드 병용)",
+     "v": "Tendinitis (힘줄염) · Tendon rupture (힘줄 파열) (고령 · 스테로이드 병용)",
      "cls": "red"
     },
     {
      "s": 2,
      "lab": "혈관",
-     "v": "대동맥류 · 대동맥 박리 위험",
+     "v": "Aortic aneurysm (대동맥류) · Aortic dissection (대동맥 박리) 위험",
      "cls": "amb"
     },
     {
      "s": 3,
      "lab": "기타",
-     "v": "혈당 이상 · 말초신경병증 · 중추신경계 반응"
+     "v": "Dysglycemia (혈당 이상) · Peripheral neuropathy (말초신경병증) · CNS effects (중추신경계 반응)"
     }
    ]
   },

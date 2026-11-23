@@ -13,8 +13,8 @@ def line(who,say):
     v=V[who];h=hashlib.md5(f"{v['voice']}|{v['rate']}|{v['pitch']}|{say}".encode()).hexdigest()[:10]
     f=os.path.join(d,'voice',f'{who}_{h}.mp3')
     if not os.path.exists(f): tts.say(v['voice'],say,f,v['rate'],v['pitch'])
-    a=read_audio(f);idx=np.where(np.abs(a)>300)[0]
-    a=a[max(0,idx[0]-240):idx[-1]+480] if len(idx) else a
+    a=read_audio(f);idx=np.where(np.abs(a)>40)[0]
+    a=a[max(0,idx[0]-int(0.02*SR)):idx[-1]+int(0.06*SR)] if len(idx) else a
     if say.rstrip().endswith('?'): a=rise(a)          # 의문문은 끝을 올림
     return fade(a*v.get('gain',1.0))
 def rise(a,tail=0.55,up=1.45):

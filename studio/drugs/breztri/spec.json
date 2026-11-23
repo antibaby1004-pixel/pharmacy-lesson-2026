@@ -147,17 +147,17 @@
     {
      "s": 1,
      "h": "ICS · budesonide",
-     "p": "글루코코르티코이드 수용체 → 염증 유전자 전사 억제"
+     "p": "Glucocorticoid receptor (글루코코르티코이드 수용체) → 염증 유전자 전사 억제"
     },
     {
      "s": 2,
      "h": "LAMA · glycopyrronium",
-     "p": "M3 무스카린 수용체 차단 → 콜린성 수축 차단"
+     "p": "M3 Muscarinic receptor (무스카린 수용체) 차단 → 콜린성 수축 차단"
     },
     {
      "s": 3,
      "h": "LABA · formoterol",
-     "p": "β2 자극 → cAMP ↑ → 평활근 이완, 빠른 발현"
+     "p": "β2 자극 → cAMP ↑ → Smooth muscle relaxation (평활근 이완), 빠른 발현"
     }
    ],
    "key": {
@@ -288,17 +288,17 @@
     {
      "s": 0,
      "lab": "glycopyrronium (LAMA)",
-     "v": "협우각 녹내장 · 요저류(전립선비대) 악화 주의"
+     "v": "Angle-closure glaucoma (협우각 녹내장) · Urinary retention (요저류) 악화 주의 — 특히 BPH (전립선비대)"
     },
     {
      "s": 1,
      "lab": "formoterol (LABA)",
-     "v": "심혈관 질환 · 저칼륨혈증 주의"
+     "v": "심혈관 질환 · Hypokalemia (저칼륨혈증) 주의"
     },
     {
      "s": 2,
      "lab": "budesonide (ICS)",
-     "v": "폐렴 · 구강 칸디다 관찰"
+     "v": "Pneumonia (폐렴) · Oral candidiasis (구강 칸디다) 관찰"
     },
     {
      "s": 3,

@@ -12,8 +12,8 @@ def synth(vk,say):
     v=V[vk];h=hashlib.md5(f"{v['voice']}|{v['rate']}|{v['pitch']}|{say}".encode()).hexdigest()[:10]
     f=os.path.join(d,'voice',f'n{vk}_{h}.mp3')
     if not os.path.exists(f): tts.say(v['voice'],say,f,v['rate'],v['pitch'])
-    a=read_audio(f);idx=np.where(np.abs(a)>250)[0]
-    a=a[max(0,idx[0]-120):idx[-1]+360] if len(idx) else a
+    a=read_audio(f);idx=np.where(np.abs(a)>40)[0]   # v23: 말끝·첫소리가 잘리지 않게 여유 있게 자름(예전 250 기준은 앞 70ms·끝 110ms를 잘라 뚝뚝 끊겼음)
+    a=a[max(0,idx[0]-int(0.02*SR)):idx[-1]+int(0.06*SR)] if len(idx) else a
     a=a*v.get('gain',1.0);pk=np.abs(a).max() or 1
     return fade(a*(0.89*32767/pk))          # 문장마다 피크를 같게 맞춰 목소리 간 음량 차이를 줄임
 out={};vd={P['part']:P.get('video_dur') for P in cfg['parts']}
