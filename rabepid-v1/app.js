@@ -80,3 +80,6 @@ update();
 
 // Initialize the external player before its scene to reduce connection delay.
 loadYT();
+
+// v20: 유튜브 구간 한국어 자막 — captions.js의 YTKO[영상ID] = [[초, 문장], ...]
+setInterval(()=>{const box=document.getElementById('ytKo');if(!box)return;let txt='';try{const s=steps[index];const L=(typeof YTKO!=='undefined'?YTKO:{})[s&&s.id];if(L&&isYT()&&ytReady&&!transitionPending){const ct=yt.getCurrentTime();let k=-1;for(let j=0;j<L.length;j++){if(L[j][0]<=ct+0.15)k=j;else break}if(k>=0&&ct<(k+1<L.length?L[k+1][0]:L[k][0]+9))txt=L[k][1]}}catch{}if(box.dataset.t!==txt){box.dataset.t=txt;box.innerHTML=txt?'<span>'+txt.replace(/</g,'&lt;')+'</span>':''}},200);

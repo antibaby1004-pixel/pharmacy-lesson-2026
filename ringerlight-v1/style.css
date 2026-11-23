@@ -69,3 +69,7 @@ body.pfs-on .topline{left:0;right:0;display:flex;justify-content:space-between}
 
 /* v19: 휴대폰 세로 — 위 설명 글을 숨겨 영상을 화면 위쪽으로 */
 @media (max-width:600px) and (orientation:portrait){header{display:none}main{padding-top:8px}.topline strong{font-size:13px;line-height:1.35}#back{font-size:13px;padding:5px 9px}}
+
+/* v20: 유튜브 위 한국어 자막(직접 번역) */
+#ytKo{position:absolute;left:3%;right:3%;bottom:13%;text-align:center;pointer-events:none;z-index:5}
+#ytKo span{display:inline;background:rgba(0,0,0,.72);color:#fff;font-weight:700;font-size:clamp(14px,2.4vw,30px);line-height:1.55;padding:.12em .45em;border-radius:6px;box-decoration-break:clone;-webkit-box-decoration-break:clone}

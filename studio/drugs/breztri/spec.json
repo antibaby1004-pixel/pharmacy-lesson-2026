@@ -168,18 +168,6 @@
    "js": "SCENE.anim=o=>{const k1=seg(o,S[1],S[1]+1),k2=seg(o,S[2],S[2]+1),k3=seg(o,S[3],S[3]+1);\n ['a1','a2','a3'].forEach((id,i)=>{$i(id).style.opacity=.15+.85*[k1,k2,k3][i]});\n const r=70+25*ease(k1)+25*ease(k2)+30*ease(k3);$i('lum').setAttribute('r',r);\n $i('wall').setAttribute('r',170-14*ease(k1));$i('mus').setAttribute('stroke-width',34-12*ease(k3));};"
   },
   {
-   "id": "yt1",
-   "type": "yt",
-   "vid": "368GamSlc_0",
-   "start": 32,
-   "end": 260,
-   "label": "3제 흡입제 기전 영상",
-   "desc": "ICS · LAMA · LABA가 기도에서 작용하는 과정",
-   "bubble": "세 성분이 같이 일하는 모습,<br>영상으로 볼까요?",
-   "say": "세 성분이 같이 일하는 모습, 영상으로 볼까요?",
-   "title": "3제 흡입제 영상 · 0:32–4:20"
-  },
-  {
    "id": "form",
    "type": "rows",
    "title": "제형 · 함량 표기",
@@ -259,6 +247,18 @@
      "cls": "red"
     }
    ]
+  },
+  {
+   "id": "yt1",
+   "type": "yt",
+   "vid": "368GamSlc_0",
+   "start": 32,
+   "end": 260,
+   "label": "흡입기 사용법 영상",
+   "desc": "첫 사용 시험 분사 · 흡입 순서 · 주 1회 세척",
+   "bubble": "흡입기 쓰는 법,<br>영상으로 볼까요?",
+   "say": "흡입기 쓰는 법, 영상으로 볼까요?",
+   "title": "3제 흡입제 영상 · 0:32–4:20"
   },
   {
    "id": "4",
