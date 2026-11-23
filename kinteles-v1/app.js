@@ -1,11 +1,11 @@
 const BL={},BP={};function getB(f){if(!BP[f])BP[f]=fetch('part'+f+'.mp4').then(r=>{if(!r.ok)throw 0;return r.blob()}).then(b=>(BL[f]=URL.createObjectURL(b))).catch(()=>{delete BP[f];return 'part'+f+'.mp4'});return BP[f]}
 function pre(i){const s=steps[i];if(s&&!s.id&&s.file)getB(s.file)}
 const steps=[
-{title:'킨텔레스 소개 · 두 제형과 적응증 · 신약',file:'intro',duration:27.513},
-{title:'림프구 · α4β7 · MAdCAM-1',file:0,duration:11.143},{title:'α4β7 차단 · 장 선택적',file:1,duration:16.047},
+{title:'킨텔레스 소개 · 두 제형과 적응증 · 신약',file:'intro',duration:27.963},
+{title:'림프구 · α4β7 · MAdCAM-1',file:0,duration:11.327},{title:'α4β7 차단 · 장 선택적',file:1,duration:16.353},
 {title:'기전 영상 · 처음부터 끝까지',id:'CksGufrYhPI',start:0,end:null,est:180},
-{title:'vedolizumab vs ustekinumab',file:'cmp',duration:41.215},{title:'용량 · 정맥주사',file:'5a',duration:13.703},{title:'용량 · 프리필드 펜',file:'5b',duration:24.245},
-{title:'보관',file:'storage',duration:26.356},{title:'주의점과 부작용',file:4,duration:28.986},{title:'Take-home message',file:'summary',duration:30.456}];
+{title:'vedolizumab vs ustekinumab',file:'cmp',duration:41.967},{title:'용량 · 정맥주사',file:'5a',duration:13.946},{title:'용량 · 프리필드 펜',file:'5b',duration:24.658},
+{title:'보관',file:'storage',duration:26.787},{title:'주의점과 부작용',file:4,duration:29.527},{title:'Take-home message',file:'summary',duration:31.234}];
 const $=id=>document.getElementById(id),local=$('local');
 let index=0,yt,ytReady=false,ytLoading=false,wantsPlay=false,slideRate=1,pendingOffset=0,ended=false,dragging=false;
 const isYT=()=>!!steps[index].id;
