@@ -339,3 +339,26 @@ function makeChar(acts0,type){
 }
 window.SCENE={};
 window.render=function(t){const o=inv(t);sceneFade(t);entries(o);if(SCENE.anim)SCENE.anim(o,t);if(SCENE.char)SCENE.char(t);if(SCENE.char2)SCENE.char2(t)};
+// v21: 그림 속 작은 글씨 키우기 — 24px 미만 글자를 최대 26px까지 키우고, 다른 글자와 겹치거나 그림 밖으로 나가면 원래 크기로 되돌림
+(function bumpSvgText(){
+ const ov=(a,b)=>a.x<b.x+b.width-1&&b.x<a.x+a.width-1&&a.y<b.y+b.height-1&&b.y<a.y+a.height-1;
+ document.querySelectorAll('.stage svg:not(.chr)').forEach(sv=>{
+  if(sv.closest('svg.chr')||sv.closest('header'))return;
+  const T=[...sv.querySelectorAll('text')].filter(t=>!t.closest('defs'));if(!T.length)return;
+  const vb=sv.viewBox&&sv.viewBox.baseVal&&sv.viewBox.baseVal.width?sv.viewBox.baseVal:{x:0,y:0,width:+sv.getAttribute('width')||1e4,height:+sv.getAttribute('height')||1e4};
+  const bb=t=>{try{return t.getBBox()}catch(e){return null}};
+  const before=new Map(T.map(t=>[t,bb(t)]));
+  const pairsBefore=new Set();T.forEach((a,i)=>T.forEach((b,j)=>{if(j>i){const A=before.get(a),B=before.get(b);if(A&&B&&ov(A,B))pairsBefore.add(i+'_'+j)}}));
+  const S=[...sv.querySelectorAll('rect,ellipse,circle')].filter(e=>!e.closest('defs')).map(e=>{try{return e.getBBox()}catch(x){return null}}).filter(b=>b&&b.width>20&&b.height>14);
+  const inside=(A,B)=>A.x>=B.x-1&&A.y>=B.y-1&&A.x+A.width<=B.x+B.width+1&&A.y+A.height<=B.y+B.height+1;
+  const home=new Map(T.map(t=>{const A=before.get(t);if(!A)return [t,null];let h=null;S.forEach(B=>{if(inside(A,B)&&(!h||B.width*B.height<h.width*h.height))h=B});return [t,h]}));
+  const big=[];T.forEach(t=>{const fs=parseFloat(t.getAttribute('font-size')||getComputedStyle(t).fontSize);if(fs&&fs<24){const n=Math.min(26,Math.round(fs*1.35));if(n>fs){t.dataset.fs0=fs;t.setAttribute('font-size',n);t.style.fontSize=n+'px';big.push(t)}}});
+  for(let pass=0;pass<3;pass++){let changed=false;
+   big.forEach(t=>{if(!t.dataset.fs0)return;const A=bb(t);if(!A||!A.width)return;const i=T.indexOf(t);
+    const H=home.get(t);const esc=H&&!inside(A,H);
+    const out=esc||A.x<vb.x-2||A.y<vb.y-2||A.x+A.width>vb.x+vb.width+2||A.y+A.height>vb.y+vb.height+2;
+    const hit=T.some((b,j)=>{if(b===t)return false;const B=bb(b);if(!B||!B.width)return false;const k=i<j?i+'_'+j:j+'_'+i;return ov(A,B)&&!pairsBefore.has(k)});
+    if(out||hit){t.setAttribute('font-size',t.dataset.fs0);t.style.fontSize=t.dataset.fs0+'px';delete t.dataset.fs0;changed=true}});
+   if(!changed)break}
+  window.__bump=(window.__bump||0)+big.filter(t=>t.dataset.fs0).length;window.__bumpTry=(window.__bumpTry||0)+big.length;
+ })})();
