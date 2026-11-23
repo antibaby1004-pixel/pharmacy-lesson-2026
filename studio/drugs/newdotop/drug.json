@@ -13,14 +13,14 @@
    "video_dur": 17.46
   },
   {
-   "part": "yt1",
-   "scene": "yt1.html",
-   "video_dur": 7.11
-  },
-  {
    "part": "5",
    "scene": "5.html",
    "video_dur": 15.18
+  },
+  {
+   "part": "yt1",
+   "scene": "yt1.html",
+   "bridge": true
   },
   {
    "part": "4",
@@ -36,15 +36,14 @@
  "order": [
   "intro",
   "m0",
-  "yt1",
   "5",
+  "yt1",
   "4",
   "summary"
  ],
  "player_parts": [
   "intro",
   "m0",
-  "yt1",
   "5",
   "4",
   "summary"
