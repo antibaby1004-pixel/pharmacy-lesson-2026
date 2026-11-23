@@ -10,12 +10,22 @@
   {
    "part": "m0",
    "scene": "m0.html",
-   "video_dur": 18.22
+   "video_dur": 21.25
   },
   {
    "part": "yt1",
    "scene": "yt1.html",
-   "video_dur": 7.11
+   "bridge": true
+  },
+  {
+   "part": "nep",
+   "scene": "nep.html",
+   "video_dur": 23.22
+  },
+  {
+   "part": "enu",
+   "scene": "enu.html",
+   "video_dur": 29.98
   },
   {
    "part": "m1",
@@ -42,6 +52,8 @@
   "intro",
   "m0",
   "yt1",
+  "nep",
+  "enu",
   "m1",
   "5",
   "4",
@@ -50,7 +62,8 @@
  "player_parts": [
   "intro",
   "m0",
-  "yt1",
+  "nep",
+  "enu",
   "m1",
   "5",
   "4",
@@ -79,7 +92,9 @@
    "NMDA",
    "H1",
    "M1",
-   "α1"
+   "α1",
+   "α2",
+   "방광"
   ],
   "warn": [
    "MAO 억제제",
@@ -90,7 +105,9 @@
    "변비",
    "자살",
    "기립성 저혈압",
-   "갑자기 끊지"
+   "갑자기 끊지",
+   "과량복용",
+   "심장 부작용"
   ]
  },
  "intro": {
