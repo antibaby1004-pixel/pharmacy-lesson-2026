@@ -3,7 +3,6 @@ function pre(i){const s=steps[i];if(s&&!s.id&&s.file)getB(s.file)}
 const steps=[
 {title: "에나폰 5 소개 · 저용량 규격 · 용량추가", file: "intro", duration: 21},
 {title: "하행 통증억제 경로", file: "m0", duration: 23},
-{title: "기전 영상 · 8:30–10:54", id: "T25jvLC6X0w", start: 510, end: 654, note: "기전 영상 8:30–10:54 · 영어 원음. ⚙ → 자막 → 자동 번역 → 한국어."},
 {title: "왜 신경통에 쓰나", file: "nep", duration: 25},
 {title: "왜 야뇨증에 쓰나", file: "enu", duration: 32},
 {title: "용량 축 · 부작용 수용체", file: "m1", duration: 22},
