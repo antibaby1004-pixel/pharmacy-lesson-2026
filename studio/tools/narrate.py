@@ -15,7 +15,7 @@ def synth(vk,say):
     a=read_audio(f);idx=np.where(np.abs(a)>250)[0]
     a=a[max(0,idx[0]-120):idx[-1]+360] if len(idx) else a
     a=a*v.get('gain',1.0);pk=np.abs(a).max() or 1
-    return a*(0.89*32767/pk)          # 문장마다 피크를 같게 맞춰 목소리 간 음량 차이를 줄임
+    return fade(a*(0.89*32767/pk))          # 문장마다 피크를 같게 맞춰 목소리 간 음량 차이를 줄임
 out={};vd={P['part']:P.get('video_dur') for P in cfg['parts']}
 for p,sents in N['parts'].items():
     pieces=[np.zeros(int(LEAD*SR),np.float32)];t=LEAD;knots=[[0.0,0.0]];cues=[];lo=0.0

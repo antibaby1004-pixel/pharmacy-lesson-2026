@@ -1,4 +1,5 @@
-const BL={};function pre(i){const s=steps[i];if(!s||s.id||!s.file||BL[s.file])return;BL[s.file]='p';fetch('part'+s.file+'.mp4').then(r=>{if(!r.ok)throw 0;return r.blob()}).then(b=>{BL[s.file]=URL.createObjectURL(b)}).catch(()=>{delete BL[s.file]})}
+const BL={},BP={};function getB(f){if(!BP[f])BP[f]=fetch('part'+f+'.mp4').then(r=>{if(!r.ok)throw 0;return r.blob()}).then(b=>(BL[f]=URL.createObjectURL(b))).catch(()=>{delete BP[f];return 'part'+f+'.mp4'});return BP[f]}
+function pre(i){const s=steps[i];if(s&&!s.id&&s.file)getB(s.file)}
 const steps=[
 {title:'킨텔레스 소개 · 두 제형과 적응증 · 신약',file:'intro',duration:20},
 {title:'림프구 · α4β7 · MAdCAM-1',file:0,duration:11},{title:'α4β7 차단 · 장 선택적',file:1,duration:12},
@@ -16,7 +17,7 @@ const format=t=>Math.floor(t/60)+':'+String(Math.floor(t%60)).padStart(2,'0');
 function currentYT(){return ytReady&&isYT()&&yt.getVideoData().video_id===steps[index].id}
 function elapsed(){return before(index)+(isYT()?(currentYT()?Math.max(0,yt.getCurrentTime()-steps[index].start):pendingOffset):local.currentTime/slideRate)}
 function sync(){updateCaption();if(!dragging)$('timeline').value=Math.min(total(),elapsed());$('timeline').max=total();$('time').textContent=format(elapsed())+' / '+format(total());$('play').textContent=wantsPlay?'일시정지':'재생';$('play').setAttribute('aria-label',wantsPlay?'일시정지':'재생')}
-function smallYouTubeCaptions(){try{if(yt&&yt.getOptions('captions').includes('fontSize'))yt.setOption('captions','fontSize',-1)}catch{}}
+function smallYouTubeCaptions(){try{if(!yt||!yt.getOptions('captions').length)return;yt.setOption('captions','fontSize',0);const L=yt.getOption('captions','tracklist')||[];const ko=L.find(x=>x.languageCode==='ko'&&!x.kind)||L.find(x=>x.languageCode==='ko');if(ko)yt.setOption('captions','track',{languageCode:'ko'});else if(L.length){const s=L.find(x=>x.languageCode&&x.languageCode.startsWith('en'))||L[0];yt.setOption('captions','track',{languageCode:s.languageCode,translationLanguage:{languageCode:'ko',languageName:'한국어'}})}}catch{}}
 function updateCaption(){const box=$('localCaption');if(transitionPending){box.textContent='';return;}box.hidden=isYT();if(isYT()){box.textContent='';return}const cue=(captions[steps[index].file]||[]).find(c=>local.currentTime>=c.start&&local.currentTime<c.end);box.innerHTML=cue?(window.hlHTML?hlHTML(cue.text):cue.text):''}
 function update(){const s=steps[index];$('title').textContent=s.title;if($('ytTitle'))$('ytTitle').textContent=s.id?s.title:'';$('position').textContent=String(index+1).padStart(2,'0')+' / '+steps.length;$('ytNote').hidden=!isYT();$('ytNote').textContent=steps[index].id==='CksGufrYhPI'?'기전 영상 처음부터 끝까지 · 영어 원음. ⚙ → 자막 → 자동 번역 → 한국어.':'자가주사 시연 1:30–4:40 · 한국어 자막이 없으면 ⚙ → 자막 → 자동 번역 → 한국어';if(isYT()){$('original').href='https://www.youtube.com/watch?v='+s.id+'&t='+Math.floor(s.start+pendingOffset)+'s'}sync()}
 function error(t){revealScene();try{local.pause();if(ytReady)yt.stopVideo()}catch{}message(t);$('errorText').textContent=t;$('fallback').hidden=false;wantsPlay=false;sync()}
@@ -48,7 +49,7 @@ function show(i,auto=true,offset=0,finishOutgoing=false){
   local.pause();if(ytReady)yt.stopVideo();
   index=i;pendingOffset=offset;ended=false;transitionPhase='loading';$('fallback').hidden=true;
   local.removeAttribute('poster');local.hidden=isYT();$('youtubeWrap').hidden=!isYT();
-  if(!isYT()){const u=BL[steps[i].file];local.src=(u&&u!=='p')?u:'part'+steps[i].file+'.mp4';local.load();}pre(i+1);pre(i+2);
+  if(!isYT()){getB(steps[i].file).then(u=>{if(token!==transitionId)return;local.src=u;local.load()})}pre(i+1);pre(i+2);
   update();message('구간이 끝나면 자동으로 이어집니다.');
   transitionWatchdog=setTimeout(()=>{
    if(token!==transitionId||!transitionPending)return;

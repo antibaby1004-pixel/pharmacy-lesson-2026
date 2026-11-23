@@ -14,3 +14,10 @@ def silences(path,th,db=-45):
     log=subprocess.run(['ffmpeg','-i',path,'-af',f'silencedetect=n={db}dB:d={th}','-f','null','-'],capture_output=True,text=True).stderr
     st=[float(x) for x in re.findall(r'silence_start: ([\d.]+)',log)];en=[float(x) for x in re.findall(r'silence_end: ([\d.]+)',log)]
     return st,en
+
+def fade(a,ms=15):
+    """문장 앞뒤를 짧게 페이드 — 잘린 지점의 '딱' 소리(클릭) 제거"""
+    n=min(int(SR*ms/1000),len(a)//2)
+    if n>1:
+        a=a.copy();r=np.linspace(0,1,n,dtype=np.float32);a[:n]*=r;a[-n:]*=r[::-1]
+    return a

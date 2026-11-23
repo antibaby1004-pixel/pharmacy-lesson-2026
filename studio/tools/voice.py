@@ -16,7 +16,7 @@ def line(who,say):
     a=read_audio(f);idx=np.where(np.abs(a)>300)[0]
     a=a[max(0,idx[0]-240):idx[-1]+480] if len(idx) else a
     if say.rstrip().endswith('?'): a=rise(a)          # 의문문은 끝을 올림
-    return a*v.get('gain',1.0)
+    return fade(a*v.get('gain',1.0))
 def rise(a,tail=0.55,up=1.45):
     import pyworld as pw
     x=a.astype(np.float64)/32768;f0,t=pw.harvest(x,SR,frame_period=5);sp=pw.cheaptrick(x,f0,t,SR);ap=pw.d4c(x,f0,t,SR)
