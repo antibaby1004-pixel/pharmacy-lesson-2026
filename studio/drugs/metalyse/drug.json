@@ -23,6 +23,11 @@
    "video_dur": 22.1
   },
   {
+   "part": "yt2",
+   "scene": "yt2.html",
+   "bridge": true
+  },
+  {
    "part": "dose",
    "scene": "dose.html",
    "video_dur": 21.85
@@ -30,7 +35,7 @@
   {
    "part": "5",
    "scene": "5.html",
-   "video_dur": 13.22
+   "video_dur": 38.51
   },
   {
    "part": "cmp",
@@ -53,6 +58,7 @@
   "m0",
   "yt1",
   "m1",
+  "yt2",
   "dose",
   "5",
   "cmp",

@@ -12,6 +12,6 @@ svg text{font-family:P}
 useTiming('summary');window.CENTER_FIRST=1.6;const $i=i=>document.getElementById(i);
 const BT=((TIMING.summary.dialog||[]).find(d=>d.who==='both')||{}).t0||1e9;
 SCENE.anim=(o,T)=>{const dm=1-.72*easeOut(seg(T,BT-1.1,BT-.2));document.querySelectorAll('.card,.wm').forEach(e=>e.style.filter=dm<1?`opacity(${dm})`:'')};
-SCENE.char=makeChar([{k: "walk", t0: 0.15, t1: 1.2, x0: 2250, x1: 1560}, {k: "clap", t0: 1.46, t1: 3.06}, {k: "prop", name: "clock", t0: 7.01, t1: 9.61}, {k: "nod", t0: 11.65, t1: 13.25}, {k: "prop", name: "book", t0: 14.48, t1: 17.08}, {k: "thumbs", t0: 17.15, t1: 18.75}],'lead');
+SCENE.char=makeChar([{k: "walk", t0: 0.15, t1: 1.2, x0: 2250, x1: 1560}, {k: "prop", name: "clock", t0: 1.46, t1: 4.06}, {k: "nod", t0: 7.01, t1: 8.61}, {k: "prop", name: "book", t0: 11.65, t1: 14.25}, {k: "thumbs", t0: 14.48, t1: 16.08}, {k: "prop", name: "magnifier", t0: 17.15, t1: 19.75}],'lead');
 SCENE.char2=makeChar([{k: "walk", t0: 19.34, t1: 20.54, x0: 2300, x1: 1830}, {k: "nod", t0: 20.74, t1: 21.54}],'cameo');
 </script><script src="../../../lib/highlight.js"></script></body></html>
