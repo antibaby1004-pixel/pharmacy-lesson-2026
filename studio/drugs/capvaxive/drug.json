@@ -18,9 +18,19 @@
    "video_dur": 7.11
   },
   {
+   "part": "types",
+   "scene": "types.html",
+   "video_dur": 31.95
+  },
+  {
    "part": "sero",
    "scene": "sero.html",
-   "video_dur": 14.94
+   "video_dur": 30.38
+  },
+  {
+   "part": "seq",
+   "scene": "seq.html",
+   "video_dur": 27.25
   },
   {
    "part": "5",
@@ -35,14 +45,16 @@
   {
    "part": "summary",
    "scene": "summary.html",
-   "video_dur": 17.2
+   "video_dur": 19.62
   }
  ],
  "order": [
   "intro",
   "m0",
   "yt1",
+  "types",
   "sero",
+  "seq",
   "5",
   "4",
   "summary"
@@ -51,7 +63,9 @@
   "intro",
   "m0",
   "yt1",
+  "types",
   "sero",
+  "seq",
   "5",
   "4",
   "summary"
@@ -77,7 +91,14 @@
    "B세포",
    "기억 B세포",
    "항원제시",
-   "혈청형"
+   "혈청형",
+   "PPSV",
+   "PCV",
+   "프로디악스23",
+   "프리베나20",
+   "PCV21",
+   "PCV20",
+   "PPSV23"
   ],
   "warn": [
    "과민반응",

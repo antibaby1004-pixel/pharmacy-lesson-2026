@@ -122,13 +122,6 @@
    "js": "let h='';for(let i=0;i<4;i++)h+=`<g id=\"g${i}\"><path d=\"M0 -14 l12 7 v14 l-12 7 l-12 -7 v-14z\" fill=\"#D96C00\"/></g><g id=\"n${i}\"><circle r=\"11\" fill=\"#1F6FD1\"/><text y=\"5\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"700\" fill=\"#fff\">Na</text></g>`;for(let i=0;i<8;i++)h+=`<path id=\"w${i}\" d=\"M0 -12 C8 0 8 8 0 10 C-8 8 -8 0 0 -12z\" fill=\"#5BB5E0\"/>`;$i('mv').innerHTML=h;\nSCENE.anim=o=>{const run=seg(o,S[1],S[1]+0.6),wat=seg(o,S[2],S[2]+0.6);\n for(let i=0;i<4;i++){const ph=((o*.35+i/4)%1);const y=lerp(90,540,ph);const g=$i('g'+i),n=$i('n'+i);g.setAttribute('transform',`translate(296 ${y})`);n.setAttribute('transform',`translate(320 ${y+4})`);g.style.opacity=run;n.style.opacity=run}\n for(let i=0;i<8;i++){const ph=((o*.35+i/8+0.06)%1);const e=$i('w'+i);e.setAttribute('transform',`translate(${250+(i%3)*50+((i*37)%30)} ${lerp(80,540,ph)})`);e.style.opacity=wat}};"
   },
   {
-   "id": "yt1",
-   "type": "ytslot",
-   "title": "기전 영상 · 링크 확정 전",
-   "sec": "<b>기전 영상</b> · VIDEO",
-   "h1": ""
-  },
-  {
    "id": "m1",
    "type": "mech",
    "title": "왜 설탕물이 아닌가",

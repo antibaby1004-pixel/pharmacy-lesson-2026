@@ -1,0 +1,14 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../../lib/common.css"><style>
+svg text{font-family:P}
+.box{position:absolute;left:96px;width:1344px;padding:20px 32px;display:grid;grid-template-columns:240px 1fr;align-items:center;gap:24px}
+.box .lab{font-size:30px}.box .v{font-size:38px;font-weight:600;line-height:50px}
+.box.red{border-color:#F2B8B2;background:#FCE9E7}.box.red .lab,.box.red .v{color:#8E2219}
+.box.amb{border-color:#F3C58A;background:#FFF7EC}.box.amb .lab,.box.amb .v{color:#7D4A00}
+</style></head><body><div class="stage">
+<div class="fade"><header class="top"><div class="sec"><b>교차 접종</b> · SEQUENTIAL</div><div class="chip">캡박시브 Capvaxive <i>· pneumococcal 21-valent conjugate vaccine</i></div></header><h1>이전 접종력에 따라 순서와 간격이 다릅니다</h1></div>
+<div class="fade"><div class="card box " style="top:262px" data-in="0.1"><span class="lab">처음 접종</span><div><div class="v">캡박시브(PCV21) 또는 프리베나20(PCV20) 1회 → 끝 · PPSV23 추가 불필요</div></div></div><div class="card box " style="top:392px" data-in="6.71"><span class="lab">PCV15 접종 후</span><div><div class="v">1년 뒤 프로디악스23 (면역저하 등은 8주)</div></div></div><div class="card box amb" style="top:522px" data-in="11.51"><span class="lab">프로디악스23 먼저</span><div><div class="v">1년 이상 뒤 캡박시브 또는 프리베나20</div></div></div><div class="card box " style="top:652px" data-in="18.12"><span class="lab">프리베나13만</span><div><div class="v">1년 이상 뒤 캡박시브 또는 프리베나20</div></div></div><div class="card box red" style="top:782px" data-in="23.52"><span class="lab">같은 날</span><div><div class="v">PCV와 PPSV23 동시 접종 안 함</div></div></div></div>
+</div>
+<script src="../timing.js"></script><script src="../../../lib/core.js"></script><script>
+useTiming('seq');window.CENTER_FIRST=1.2;const $i=i=>document.getElementById(i);
+SCENE.char=makeChar([{k: "walk", t0: 0.15, t1: 1.2, x0: 2250, x1: 1640}, {k: "prop", name: "phone", t0: 6.91, t1: 9.51}, {k: "think", t0: 11.71, t1: 13.31}, {k: "prop", name: "syringe", t0: 18.32, t1: 20.92}, {k: "clap", t0: 23.72, t1: 25.32}],'lead');
+</script><script src="../../../lib/highlight.js"></script></body></html>

@@ -142,10 +142,15 @@
   },
   {
    "id": "yt1",
-   "type": "ytslot",
-   "title": "기전 영상 · 링크 확정 전",
-   "sec": "<b>기전 영상</b> · VIDEO",
-   "h1": ""
+   "type": "yt",
+   "vid": "YyS9c13LM14",
+   "start": 8,
+   "end": 194,
+   "rate": 0.9,
+   "label": "혈전용해제 기전 영상",
+   "desc": "tenecteplase가 피브린 위에서 plasminogen을 plasmin으로 바꾸는 과정",
+   "bubble": "피브린이 녹는 모습,<br>영상으로 볼까요?",
+   "say": "피브린이 녹는 모습, 영상으로 볼까요?"
   },
   {
    "id": "m1",
@@ -189,6 +194,18 @@
    },
    "fig": "<text x=\"40\" y=\"170\" font-size=\"22\" font-weight=\"700\" fill=\"#3F4D5A\">alteplase 도메인 지도</text><rect x=\"40\" y=\"200\" width=\"70\" height=\"70\" rx=\"10\" fill=\"#EEF0FA\" stroke=\"#5B5FA8\" stroke-width=\"3\"/><text x=\"75.0\" y=\"243\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"700\" fill=\"#5B5FA8\">F</text><rect x=\"116\" y=\"200\" width=\"60\" height=\"70\" rx=\"10\" fill=\"#EEF0FA\" stroke=\"#5B5FA8\" stroke-width=\"3\"/><text x=\"146.0\" y=\"243\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"700\" fill=\"#5B5FA8\">EGF</text><rect x=\"182\" y=\"200\" width=\"110\" height=\"70\" rx=\"10\" fill=\"#EEF0FA\" stroke=\"#5B5FA8\" stroke-width=\"3\"/><text x=\"237.0\" y=\"243\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"700\" fill=\"#5B5FA8\">K1</text><rect x=\"298\" y=\"200\" width=\"110\" height=\"70\" rx=\"10\" fill=\"#EEF0FA\" stroke=\"#5B5FA8\" stroke-width=\"3\"/><text x=\"353.0\" y=\"243\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"700\" fill=\"#5B5FA8\">K2</text><rect x=\"414\" y=\"200\" width=\"190\" height=\"70\" rx=\"10\" fill=\"#EEF0FA\" stroke=\"#5B5FA8\" stroke-width=\"3\"/><text x=\"509.0\" y=\"243\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"700\" fill=\"#5B5FA8\">Protease</text>\n<g id=\"m1\" style=\"opacity:.15\"><path d=\"M240 280 v60\" stroke=\"#1F6FD1\" stroke-width=\"5\"/><rect x=\"150\" y=\"340\" width=\"180\" height=\"70\" rx=\"12\" fill=\"#fff\" stroke=\"#1F6FD1\" stroke-width=\"3\"/><text x=\"240\" y=\"370\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"700\" fill=\"#1F6FD1\">T103N</text><text x=\"240\" y=\"396\" text-anchor=\"middle\" font-size=\"16\" fill=\"#243341\">당사슬 추가 → 청소 ↓</text></g>\n<g id=\"m2\" style=\"opacity:.15\"><path d=\"M290 280 v170\" stroke=\"#2F8F6A\" stroke-width=\"5\"/><rect x=\"200\" y=\"450\" width=\"190\" height=\"70\" rx=\"12\" fill=\"#fff\" stroke=\"#2F8F6A\" stroke-width=\"3\"/><text x=\"295\" y=\"480\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"700\" fill=\"#2F8F6A\">N117Q</text><text x=\"295\" y=\"506\" text-anchor=\"middle\" font-size=\"16\" fill=\"#243341\">당사슬 제거 → 반감기 ↑</text></g>\n<g id=\"m3\" style=\"opacity:.15\"><path d=\"M520 280 v60\" stroke=\"#D2342A\" stroke-width=\"5\"/><rect x=\"410\" y=\"340\" width=\"190\" height=\"70\" rx=\"12\" fill=\"#fff\" stroke=\"#D2342A\" stroke-width=\"3\"/><text x=\"505\" y=\"370\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#D2342A\">KHRR→AAAA</text><text x=\"505\" y=\"396\" text-anchor=\"middle\" font-size=\"16\" fill=\"#243341\">PAI-1 손잡이 제거</text></g>\n<text id=\"res\" x=\"306\" y=\"590\" text-anchor=\"middle\" font-size=\"24\" font-weight=\"700\" fill=\"#007F86\" style=\"opacity:0\">반감기 ↑ · PAI-1 저항 ↑ → 단회 볼루스</text>",
    "js": "SCENE.anim=o=>{['m1','m2','m3'].forEach((id,i)=>$i(id).style.opacity=.15+.85*seg(o,S[i+1],S[i+1]+0.7));$i('res').style.opacity=seg(o,S[4],S[4]+0.6)};"
+  },
+  {
+   "id": "yt2",
+   "type": "yt",
+   "vid": "Dc9NLY-jGyw",
+   "start": 10,
+   "end": 133,
+   "rate": 0.9,
+   "label": "tenecteplase 연구 요약본 (NEJM)",
+   "desc": "급성 허혈성 뇌졸중 tenecteplase 임상연구 요약",
+   "bubble": "연구 결과도<br>짧게 볼까요?",
+   "say": "연구 결과도 짧게 볼까요?"
   },
   {
    "id": "dose",
@@ -243,39 +260,58 @@
   {
    "id": "5",
    "type": "rows",
-   "title": "조제와 투여",
-   "sec": "<b>조제 · 투여</b> · ADMINISTRATION",
-   "h1": "5 mL로 녹여 10초 볼루스 한 번",
+   "title": "조제법",
+   "sec": "<b>조제법</b> · PREPARATION",
+   "h1": "5 mL로 녹이고, 포도당 라인은 쓰지 않습니다",
    "sents": [
+    "바늘과 주사기는 포장에 없어서 따로 준비하고, 바이알의 플립오프 캡을 떼요.",
     [
-     "주사용수 5 mL로 녹이면 5 mg/mL가 돼요.",
-     "주사용수 오 밀리리터로 녹이면, 밀리리터당 오 밀리그램이 돼요."
+     "주사기에 멸균 주사용수 5 mL를 채워 마개 중앙에 꽂고, 거품이 생기지 않게 천천히 모두 넣어요.",
+     "주사기에 멸균 주사용수 5 밀리리터를 채워 마개 중앙에 꽂고, 거품이 생기지 않게 천천히 모두 넣어요."
     ],
-    "흔들지 말고 가볍게 돌려 섞어요.",
-    "5에서 10초 동안 한 번에 정맥 볼루스로 줘요.",
-    "포도당 수액과는 섞지 않고, 남은 양은 버려요."
+    "주사기를 꽂은 채로 흔들지 말고 부드럽게 둥글게 돌려서 녹여요.",
+    "다 녹으면 무색에서 연한 노란색의 투명한 용액이어야 하고, 입자가 보이면 쓰지 않아요.",
+    "바이알을 뒤집어 주사기가 아래로 오게 한 뒤, 체중에 맞는 용량만큼만 뽑아요.",
+    "생리식염수만 흐르는 라인에 주고, 포도당 라인이나 헤파린을 포함한 다른 약과 섞지 않아요.",
+    "5초에서 10초 동안 한 번에 정맥으로 주고, 라인을 플러싱한 뒤 남은 용액은 버려요."
    ],
    "rows": [
     {
      "s": 0,
-     "lab": "용해",
-     "v": "주사용수 5 mL → 5 mg/mL"
+     "lab": "준비",
+     "v": "바늘·주사기 별도 준비(포장에 없음) · 플립오프 캡 제거"
     },
     {
      "s": 1,
-     "lab": "섞기",
-     "v": "흔들지 말고 가볍게 돌리기"
+     "lab": "용해",
+     "v": "멸균 주사용수 5 mL → 마개 중앙 · 거품 없이 천천히 → 5 mg/mL"
     },
     {
      "s": 2,
-     "lab": "투여",
-     "v": "5–10초 단회 정맥 볼루스"
+     "lab": "섞기",
+     "v": "주사기 꽂은 채 부드럽게 돌리기 · 흔들기 금지",
+     "cls": "amb"
     },
     {
      "s": 3,
-     "lab": "금지",
-     "v": "포도당 수액과 혼합 금지 · 잔량 폐기",
+     "lab": "확인",
+     "v": "무색~연한 노란색 투명 · 입자 있으면 사용 금지"
+    },
+    {
+     "s": 4,
+     "lab": "뽑기",
+     "v": "바이알 뒤집어 체중별 용량만 주사기로"
+    },
+    {
+     "s": 5,
+     "lab": "라인",
+     "v": "0.9% 생리식염수 라인만 · 포도당 라인 금지 · 헤파린 등 다른 약과 혼합 금지",
      "cls": "red"
+    },
+    {
+     "s": 6,
+     "lab": "투여",
+     "v": "5–10초 정맥 일시 투여 → 라인 플러싱 · 남은 용액 폐기"
     }
    ]
   },

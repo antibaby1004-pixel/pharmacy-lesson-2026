@@ -15,7 +15,7 @@
   {
    "part": "yt1",
    "scene": "yt1.html",
-   "video_dur": 7.11
+   "bridge": true
   },
   {
    "part": "m1",
@@ -62,7 +62,6 @@
  "player_parts": [
   "intro",
   "m0",
-  "yt1",
   "m1",
   "dose",
   "5",

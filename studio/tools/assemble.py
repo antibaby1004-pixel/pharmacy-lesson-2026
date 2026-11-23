@@ -35,6 +35,8 @@ ix=os.path.join(dist,'index.html');DN=json.load(open(os.path.join(STUDIO,'displa
 app=open(os.path.join(d,'source','app.js')).read()
 app=re.sub(r"file:('?[\w]+'?),duration:[\d.]+",lambda m:f"file:{m.group(1)},duration:{F[m.group(1).strip(chr(39))]['dur']}" if m.group(1).strip("'") in F else m.group(0),app)
 open(os.path.join(dist,'app.js'),'w').write(app)
-for p in cfg.get('player_parts',[]): shutil.copy(os.path.join(B,'parts',f'part{p}.mp4'),dist)
+# 웹용: 1920×1080(lanczos)로 다시 인코딩 — 휴대폰·저사양 PC에서도 끊김 없이, 48 kHz 음성
+for p in cfg.get('player_parts',[]):
+    subprocess.run(['ffmpeg','-loglevel','error','-y','-i',os.path.join(B,'parts',f'part{p}.mp4'),'-vf','scale=1920:1080:flags=lanczos','-c:v','libx264','-preset','medium','-crf','22','-tune','animation','-profile:v','high','-level','4.1','-pix_fmt','yuv420p','-g','90','-c:a','aac','-b:a','128k','-ar','48000','-movflags','+faststart',os.path.join(dist,f'part{p}.mp4')],check=True)
 subprocess.run(['ffmpeg','-loglevel','error','-y','-ss','3.2','-i',os.path.join(B,'설명영상_1440p.mp4'),'-frames:v','1','-vf','scale=1280:-1',os.path.join(dist,'poster.png')])
 print('완성:',os.path.join(B,'설명영상_1440p.mp4'),'/',dist)
