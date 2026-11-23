@@ -13,11 +13,6 @@
    "video_dur": 21.25
   },
   {
-   "part": "yt1",
-   "scene": "yt1.html",
-   "bridge": true
-  },
-  {
    "part": "nep",
    "scene": "nep.html",
    "video_dur": 23.22
@@ -51,7 +46,6 @@
  "order": [
   "intro",
   "m0",
-  "yt1",
   "nep",
   "enu",
   "m1",

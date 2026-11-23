@@ -37,7 +37,7 @@ for _vid in set(re.findall(r"id: ?['\"]([A-Za-z0-9_-]{11})['\"]",_app)):
     if os.path.exists(_p): _K[_vid]=[[float(a),b] for a,b in (l.strip().split('|',1) for l in open(_p,encoding='utf-8') if '|' in l)]
 open(os.path.join(dist,'captions.js'),'a').write('\nconst YTKO='+json.dumps(_K,ensure_ascii=False)+';')
 shutil.copy(os.path.join(STUDIO,'lib','highlight.js'),dist)
-ix=os.path.join(dist,'index.html');DN=json.load(open(os.path.join(STUDIO,'display_names.json'))).get(os.path.basename(os.path.abspath(d)));NM=f'{DN[0]} ({DN[1]})' if DN else cfg.get('name','');h=open(ix).read().replace('{{NAME}}',NM).replace('{{NO}}',str(cfg.get('no','01')).zfill(2));open(ix,'w').write(h)
+ix=os.path.join(dist,'index.html');DN=json.load(open(os.path.join(STUDIO,'display_names.json'))).get(os.path.basename(os.path.abspath(d)));NM=f'{DN[0]} ({DN[1]})' if DN else cfg.get('name','');h=open(ix).read();from dosify import dosify as _ds;h=h.replace('<h1>{{NAME}}','<h1>'+(_ds(DN[0],DN[1]) if DN else NM)) if '<h1>{{NAME}}' in h else h;h=h.replace('{{NAME}}',NM).replace('{{NO}}',str(cfg.get('no','01')).zfill(2));open(ix,'w').write(h)
 app=open(os.path.join(d,'source','app.js')).read()
 app=re.sub(r"file:('?[\w]+'?),duration:[\d.]+",lambda m:f"file:{m.group(1)},duration:{F[m.group(1).strip(chr(39))]['dur']}" if m.group(1).strip("'") in F else m.group(0),app)
 open(os.path.join(dist,'app.js'),'w').write(app)

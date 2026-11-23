@@ -85,3 +85,18 @@ loadYT();
 
 // v20: 유튜브 구간 한국어 자막 — captions.js의 YTKO[영상ID] = [[초, 문장], ...]
 setInterval(()=>{const box=document.getElementById('ytKo');if(!box)return;let txt='';try{const s=steps[index];const L=(typeof YTKO!=='undefined'?YTKO:{})[s&&s.id];if(L&&isYT()&&ytReady&&!transitionPending){const ct=yt.getCurrentTime();let k=-1;for(let j=0;j<L.length;j++){if(L[j][0]<=ct+0.15)k=j;else break}if(k>=0&&ct<(k+1<L.length?L[k+1][0]:L[k][0]+9))txt=L[k][1]}}catch{}if(box.dataset.t!==txt){box.dataset.t=txt;box.innerHTML=txt?'<span>'+txt.replace(/</g,'&lt;')+'</span>':''}},200);
+
+// v22: 자유로운 건너뛰기 — 이동 중에는 목표 위치를 표시하고, 유튜브가 구간 밖(광고·로딩)일 때 시작점으로 튀어 보이지 않게 함. ±10초 버튼·키보드 ←/→
+var seekTarget=null;
+function elapsed(){
+ if(transitionPending&&seekTarget!=null)return seekTarget;
+ const s=steps[index];
+ if(s.id){const r=s.rate||1;if(currentYT()){const ct=yt.getCurrentTime();if(ct>=s.start-1&&(s.end==null||ct<=s.end+1))return before(index)+Math.max(0,ct-s.start)/r}return before(index)+pendingOffset/r}
+ return before(index)+local.currentTime/slideRate}
+(function(){const _seek=seek;seek=function(t){t=Math.max(0,Math.min(total()-0.1,t));seekTarget=t;_seek(t)};
+ const _rev=revealScene;revealScene=function(tk){_rev(tk);if(!transitionPending)seekTarget=null};
+ const p=$('play');if(p&&!document.getElementById('back10')){const mk=(id,txt,d)=>{const b=document.createElement('button');b.id=id;b.type='button';b.textContent=txt;b.className=p.className;b.style.cssText='margin-left:8px;min-width:64px';b.onclick=()=>seek(elapsed()+d);return b};p.after(mk('back10','−10초',-10));document.getElementById('back10').after(mk('fwd10','+10초',10))}
+ document.addEventListener('keydown',e=>{if(e.target&&/INPUT|SELECT|TEXTAREA/.test(e.target.tagName))return;if(e.key==='ArrowRight'){seek(elapsed()+10);e.preventDefault()}if(e.key==='ArrowLeft'){seek(elapsed()-10);e.preventDefault()}});
+ // 유튜브가 시작 위치를 무시하고 0초부터 틀면(광고 아님: 길이가 원본과 같을 때) 지정 위치로 맞춤
+ setInterval(()=>{try{const s=steps[index];if(!s.id||transitionPending||!currentYT()||yt.getPlayerState()!==1)return;const ct=yt.getCurrentTime(),D=yt.getDuration();if(D>s.start+5&&ct<s.start-2)yt.seekTo(s.start+pendingOffset,true)}catch(e){}},1000);
+})();

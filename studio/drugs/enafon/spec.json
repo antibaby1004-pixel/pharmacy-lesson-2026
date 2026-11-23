@@ -147,17 +147,6 @@
    "js": "let h='';for(let i=0;i<4;i++)h+=`<circle id=\"p${i}\" r=\"10\" fill=\"#D2342A\"/>`;$i('pul').innerHTML=h;\nSCENE.anim=o=>{const k=seg(o,S[1],S[1]+1.2),g=seg(o,S[2],S[2]+0.8);$i('kn').setAttribute('transform',`rotate(${-60+150*ease(k)})`);$i('dn').setAttribute('stroke-width',6+8*k);\n for(let i=0;i<4;i++){const ph=((o*.5+i/4)%1);const e=$i('p'+i);const y=lerp(470,160,ph);const blocked=g>.5&&y<450;e.setAttribute('cx',322);e.setAttribute('cy',blocked?455:y);e.setAttribute('r',10*(1-0.6*g));e.style.opacity=blocked?0.15:1}\n $i('gate').style.opacity=g};"
   },
   {
-   "id": "yt1",
-   "type": "yt",
-   "vid": "T25jvLC6X0w",
-   "start": 510,
-   "end": 654,
-   "label": "TCA 기전 영상",
-   "desc": "삼환계 항우울제의 재흡수 억제 · 수용체 차단 · 부작용",
-   "bubble": "삼환계 전체 그림,<br>영상으로 볼까요?",
-   "say": "삼환계 전체 그림, 영상으로 볼까요?"
-  },
-  {
    "id": "nep",
    "type": "rows",
    "title": "왜 신경통에 쓰나",
