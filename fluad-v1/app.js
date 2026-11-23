@@ -3,8 +3,8 @@ function pre(i){const s=steps[i];if(s&&!s.id&&s.file)getB(s.file)}
 const steps=[
 {title:'플루아드 소개 · 대상과 구성 · 신약',file:'intro',duration:33.43},
 {title:'MF59 · 면역세포 모집',file:0,duration:13.868},{title:'항원 전달 · 림프절로',file:1,duration:6.353},{title:'항체 반응 강화',file:2,duration:16.048},
-{title:'용량과 사용법',file:5,duration:11.915},{title:'프리필드시린지 접종',file:'inj',duration:18.35},{title:'보관',file:'storage',duration:14.134},
-{title:'접종 전 확인',file:'check',duration:27.859},{title:'주의점과 부작용',file:4,duration:26.893},{title:'Take-home message',file:'summary',duration:29.961}];
+{title:'용량과 사용법',file:5,duration:12.296},{title:'피하주사 vs 근육주사',file:'route',duration:49.758},{title:'프리필드시린지 접종',file:'inj',duration:18.35},{title:'보관',file:'storage',duration:14.134},
+{title:'접종 전 확인',file:'check',duration:27.859},{title:'주의점과 부작용',file:4,duration:26.893},{title:'Take-home message',file:'summary',duration:31.862}];
 const $=id=>document.getElementById(id),local=$('local');
 let index=0,yt,ytReady=false,ytLoading=false,wantsPlay=false,slideRate=1,pendingOffset=0,ended=false,dragging=false;
 const isYT=()=>!!steps[index].id;
