@@ -1,16 +1,66 @@
-{"repatha":["레파타 주 프리필드펜","Repatha inj. prefilled pen"],
-"zeroam":["제로암 주","Gero-Am inj."],
-"stelara":["스텔라라 주","Stelara inj."],
-"kinteles":["킨텔레스 주","Kinteles inj."],
-"rabepid":["라베피드 정","Rabepid tab."],
-"fluad":["플루아드 프리필드시린지 주","Fluad prefilled syringe inj."],
-"breztri":["브레즈트리 에어로스피어 흡입제","Breztri Aerosphere inhaler"],
-"neoblue":["네오블루5 주","Neoblue 5 inj."],
-"cravit":["크라비트 주 750 mg","Cravit inj. 750 mg"],
-"capvaxive":["캡박시브 프리필드시린지 주","Capvaxive prefilled syringe inj."],
-"maxialox":["맥시알록 프리필드 주","Maxialox prefilled inj."],
-"metalyse":["메탈라제 주사 25 mg","Metalyse inj. 25 mg"],
-"ringerlight":["링거라이트 액","Ringer light soln."],
-"newdotop":["뉴도탑 카타플라스마","Newdotop cataplasma"],
-"enafon":["에나폰 정 5 mg","Enafon tab. 5 mg"],
-"clarimacin":["클래리마신 정","Clarimacin tab."]}
+{
+"repatha": [
+"레파타 주 프리필드펜 140 mg",
+"Repatha inj. prefilled pen 140 mg"
+],
+"zeroam": [
+"제로암 주 1 g · 200 mg",
+"Gero-Am inj. 1 g · 200 mg"
+],
+"stelara": [
+"스텔라라 주 130 mg · 프리필드 90 mg",
+"Stelara inj. 130 mg · PFS 90 mg"
+],
+"kinteles": [
+"킨텔레스 주 300 mg · 프리필드펜 108 mg",
+"Kinteles inj. 300 mg · pen 108 mg"
+],
+"rabepid": [
+"라베피드 정 10/600 · 20/600 mg",
+"Rabepid tab. 10/600 · 20/600 mg"
+],
+"fluad": [
+"플루아드 프리필드시린지 주 0.5 mL",
+"Fluad prefilled syringe inj. 0.5 mL"
+],
+"breztri": [
+"브레즈트리 에어로스피어 160/7.2/5 µg",
+"Breztri Aerosphere 160/7.2/5 µg"
+],
+"neoblue": [
+"네오블루5 주 10 mL",
+"Neoblue 5 inj. 10 mL"
+],
+"cravit": [
+"크라비트 주 750 mg/150 mL",
+"Cravit inj. 750 mg/150 mL"
+],
+"capvaxive": [
+"캡박시브 프리필드시린지 주 0.5 mL",
+"Capvaxive prefilled syringe inj. 0.5 mL"
+],
+"maxialox": [
+"맥시알록 프리필드 주 0.075 mg/1.5 mL",
+"Maxialox prefilled inj. 0.075 mg/1.5 mL"
+],
+"metalyse": [
+"메탈라제 주사 25 mg",
+"Metalyse inj. 25 mg"
+],
+"ringerlight": [
+"링거라이트 액 200 mL",
+"Ringer light soln. 200 mL"
+],
+"newdotop": [
+"뉴도탑 카타플라스마 700 mg",
+"Newdotop cataplasma 700 mg"
+],
+"enafon": [
+"에나폰 정 5 mg",
+"Enafon tab. 5 mg"
+],
+"clarimacin": [
+"클래리마신 정",
+"Clarimacin tab."
+]
+}
