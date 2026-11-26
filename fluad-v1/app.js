@@ -4,7 +4,7 @@ const steps=[
 {title:'플루아드 소개 · 대상과 구성 · 신약',file:'intro',duration:35.272},
 {title:'MF59 · 면역세포 모집',file:0,duration:14.505},{title:'항원 전달 · 림프절로',file:1,duration:6.813},{title:'항체 반응 강화',file:2,duration:16.961},
 {title:'용량과 사용법',file:5,duration:13.446},{title:'피하주사 vs 근육주사',file:'route',duration:52.542},{title:'프리필드시린지 접종',file:'inj',duration:20.154},{title:'보관',file:'storage',duration:14.651},
-{title:'접종 전 확인',file:'check',duration:29.41},{title:'주의점과 부작용',file:4,duration:28.506},{title:'Take-home message',file:'summary',duration:33.53}];
+{title:'접종 전 확인',file:'check',duration:29.41},{title:'주의점과 부작용',file:4,duration:28.506},{title:'허가 연령 · 비급여 ≠ 적응증',file:'age',duration:44.148},{title:'Take-home message',file:'summary',duration:33.53}];
 const $=id=>document.getElementById(id),local=$('local');
 let index=0,yt,ytReady=false,ytLoading=false,wantsPlay=false,slideRate=1,pendingOffset=0,ended=false,dragging=false;
 const isYT=()=>!!steps[index].id;
