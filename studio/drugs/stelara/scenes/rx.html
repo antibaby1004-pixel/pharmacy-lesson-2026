@@ -1,0 +1,25 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../../lib/common.css"><style>
+.tb{position:absolute;left:96px;top:250px;width:1400px;display:grid;grid-template-columns:230px 1fr 1fr;gap:10px}
+.tb>div{border-radius:14px;padding:16px 22px;font-size:32px;line-height:42px;font-weight:600;background:#fff;border:1.5px solid var(--hair)}
+.tb .h{background:#243341;color:#fff;font-size:34px;text-align:center;border:0}
+.tb .h.me{background:var(--acc)}
+.tb .lab{background:#EEF1F4;font-size:30px;display:flex;align-items:center}
+.tb .c1{border-color:var(--acc);border-width:2.5px}
+.tb .no{color:#8A939C}
+.tb small{display:block;font-size:24px;line-height:32px;color:var(--muted);font-weight:500;margin-top:4px}
+.key{position:absolute;left:96px;top:930px;width:1400px;padding:18px 26px;border-radius:14px;background:#E6F4F5;border:2px solid var(--acc);font-size:34px;font-weight:700;color:#0B5E63}
+</style></head><body><div class="stage">
+<div class="fade"><header class="top"><div class="sec"><b>유도 · 유지 제형</b> · INDUCTION vs MAINTENANCE</div><div class="chip">스텔라라 Stelara <i>· ustekinumab</i></div></header><h1>스텔라라는 정맥 1회 → 시린지, 킨텔레스는 정맥 계속 또는 펜</h1></div>
+<div class="fade"><div class="tb">
+<div></div><div class="h me">스텔라라</div><div class="h ">킨텔레스</div>
+<div class="lab" data-in="5.0">유도</div><div class="c1" data-in="5.0">정맥 1회<small>체중별 용량</small></div><div class="c2" data-in="5.0">정맥 300 mg × 3회<small>0 · 2 · 6주</small></div>
+<div class="lab" data-in="12.4">유지 · 정맥</div><div class="c1 no" data-in="12.4">없음</div><div class="c2" data-in="20.4">정맥 300 mg<small>8주마다</small></div>
+<div class="lab" data-in="12.4">유지 · 피하</div><div class="c1" data-in="12.4">프리필드 시린지 90 mg<small>8주 뒤부터 12주마다 (반응 부족 시 8주)</small></div><div class="c2" data-in="20.4">프리필드 펜 108 mg<small>2주마다 · 자가 주사</small></div>
+<div class="lab" data-in="28.0">피하 전환</div><div class="c1" data-in="28.0">유도 뒤 바로 피하</div><div class="c2" data-in="28.0">정맥 최소 2회 뒤<small>다음 정맥 예정일부터 펜</small></div>
+</div>
+<div class="key" data-in="32.8">스텔라라 = 정맥 한 번 → 시린지 · 킨텔레스 = 정맥 유지 또는 펜으로 갈아타기</div></div>
+</div>
+<script src="../timing.js"></script><script src="../../../lib/core.js"></script><script>
+useTiming('rx');
+SCENE.char=makeChar([{k:'walk',t0:0.15,t1:1.2,x0:2250,x1:1700},{k:'point',t0:5.4,t1:7.6,ang:120},{k:'prop',name:'syringe',t0:12.8,t1:15.8},{k:'nod',t0:28.4,t1:29.6}],'lead');
+</script><script src="../../../lib/highlight.js"></script></body></html>

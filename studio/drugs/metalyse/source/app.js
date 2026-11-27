@@ -6,11 +6,11 @@ const steps=[
 {title: "기전 영상 · 0:08–3:14 · 0.9배속", id: "YyS9c13LM14", start: 8, end: 194, rate: 0.9, note: "기전 영상 0:08–3:14 · 0.9배속 · 영어 원음. ⚙ → 자막 → 자동 번역 → 한국어."},
 {title: "세 군데를 고쳤더니", file: "m1", duration: 24},
 {title: "기전 영상 · 0:10–2:13 · 0.9배속", id: "Dc9NLY-jGyw", start: 10, end: 133, rate: 0.9, note: "기전 영상 0:10–2:13 · 0.9배속 · 영어 원음. ⚙ → 자막 → 자동 번역 → 한국어."},
-{title: "용량 · 체중 밴드", file: "dose", duration: 23},
+{title: "용량 · 체중당", file: "dose", duration: 29},
 {title: "조제법", file: "5", duration: 40},
 {title: "액티라제와 비교", file: "cmp", duration: 22},
 {title: "주의사항", file: "4", duration: 17},
-{title: "Take-home message", file: "summary", duration: 23}];
+{title: "Take-home message", file: "summary", duration: 25}];
 const $=id=>document.getElementById(id),local=$('local');
 let index=0,yt,ytReady=false,ytLoading=false,wantsPlay=false,slideRate=1,pendingOffset=0,ended=false,dragging=false;
 const isYT=()=>!!steps[index].id;

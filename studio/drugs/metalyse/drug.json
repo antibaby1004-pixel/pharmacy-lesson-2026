@@ -30,7 +30,7 @@
   {
    "part": "dose",
    "scene": "dose.html",
-   "video_dur": 21.85
+   "video_dur": 27.25
   },
   {
    "part": "5",
@@ -50,7 +50,7 @@
   {
    "part": "summary",
    "scene": "summary.html",
-   "video_dur": 21.14
+   "video_dur": 22.95
   }
  ],
  "order": [

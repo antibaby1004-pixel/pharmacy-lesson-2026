@@ -4,7 +4,7 @@ const steps=[
 {title:'스텔라라 소개 · 제형과 허가 적응증 · 신약',file:'intro',duration:25},{title:'정맥주사 vs 프리필드시린지',file:'forms',duration:24},
 {title:'IL-12 · IL-23 · 공통 p40',file:0,duration:10},{title:'p40 차단 · 염증 감소',file:1,duration:10},
 {title:'기전 영상 · 0:00–3:37',id:'KWHUwVdVICM',start:0,end:217},
-{title:'용량과 사용법',file:5,duration:28},{title:'정맥주사 조제 · 희석과 주입',file:'iv',duration:24},
+{title:'용량과 사용법',file:5,duration:28},{title:'유도 · 유지 제형 비교',file:'rx',duration:41},{title:'정맥주사 조제 · 희석과 주입',file:'iv',duration:24},
 {title:'프리필드시린지 보관',file:'storage',duration:20},{title:'프리필드시린지 주사 방법',file:'inj',duration:31},
 {title:'주의점 1 · 감염과 생백신',file:'4a',duration:17},{title:'주의점 2 · 결핵과 과민반응',file:'4b',duration:17},
 {title:'Take-home message',file:'summary',duration:31}];

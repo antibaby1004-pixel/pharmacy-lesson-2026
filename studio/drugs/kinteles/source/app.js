@@ -4,7 +4,7 @@ const steps=[
 {title:'킨텔레스 소개 · 두 제형과 적응증 · 신약',file:'intro',duration:20},
 {title:'림프구 · α4β7 · MAdCAM-1',file:0,duration:11},{title:'α4β7 차단 · 장 선택적',file:1,duration:12},
 {title:'기전 영상 · 처음부터 끝까지',id:'CksGufrYhPI',start:0,end:null,est:180},
-{title:'vedolizumab vs ustekinumab',file:'cmp',duration:32},{title:'용량 · 정맥주사',file:'5a',duration:13},{title:'용량 · 프리필드 펜',file:'5b',duration:20},
+{title:'vedolizumab vs ustekinumab',file:'cmp',duration:32},{title:'용량 · 정맥주사',file:'5a',duration:13},{title:'용량 · 프리필드 펜',file:'5b',duration:20},{title:'유도 · 유지 제형 비교',file:'rx',duration:41},
 {title:'보관',file:'storage',duration:20},{title:'주의점과 부작용',file:4,duration:23},{title:'Take-home message',file:'summary',duration:22}];
 const $=id=>document.getElementById(id),local=$('local');
 let index=0,yt,ytReady=false,ytLoading=false,wantsPlay=false,slideRate=1,pendingOffset=0,ended=false,dragging=false;
